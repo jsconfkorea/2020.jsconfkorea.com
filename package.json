@@ -1,0 +1,19 @@
+{
+  "name": "2020.jsconfkorea.com",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jsconfkorea/2020.jsconfkorea.com.git",
+  "author": "Chris Yang <ysm0622@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "next build"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.17",
+    "@types/react": "^16.9.16",
+    "next": "^9.1.5",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.7.3"
+  }
+}
