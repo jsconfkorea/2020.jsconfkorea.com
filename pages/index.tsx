@@ -13,6 +13,6 @@ export default () => (
         font-size: 2rem;
       }
     `}</style>
-    Comming soon...!
+    Coming soon...!
   </>
 )
