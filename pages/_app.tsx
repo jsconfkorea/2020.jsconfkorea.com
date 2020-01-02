@@ -11,7 +11,7 @@ export default ({ Component, pageProps }: AppProps) => {
         <meta property="og:title" content="JSConf Korea 2020 | JSConf Korea" />
         <meta property="og:site_name" content="JSConf Korea 2020" />
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
-        <meta property="og:description" content="🇰🇷 Comming Soon !" />
+        <meta property="og:description" content="🇰🇷 Coming Soon !" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/thumb.png" />
         <link rel="shortcut icon" href="/icon.png" />
