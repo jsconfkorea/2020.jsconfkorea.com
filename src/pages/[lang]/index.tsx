@@ -1,6 +1,7 @@
 import { css } from '@emotion/core'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import Markdown from 'react-markdown'
+import Link from 'next/link'
 
 type Props = {
   md: string
@@ -8,6 +9,9 @@ type Props = {
 
 const Index = ({ md }: Props) => (
   <div css={style}>
+    <Link href="/ko">ko</Link>
+    <br></br>
+    <Link href="/en">en</Link>
     <Markdown>{md}</Markdown>
   </div>
 )
