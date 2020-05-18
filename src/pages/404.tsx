@@ -1,4 +1,5 @@
-import { css } from '@emotion/core'
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core'
 
 const NotFound = () => (
   <div css={style}>

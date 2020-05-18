@@ -1,12 +1,10 @@
 import { css } from '@emotion/core'
 import { GetServerSideProps } from 'next'
-import { languages } from '../../i18n'
+import { languages } from '../../components/I18nProvider'
 
 const Index = () => <div css={style}>Coming soon...!</div>
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res, query }) => {
-  console.log({ query })
-  console.log({ url: req.url })
   const lang = query.lang as string
   if (!languages.includes(lang)) {
     res.writeHead(301, { Location: `/en${req.url}` })

@@ -1,9 +1,13 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
+import GlobalStyle from '../components/GlobalStyle'
+import I18nProvider from '../components/I18nProvider'
 
 export default ({ Component, pageProps }: AppProps) => {
+  const { langDict, lang } = pageProps
   return (
     <>
+      <GlobalStyle />
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,7 +20,9 @@ export default ({ Component, pageProps }: AppProps) => {
         <meta property="og:image" content="/thumb.png" />
         <link rel="shortcut icon" href="/icon.png" />
       </Head>
-      <Component {...pageProps} />
+      <I18nProvider langDict={langDict} lang={lang}>
+        <Component {...pageProps} />
+      </I18nProvider>
     </>
   )
 }
