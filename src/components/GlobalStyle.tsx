@@ -7,4 +7,9 @@ export default GlobalStyle
 
 const style = css`
   ${emotionNormalize}
+  html,
+  body,
+  #__next {
+    height: 100%;
+  }
 `
