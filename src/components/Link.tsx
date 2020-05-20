@@ -8,12 +8,14 @@ type Props = {
 } & LinkProps
 
 const Link = (props: Props) => {
-  const { href, children } = props
+  const { children } = props
   const { pathname } = useRouter()
   const isLangPath = pathname.slice(0, 7) === '/[lang]'
   const { activeLanguage } = useI18n()
+  const href = `${isLangPath ? `/[lang]` : ''}${props.href}`
+  const as = `${isLangPath ? `/${activeLanguage}` : ''}${props.href}`
   return (
-    <NextLink href={`${isLangPath ? `/${activeLanguage}` : ''}${href}`}>
+    <NextLink href={href} as={as}>
       <a>{children}</a>
     </NextLink>
   )
