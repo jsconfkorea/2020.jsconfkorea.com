@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticPaths } from 'next'
 import Markdown from 'react-markdown'
 import { useI18n } from '../hooks/useI18n'
 import ChangeLanguageLink from '../components/ChangeLangaugeLink'
