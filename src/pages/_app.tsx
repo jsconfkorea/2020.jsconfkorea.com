@@ -3,7 +3,7 @@ import Head from 'next/head'
 import GlobalStyle from '../components/GlobalStyle'
 import I18nProvider from '../components/I18nProvider'
 
-export default ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
   return (
     <>
@@ -26,3 +26,5 @@ export default ({ Component, pageProps }: AppProps) => {
     </>
   )
 }
+
+export default App

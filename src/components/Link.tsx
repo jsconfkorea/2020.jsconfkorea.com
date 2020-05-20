@@ -4,28 +4,17 @@ import { ReactNode } from 'react'
 import { useRouter } from 'next/dist/client/router'
 
 type Props = {
-  lang?: string
   children: ReactNode
 } & LinkProps
 
 const Link = (props: Props) => {
-  const { lang, children } = props
-  const router = useRouter()
-  const { locale, activeLanguage } = useI18n()
-  const href = `/${activeLanguage}${props.href}`
+  const { href, children } = props
+  const { pathname } = useRouter()
+  const isLangPath = pathname.slice(0, 7) === '/[lang]'
+  const { activeLanguage } = useI18n()
   return (
-    <NextLink {...props} href={href}>
-      <a
-        onClick={(e) => {
-          if (!lang) return
-          e.preventDefault()
-          locale(lang)
-          const { pathname, asPath } = router
-          router.push(pathname, `/${lang}${asPath.slice(3)}`)
-        }}
-      >
-        {children}
-      </a>
+    <NextLink href={`${isLangPath ? `/${activeLanguage}` : ''}${href}`}>
+      <a>{children}</a>
     </NextLink>
   )
 }

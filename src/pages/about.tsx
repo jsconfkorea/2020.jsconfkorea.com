@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import Markdown from 'react-markdown'
 import { useI18n } from '../hooks/useI18n'
 import ChangeLanguageLink from '../components/ChangeLangaugeLink'
-import Link from '../components/Link'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -13,16 +13,20 @@ const Index = ({}: Props) => {
   const { t } = useI18n()
   return (
     <div css={style}>
-      <h1>{t('hello_world')}</h1>
       <ChangeLanguageLink lang="ko">ko</ChangeLanguageLink>
       <br></br>
       <ChangeLanguageLink lang="en">en</ChangeLanguageLink>
-      <div>This is Index page!</div>
-      <Link href="/about">about page</Link>
+      <Markdown>{t('about')}</Markdown>
     </div>
   )
 }
-
 const style = css``
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [{ params: { lang: 'ko' } }, { params: { lang: 'en' } }],
+    fallback: true,
+  }
+}
 
 export default Index
