@@ -18,7 +18,7 @@ type Props = {
 
 const I18nProvider = ({ langDict, lang, children }: Props) => {
   i18n.locale(lang ?? defaultLanguage)
-  languages.forEach((lang) => i18n.set(lang, langDict[lang]))
+  languages.forEach((lang) => i18n.set(lang, langDict?.[lang]))
   return <I18nContext.Provider value={i18n}>{children}</I18nContext.Provider>
 }
 
