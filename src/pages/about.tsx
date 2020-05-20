@@ -22,11 +22,4 @@ const Index = ({}: Props) => {
 }
 const style = css``
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {
-    paths: [{ params: { lang: 'ko' } }, { params: { lang: 'en' } }],
-    fallback: true,
-  }
-}
-
 export default Index
