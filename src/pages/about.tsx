@@ -9,7 +9,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({}: Props) => {
+const About = ({}: Props) => {
   const { t } = useI18n()
   return (
     <div css={style}>
@@ -22,4 +22,4 @@ const Index = ({}: Props) => {
 }
 const style = css``
 
-export default Index
+export default About
