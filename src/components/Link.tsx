@@ -4,19 +4,20 @@ import { ReactNode } from 'react'
 import { useRouter } from 'next/dist/client/router'
 
 type Props = {
+  className?: string
   children: ReactNode
 } & LinkProps
 
 const Link = (props: Props) => {
-  const { children } = props
+  const { children, className } = props
   const { pathname } = useRouter()
   const isLangPath = pathname.slice(0, 7) === '/[lang]'
   const { activeLanguage } = useI18n()
-  const href = `${isLangPath ? `/[lang]` : ''}${props.href}`
-  const as = `${isLangPath ? `/${activeLanguage}` : ''}${props.href}`
+  const href = `${isLangPath ? `/[lang]` : ''}${props.href === '/' ? '' : props.href}`
+  const as = `${isLangPath ? `/${activeLanguage}` : ''}${props.href === '/' ? '' : props.href}`
   return (
     <NextLink href={href} as={as}>
-      <a>{children}</a>
+      <a className={className}>{children}</a>
     </NextLink>
   )
 }

@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import Link from './Link'
 import { useState } from 'react'
+import useInterval from '../hooks/useInterval'
 
-const CodeViewer = () => {
-  let codes = `
+const codes = `
   class Map_ {
     constructor(gap) {
       this.gap = gap;
@@ -32,45 +31,39 @@ const CodeViewer = () => {
     if (b) return Math.random() * (b - a) + a;
     else return Math.random() * a;
   }
-  
-`;
+`
 
-  let elems = [];
+const { length } = codes
 
-  for (let i = 0; i < codes.length; i++) {
-    let s = codes[i];
-    elems.push((() => {
-      if (s == " ") return (<span>&nbsp;</span>);
-      else if (s != "\n") return (<span>{s}</span>);
-      else return (<br />);
-    })());
-  }
+const CodeViewer = () => {
+  const [code, setCode] = useState(codes)
+  const [slice, setSlice] = useState(1)
+
+  useInterval(() => {
+    setCode(codes.slice(0, slice))
+    if (slice > length + 300) (window as any).resetMap()
+    setSlice((slice) => (slice > length + 300 ? 1 : slice + 2))
+  }, 10)
 
   return (
-    <div id="code-viewer" css={style}>
-      {elems}
-    </div>
+    <>
+      <div css={style}>{code} </div>
+    </>
   )
 }
 
 const style = css`
-    position:absolute;
-    max-width:50%;
-    max-height:80%;
-    left:20px;
-    top:20px;
-    color:#fff;
-    font-size:15px;
-    line-height:1.2em;
-    font-family: 'Source Code Pro', monospace;
-    overflow:hidden;
-
-    span{
-      opacity:0;
-      &.active{
-        opacity:1;
-      }
-    }
+  position: absolute;
+  max-width: 50%;
+  max-height: 80%;
+  left: 20px;
+  top: 20px;
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.2em;
+  font-family: 'Source Code Pro', monospace;
+  overflow: hidden;
+  white-space: pre;
 `
 
 export default CodeViewer

@@ -16,36 +16,40 @@ const style = css`
     width: 100%;
     -ms-overflow-style: none;
   }
-  body::-webkit-scrollbar, #__next::-webkit-scrollbar  {
+  body::-webkit-scrollbar,
+  #__next::-webkit-scrollbar {
     display: none;
   }
 
-  body{
-    background-color:#A6A6A6;
+  body {
+    background-color: #a6a6a6;
     /* background-color:#000; */
     font-family: 'Noto Sans KR', sans-serif;
   }
-  #__next{
-    padding-top:100px;
-    box-sizing:border-box;
+  #__next {
+    padding-top: 100px;
+    box-sizing: border-box;
   }
 
-  .btn-default{
-    -webkit-appearance:none;
-    background:transparent;
-    border:none;
-    cursor:pointer;
+  .btn-default {
+    -webkit-appearance: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
 
-  .block{
-    height:100px;
+  .block {
+    height: 100px;
   }
 
-  *:focus{
-    outline:none;
+  *:focus {
+    outline: none;
   }
-  .disabled{
-    opacity:0.5;
-    pointer-events:none;
+  .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  a {
+    text-decoration: none;
   }
 `
