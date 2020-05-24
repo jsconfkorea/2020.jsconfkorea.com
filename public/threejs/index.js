@@ -40,7 +40,7 @@ let animate = function () {
   }
 
 
-  if (isSingle && frameCount % 180 == 1) {
+  if (isSingle && frameCount % 300 == 1) {
     resetMap();
     if (resetTypo) resetTypo();
   }

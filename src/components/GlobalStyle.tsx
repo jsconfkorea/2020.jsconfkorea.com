@@ -14,7 +14,12 @@ const style = css`
   #__next {
     height: 100%;
     width: 100%;
+    -ms-overflow-style: none;
   }
+  body::-webkit-scrollbar, #__next::-webkit-scrollbar  {
+    display: none;
+  }
+
   body{
     background-color:#A6A6A6;
     /* background-color:#000; */
