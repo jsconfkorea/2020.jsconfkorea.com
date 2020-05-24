@@ -44,4 +44,8 @@ const style = css`
   *:focus{
     outline:none;
   }
+  .disabled{
+    opacity:0.5;
+    pointer-events:none;
+  }
 `

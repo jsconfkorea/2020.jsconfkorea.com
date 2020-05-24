@@ -26,9 +26,9 @@ const Header = ({ toGreen }: Props) => {
       <nav>
         <ul className="menu-main">
           <li><Link href="/">ABOUT</Link></li>
-          <li><Link href="/">SCHEDULE</Link></li>
-          <li><Link href="/">SPEAKER</Link></li>
-          <li><Link href="/">SPONSORS</Link></li>
+          <li className="disabled"><Link href="/">SCHEDULE</Link></li>
+          <li className="disabled"><Link href="/">SPEAKER</Link></li>
+          <li className="disabled"><Link href="/">SPONSORS</Link></li>
         </ul>
         <ul className="menu-docs">
           <li><Link href="/">Code of Conduct</Link></li>
