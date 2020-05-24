@@ -7,10 +7,36 @@ export default GlobalStyle
 
 const style = css`
   ${emotionNormalize}
+
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Source+Code+Pro&display=swap');
   html,
   body,
   #__next {
     height: 100%;
     width: 100%;
+  }
+  body{
+    background-color:#A6A6A6;
+    /* background-color:#000; */
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  #__next{
+    padding-top:100px;
+    box-sizing:border-box;
+  }
+
+  .btn-default{
+    -webkit-appearance:none;
+    background:transparent;
+    border:none;
+    cursor:pointer;
+  }
+
+  .block{
+    height:100px;
+  }
+
+  *:focus{
+    outline:none;
   }
 `
