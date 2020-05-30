@@ -7,7 +7,7 @@ import { useI18n } from '../hooks/useI18n'
 
 type Props = {}
 
-const Header = ({}: Props) => {
+const Header = ({ }: Props) => {
   const { t } = useI18n()
   const [on, setOn] = useState(false)
   const func = () => {
@@ -26,6 +26,9 @@ const Header = ({}: Props) => {
       </div>
       <nav>
         <ul className="menu-main">
+          <li>
+            <Link href="/">HOME</Link>
+          </li>
           <li>
             <Link href="/about">{t('about')}</Link>
           </li>
@@ -193,6 +196,55 @@ const style = css`
     visibility: visible;
     opacity: 1;
     transition: opacity 0.5s, visibility 0s;
+  }
+
+  @media screen and (max-width:768px){
+    
+    #btn-lang {
+      font-size: 20px;
+      right: 15px;
+      top: 20px;
+    }
+
+    #btn-menu {
+      width: 30px;
+      height: 16px;
+      left: 15px;
+      top: 22px;
+
+      span {
+        top: 8px;
+        &:nth-of-type(1) {
+          transform: translateY(-6px);
+        }
+        &:nth-of-type(3) {
+          transform: translateY(6px);
+        }
+      }
+
+      &:hover {
+        & > span:nth-of-type(1) {
+          transform: translateY(-8px);
+        }
+        & > span:nth-of-type(3) {
+          transform: translateY(8px);
+        }
+      }
+    }
+    nav {
+      padding-top:0;
+      ul {
+        &.menu-main {
+          font-size: 25px;
+        }
+
+        &.menu-docs {
+          font-size: 15px;
+          margin-top: 10px;
+        }
+      }
+    }
+
   }
 `
 

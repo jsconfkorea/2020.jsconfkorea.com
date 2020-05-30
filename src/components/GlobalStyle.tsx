@@ -52,4 +52,83 @@ const style = css`
   a {
     text-decoration: none;
   }
+  ul{
+    list-style:none;
+    padding:0;
+  }
+
+  .doc{
+    margin:0 auto 100px;
+    max-width:800px;
+    color:#fff;
+
+    h2:first-child{
+      margin-top:100px;
+      margin-bottom:50px;
+      font-size:35px;
+    }
+    h2{
+      margin-top:80px;
+      margin-bottom:25px;
+      font-size:25px;
+    }
+    p{
+      margin-top:15px;
+      font-size:15px;
+      line-height:1.5em;
+    }
+    ul{
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    li {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.5em;
+      border-radius: 3px;
+    }
+    ul li{
+      border: solid 1px #fff;
+      padding: 10px 15px;
+    }
+    a{
+      color:#fff;
+      border-bottom:solid 1px #fff;
+    }
+  }
+
+  @media screen and (max-width:768px){
+    .block {
+      height: 60px;
+    }
+
+    .doc{
+      margin: 0 15px 50px;
+       h1{
+        margin-top:50px;
+        margin-bottom:20px;
+        font-size:20px;
+        line-height:1.5em;
+      }
+      p{
+        margin-top:15px;
+        font-size:15px;
+        line-height:1.5em;
+      }
+      ul{
+        margin-top:20px;
+        margin-bottom:20px;
+      }
+      li{
+        margin-top:10px;
+        font-size:15px;
+        line-height: 1.5em;
+      }
+
+      ul li{
+        padding:10px;
+        border-radius: 8px;
+      }
+    }
+  }
 `

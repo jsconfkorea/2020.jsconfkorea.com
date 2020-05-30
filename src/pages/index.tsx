@@ -10,7 +10,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({}: Props) => {
+const Index = ({ }: Props) => {
   const { t, activeLanguage } = useI18n()
 
   return (
@@ -28,6 +28,7 @@ const Index = ({}: Props) => {
             <p>HOME EDITION</p>
           </h1>
           <CodeViewer></CodeViewer>
+          <div id="scroll"><img src="/images/arrow-scroll.svg"></img><div>scroll</div></div>
         </section>
         <section id="main-buttons">
           <div>
@@ -95,6 +96,17 @@ const style = css`
         margin: 0;
       }
     }
+
+    #scroll{
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      color:white;
+
+      div{
+        font-weight:bold;
+      }
+    }
   }
 
   #main-buttons {
@@ -149,6 +161,42 @@ const style = css`
         flex: 3;
         & > a {
           background: #ff7235;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:768px){
+    #intro {
+      h1 {
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+      }
+      #scroll{
+        img{
+          width:20px;
+          height:auto;
+        }
+        div{
+          font-size:10px;
+        }
+      }
+    }
+
+    #main-buttons {
+      & > div {
+        & > div {
+          height: 50px;
+          a {
+            height: 50px;
+            font-size: 20px;
+            line-height: 50px;
+            &:hover {
+              height: 70px;
+              line-height: 70px;
+            }
+          }
         }
       }
     }
