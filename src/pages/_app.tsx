@@ -9,7 +9,6 @@ const App = ({ Component, pageProps }: AppProps) => {
   const description = '🇰🇷 Coming Soon !'
   return (
     <>
-      <GlobalStyle />
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -25,6 +24,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="shortcut icon" href="/icon.png" />
       </Head>
       <I18nProvider langDict={langDict} lang={lang}>
+        <GlobalStyle />
         <Component {...pageProps} />
       </I18nProvider>
     </>
