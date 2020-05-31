@@ -27,7 +27,7 @@ const Header = ({ }: Props) => {
       <nav>
         <ul className="menu-main">
           <li>
-            <Link href="/">{t('home')}</Link>
+            <Link href="/index">{t('home')}</Link>
           </li>
           <li>
             <Link href="/about">{t('about')}</Link>
@@ -62,7 +62,7 @@ const style = css`
   right: 0;
 
   border-bottom: solid 1px #fff;
-  background: #777;
+  background: #555;
   overflow: hidden;
   z-index: 99;
 
@@ -92,25 +92,24 @@ const style = css`
   }
 
   #btn-lang {
-    font-size: 30px;
+    font-size: 0.3rem;
     color: #fff;
-
     position: absolute;
-    right: 28px;
-    top: 35px;
+    right: 0.28rem;
+    top: 0.35rem;
 
     & > a {
-      margin: 0 0.5rem;
+      margin: 0 0.1rem;
       color: #fff;
       font-weight: 900;
     }
   }
 
   #btn-menu {
-    width: 50px;
-    height: 22px;
-    left: 36px;
-    top: 40px;
+    width: 0.5rem;
+    height: 0.22rem;
+    left: 0.36rem;
+    top: 0.40rem;
 
     position: absolute;
 
@@ -121,26 +120,26 @@ const style = css`
       width: 100%;
       height: 2px;
       background-color: #fff;
-      top: 10px;
+      top: 0.1rem;
       transition: transform 0.3s;
 
       &:nth-of-type(1) {
-        transform: translateY(-10px);
+        transform: translateY(-0.1rem);
       }
       &:nth-of-type(2) {
         transition: opacity 0.3s;
       }
       &:nth-of-type(3) {
-        transform: translateY(10px);
+        transform: translateY(0.1rem);
       }
     }
 
     &:hover {
       & > span:nth-of-type(1) {
-        transform: translateY(-15px);
+        transform: translateY(-0.15rem);
       }
       & > span:nth-of-type(3) {
-        transform: translateY(15px);
+        transform: translateY(0.15rem);
       }
     }
   }
@@ -163,13 +162,13 @@ const style = css`
       margin: 0;
 
       &.menu-main {
-        font-size: 50px;
+        font-size: 0.5rem;
         font-weight: 900;
         line-height: 1.5em;
       }
 
       &.menu-docs {
-        font-size: 25px;
+        font-size: 0.25rem;
         font-weight: 900;
         line-height: 1.5em;
         margin-top: 20px;
@@ -180,7 +179,7 @@ const style = css`
         text-decoration: none;
         transition: all 0.4s;
         padding:0 10px;
-        background:#777;
+        background:#555;
         border:solid 1px transparent;
 
         &:link,
@@ -191,8 +190,7 @@ const style = css`
         &:hover {
           border:solid 1px rgba(0,0,0,0.3);
           box-shadow:0 10px 0 rgba(0,0,0,0.3);
-          transform:translateY(-10px);
-
+          transform:translateY(-0.1rem);
         }
       }
     }
@@ -205,51 +203,6 @@ const style = css`
   }
 
   @media screen and (max-width:768px){
-    
-    #btn-lang {
-      font-size: 20px;
-      right: 15px;
-      top: 20px;
-    }
-
-    #btn-menu {
-      width: 30px;
-      height: 16px;
-      left: 15px;
-      top: 22px;
-
-      span {
-        top: 8px;
-        &:nth-of-type(1) {
-          transform: translateY(-6px);
-        }
-        &:nth-of-type(3) {
-          transform: translateY(6px);
-        }
-      }
-
-      &:hover {
-        & > span:nth-of-type(1) {
-          transform: translateY(-8px);
-        }
-        & > span:nth-of-type(3) {
-          transform: translateY(8px);
-        }
-      }
-    }
-    nav {
-      padding-top:0;
-      ul {
-        &.menu-main {
-          font-size: 25px;
-        }
-
-        &.menu-docs {
-          font-size: 15px;
-          margin-top: 10px;
-        }
-      }
-    }
 
   }
 `

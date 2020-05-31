@@ -21,13 +21,16 @@ const style = css`
     display: none;
   }
 
+  html{
+    font-size:100px;
+  }
   body {
-    background-color: #777;
+    background-color: #555;
     /* background-color:#000; */
     font-family: 'Noto Sans KR', sans-serif;
   }
   #__next {
-    padding-top: 100px;
+    padding-top: 1rem;
     box-sizing: border-box;
   }
 
@@ -39,7 +42,7 @@ const style = css`
   }
 
   .block {
-    height: 100px;
+    height: 1rem;
   }
 
   *:focus {
@@ -109,14 +112,16 @@ const style = css`
     }
   }
 
-  @media screen and (max-width:768px){
-    #__next {
-      padding-top: 60px;
+  @media screen and (max-width:1200px){
+    html{
+      font-size:80px;
     }
-    .block {
-      height: 60px;
-    }
+  }
 
+  @media screen and (max-width:768px){
+    html{
+      font-size:60px;
+    }
     .doc{
       margin: 0 15px 50px;
       h1{
