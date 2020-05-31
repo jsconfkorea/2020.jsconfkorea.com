@@ -6,6 +6,7 @@ import { useScroll } from '../hooks/useScroll'
 import Header from '../components/Header'
 import Popup from '../components/Popup'
 import Graphic from '../components/Graphic'
+import CodeViewer from '../components/CodeViewer'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Head from 'next/head'
@@ -33,6 +34,7 @@ const Index = ({ }: Props) => {
         <section id="intro" className={y > 60 ? "scrollup" : ""}>
           {/* <Graphic></Graphic> */}
           <iframe src="https://codepen.io/turtlefingers/live/MWaNLqJ"></iframe>
+          <CodeViewer></CodeViewer>
           <IntroTitle></IntroTitle>
           <div id="scroll"><img src="/images/arrow-scroll.svg"></img><div>scroll</div></div>
         </section>

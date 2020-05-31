@@ -41,7 +41,7 @@ const CodeViewer = () => {
 
   useInterval(() => {
     setCode(codes.slice(0, slice))
-    if (slice > length + 300) (window as any).resetMap()
+    //if (slice > length + 300) (window as any).resetMap()
     setSlice((slice) => (slice > length + 300 ? 1 : slice + 2))
   }, 10)
 
@@ -54,16 +54,22 @@ const CodeViewer = () => {
 
 const style = css`
   position: absolute;
-  max-width: 50%;
+  max-width: 768px;
   max-height: 80%;
   left: 20px;
   top: 20px;
-  color: #fff;
+  color: #333;
   font-size: 15px;
   line-height: 1.2em;
   font-family: 'Source Code Pro', monospace;
   overflow: hidden;
   white-space: pre;
+
+  @media screen and (max-width:768px){
+    left: 10px;
+    top: 10px;
+    width:calc(100% - 20px);
+  }
 `
 
 export default CodeViewer
