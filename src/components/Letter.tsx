@@ -30,10 +30,14 @@ const Letter = (props: Props) => {
     }
   })
 
+  const reset = () => {
+    setCount(Math.floor(Math.random() * 5 + 30));
+  }
+
 
   return (
     <>
-      <span style={color}>{letter}</span>
+      <span style={color} onMouseEnter={reset}>{letter}</span>
     </>
   )
 }
