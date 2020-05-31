@@ -62,8 +62,7 @@ const style = css`
   right: 0;
 
   border-bottom: solid 1px #fff;
-  background: #a6a6a6;
-  /* background-color:#000; */
+  background: #777;
   overflow: hidden;
   z-index: 99;
 

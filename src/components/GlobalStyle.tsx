@@ -22,7 +22,7 @@ const style = css`
   }
 
   body {
-    background-color: #a6a6a6;
+    background-color: #777;
     /* background-color:#000; */
     font-family: 'Noto Sans KR', sans-serif;
   }
@@ -62,15 +62,21 @@ const style = css`
     max-width:800px;
     color:#fff;
 
-    h1:first-child{
-      margin-top:100px;
-      margin-bottom:50px;
-      font-size:35px;
-    }
     h1{
       margin-top:80px;
       margin-bottom:25px;
       font-size:25px;
+
+      &:first-child{
+        margin-top:50px;
+        margin-bottom:50px;
+        font-size:35px;
+      }
+    }
+    h2{
+      margin-top:60px;
+      margin-bottom:20px;
+      font-size:20px;
     }
     p{
       margin-top:15px;
@@ -95,20 +101,39 @@ const style = css`
       color:#fff;
       border-bottom:solid 1px #fff;
     }
+    blockquote {
+      margin:0;
+      padding:10px 20px;
+      background-color:rgba(0,0,0,0.15);
+      border:solid 2px rgba(0,0,0,0.1);
+    }
   }
 
   @media screen and (max-width:768px){
+    #__next {
+      padding-top: 60px;
+    }
     .block {
       height: 60px;
     }
 
     .doc{
       margin: 0 15px 50px;
-       h1{
+      h1{
         margin-top:50px;
         margin-bottom:20px;
         font-size:20px;
         line-height:1.5em;
+
+        &:first-child{
+          font-size:30px;
+          margin-top:30px;
+        }
+      }
+      h2{
+        margin-top:40px;
+        margin-bottom:15px;
+        font-size:16px;
       }
       p{
         margin-top:15px;
