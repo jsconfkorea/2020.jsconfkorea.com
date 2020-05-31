@@ -21,8 +21,10 @@ const Header = ({ }: Props) => {
         <span></span>
         <span></span>
       </button>
-      <div id="btn-lang">
-        <ChangeLanguageLink lang="en">EN</ChangeLanguageLink>|<ChangeLanguageLink lang="ko">KR</ChangeLanguageLink>
+      <div id="btn-right">
+        <div id="btn-lang">
+          <ChangeLanguageLink lang="en">EN</ChangeLanguageLink>|<ChangeLanguageLink lang="ko">KR</ChangeLanguageLink>
+        </div>
       </div>
       <nav>
         <ul className="menu-main">
@@ -51,6 +53,11 @@ const Header = ({ }: Props) => {
           </li>
         </ul>
       </nav>
+      <div id="btn-social">
+        <Link href="/"><img src="/images/icon-facebook.svg"></img></Link>
+        <Link href="/"><img src="/images/icon-twitter.svg"></img></Link>
+        <Link href="/"><img src="/images/icon-instagram.svg"></img></Link>
+      </div>
     </header>
   )
 }
@@ -89,18 +96,50 @@ const style = css`
         }
       }
     }
+    #btn-social {
+      opacity:1;
+      visibility:visible;
+    }
   }
 
-  #btn-lang {
-    font-size: 0.3rem;
-    color: #333;
+  #btn-right{
     position: absolute;
     right: 0.28rem;
     top: 0.35rem;
+    white-space:nowrap;
 
+    &>*{
+      vertical-align:top;
+    }
+  }
+  #btn-lang {
+    display:inline-block;
+    font-size: 0.3rem;
+    color: #333;
     & > a {
       margin: 0 0.1rem;
       color: #333;
+    }
+    
+  }
+  #btn-social {
+    position:absolute;
+    opacity:0;
+    visibility:hidden;
+    right:0.3rem;
+    bottom:0.3rem;
+    height:0.4rem;
+    font-size:0;
+
+    &>a{
+      display:inline-block;
+      height:100%;
+      margin-left:0.2rem;
+      vertical-align:middle;
+      img{
+        height:100%;
+      }
+     
     }
   }
 
