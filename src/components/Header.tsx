@@ -135,11 +135,13 @@ const style = css`
       display:inline-block;
       height:100%;
       margin-left:0.2rem;
-      vertical-align:middle;
+      transition:opacity .3s;
       img{
         height:100%;
       }
-     
+      &:hover{
+        opacity:.5;
+      }
     }
   }
 

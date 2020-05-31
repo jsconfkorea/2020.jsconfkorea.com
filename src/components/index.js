@@ -42,9 +42,10 @@ let animate = function () {
     isStart = true
   }
 
-  if (isSingle && frameCount % 300 == 1) {
-    resetMap()
-  }
+  // if (isSingle && frameCount % 300 == 1) {
+  //   resetMap()
+  //   // if (resetTypo) resetTypo()
+  // }
   requestAnimationFrame(animate)
   camera.position.x = Math.cos(frameCount * speed) * 5
   camera.position.z = Math.sin(frameCount * speed) * 5
