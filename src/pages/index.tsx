@@ -2,6 +2,7 @@
 import { jsx, css } from '@emotion/core'
 import { useState } from 'react'
 import { useI18n } from '../hooks/useI18n'
+import { useScroll } from '../hooks/useScroll'
 import Header from '../components/Header'
 import Popup from '../components/Popup'
 import Graphic from '../components/Graphic'
@@ -15,6 +16,7 @@ type Props = {}
 
 const Index = ({ }: Props) => {
   const { t, activeLanguage } = useI18n()
+  const { y } = useScroll()
 
   const [popupActive, setActive] = useState(false)
   const popupActivate = () => {
@@ -28,7 +30,7 @@ const Index = ({ }: Props) => {
       </Head>
       <Header></Header>
       <div css={style}>
-        <section id="intro">
+        <section id="intro" className={y > 60 ? "scrollup" : ""}>
           <Graphic></Graphic>
           <IntroTitle></IntroTitle>
           <div id="scroll"><img src="/images/arrow-scroll.svg"></img><div>scroll</div></div>
@@ -92,7 +94,7 @@ const style = css`
     }
 
     h1 {
-      position: absolute;
+      position: fixed;
       bottom: 0.3rem;
       right: 0.3rem;
 
@@ -110,11 +112,11 @@ const style = css`
     }
 
     #scroll{
-      position: absolute;
+      position: fixed;
       bottom: 0.3rem;
       left: 0.3rem;
       color:#333;
-
+      transition:opacity .3s;
 
       div{
         font-size:0.15rem;
@@ -130,6 +132,16 @@ const style = css`
         form{transform:translateY(0)}
         to{transform:translateY(-10px)}
       }
+    }
+    &.scrollup>#scroll{
+      opacity:0;
+    }
+
+    h1{
+      transition:opacity .3s;
+    }
+    &.scrollup>h1{
+      opacity:0;
     }
   }
 
