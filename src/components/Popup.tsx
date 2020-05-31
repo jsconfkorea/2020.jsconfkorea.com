@@ -20,7 +20,7 @@ const Popup = (props: Props) => {
     <div id="popup" css={style} className={props.active ? 'active' : ''}>
       <div className="inner">
         <form id="popup-form">
-          <p className="popup-message">Please enter your e-mail address</p>
+          <p id="popup-message">Please enter your e-mail address</p>
           <input id="email-input" type="email" placeholder="email address"></input>
           <div id="popup-notice" className="">Incorrect format</div>
           <button id="popup-submit" type="submit">Submit</button>
@@ -36,7 +36,7 @@ const style = css`
   bottom:0;
   left:0;
   right:0;
-  background:#eeeeff88;
+  background:#ffffff33;
   z-index:10;
   opacity:0;
   visibility: hidden;
@@ -51,12 +51,10 @@ const style = css`
     &>.inner{
       #popup-form{
         transform:translateY(0) scaleX(1);
-        box-shadow: 9px 12px 0 #ff7235;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
       }
     }
   }
-
-
 
   &>.inner{
       position: absolute;;
@@ -70,7 +68,7 @@ const style = css`
         padding:70px 100px;
         max-width:500px;
         box-sizing:border-box;
-        background-color:#fff;
+        background-color: #ff7235;
         border:solid 5px #ff7235;
         color:white;
         font-size:0;
@@ -78,18 +76,18 @@ const style = css`
         z-index: 1;
 
         transform:translateY(10px);
-        box-shadow: 0px 0px 0 #ff7235;
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
 
         input{
             width:100%;
             display:block;
-            background:#ff7235;
-            border:solid #ff7235 5px;
+            background:rgba(0,0,0,0.2);
+            border:solid rgba(0,0,0,0.2) 1px;
             color:#fff;
             outline:none;
             font-size:20px;
             line-height:30px;
-            padding:0 10px;
+            padding:5px 10px;
             border-radius:3px;
             margin-top:20px;
             box-sizing: border-box;;
@@ -107,8 +105,13 @@ const style = css`
         input::placeholder {
           color: #ffffff99;
         }
+        #popup-message{
+          color:#fff;
+          font-size:20px;
+          line-height:1.5em;
+        }
         #popup-notice{
-          color:#ff7235;
+          color:#fff;
           font-size:15px;
           line-height:1.5em;
           padding:5px 0;
@@ -128,8 +131,9 @@ const style = css`
 
         button{
           display:block;
-          border:solid 3px #ff7235;
-          color:#ff7235;
+          border:solid 1px rgba(0,0,0,0.1);
+          color:#fff;
+          background:#ff7235;
           width:100%;
 
           margin-top:15px;
@@ -137,11 +141,10 @@ const style = css`
           outline:none;
           border-radius:3px;
           font-size:20px;
-          font-weight:900;
 
           cursor:pointer;
           transform:translate(0px,-6px);
-          box-shadow:0px 6px 0 #ff7235;
+          box-shadow:0px 6px 0 rgba(0,0,0,0.3);
           transition:transform .2s, box-shadow .2s;
         }
         button:hover{

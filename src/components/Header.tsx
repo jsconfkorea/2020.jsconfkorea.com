@@ -61,8 +61,8 @@ const style = css`
   left: 0;
   right: 0;
 
-  border-bottom: solid 1px #fff;
-  background: #555;
+  border-bottom: solid 1px #333;
+  background: #ddd;
   overflow: hidden;
   z-index: 99;
 
@@ -93,15 +93,14 @@ const style = css`
 
   #btn-lang {
     font-size: 0.3rem;
-    color: #fff;
+    color: #333;
     position: absolute;
     right: 0.28rem;
     top: 0.35rem;
 
     & > a {
       margin: 0 0.1rem;
-      color: #fff;
-      font-weight: 900;
+      color: #333;
     }
   }
 
@@ -119,7 +118,7 @@ const style = css`
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #fff;
+      background-color: #333;
       top: 0.1rem;
       transition: transform 0.3s;
 
@@ -163,13 +162,11 @@ const style = css`
 
       &.menu-main {
         font-size: 0.5rem;
-        font-weight: 900;
         line-height: 1.5em;
       }
 
       &.menu-docs {
         font-size: 0.25rem;
-        font-weight: 900;
         line-height: 1.5em;
         margin-top: 20px;
       }
@@ -179,12 +176,12 @@ const style = css`
         text-decoration: none;
         transition: all 0.4s;
         padding:0 10px;
-        background:#555;
+        background:#ddd;
         border:solid 1px transparent;
 
         &:link,
         &:visited {
-          color: #fff;
+          color: #333;
         }
 
         &:hover {

@@ -5,6 +5,7 @@ import { useI18n } from '../hooks/useI18n'
 import Header from '../components/Header'
 import Popup from '../components/Popup'
 import Graphic from '../components/Graphic'
+import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Head from 'next/head'
 
@@ -28,13 +29,8 @@ const Index = ({ }: Props) => {
       <Header></Header>
       <div css={style}>
         <section id="intro">
-          {/* <canvas id="three"></canvas> */}
           <Graphic></Graphic>
-          <h1>
-            <p>JSCONF</p>
-            <p>KOREA 2020</p>
-            <p>HOME EDITION</p>
-          </h1>
+          <IntroTitle></IntroTitle>
           <div id="scroll"><img src="/images/arrow-scroll.svg"></img><div>scroll</div></div>
         </section>
         <section id="main-buttons">
@@ -100,7 +96,7 @@ const style = css`
       bottom: 0.3rem;
       right: 0.3rem;
 
-      color: #fff;
+      color: #333;
       font-size: 1rem;
       letter-spacing: -0.05em;
       line-height: 1em;
@@ -117,12 +113,11 @@ const style = css`
       position: absolute;
       bottom: 0.3rem;
       left: 0.3rem;
-      color:white;
+      color:#333;
 
 
       div{
         font-size:0.15rem;
-        font-weight:bold;
       }
 
       img{
@@ -155,7 +150,7 @@ const style = css`
           color: #fff;
           font-size: 0.5rem;
           line-height: 1rem;
-          font-weight: 900;
+          font-weight:400;
         }
 
         button, a{
