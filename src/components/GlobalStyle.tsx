@@ -62,12 +62,12 @@ const style = css`
     max-width:800px;
     color:#fff;
 
-    h2:first-child{
+    h1:first-child{
       margin-top:100px;
       margin-bottom:50px;
       font-size:35px;
     }
-    h2{
+    h1{
       margin-top:80px;
       margin-bottom:25px;
       font-size:25px;

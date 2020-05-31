@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
+import { useState } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import Header from '../components/Header'
+import Popup from '../components/Popup'
 import CodeViewer from '../components/CodeViewer'
 import Link from '../components/Link'
 import Head from 'next/head'
@@ -12,6 +14,11 @@ type Props = {}
 
 const Index = ({ }: Props) => {
   const { t, activeLanguage } = useI18n()
+
+  const [popupActive, setActive] = useState(false)
+  const popupActivate = () => {
+    setActive((popupActive) => !popupActive)
+  }
 
   return (
     <>
@@ -33,9 +40,17 @@ const Index = ({ }: Props) => {
         <section id="main-buttons">
           <div>
             <div id="btn-lookback">
-              <Link href="/" className="btn-default block">
-                {t('look_back_2019')}
-              </Link>
+              <div className="btn-default block">
+                <span>{t('look_back_2019')}</span>
+                <div className="inner">
+                  <Link href="/" className="btn-default block">
+                    {t('website')}
+                  </Link>
+                  <Link href="/" className="btn-default block">
+                    {t('video')}
+                  </Link>
+                </div>
+              </div>
             </div>
             <div id="btn-cfp">
               <Link href="/call-for-proposals" className="btn-default block">
@@ -50,13 +65,14 @@ const Index = ({ }: Props) => {
               </Link>
             </div>
             <div id="btn-newsletter">
-              <Link href="/" className="btn-default block">
+              <button className="btn-default block" onClick={popupActivate}>
                 {t('news_letter')}
-              </Link>
+              </button>
             </div>
           </div>
         </section>
       </div>
+      <Popup active={popupActive}></Popup>
       <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
       <script defer src="/threejs/typo.js"></script>
@@ -103,8 +119,19 @@ const style = css`
       left: 30px;
       color:white;
 
+
       div{
         font-weight:bold;
+      }
+
+      img{
+        display:relative;
+        animation:loop .7s infinite alternate forwards;
+      }
+
+      @keyframes loop{
+        form{transform:translateY(0)}
+        to{transform:translateY(-10px)}
       }
     }
   }
@@ -118,48 +145,78 @@ const style = css`
         height: 100px;
         flex: 1;
 
-        a {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 100px;
+        button, a, span{
+          display:inline-block;
+          width:100%;
           text-align: center;
           color: #fff;
           font-size: 50px;
           line-height: 100px;
           font-weight: 900;
-          transition: all 0.3s;
+        }
 
+        button, a{
+          transform:translateY(0);
+          transition: all .3s;
+          &:hover{
+            transform:translateY(-10px);
+            box-shadow:0 10px 0 rgba(0,0,0,0.3);
+          }
+        }
+
+        & > * {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transition: all 0.3s;
           cursor: pointer;
 
-          &:hover {
-            height: 130px;
-            line-height: 130px;
+          &>.inner{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s;
+            transform:translateY(100%);
+
+          }
+
+          &:hover>.inner{
+            transform:translateY(0);
           }
         }
       }
 
+
+
       #btn-lookback {
         flex: 2;
-        & > a {
+        background: #2d68ff;
+        a{
           background: #2d68ff;
+          width:50%;
         }
       }
       #btn-cfp {
-        & > a {
+        background: #00e168;
+        a{
           background: #00e168;
         }
       }
       #btn-sponsor {
         flex: 2;
-        & > a {
+        background: #efc325;
+        a{
           background: #efc325;
         }
       }
       #btn-newsletter {
         flex: 3;
-        & > a {
+        background: #ff7235;
+        button{
           background: #ff7235;
         }
       }
@@ -188,14 +245,10 @@ const style = css`
       & > div {
         & > div {
           height: 50px;
-          a {
+          a,button,span {
             height: 50px;
             font-size: 20px;
             line-height: 50px;
-            &:hover {
-              height: 70px;
-              line-height: 70px;
-            }
           }
         }
       }

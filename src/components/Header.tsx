@@ -27,7 +27,7 @@ const Header = ({ }: Props) => {
       <nav>
         <ul className="menu-main">
           <li>
-            <Link href="/">HOME</Link>
+            <Link href="/">{t('home')}</Link>
           </li>
           <li>
             <Link href="/about">{t('about')}</Link>
