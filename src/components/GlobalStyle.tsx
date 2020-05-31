@@ -67,7 +67,7 @@ const style = css`
     padding:30px 30px;
     color:#333;
     border:solid 1px rgba(0,0,0,0.1);
-    background-color:rgba(0,0,0,0.05);
+    background-color:rgba(255,255,255,0.05);
     box-sizing:border-box;
 
     h1{
@@ -119,7 +119,7 @@ const style = css`
     blockquote {
       margin:0;
       padding:10px 20px;
-      background-color:rgba(0,0,0,0.1);
+      background-color:rgba(0,0,0,0.05);
       border:solid 1px rgba(0,0,0,0.1);
     }
   }
