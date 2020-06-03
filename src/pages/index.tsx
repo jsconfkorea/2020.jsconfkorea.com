@@ -15,7 +15,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({ }: Props) => {
+const Index = ({}: Props) => {
   const { t, activeLanguage } = useI18n()
   const { y } = useScroll()
 
@@ -31,12 +31,15 @@ const Index = ({ }: Props) => {
       </Head>
       <Header></Header>
       <div css={style}>
-        <section id="intro" className={y > 60 ? "scrollup" : ""}>
+        <section id="intro" className={y > 60 ? 'scrollup' : ''}>
           {/* <Graphic></Graphic> */}
           <iframe src="https://codepen.io/turtlefingers/live/MWaNLqJ"></iframe>
           <CodeViewer></CodeViewer>
           <IntroTitle></IntroTitle>
-          <div id="scroll"><img src="/images/arrow-scroll.svg"></img><div>scroll</div></div>
+          <div id="scroll">
+            <img src="/images/arrow-scroll.svg"></img>
+            <div>scroll</div>
+          </div>
         </section>
         <section id="main-buttons">
           <div>
@@ -44,12 +47,16 @@ const Index = ({ }: Props) => {
               <div className="btn-default block">
                 <span>{t('look_back_2019')}</span>
                 <div className="inner">
-                  <Link href="/" className="btn-default block">
+                  <a href="https://2019.jsconfkorea.com/" className="btn-default block" target="_blank">
                     {t('website')}
-                  </Link>
-                  <Link href="/" className="btn-default block">
+                  </a>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PL8vHvcFj-bKrg-fp-4bnawVf5y30mi5xd"
+                    className="btn-default block"
+                    target="_blank"
+                  >
                     {t('video')}
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -74,9 +81,9 @@ const Index = ({ }: Props) => {
         </section>
       </div>
       <Popup active={popupActive}></Popup>
-      <script defer src="/threejs/modules.js"></script>
+      {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
-      <script defer src="/threejs/typo.js"></script>
+      <script defer src="/threejs/typo.js"></script> */}
     </>
   )
 }
@@ -88,7 +95,7 @@ const style = css`
     position: relative;
     height: 100%;
 
-    iframe{
+    iframe {
       position: fixed;
       bottom: 0;
       left: 0;
@@ -122,37 +129,41 @@ const style = css`
       }
     }
 
-    #scroll{
+    #scroll {
       position: fixed;
       bottom: 0.3rem;
       left: 0.3rem;
-      color:#333;
-      transition:opacity .3s;
+      color: #333;
+      transition: opacity 0.3s;
 
-      div{
-        font-size:0.15rem;
+      div {
+        font-size: 0.15rem;
       }
 
-      img{
-        display:relative;
-        width:0.3rem;
-        animation:loop .7s infinite alternate forwards;
+      img {
+        display: relative;
+        width: 0.3rem;
+        animation: loop 0.7s infinite alternate forwards;
       }
 
-      @keyframes loop{
-        form{transform:translateY(0)}
-        to{transform:translateY(-10px)}
+      @keyframes loop {
+        form {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-10px);
+        }
       }
     }
-    &.scrollup>#scroll{
-      opacity:0;
+    &.scrollup > #scroll {
+      opacity: 0;
     }
 
-    h1{
-      transition:opacity .3s;
+    h1 {
+      transition: opacity 0.3s;
     }
-    &.scrollup>h1{
-      opacity:0;
+    &.scrollup > h1 {
+      opacity: 0;
     }
   }
 
@@ -164,24 +175,27 @@ const style = css`
         position: relative;
         height: 1rem;
         flex: 1;
-        font-size:0;
+        font-size: 0;
 
-        button, a, span{
-          display:inline-block;
-          width:100%;
+        button,
+        a,
+        span {
+          display: inline-block;
+          width: 100%;
           text-align: center;
           color: #fff;
           font-size: 0.5rem;
           line-height: 1rem;
-          font-weight:400;
+          font-weight: 400;
         }
 
-        button, a{
-          transform:translateY(0);
-          transition: all .3s;
-          &:hover{
-            transform:translateY(-10px);
-            box-shadow:0 10px 0 rgba(0,0,0,0.3);
+        button,
+        a {
+          transform: translateY(0);
+          transition: all 0.3s;
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
           }
         }
 
@@ -194,57 +208,54 @@ const style = css`
           transition: all 0.3s;
           cursor: pointer;
 
-          &>.inner{
+          & > .inner {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 100%;
             transition: all 0.3s;
-            transform:translateY(100%);
-
+            transform: translateY(100%);
           }
 
-          &:hover>.inner{
-            transform:translateY(0);
+          &:hover > .inner {
+            transform: translateY(0);
           }
         }
       }
-
-
 
       #btn-lookback {
         flex: 2;
         background: #2d68ff;
-        a{
+        a {
           background: #2d68ff;
-          width:50%;
+          width: 50%;
         }
       }
       #btn-cfp {
         background: #00e168;
-        a{
+        a {
           background: #00e168;
         }
       }
       #btn-sponsor {
         flex: 2;
         background: #efc325;
-        a{
+        a {
           background: #efc325;
         }
       }
       #btn-newsletter {
         flex: 3;
         background: #ff7235;
-        button{
+        button {
           background: #ff7235;
         }
       }
     }
   }
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     #intro {
       h1 {
         bottom: 0.2rem;
@@ -255,8 +266,9 @@ const style = css`
     #main-buttons {
       & > div {
         & > div {
-
-          button, a, span{
+          button,
+          a,
+          span {
             font-size: 0.35rem;
             line-height: 1rem;
           }

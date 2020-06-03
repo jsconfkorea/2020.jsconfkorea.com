@@ -1,6 +1,4 @@
 export const ko = {
-  hello_world: '안녕 세상!',
-
   // index
   look_back_2019: '2019년 행사보기',
   website: '웹사이트',

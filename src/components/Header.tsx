@@ -7,7 +7,7 @@ import { useI18n } from '../hooks/useI18n'
 
 type Props = {}
 
-const Header = ({ }: Props) => {
+const Header = ({}: Props) => {
   const { t } = useI18n()
   const [on, setOn] = useState(false)
   const func = () => {
@@ -29,7 +29,7 @@ const Header = ({ }: Props) => {
       <nav>
         <ul className="menu-main">
           <li>
-            <Link href="/index">{t('home')}</Link>
+            <Link href="/">{t('home')}</Link>
           </li>
           <li>
             <Link href="/about">{t('about')}</Link>
@@ -54,9 +54,15 @@ const Header = ({ }: Props) => {
         </ul>
       </nav>
       <div id="btn-social">
-        <Link href="/"><img src="/images/icon-facebook.svg"></img></Link>
-        <Link href="/"><img src="/images/icon-twitter.svg"></img></Link>
-        <Link href="/"><img src="/images/icon-instagram.svg"></img></Link>
+        <Link href="/">
+          <img src="/images/icon-facebook.svg"></img>
+        </Link>
+        <Link href="/">
+          <img src="/images/icon-twitter.svg"></img>
+        </Link>
+        <Link href="/">
+          <img src="/images/icon-instagram.svg"></img>
+        </Link>
       </div>
     </header>
   )
@@ -97,50 +103,49 @@ const style = css`
       }
     }
     #btn-social {
-      opacity:1;
-      visibility:visible;
+      opacity: 1;
+      visibility: visible;
     }
   }
 
-  #btn-right{
+  #btn-right {
     position: absolute;
     right: 0.28rem;
     top: 0.35rem;
-    white-space:nowrap;
+    white-space: nowrap;
 
-    &>*{
-      vertical-align:top;
+    & > * {
+      vertical-align: top;
     }
   }
   #btn-lang {
-    display:inline-block;
+    display: inline-block;
     font-size: 0.3rem;
     color: #333;
     & > a {
       margin: 0 0.1rem;
       color: #333;
     }
-    
   }
   #btn-social {
-    position:absolute;
-    opacity:0;
-    visibility:hidden;
-    right:0.3rem;
-    bottom:0.3rem;
-    height:0.4rem;
-    font-size:0;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    right: 0.3rem;
+    bottom: 0.3rem;
+    height: 0.4rem;
+    font-size: 0;
 
-    &>a{
-      display:inline-block;
-      height:100%;
-      margin-left:0.2rem;
-      transition:opacity .3s;
-      img{
-        height:100%;
+    & > a {
+      display: inline-block;
+      height: 100%;
+      margin-left: 0.2rem;
+      transition: opacity 0.3s;
+      img {
+        height: 100%;
       }
-      &:hover{
-        opacity:.5;
+      &:hover {
+        opacity: 0.5;
       }
     }
   }
@@ -149,7 +154,7 @@ const style = css`
     width: 0.5rem;
     height: 0.22rem;
     left: 0.36rem;
-    top: 0.40rem;
+    top: 0.4rem;
 
     position: absolute;
 
@@ -213,12 +218,12 @@ const style = css`
       }
 
       a {
-        display:inline-block;
+        display: inline-block;
         text-decoration: none;
         transition: all 0.4s;
-        padding:0 10px;
-        background:#ddd;
-        border:solid 1px transparent;
+        padding: 0 10px;
+        background: #ddd;
+        border: solid 1px transparent;
 
         &:link,
         &:visited {
@@ -226,9 +231,9 @@ const style = css`
         }
 
         &:hover {
-          border:solid 1px rgba(0,0,0,0.3);
-          box-shadow:0 10px 0 rgba(0,0,0,0.3);
-          transform:translateY(-0.1rem);
+          border: solid 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
+          transform: translateY(-0.1rem);
         }
       }
     }
@@ -240,8 +245,7 @@ const style = css`
     transition: opacity 0.5s, visibility 0s;
   }
 
-  @media screen and (max-width:768px){
-
+  @media screen and (max-width: 768px) {
   }
 `
 

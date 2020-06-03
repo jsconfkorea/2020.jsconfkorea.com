@@ -22,6 +22,10 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/thumb.png" />
         <link rel="shortcut icon" href="/icon.png" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Source+Code+Pro&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <I18nProvider langDict={langDict} lang={lang}>
         <GlobalStyle />

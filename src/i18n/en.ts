@@ -1,6 +1,4 @@
 export const en = {
-  hello_world: 'Hello, World!',
-
   // index
   look_back_2019: 'LOOK BACK 2019',
   website: 'WEBSITE',
