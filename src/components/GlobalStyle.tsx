@@ -10,21 +10,25 @@ const style = css`
 
   * {
     box-sizing: border-box;
+    transform:translateZ(0);
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100,300,400;700;900&family=Source+Code+Pro&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100,300,400;700;900&family=Source+Code+Pro&display=swap');
+
   html,
   body,
   #__next {
     height: 100%;
     width: 100%;
     -ms-overflow-style: none;
+    transform:none;
+    
   }
   body::-webkit-scrollbar,
   #__next::-webkit-scrollbar {
     display: none;
   }
-
+  
   html {
     font-size: 100px;
   }

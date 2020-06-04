@@ -29,12 +29,11 @@ const Index = ({}: Props) => {
       <Head>
         <script src="/threejs/three.min.js"></script>
       </Head>
-      <Header></Header>
       <div css={style}>
         <section id="intro" className={y > 60 ? 'scrollup' : ''}>
           {/* <Graphic></Graphic> */}
-          <iframe src="https://codepen.io/turtlefingers/live/MWaNLqJ"></iframe>
-          <CodeViewer></CodeViewer>
+          {/* <iframe src="https://codepen.io/turtlefingers/live/MWaNLqJ"></iframe> */}
+          {/* <CodeViewer></CodeViewer> */}
           <IntroTitle></IntroTitle>
           <div id="scroll">
             <img src="/images/arrow-scroll.svg"></img>
@@ -44,7 +43,7 @@ const Index = ({}: Props) => {
         <section id="main-buttons">
           <div>
             <div id="btn-lookback">
-              <div className="btn-default block">
+              <div className="btn-default">
                 <span>{t('look_back_2019')}</span>
                 <div className="inner">
                   <a href="https://2019.jsconfkorea.com/" className="btn-default block" target="_blank">
@@ -61,25 +60,26 @@ const Index = ({}: Props) => {
               </div>
             </div>
             <div id="btn-cfp">
-              <Link href="/call-for-proposals" className="btn-default block">
+              <Link href="/call-for-proposals" className="btn-default">
                 {t('cfp')}
               </Link>
             </div>
           </div>
           <div>
             <div id="btn-sponsor">
-              <Link href="/" className="btn-default block">
+              <Link href="/" className="btn-default">
                 {t('sponsor')}
               </Link>
             </div>
             <div id="btn-newsletter">
-              <button className="btn-default block" onClick={popupActivate}>
+              <button className="btn-default" onClick={popupActivate}>
                 {t('news_letter')}
               </button>
             </div>
           </div>
         </section>
       </div>
+      <Header></Header>
       <Popup active={popupActive}></Popup>
       {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
@@ -148,10 +148,10 @@ const style = css`
 
       @keyframes loop {
         form {
-          transform: translateY(0);
+          transform: translateY(0) translateZ(0);
         }
         to {
-          transform: translateY(-10px);
+          transform: translateY(-10px) translateZ(0);
         }
       }
     }
@@ -191,10 +191,10 @@ const style = css`
 
         button,
         a {
-          transform: translateY(0);
+          transform: translateY(0) translateZ(0);
           transition: all 0.3s;
           &:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px) translateZ(0);
             box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
           }
         }
@@ -215,11 +215,11 @@ const style = css`
             width: 100%;
             height: 100%;
             transition: all 0.3s;
-            transform: translateY(100%);
+            transform: translateY(100%) translateZ(0);
           }
 
           &:hover > .inner {
-            transform: translateY(0);
+            transform: translateY(0) translateZ(0);
           }
         }
       }
@@ -227,15 +227,18 @@ const style = css`
       #btn-lookback {
         flex: 2;
         background: #2d68ff;
+        height: 1rem;
         a {
           background: #2d68ff;
           width: 50%;
+          height: 1rem;
         }
       }
       #btn-cfp {
         background: #00e168;
         a {
           background: #00e168;
+          height: 1rem;
         }
       }
       #btn-sponsor {
@@ -243,6 +246,7 @@ const style = css`
         background: #efc325;
         a {
           background: #efc325;
+          height: 1rem;
         }
       }
       #btn-newsletter {
@@ -250,6 +254,7 @@ const style = css`
         background: #ff7235;
         button {
           background: #ff7235;
+          height: 1rem;
         }
       }
     }

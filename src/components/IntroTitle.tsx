@@ -30,7 +30,7 @@ const IntroTitle = () => {
 }
 
 const style = css`
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:ital,wght@1,100&display=swap');
 font-family: 'Roboto Mono', monospace;
 span{
   display:inline-block;

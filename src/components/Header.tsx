@@ -15,7 +15,7 @@ const Header = ({}: Props) => {
   }
 
   return (
-    <header css={style} className={on ? 'block active' : 'block'}>
+    <header css={style} className={on ? 'active' : ''}>
       <button id="btn-menu" className="btn-default" onClick={func}>
         <span></span>
         <span></span>
@@ -54,15 +54,15 @@ const Header = ({}: Props) => {
         </ul>
       </nav>
       <div id="btn-social">
-        <Link href="/">
+        <a href="https://www.facebook.com/jsconfkorea" target="_blank">
           <img src="/images/icon-facebook.svg"></img>
-        </Link>
-        <Link href="/">
+        </a>
+        <a href="https://twitter.com/jsconfkorea" target="_blank">
           <img src="/images/icon-twitter.svg"></img>
-        </Link>
-        <Link href="/">
+        </a>
+        <a href="https://www.instagram.com/jsconf.korea/" target="_blank">
           <img src="/images/icon-instagram.svg"></img>
-        </Link>
+        </a>
       </div>
     </header>
   )
@@ -78,27 +78,28 @@ const style = css`
   background: #ddd;
   overflow: hidden;
   z-index: 99;
+  height: 1rem;
 
   &.active {
     height: 100%;
 
     #btn-menu {
       & > span:nth-of-type(1) {
-        transform: translateY(0px) rotate(45deg);
+        transform: translateY(0px) rotate(45deg) translateZ(0);
       }
       & > span:nth-of-type(2) {
         opacity: 0;
       }
       & > span:nth-of-type(3) {
-        transform: translateY(0px) rotate(-45deg);
+        transform: translateY(0px) rotate(-45deg) translateZ(0);
       }
 
       &:hover {
         & > span:nth-of-type(1) {
-          transform: translateY(0px) rotate(40deg);
+          transform: translateY(0px) rotate(40deg) translateZ(0);
         }
         & > span:nth-of-type(3) {
-          transform: translateY(0px) rotate(-40deg);
+          transform: translateY(0px) rotate(-40deg) translateZ(0);
         }
       }
     }
@@ -169,22 +170,22 @@ const style = css`
       transition: transform 0.3s;
 
       &:nth-of-type(1) {
-        transform: translateY(-0.1rem);
+        transform: translateY(-0.1rem) translateZ(0);
       }
       &:nth-of-type(2) {
         transition: opacity 0.3s;
       }
       &:nth-of-type(3) {
-        transform: translateY(0.1rem);
+        transform: translateY(0.1rem) translateZ(0);
       }
     }
 
     &:hover {
       & > span:nth-of-type(1) {
-        transform: translateY(-0.15rem);
+        transform: translateY(-0.15rem) translateZ(0);
       }
       & > span:nth-of-type(3) {
-        transform: translateY(0.15rem);
+        transform: translateY(0.15rem) translateZ(0);
       }
     }
   }
@@ -195,7 +196,7 @@ const style = css`
     position: absolute;
     left: 20%;
     top: 45%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateZ(0);
     visibility: hidden;
     opacity: 0;
 
@@ -233,7 +234,7 @@ const style = css`
         &:hover {
           border: solid 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
-          transform: translateY(-0.1rem);
+          transform: translateY(-0.1rem) translateZ(0);
         }
       }
     }

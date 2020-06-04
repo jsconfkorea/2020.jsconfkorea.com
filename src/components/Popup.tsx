@@ -50,7 +50,7 @@ const style = css`
 
     &>.inner{
       #popup-form{
-        transform:translateY(0) scaleX(1);
+        transform:translateY(0) scaleX(1) translateZ(0);
         box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
       }
     }
@@ -60,7 +60,7 @@ const style = css`
       position: absolute;;
       top:50%;
       left:50%;
-      transform:translate(-50%,-50%);
+      transform:translate3d(-50%,-50%,0);
 
       #popup-form{
         background:white;
@@ -75,7 +75,7 @@ const style = css`
         transition:all .3s;
         z-index: 1;
 
-        transform:translateY(10px);
+        transform:translateY(10px) translateZ(0);
         box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
 
         input{
@@ -143,16 +143,16 @@ const style = css`
           font-size:20px;
 
           cursor:pointer;
-          transform:translate(0px,-6px);
+          transform:translate3d(0px,-6px,0);
           box-shadow:0px 6px 0 rgba(0,0,0,0.3);
           transition:transform .2s, box-shadow .2s;
         }
         button:hover{
-          transform:translate(0px,-4px);
+          transform:translate3d(0px,-4px,0);
           box-shadow:0px 4px 0 #ff7235;
         }
         button:active{
-          transform:translate(0px,-2px);
+          transform:translate3d(0px,-2px,0);
           box-shadow:0px 2px 0 #ff7235;
         }
       }
@@ -163,13 +163,13 @@ const style = css`
 
 
   @media screen and (max-width:768px){
-    #popup-form{
+    &>.inner #popup-form{
       width:calc(100vw - 25px);
       padding:30px 30px;
       border:solid 3px #ff7235;
       box-shadow: 0px 0px 0 #ff7235;
     }
-    &.active #popup-form{
+    &.active>.inner #popup-form{
       box-shadow: 6px 8px 0 #ff7235;
     }
   }
