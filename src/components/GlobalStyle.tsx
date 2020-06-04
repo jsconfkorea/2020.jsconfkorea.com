@@ -21,7 +21,7 @@ const style = css`
     display: none;
   }
 
-  *{
+  #__next *{
     transform:translateZ(0);
   }
 
