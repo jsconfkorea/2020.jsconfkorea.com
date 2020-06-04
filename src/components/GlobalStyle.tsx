@@ -8,7 +8,7 @@ export default GlobalStyle
 const style = css`
   ${emotionNormalize}
 
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100,300,400;700;900&family=Source+Code+Pro&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100,300,400;700;900&family=Source+Code+Pro&display=swap');
   html,
   body,
   #__next {
