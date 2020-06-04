@@ -33,7 +33,7 @@ const Index = ({ }: Props) => {
       <div css={style}>
         <section id="intro" className={y > 60 ? "scrollup" : ""}>
           {/* <Graphic></Graphic> */}
-          <iframe src="https://codepen.io/turtlefingers/live/MWaNLqJ"></iframe>
+          {/* <iframe src="https://codepen.io/turtlefingers/live/MWaNLqJ"></iframe> */}
           <CodeViewer></CodeViewer>
           <IntroTitle></IntroTitle>
           <div id="scroll"><img src="/images/arrow-scroll.svg"></img><div>scroll</div></div>
