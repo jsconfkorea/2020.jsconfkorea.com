@@ -78,21 +78,21 @@ const style = css`
 
     #btn-menu {
       & > span:nth-of-type(1) {
-        transform: translateY(0px) rotate(45deg);
+        transform: translateY(0px) rotate(45deg) translateZ(0);
       }
       & > span:nth-of-type(2) {
         opacity: 0;
       }
       & > span:nth-of-type(3) {
-        transform: translateY(0px) rotate(-45deg);
+        transform: translateY(0px) rotate(-45deg) translateZ(0);
       }
 
       &:hover {
         & > span:nth-of-type(1) {
-          transform: translateY(0px) rotate(40deg);
+          transform: translateY(0px) rotate(40deg) translateZ(0);
         }
         & > span:nth-of-type(3) {
-          transform: translateY(0px) rotate(-40deg);
+          transform: translateY(0px) rotate(-40deg) translateZ(0);
         }
       }
     }
@@ -164,22 +164,22 @@ const style = css`
       transition: transform 0.3s;
 
       &:nth-of-type(1) {
-        transform: translateY(-0.1rem);
+        transform: translateY(-0.1rem) translateZ(0);
       }
       &:nth-of-type(2) {
         transition: opacity 0.3s;
       }
       &:nth-of-type(3) {
-        transform: translateY(0.1rem);
+        transform: translateY(0.1rem) translateZ(0);
       }
     }
 
     &:hover {
       & > span:nth-of-type(1) {
-        transform: translateY(-0.15rem);
+        transform: translateY(-0.15rem) translateZ(0);
       }
       & > span:nth-of-type(3) {
-        transform: translateY(0.15rem);
+        transform: translateY(0.15rem) translateZ(0);
       }
     }
   }
@@ -190,7 +190,7 @@ const style = css`
     position: absolute;
     left: 20%;
     top: 45%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateZ(0);
     visibility: hidden;
     opacity: 0;
 
@@ -228,7 +228,7 @@ const style = css`
         &:hover {
           border:solid 1px rgba(0,0,0,0.3);
           box-shadow:0 10px 0 rgba(0,0,0,0.3);
-          transform:translateY(-0.1rem);
+          transform:translateY(-0.1rem) translateZ(0);
         }
       }
     }
