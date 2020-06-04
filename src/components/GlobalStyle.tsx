@@ -15,9 +15,7 @@ const style = css`
     height: 100%;
     width: 100%;
     -ms-overflow-style: none;
-    *{
     transform:none;
-  }
   }
   body::-webkit-scrollbar,
   #__next::-webkit-scrollbar {
