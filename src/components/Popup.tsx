@@ -163,13 +163,13 @@ const style = css`
 
 
   @media screen and (max-width:768px){
-    #popup-form{
+    &>.inner #popup-form{
       width:calc(100vw - 25px);
       padding:30px 30px;
       border:solid 3px #ff7235;
       box-shadow: 0px 0px 0 #ff7235;
     }
-    &.active #popup-form{
+    &.active>.inner #popup-form{
       box-shadow: 6px 8px 0 #ff7235;
     }
   }
