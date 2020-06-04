@@ -3,6 +3,7 @@ import { jsx, css } from '@emotion/core'
 import { useState, useEffect } from 'react'
 import useInterval from '../hooks/useInterval'
 import Letter from './Letter'
+import shortid from 'shortid';
 
 const str = `
 JSCONF
@@ -11,20 +12,22 @@ HOME EDITION
 `
 
 const IntroTitle = () => {
-  let typo = [];
-  for (let i = 0; i < str.length; i++) {
-    let s = str[i];
-    let n = i;
-    typo.push((() => {
-      if (s == " ") return (<Letter letter="&nbsp;" num={n}></Letter>)
-      else if (s != "\n") return (<Letter letter={s} num={n}></Letter>)
-      else return (<br />)
-    })());
-  }
-
   return (
     <>
-      <h1 css={style}>{typo}</h1>
+      <h1 css={style}>
+        {
+          str.split("").map((s, i) => {
+            const key = shortid.generate();
+            if (s === " ") {
+              return (<Letter key={key} letter="&nbsp;" num={i}></Letter>)
+            } else if (s !== "\n") {
+              return (<Letter key={key} letter={s} num={i}></Letter>)
+            } else {
+              return (<br key={key}/>)
+            }
+          })
+        }
+      </h1>
     </>
   )
 }
