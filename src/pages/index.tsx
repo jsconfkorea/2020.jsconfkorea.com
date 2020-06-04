@@ -41,32 +41,32 @@ const Index = ({ }: Props) => {
         <section id="main-buttons">
           <div>
             <div id="btn-lookback">
-              <div className="btn-default block">
+              <div className="btn-default">
                 <span>{t('look_back_2019')}</span>
                 <div className="inner">
-                  <Link href="/" className="btn-default block">
+                  <Link href="/" className="btn-default">
                     {t('website')}
                   </Link>
-                  <Link href="/" className="btn-default block">
+                  <Link href="/" className="btn-default">
                     {t('video')}
                   </Link>
                 </div>
               </div>
             </div>
             <div id="btn-cfp">
-              <Link href="/call-for-proposals" className="btn-default block">
+              <Link href="/call-for-proposals" className="btn-default">
                 {t('cfp')}
               </Link>
             </div>
           </div>
           <div>
             <div id="btn-sponsor">
-              <Link href="/" className="btn-default block">
+              <Link href="/" className="btn-default">
                 {t('sponsor')}
               </Link>
             </div>
             <div id="btn-newsletter">
-              <button className="btn-default block" onClick={popupActivate}>
+              <button className="btn-default" onClick={popupActivate}>
                 {t('news_letter')}
               </button>
             </div>
@@ -216,15 +216,18 @@ const style = css`
       #btn-lookback {
         flex: 2;
         background: #2d68ff;
+        height: 1rem;
         a{
           background: #2d68ff;
           width:50%;
+          height: 1rem;
         }
       }
       #btn-cfp {
         background: #00e168;
         a{
           background: #00e168;
+          height: 1rem;
         }
       }
       #btn-sponsor {
@@ -232,6 +235,7 @@ const style = css`
         background: #efc325;
         a{
           background: #efc325;
+          height: 1rem;
         }
       }
       #btn-newsletter {
@@ -239,6 +243,7 @@ const style = css`
         background: #ff7235;
         button{
           background: #ff7235;
+          height: 1rem;
         }
       }
     }

@@ -15,7 +15,7 @@ const Header = ({ }: Props) => {
   }
 
   return (
-    <header css={style} className={on ? 'block active' : 'block'}>
+    <header css={style} className={on ? 'active' : ''}>
       <button id="btn-menu" className="btn-default" onClick={func}>
         <span></span>
         <span></span>
@@ -72,6 +72,7 @@ const style = css`
   background: #ddd;
   overflow: hidden;
   z-index: 99;
+  height: 1rem;
 
   &.active {
     height: 100%;
