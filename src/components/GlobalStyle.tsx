@@ -21,6 +21,10 @@ const style = css`
     display: none;
   }
 
+  *{
+    transform:translateZ(0);
+  }
+
   html{
     font-size:100px;
   }
