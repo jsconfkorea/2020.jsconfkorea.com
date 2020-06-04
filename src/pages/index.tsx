@@ -140,8 +140,8 @@ const style = css`
       }
 
       @keyframes loop{
-        form{transform:translateY(0)}
-        to{transform:translateY(-10px)}
+        form{transform:translateY(0) translateZ(0);}
+        to{transform:translateY(-10px) translateZ(0);}
       }
     }
     &.scrollup>#scroll{
@@ -177,10 +177,10 @@ const style = css`
         }
 
         button, a{
-          transform:translateY(0);
+          transform:translateY(0) translateZ(0);
           transition: all .3s;
           &:hover{
-            transform:translateY(-10px);
+            transform:translateY(-10px) translateZ(0);
             box-shadow:0 10px 0 rgba(0,0,0,0.3);
           }
         }
@@ -201,12 +201,12 @@ const style = css`
             width: 100%;
             height: 100%;
             transition: all 0.3s;
-            transform:translateY(100%);
+            transform:translateY(100%) translateZ(0);
 
           }
 
           &:hover>.inner{
-            transform:translateY(0);
+            transform:translateY(0) translateZ(0);
           }
         }
       }
