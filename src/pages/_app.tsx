@@ -23,7 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:image" content="/thumb.png" />
         <link rel="shortcut icon" href="/icon.png" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&family=Source+Code+Pro&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro&display=swap"
           rel="stylesheet"
         />
       </Head>

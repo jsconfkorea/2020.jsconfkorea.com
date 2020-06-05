@@ -10,10 +10,8 @@ const style = css`
 
   * {
     box-sizing: border-box;
-    transform:translateZ(0);
+    transform: translateZ(0);
   }
-
-  @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:wght@100,300,400;700;900&family=Source+Code+Pro&display=swap');
 
   html,
   body,
@@ -21,21 +19,20 @@ const style = css`
     height: 100%;
     width: 100%;
     -ms-overflow-style: none;
-    transform:none;
-    
+    transform: none;
   }
   body::-webkit-scrollbar,
   #__next::-webkit-scrollbar {
     display: none;
   }
-  
+
   html {
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 100px;
   }
   body {
     background-color: #ddd;
     /* background-color:#000; */
-    font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
   }
   #__next {
@@ -56,10 +53,6 @@ const style = css`
   *:focus {
     outline: none;
   }
-  .disabled {
-    opacity: 0.5;
-    pointer-events: none;
-  }
   a {
     text-decoration: none;
   }
@@ -68,119 +61,15 @@ const style = css`
     padding: 0;
   }
 
-  .doc {
-    margin: 20px auto 100px;
-    max-width: 820px;
-    padding: 30px 30px;
-    color: #333;
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.05);
-    box-sizing: border-box;
-
-    h1 {
-      margin-top: 80px;
-      margin-bottom: 25px;
-      font-size: 25px;
-
-      &:first-of-type {
-        margin-top: 0px;
-        margin-bottom: 50px;
-        font-size: 35px;
-        border-bottom: solid 1px #333;
-        padding-bottom: 5px;
-      }
-    }
-    h2 {
-      margin-top: 60px;
-      margin-bottom: 20px;
-      font-size: 20px;
-    }
-    h3 {
-      margin-top: 50px;
-      margin-bottom: 20px;
-      font-size: 18px;
-    }
-    p {
-      margin-top: 15px;
-      font-size: 15px;
-      line-height: 1.5em;
-    }
-    ul {
-      margin-top: 30px;
-      margin-bottom: 30px;
-    }
-    li {
-      margin-top: 10px;
-      font-size: 15px;
-      line-height: 1.5em;
-      border-radius: 3px;
-    }
-    ul li {
-      border: solid 1px #333;
-      padding: 10px 15px;
-    }
-    a {
-      color: #333;
-      border-bottom: solid 1px #333;
-    }
-    blockquote {
-      margin: 0;
-      padding: 10px 20px;
-      background-color: rgba(0, 0, 0, 0.05);
-      border: solid 1px rgba(0, 0, 0, 0.1);
-    }
-  }
-
   @media screen and (max-width: 1200px) {
     html {
       font-size: 80px;
-    }
-    .doc {
-      max-width: 738px;
     }
   }
 
   @media screen and (max-width: 768px) {
     html {
       font-size: 60px;
-    }
-    .doc {
-      margin: 8px 8px 20px;
-      padding: 15px;
-      h1 {
-        margin-top: 50px;
-        margin-bottom: 20px;
-        font-size: 20px;
-        line-height: 1.5em;
-
-        &:first-of-type {
-          font-size: 30px;
-        }
-      }
-      h2 {
-        margin-top: 40px;
-        margin-bottom: 15px;
-        font-size: 16px;
-      }
-      p {
-        margin-top: 15px;
-        font-size: 15px;
-        line-height: 1.5em;
-      }
-      ul {
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-      li {
-        margin-top: 10px;
-        font-size: 15px;
-        line-height: 1.5em;
-      }
-
-      ul li {
-        padding: 10px;
-        border-radius: 8px;
-      }
     }
   }
 `

@@ -17,9 +17,11 @@ const Header = ({}: Props) => {
   return (
     <header css={style} className={on ? 'active' : ''}>
       <button id="btn-menu" className="btn-default" onClick={func}>
-        <span></span>
-        <span></span>
-        <span></span>
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
       <div id="btn-right">
         <div id="btn-lang">
@@ -34,14 +36,20 @@ const Header = ({}: Props) => {
           <li>
             <Link href="/about">{t('about')}</Link>
           </li>
-          <li className="disabled">
-            <Link href="/schedule">{t('schedule')}</Link>
+          <li>
+            <Link href="/schedule" disabled>
+              {t('schedule')}
+            </Link>
           </li>
-          <li className="disabled">
-            <Link href="/speakers">{t('speakers')}</Link>
+          <li>
+            <Link href="/speakers" disabled>
+              {t('speakers')}
+            </Link>
           </li>
-          <li className="disabled">
-            <Link href="/sponsors">{t('sponsors')}</Link>
+          <li>
+            <Link href="/sponsors" disabled>
+              {t('sponsors')}
+            </Link>
           </li>
         </ul>
         <ul className="menu-docs">
@@ -84,25 +92,27 @@ const style = css`
     height: 100%;
 
     #btn-menu {
-      & > span:nth-of-type(1) {
-        transform: translateY(0px) rotate(45deg) translateZ(0);
-      }
-      & > span:nth-of-type(2) {
-        opacity: 0;
-      }
-      & > span:nth-of-type(3) {
-        transform: translateY(0px) rotate(-45deg) translateZ(0);
-      }
-
-      &:hover {
+      & > div {
         & > span:nth-of-type(1) {
-          transform: translateY(0px) rotate(40deg) translateZ(0);
+          transform: translateY(0px) rotate(45deg) translateZ(0);
+        }
+        & > span:nth-of-type(2) {
+          opacity: 0;
         }
         & > span:nth-of-type(3) {
+          transform: translateY(0px) rotate(-45deg) translateZ(0);
+        }
+      }
+      &:hover {
+        span:nth-of-type(1) {
+          transform: translateY(0px) rotate(40deg) translateZ(0);
+        }
+        span:nth-of-type(3) {
           transform: translateY(0px) rotate(-40deg) translateZ(0);
         }
       }
     }
+
     #btn-social {
       opacity: 1;
       visibility: visible;
@@ -152,39 +162,40 @@ const style = css`
   }
 
   #btn-menu {
-    width: 0.5rem;
-    height: 0.22rem;
-    left: 0.36rem;
-    top: 0.4rem;
-
-    position: absolute;
-
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
     padding: 0;
-    span {
-      display: block;
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background-color: #333;
-      top: 0.1rem;
-      transition: transform 0.3s;
+    position: absolute;
+    & > div {
+      width: 0.5rem;
+      height: 0.22rem;
+      margin: auto;
+      span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #333;
+        top: 0.1rem;
+        transition: transform 0.3s;
 
-      &:nth-of-type(1) {
-        transform: translateY(-0.1rem) translateZ(0);
-      }
-      &:nth-of-type(2) {
-        transition: opacity 0.3s;
-      }
-      &:nth-of-type(3) {
-        transform: translateY(0.1rem) translateZ(0);
+        &:nth-of-type(1) {
+          transform: translateY(-0.1rem) translateZ(0);
+        }
+        &:nth-of-type(2) {
+          transition: opacity 0.3s;
+        }
+        &:nth-of-type(3) {
+          transform: translateY(0.1rem) translateZ(0);
+        }
       }
     }
-
     &:hover {
-      & > span:nth-of-type(1) {
+      span:nth-of-type(1) {
         transform: translateY(-0.15rem) translateZ(0);
       }
-      & > span:nth-of-type(3) {
+      span:nth-of-type(3) {
         transform: translateY(0.15rem) translateZ(0);
       }
     }
@@ -210,6 +221,12 @@ const style = css`
       &.menu-main {
         font-size: 0.5rem;
         line-height: 1.5em;
+
+        .disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+          /* pointer-events: none; */
+        }
       }
 
       &.menu-docs {
@@ -231,7 +248,7 @@ const style = css`
           color: #333;
         }
 
-        &:hover {
+        &:not(.disabled):hover {
           border: solid 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
           transform: translateY(-0.1rem) translateZ(0);
