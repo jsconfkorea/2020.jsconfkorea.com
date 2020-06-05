@@ -11,6 +11,8 @@ const style = css`
   * {
     box-sizing: border-box;
     transform: translateZ(0);
+
+    -webkit-tap-highlight-color: transparent;
   }
 
   html,
