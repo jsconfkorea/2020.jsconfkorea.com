@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useState, useEffect } from 'react'
-import useInterval from '../hooks/useInterval'
 import Letter from './Letter'
 import shortid from 'shortid'
+import { memo } from 'react'
 
 const str = `
 JSCONF
@@ -11,7 +10,7 @@ KOREA 2020
 HOME EDITION
 `
 
-const IntroTitle = () => {
+const IntroTitle = memo(() => {
   return (
     <>
       <h1 css={style}>
@@ -28,7 +27,7 @@ const IntroTitle = () => {
       </h1>
     </>
   )
-}
+})
 
 const style = css`
   font-family: 'Roboto Mono', monospace;
