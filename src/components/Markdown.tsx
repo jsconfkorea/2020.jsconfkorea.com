@@ -25,7 +25,7 @@ const style = css`
   padding: 30px 30px;
   color: #333;
   border: solid 1px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
 
   h1 {
@@ -61,14 +61,14 @@ const style = css`
     margin-bottom: 30px;
   }
   li {
-    margin-top: 10px;
+    margin-top: 6px;
     font-size: 15px;
     line-height: 1.5em;
     border-radius: 3px;
   }
   ul li {
     border: solid 1px #333;
-    padding: 10px 15px;
+    padding: 6px 12px;
   }
   a {
     color: #333;
@@ -79,6 +79,32 @@ const style = css`
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.05);
     border: solid 1px rgba(0, 0, 0, 0.1);
+  }
+  button{
+    display:block;
+    border:solid 1px rgba(0,0,0,0.1);
+    color:#fff;
+    background:#555;
+    max-width:300px;
+
+    margin:20px auto 30px;
+    padding:10px 20px;
+    outline:none;
+    border-radius:3px;
+    font-size:20px;
+
+    cursor:pointer;
+    transform:translate3d(0px,-6px,0);
+    box-shadow:0px 6px 0 #111;
+    transition:transform .2s, box-shadow .2s;
+  }
+  button:hover{
+    transform:translate3d(0px,-4px,0);
+    box-shadow:0px 4px 0 #111;
+  }
+  button:active{
+    transform:translate3d(0px,-2px,0);
+    box-shadow:0px 2px 0 #111;
   }
 
   @media screen and (max-width: 1200px) {
