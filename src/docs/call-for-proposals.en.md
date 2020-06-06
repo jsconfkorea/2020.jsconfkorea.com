@@ -2,7 +2,7 @@
 
 # Introduction
 
-We at JSConf Korea believe that progress happens when everyone has a chance to share their perspective. If you've used JavaScript on an exciting project, or have ideas, stories, or even a song to share with us, please submit a proposal! As long as it fits our [Code of Conduct](/en/code-of-conduct), anything’s on the table. Even if you don’t have any experience in giving talks, [we’re here to help](https://jsconfkorea.com/en/call-for-proposals#support). You can pick a topic from the list below or come up with your own:
+We believe that progress happens when everyone has a chance to share their perspective. If you've used JavaScript on an exciting project, or have ideas, stories, or even a song to share with us, please submit a proposal! As long as it fits our [Code of Conduct](/en/code-of-conduct), anything’s on the table. Even if you don’t have any experience in giving talks, [we’re here to help](https://2020.jsconfkorea.com/en/call-for-proposals#support). You can pick a topic from the list below or come up with your own:
 
 ## Topics
 
@@ -29,13 +29,10 @@ We at JSConf Korea believe that progress happens when everyone has a chance to s
 
 ## Perks
 
-You will get a ticket to enjoy the conference. The tickets may sell out before the list of speakers is finalized, so if you want to make sure you can attend, please purchase a ticket first and we’ll reimburse you if you get selected.
+By becoming speaker, you get...
 
-For all speakers traveling from overseas, we will pay for your travel expenses up to [₩1,200,000](https://www.curvert.com/en/krw-usd/1200000) and arrange your hotel accommodations for 3 nights.
-
-For all speakers traveling from South Korea, we offer a modest amount of honorarium. If you're coming from outside the Seoul Capital Area, we will also pay for your travel and arrange 3 nights at a hotel.
-
-We will book all travel tickets unless you prefer to book your own---we will reimburse you for it.
+- 🎟 A free ticket to attend the next JSConf Korea
+- 🎁 A gift box curated for you by JSConf Korea
 
 ## Speaker Support
 
@@ -53,15 +50,13 @@ Again, whatever else you might need, we’re here to help. Get in touch with us 
 
 Prepare your talk to be less than **25 minutes long**. You will have 30 minutes for transition, preparation, and the talk.
 
-There is no Q&A time, but you are free to talk with other attendees off stage after your talk.
-
 ## Language
 
-All talks must be in either English or Korean. Live interpretation will be provided for both languages.
+All talks must be in either English or Korean. Your talk will also be live-captioned.
 
 # Slides and Video Recording
 
-All slides and video recordings of the talks will be shared on our website the [JSConf YouTube channel](https://www.youtube.com/channel/UCzoVCacndDCfGDf41P-z0iA) and [JSConf Korea YouTube channel](https://www.youtube.com/channel/UCkHwMMujxwX2s_nxXFsUcLQ). This is for the benefit of the greater JavaScript community and for those who couldn’t make it. We hope you agree, but if you don’t feel comfortable sharing your slides or getting the video published, let us know.
+All slides and video recordings of the talks will be shared on our website, [JSConf YouTube channel](https://www.youtube.com/channel/UCzoVCacndDCfGDf41P-z0iA) and [JSConf Korea YouTube channel](https://www.youtube.com/channel/UCkHwMMujxwX2s_nxXFsUcLQ). This is for the benefit of the greater JavaScript community and for those who couldn’t make it. We hope you agree, but if you don’t feel comfortable sharing your slides or getting the video published, let us know.
 
 # Selection Process and Criteria
 
@@ -76,7 +71,7 @@ In the first round, the committee evaluates completely anonymized proposals and 
 - Novelty and originality of the topic
 - Deliverable in given time
 
-The top proposals are then de-anonymized for the committee to finalize the list of speakers. The committee will take speaker details into account in order to ensure a diverse lineup of speakers and to consider travel expenses depending on our finances.
+The top proposals are then de-anonymized for the committee to finalize the list of speakers. In order to ensure a diverse lineup of speakers, the committee will take speaker details into account.
 
 # How to write a proposal
 
