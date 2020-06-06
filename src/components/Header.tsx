@@ -258,8 +258,6 @@ const style = css`
           color:#eee;
           transform: translateY(-0.1rem) translateZ(0);
         }
-
-
       }
 
       li:nth-child(4n+1) a:not(.disabled):hover,
