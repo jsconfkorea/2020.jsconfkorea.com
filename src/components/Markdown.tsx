@@ -145,11 +145,6 @@ const style = css`
       font-size: 15px;
       line-height: 1.5em;
     }
-
-    ul li {
-      padding: 10px;
-      border-radius: 8px;
-    }
   }
 `
 
