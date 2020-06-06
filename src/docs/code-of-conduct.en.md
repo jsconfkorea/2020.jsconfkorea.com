@@ -2,7 +2,7 @@
 
 # PURPOSE
 
-JSConf Korea is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion, hometown, educational background, seniority level, choice of technology, language, or [neurotype](https://en.wikiversity.org/wiki/The_Neurodiversity_Movement/Section_1:_The_Basics). We do not tolerate harassment of conference participants in any form. Sexual language and imagery are not appropriate for any conference venue, including talks. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.
+JSConf Korea is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion, hometown, educational background, seniority level, choice of technology, language, or [neurotype](https://en.wikiversity.org/wiki/The_Neurodiversity_Movement/Section_1:_The_Basics). We do not tolerate harassment of conference participants in any form. Sexual language and imagery are not appropriate for any conference space online or offline, including talks. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.
 
 # ANTI-HARASSMENT
 
