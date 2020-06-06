@@ -16,6 +16,6 @@ This year, we come to you as *JSConf Korea 2020 Home Edition*. We're taking thin
 
 JSConf Korea strives to be an accessible and inclusive conference, because everyone deserves a good time here.
 
-This year's conferencec will be all online. All talks will be live captioned in both Korean and English.
+This year's conferencec will be all online. We plan on providing live captions for all talks in both Korean and English.
 
 If you have any accessibility requests, please get in touch at [contact@jsconfkorea.com](mailto:contact@jsconfkorea.com) and we'll make a good faith effort to accommodate your needs.
