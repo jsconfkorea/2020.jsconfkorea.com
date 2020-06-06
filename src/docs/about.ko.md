@@ -20,6 +20,6 @@ JSConf Korea 2020 Home Edition은 온라인 컨퍼런스로 진행됩니다. 모
 
 # 팀
 
-JSConf Korea의 준비위원회는 모두 금전적 이득 없이 자바스크립트 커뮤니티를 위해 자원봉사로 운영되고 있습니다.
+접근성에 관한 요청을 [contact@jsconfkorea.com](mailto:contact@jsconfkorea.com)로 알려주시면 최선을 다해 반영해드리겠습니다.
 
 - ✨프로필 준비중입니다.
