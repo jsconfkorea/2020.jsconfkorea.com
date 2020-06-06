@@ -15,4 +15,10 @@ export const en = {
   sponsors: 'SPONSORS',
   code_of_conduct: 'Code of Conduct',
   privacy_policy: 'Privacy Policy',
+
+  //newsletter
+  input_email: 'Please enter your e-mail address',
+  submit: 'Submit',
+  success: 'Success!',
+  fail: 'Fail',
 }

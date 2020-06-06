@@ -1,0 +1,8 @@
+{
+  "functions": {
+    "addToMailchimp": {
+      "app": "mailchimp",
+      "type": "addOrUpdateListMember"
+    }
+  }
+}

@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useState } from 'react'
+import { useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import { useScroll } from '../hooks/useScroll'
+import { useModal } from '../hooks/useModal'
+import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import Header from '../components/Header'
 import Popup from '../components/Popup'
 import Graphic from '../components/Graphic'
@@ -17,13 +19,12 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 type Props = {}
 
 const Index = ({}: Props) => {
+  const ref = useRef<HTMLFormElement>(null)
   const { t, activeLanguage } = useI18n()
   const { y } = useScroll()
+  const { isShowing, toggle, close } = useModal()
 
-  const [popupActive, setActive] = useState(false)
-  const popupActivate = () => {
-    setActive((popupActive) => !popupActive)
-  }
+  useOnClickOutside(ref, close)
 
   return (
     <>
@@ -73,7 +74,8 @@ const Index = ({}: Props) => {
           </div>
         </section>
       </div>
-      <Popup active={popupActive}></Popup>
+      <Header></Header>
+      <Popup ref={ref} isShowing={isShowing} hide={toggle} />
       {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
       <script defer src="/threejs/typo.js"></script> */}
