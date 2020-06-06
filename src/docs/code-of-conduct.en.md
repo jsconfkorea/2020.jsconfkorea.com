@@ -24,7 +24,7 @@ If a participant engages in harassing behavior, event organizers retain the righ
 
 Event organizers may take action to address anything designed to, or with the clear impact of, disrupting the event or making the environment hostile for any participants.
 
-We expect participants to follow these rules at all event venues and event-related social activities.
+We expect participants to follow these rules at all event spaces and event-related activities, both online and offline. These include our social media posts and chat rooms in online conferencing platforms.
 
 # INCLUSIVE LANGUAGE
 
@@ -36,18 +36,11 @@ Any speech that reinforces harmful stereotypes is unwelcome. Examples include bu
 
 # PHOTO POLICY
 
-Photographs and videos taken during the conference will be released through JSConf Korea's official channels.
+Photographs and videos taken during the conference may be released through JSConf Korea's official channels. These include screenshots and screen recordings of our video conferences.
 
-Whether you agree to be photographed will be indicated through your lanyard.
+If there are participants with their cameras on, please ask for their permission before taking any screenshots or recordings.
 
-- Black: "It's okay to photograph/film me."
-- Yellow: "Please do not photograph/film me."
-
-All participants, including attendees, sponsor representatives, and staff members, shall do their best to respect the lanyards. If you must take a photo of someone wearing a yellow lanyard, please ask first. If someone in a yellow lanyard is in a photo you've taken, please blur them out or delete the photo.
-
-Our photographers and videographers will take extra caution to respect the lanyards. However, in crowded situations, they may not be able to follow completely. If a photograph or a recording includes participants wearing yellow lanyards, we will blur them out or not publish it. Furthermore, once the photographs and videos are published, you can ask us to take down certain photographs that you do not want to be shared.
-
-Note that for our group photo, the lanyards will be ignored, so if you do not want to be photographed here we ask you to step outside of the crowd.
+If you do not wish to be photographed (via screenshots), please feel free to turn your camera off at any moment.
 
 # REPORTING
 
@@ -59,20 +52,13 @@ If someone makes you or anyone else feel unsafe or unwelcome, please report it a
 
 ## Personal report
 
-You can make a personal report in two ways:
-
-- Talk to a staff member directly.
-- Email: [contact@jsconfkorea.com](mailto:contact@jsconfkorea.com)
+Email us at [contact@jsconfkorea.com](mailto:contact@jsconfkorea.com) with your report.
 
 When taking a personal report, our staff will ensure you are safe and cannot be overheard. They may involve other event staff to ensure your report is managed properly. Once safe, we’ll ask you to tell us about what happened. This can be upsetting, but we’ll handle it as respectfully as possible. You won’t be asked to confront anyone and we won’t tell anyone who you are.
-
-## Important contacts
-
-- Police: 112 (no need for a SIM card or to unlock your phone)
-- Medical emergency: 119 (no need for a SIM card or to unlock your phone)
-
-Our staff can assist you in contacting any of the above numbers or escorting you to where you will feel safe.
 
 # ATTRIBUTION
 
 This Code of Conduct was adapted from [JSConf EU’s Code of Conduct](https://2019.jsconf.eu/code-of-conduct/) to fit Korean culture and language. JSConf EU’s Code of Conduct was in turn based on [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](http://jsconfau.com/), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), the work of [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/) and [Conference Code of Conduct](https://confcodeofconduct.com/).
+
+
+Last updated June 6, 2020
