@@ -7,7 +7,7 @@ import { useI18n } from '../hooks/useI18n'
 
 type Props = {}
 
-const Header = ({}: Props) => {
+const Header = ({ }: Props) => {
   const { t } = useI18n()
   const [on, setOn] = useState(false)
   const func = () => {
@@ -239,7 +239,7 @@ const style = css`
         display: inline-block;
         text-decoration: none;
         transition: all 0.4s;
-        padding: 0 10px;
+        padding: 0 20px;
         background: #ddd;
         border: solid 1px transparent;
 
@@ -249,10 +249,32 @@ const style = css`
         }
 
         &:not(.disabled):hover {
-          border: solid 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
+          color:#eee;
           transform: translateY(-0.1rem) translateZ(0);
         }
+
+
+      }
+
+      li:nth-child(4n+1) a:not(.disabled):hover{
+        background:#ff7235;
+        border: solid 1px #ff7235;
+        box-shadow: 0 10px 0 #e64500;
+      }
+      li:nth-child(4n+2) a:not(.disabled):hover{
+        background:#2d68ff;
+        border: solid 1px #2d68ff;
+        box-shadow: 0 10px 0 #0041e6;
+      }
+      li:nth-child(4n+3) a:not(.disabled):hover{
+        background:#efc325;
+        border: solid 1px #efc325;
+        box-shadow: 0 10px 0 #d5ab10;
+      }
+      li:nth-child(4n) a:not(.disabled):hover{
+        background:#00e168;
+        border: solid 1px #00e168;
+        box-shadow: 0 10px 0 #00b353;
       }
     }
   }
