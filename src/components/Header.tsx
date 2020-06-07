@@ -19,7 +19,7 @@ const Header = ({}: Props) => {
 
   return (
     <header css={style} className={on ? 'active' : ''}>
-      <button id="btn-menu" className="btn-default" onClick={func}>
+      <button id="btn-menu" className="btn-default" aria-label="menu" onClick={func}>
         <div>
           <span></span>
           <span></span>
@@ -65,13 +65,13 @@ const Header = ({}: Props) => {
         </ul>
       </nav>
       <div id="btn-social">
-        <a href="https://www.facebook.com/jsconfkorea" target="_blank">
+        <a href="https://www.facebook.com/jsconfkorea" target="_blank" rel="noopener">
           <FacebookIcon />
         </a>
-        <a href="https://twitter.com/jsconfkorea" target="_blank">
+        <a href="https://twitter.com/jsconfkorea" target="_blank" rel="noopener">
           <TwitterIcon />
         </a>
-        <a href="https://www.instagram.com/jsconf.korea/" target="_blank">
+        <a href="https://www.instagram.com/jsconf.korea/" target="_blank" rel="noopener">
           <InstagramIcon />
         </a>
       </div>
@@ -90,7 +90,7 @@ const style = css`
   overflow: hidden;
   z-index: 99;
   height: 1rem;
-  font-weight:900;
+  font-weight: 900;
 
   &.active {
     height: 100%;

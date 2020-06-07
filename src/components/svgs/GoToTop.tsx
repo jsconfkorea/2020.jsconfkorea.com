@@ -5,16 +5,11 @@ const GoToTop = () => (
   <svg
     css={style}
     version="1.1"
-    id="레이어_1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
     viewBox="0 0 203.1 203.1"
     style={{ background: 'new 0 0 203.1 203.1' }}
-    xmlSpace="preserve"
   >
-    <style type="text/css"></style>
     <g>
       <g>
         <path

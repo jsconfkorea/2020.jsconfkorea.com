@@ -16,7 +16,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({ }: Props) => {
+const Index = ({}: Props) => {
   const { t, activeLanguage } = useI18n()
   const { y } = useScroll()
 
@@ -27,9 +27,7 @@ const Index = ({ }: Props) => {
 
   return (
     <>
-      <Head>
-        <script src="/threejs/three.min.js"></script>
-      </Head>
+      <Head>{/* <script src="/threejs/three.min.js"></script> */}</Head>
       <Header></Header>
       <div css={style}>
         <section id="intro" className={y > 60 ? 'scrollup' : ''}>
@@ -42,7 +40,7 @@ const Index = ({ }: Props) => {
               <div className="btn-default">
                 <span>{t('look_back_2019')}</span>
                 <div className="inner">
-                  <a href="https://2019.jsconfkorea.com/" className="btn-default block" target="_blank">
+                  <a href="https://2019.jsconfkorea.com/" className="btn-default block" target="_blank" rel="noopener">
                     {t('website')}
                   </a>
                   <a
