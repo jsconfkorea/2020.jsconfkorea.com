@@ -29,6 +29,7 @@ const Index = ({ }: Props) => {
       <Head>
         <script src="/threejs/three.min.js"></script>
       </Head>
+      <Header></Header>
       <div css={style}>
         <section id="intro" className={y > 60 ? 'scrollup' : ''}>
           <Graphic></Graphic>
@@ -77,7 +78,6 @@ const Index = ({ }: Props) => {
           </div>
         </section>
       </div>
-      <Header></Header>
       <Popup active={popupActive}></Popup>
       {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>

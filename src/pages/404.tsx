@@ -7,11 +7,11 @@ const NotFound = () => {
   const { t } = useI18n()
   return (
     <>
+      <Header></Header>
       <div css={style}>
         <img src="/images/404_gray.svg"></img>
         <p>404 Not Found</p>
       </div>
-      <Header></Header>
     </>
   )
 }
