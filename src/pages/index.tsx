@@ -34,10 +34,6 @@ const Index = ({ }: Props) => {
         <section id="intro" className={y > 60 ? 'scrollup' : ''}>
           <Graphic></Graphic>
           <IntroTitle></IntroTitle>
-          <div id="scroll">
-            <img src="/images/arrow-scroll.svg"></img>
-            <div>scroll</div>
-          </div>
         </section>
         <section id="main-buttons">
           <div>
@@ -58,10 +54,10 @@ const Index = ({ }: Props) => {
                 </div>
               </div>
             </div>
-            <div id="btn-cfp">
-              <Link href="/call-for-proposals" className="btn-default">
-                {t('cfp')}
-              </Link>
+            <div id="btn-newsletter">
+              <button className="btn-default" onClick={popupActivate}>
+                {t('news_letter')}
+              </button>
             </div>
           </div>
           <div>
@@ -70,10 +66,10 @@ const Index = ({ }: Props) => {
                 {t('sponsor')}
               </Link>
             </div>
-            <div id="btn-newsletter">
-              <button className="btn-default" onClick={popupActivate}>
-                {t('news_letter')}
-              </button>
+            <div id="btn-cfp">
+              <Link href="/call-for-proposals" className="btn-default">
+                {t('cfp')}
+              </Link>
             </div>
           </div>
         </section>
@@ -91,7 +87,7 @@ const style = css`
 
   #intro {
     position: relative;
-    height: 100%;
+    height: calc(100% - 2rem);
 
     iframe {
       position: fixed;
@@ -111,14 +107,14 @@ const style = css`
 
     h1 {
       position: fixed;
-      bottom: 0.3rem;
-      right: 0.3rem;
+      top: 0.3rem;
+      left: 0.3rem;
 
       color: #333;
-      font-size: 1rem;
+      font-size: 0.75rem;
       letter-spacing: -0.05em;
       line-height: 1em;
-      text-align: right;
+      /* text-align: right; */
 
       margin: 0;
 
@@ -216,7 +212,7 @@ const style = css`
       }
 
       #btn-lookback {
-        flex: 2;
+        flex: 4;
         background: #2d68ff;
         height: 1rem;
         a {
@@ -226,6 +222,7 @@ const style = css`
         }
       }
       #btn-cfp {
+        flex: 4;
         background: #00e168;
         a {
           background: #00e168;
@@ -233,7 +230,7 @@ const style = css`
         }
       }
       #btn-sponsor {
-        flex: 2;
+        flex: 3;
         background: #efc325;
         a {
           background: #efc325;
@@ -256,7 +253,7 @@ const style = css`
       h1 {
         bottom: 0.2rem;
         right: 0.2rem;
-        font-size: 0.5rem;
+        font-size: 0.45rem;
       }
     }
     #main-buttons {

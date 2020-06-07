@@ -134,9 +134,14 @@ const style = css`
     display: inline-block;
     font-size: 0.3rem;
     color: #333;
+    transition:opacity .3s;
     & > a {
       margin: 0 0.1rem;
       color: #333;
+
+      &:hover, &:focus{
+        opacity:.5;
+      }
     }
   }
   #btn-social {

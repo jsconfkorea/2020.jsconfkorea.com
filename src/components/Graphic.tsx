@@ -34,7 +34,7 @@ const style = css`
     height:auto;
     position:absolute;
     left:50%;
-    top:50%;
+    top:55%;
     transform:translate3d(-50%,-50%,0);
   }
   @media screen and (max-width:768px){

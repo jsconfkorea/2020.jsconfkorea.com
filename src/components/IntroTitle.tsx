@@ -4,9 +4,7 @@ import Letter from './Letter'
 import shortid from 'shortid'
 import { memo } from 'react'
 
-const str = `
-JSCONF
-KOREA 2020
+const str = `JSCONF KOREA 2020
 HOME EDITION
 `
 
