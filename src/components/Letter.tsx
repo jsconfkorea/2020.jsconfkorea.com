@@ -15,7 +15,7 @@ const Letter = (props: Props) => {
   let l = characters.charAt(Math.floor(Math.random() * characters.length));
   const [letter, setLetter] = useState("#")
   const [color, setColor] = useState({ color: "#333", transform: "skewY(-10deg) translateZ(0)" })
-  const [count, setCount] = useState(Math.floor(/*Math.random() * 5 + */props.num + 30))
+  const [count, setCount] = useState(Math.floor(/*Math.random() * 5 + */props.num + 10))
   const colors = ["#2d68ff", "#00e168", "#efc325", "#ff7235"];
 
   useInterval(() => {
