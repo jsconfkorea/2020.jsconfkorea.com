@@ -20,8 +20,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:site_name" content="JSConf Korea 2020" />
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/thumb.png" />
-        <link rel="shortcut icon" href="/icon.png" />
+        <meta property="og:image" content="/site-thumb.png" />
+        <link rel="shortcut icon" href="/favicon.png" />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro&display=swap"
           rel="stylesheet"
