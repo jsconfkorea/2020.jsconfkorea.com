@@ -33,9 +33,8 @@ const Popup = ({ isShowing, hide }: Props, ref: any) => {
       <div id="popup" css={style} className="active">
         <div className="inner">
           <form id="popup-form" ref={ref} onSubmit={handleOnSubmit}>
-            <p id="popup-message">{t('input_email')}</p>
+            <p className="popup-message">{t('input_email')}</p>
             <input
-              id="email-input"
               type="email"
               placeholder="email address"
               value={emailAddress}
@@ -43,9 +42,7 @@ const Popup = ({ isShowing, hide }: Props, ref: any) => {
             />
             {isSuccess === 'ok' && <p className="popup-notice">{t('success')}</p>}
             {isSuccess === 'fail' && <p className="popup-notice">{errorMsg}</p>}
-            <button id="popup-submit" type="submit">
-              {t('submit')}
-            </button>
+            <button type="submit">{t('submit')}</button>
           </form>
           <button className="popup-close-button" onClick={hide} />
         </div>
@@ -134,28 +131,11 @@ const style = css`
       input::placeholder {
         color: #ffffff99;
       }
-      #popup-message {
+
+      .popup-message {
         color: #fff;
         font-size: 20px;
         line-height: 1.5em;
-      }
-      .popup-notice {
-        color: #fff;
-        font-size: 15px;
-        line-height: 1.5em;
-        padding: 5px 0;
-        box-sizing: border-box;
-        transition: height 0.2s;
-
-        height: 0;
-        opacity: 0;
-        visibility: hidden;
-
-        &.active {
-          height: auto;
-          opacity: 1;
-          visibility: visible;
-        }
       }
 
       button {
@@ -199,16 +179,32 @@ const style = css`
   .popup-close-button::before {
     content: 'x';
     color: #fff;
-    font-size: 20px;
+    font-size: 30px;
   }
 
   .popup-close-button {
     background-color: transparent;
     border: none;
     position: absolute;
-    right: 10px;
-    top: -20px;
+    right: 20px;
+    top: -30px;
     z-index: 9999;
+    padding: 0;
+  }
+
+  .popup-notice {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5em;
+    padding: 5px 0;
+    box-sizing: border-box;
+    transition: height 0.2s;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
   }
 
   @media screen and (max-width: 768px) {
