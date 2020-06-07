@@ -31,7 +31,7 @@ const Letter = (props: Props) => {
     else {
       setCount(count - 1);
     }
-  }, 150)
+  }, 50)
 
   const reset = () => {
     setCount(6);
