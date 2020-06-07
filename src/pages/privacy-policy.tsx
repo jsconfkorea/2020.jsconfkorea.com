@@ -14,8 +14,6 @@ const COC = ({ }: Props) => {
   const { t } = useI18n()
   return (
     <>
-      <Markdown>{t('privacy-policy-md')}</Markdown>
-      <TopButton></TopButton>
       <Header></Header>
       <Markdown>{t('privacy-policy-md')}</Markdown>
       <TopButton></TopButton>

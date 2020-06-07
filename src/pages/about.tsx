@@ -13,8 +13,6 @@ const About = ({ }: Props) => {
   const { t } = useI18n()
   return (
     <>
-      <Markdown>{t('about-md')}</Markdown>
-      <TopButton></TopButton>
       <Header></Header>
       <Markdown>{t('about-md')}</Markdown>
       <TopButton></TopButton>

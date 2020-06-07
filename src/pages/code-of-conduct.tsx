@@ -13,8 +13,6 @@ const COC = ({ }: Props) => {
   const { t } = useI18n()
   return (
     <>
-      <Markdown>{t('code-of-conduct-md')}</Markdown>
-      <TopButton></TopButton>
       <Header></Header>
       <Markdown>{t('code-of-conduct-md')}</Markdown>
       <TopButton></TopButton>

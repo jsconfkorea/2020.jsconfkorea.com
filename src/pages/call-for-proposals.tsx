@@ -13,8 +13,6 @@ const CFP = ({ }: Props) => {
   const { t } = useI18n()
   return (
     <>
-      <Markdown>{t('call-for-proposals-md')}</Markdown>
-      <TopButton></TopButton>
       <Header></Header>
       <Markdown>{t('call-for-proposals-md')}</Markdown>
       <TopButton></TopButton>
