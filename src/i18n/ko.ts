@@ -15,4 +15,10 @@ export const ko = {
   sponsors: '스폰서',
   code_of_conduct: '핵심원칙',
   privacy_policy: '개인정보처리방침',
+
+  //newsletter
+  input_email: '이메일 주소를 입력해 주세요.',
+  submit: '제출',
+  success: '성공!',
+  fail: '실패!',
 }

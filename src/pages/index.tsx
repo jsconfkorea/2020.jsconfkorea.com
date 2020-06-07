@@ -1,33 +1,31 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import { useScroll } from '../hooks/useScroll'
+import { useModal } from '../hooks/useModal'
 import Header from '../components/Header'
-import Popup from '../components/Popup'
 import Graphic from '../components/Graphic'
-import CodeViewer from '../components/CodeViewer'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Head from 'next/head'
-import ScrollArrow from '../components/svgs/ScrollArrow'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
 const Index = ({}: Props) => {
-  const { t, activeLanguage } = useI18n()
+  const { t } = useI18n()
   const { y } = useScroll()
 
-  const [popupActive, setActive] = useState(false)
+  const [, setActive] = useState(false)
   const popupActivate = () => {
     setActive((popupActive) => !popupActive)
   }
+  // useOnClickOutside(ref, close)
 
   return (
     <>
-      <Head>{/* <script src="/threejs/three.min.js"></script> */}</Head>
       <Header></Header>
       <div css={style}>
         <section id="intro" className={y > 60 ? 'scrollup' : ''}>
@@ -73,7 +71,7 @@ const Index = ({}: Props) => {
           </div>
         </section>
       </div>
-      <Popup active={popupActive}></Popup>
+      {/* <Popup ref={ref} isShowing={isShowing} hide={toggle} /> */}
       {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
       <script defer src="/threejs/typo.js"></script> */}
@@ -179,7 +177,8 @@ const style = css`
         a {
           transform: translateY(0) translateZ(0);
           transition: all 0.3s;
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             transform: translateY(-10px) translateZ(0);
             box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
           }
@@ -204,7 +203,8 @@ const style = css`
             transform: translateY(100%) translateZ(0);
           }
 
-          &:hover > .inner, &:focus > .inner {
+          &:hover > .inner,
+          &:focus > .inner {
             transform: translateY(0) translateZ(0);
           }
         }
