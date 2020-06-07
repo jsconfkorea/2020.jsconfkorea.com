@@ -60,5 +60,4 @@ When taking a personal report, our staff will ensure you are safe and cannot be 
 
 This Code of Conduct was adapted from [JSConf EU’s Code of Conduct](https://2019.jsconf.eu/code-of-conduct/) to fit Korean culture and language. JSConf EU’s Code of Conduct was in turn based on [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](http://jsconfau.com/), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), the work of [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/) and [Conference Code of Conduct](https://confcodeofconduct.com/).
 
-
 Last updated June 6, 2020

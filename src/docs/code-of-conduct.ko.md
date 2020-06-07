@@ -2,7 +2,7 @@
 
 # 모두가 존중받는 컨퍼런스
 
-JSConf Korea는 성별, 성 정체성 및 표현 방법, 성적 지향, 장애, 외모, 신체 사이즈, 인종, 연령, 종교, 출신 지역, 학력, 경력, 사용 기술이나  언어, [뉴로타입](https://en.wikiversity.org/wiki/The_Neurodiversity_Movement/Section_1:_The_Basics)에 상관없이 모두가 존중받는 컨퍼런스 경험을 제공하기 위해 최선을 다하고 있습니다. JSConf Korea에서는 컨퍼런스 참가자에 대한 어떠한 괴롭힘도 용납하지 않습니다. 성적인 언행이나 묘사는 세션들을 포함한 컨퍼런스 내 어느곳에서도 부적절합니다. 이러한 규칙을 위반하는 참가자는 컨퍼런스 주최 측의 판단에 따라 제재를 당하거나 환불 없이 퇴장당할 수 있습니다.
+JSConf Korea는 성별, 성 정체성 및 표현 방법, 성적 지향, 장애, 외모, 신체 사이즈, 인종, 연령, 종교, 출신 지역, 학력, 경력, 사용 기술이나 언어, [뉴로타입](https://en.wikiversity.org/wiki/The_Neurodiversity_Movement/Section_1:_The_Basics)에 상관없이 모두가 존중받는 컨퍼런스 경험을 제공하기 위해 최선을 다하고 있습니다. JSConf Korea에서는 컨퍼런스 참가자에 대한 어떠한 괴롭힘도 용납하지 않습니다. 성적인 언행이나 묘사는 세션들을 포함한 컨퍼런스 내 어느곳에서도 부적절합니다. 이러한 규칙을 위반하는 참가자는 컨퍼런스 주최 측의 판단에 따라 제재를 당하거나 환불 없이 퇴장당할 수 있습니다.
 
 여기서 괴롭힘이란 아래를 포함하지만 아래에 국한되지는 않습니다.
 
@@ -57,6 +57,5 @@ JSConf Korea의 모든 참가자는 온/오프라인 컨퍼런스 장소 및 컨
 # 참고 문서
 
 JSConf Korea의 핵심원칙은 [JSConf EU의 행동강령(Code of Conduct)](https://2019.jsconf.eu/code-of-conduct/)을 한국의 문화와 언어에 맞게 수정하여 작성하였습니다. JSConf EU의 행동강령은 [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](http://jsconfau.com/), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), 그리고 [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/)님의 글 및 [Conference Code of Conduct](https://confcodeofconduct.com/)을 참고하여 작성되었습니다.
-
 
 마지막 수정일: 2020년 6월 6일

@@ -6,7 +6,7 @@ JSConf Korea is a community conference that pushes the boundaries of what can be
 
 Our mission is to make the Korean technology community more daring, more diverse, and more human; in short, we just want to make things better.
 
-This year, we come to you as *JSConf Korea 2020 Home Edition*. We're taking things online so that everyone can stay safe (and comfy). We can't wait to meet you all there!
+This year, we come to you as _JSConf Korea 2020 Home Edition_. We're taking things online so that everyone can stay safe (and comfy). We can't wait to meet you all there!
 
 # Program
 
