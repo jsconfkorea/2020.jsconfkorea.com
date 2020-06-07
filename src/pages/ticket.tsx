@@ -2,7 +2,6 @@
 import { jsx, css } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
 import Header from '../components/Header'
-import ChangeLanguageLink from '../components/ChangeLangaugeLink'
 import Link from '../components/Link'
 import TitoWidget from '../components/TitoWidget'
 
@@ -10,7 +9,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Ticket = ({ }: Props) => {
+const Ticket = ({}: Props) => {
   const { t } = useI18n()
   return (
     <>
