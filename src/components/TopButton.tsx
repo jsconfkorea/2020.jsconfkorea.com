@@ -5,7 +5,7 @@ import GoToTop from './svgs/GoToTop'
 const GoToTopButton = () => {
   return (
     <>
-      <button css={style}>
+      <button css={style} aria-label="go to top">
         <GoToTop />
       </button>
     </>
