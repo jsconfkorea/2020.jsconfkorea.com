@@ -45,6 +45,7 @@ const Index = ({}: Props) => {
                     href="https://www.youtube.com/playlist?list=PL8vHvcFj-bKrg-fp-4bnawVf5y30mi5xd"
                     className="btn-default block"
                     target="_blank"
+                    rel="noopener"
                   >
                     {t('video')}
                   </a>
