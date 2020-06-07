@@ -87,6 +87,7 @@ const style = css`
   overflow: hidden;
   z-index: 99;
   height: 1rem;
+  font-weight:900;
 
   &.active {
     height: 100%;

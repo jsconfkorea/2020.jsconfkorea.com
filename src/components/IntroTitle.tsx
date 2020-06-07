@@ -30,7 +30,7 @@ const IntroTitle = memo(() => {
 })
 
 const style = css`
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Noto Sans KR', sans-serif;
   span {
     display: inline-block;
     transition: transform 0.3s;

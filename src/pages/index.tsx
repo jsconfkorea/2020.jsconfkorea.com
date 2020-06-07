@@ -15,7 +15,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({}: Props) => {
+const Index = ({ }: Props) => {
   const { t, activeLanguage } = useI18n()
   const { y } = useScroll()
 
@@ -31,9 +31,7 @@ const Index = ({}: Props) => {
       </Head>
       <div css={style}>
         <section id="intro" className={y > 60 ? 'scrollup' : ''}>
-          {/* <Graphic></Graphic> */}
-          {/* <iframe src="https://codepen.io/turtlefingers/live/MWaNLqJ"></iframe> */}
-          {/* <CodeViewer></CodeViewer> */}
+          <Graphic></Graphic>
           <IntroTitle></IntroTitle>
           <div id="scroll">
             <img src="/images/arrow-scroll.svg"></img>
@@ -158,13 +156,6 @@ const style = css`
     &.scrollup > #scroll {
       opacity: 0;
     }
-
-    h1 {
-      transition: opacity 0.3s;
-    }
-    &.scrollup > h1 {
-      opacity: 0;
-    }
   }
 
   #main-buttons {
@@ -186,7 +177,7 @@ const style = css`
           color: #fff;
           font-size: 0.5rem;
           line-height: 1rem;
-          font-weight: 400;
+          font-weight: 900;
         }
 
         button,
