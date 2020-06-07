@@ -9,12 +9,15 @@ type Props = {
   className?: string
 }
 
+const languages = ['ko', 'en']
+
 const ChangeLanguageLink = ({ lang, children, className }: Props) => {
   const { asPath, pathname } = useRouter()
   const { locale } = useI18n()
-  const isLangPath = pathname.slice(0, 7) === '/[lang]'
+  const isLangPath = pathname.slice(0, 7) === '/[lang]' || languages.includes(asPath.slice(1, 3))
   const href = `/[lang]${isLangPath ? asPath.slice(3) : asPath === '/' ? '' : asPath}`
   const as = `/${lang}${isLangPath ? asPath.slice(3) : asPath === '/' ? '' : asPath}`
+  console.log({ isLangPath, href, as, asPath, pathname })
   return (
     <Link href={href} as={as} scroll={false}>
       <a

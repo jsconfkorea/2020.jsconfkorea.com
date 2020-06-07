@@ -10,6 +10,7 @@ import CodeViewer from '../components/CodeViewer'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Head from 'next/head'
+import ScrollArrow from '../components/svgs/ScrollArrow'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -134,7 +135,7 @@ const style = css`
         font-size: 0.15rem;
       }
 
-      img {
+      svg {
         display: relative;
         width: 0.3rem;
         animation: loop 0.7s infinite alternate forwards;

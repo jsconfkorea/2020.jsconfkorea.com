@@ -4,10 +4,13 @@ import Link from './Link'
 import { useState } from 'react'
 import ChangeLanguageLink from './ChangeLangaugeLink'
 import { useI18n } from '../hooks/useI18n'
+import FacebookIcon from './svgs/FacebookIcon'
+import TwitterIcon from './svgs/TwitterIcon'
+import InstagramIcon from './svgs/InstagramIcon'
 
 type Props = {}
 
-const Header = ({ }: Props) => {
+const Header = ({}: Props) => {
   const { t } = useI18n()
   const [on, setOn] = useState(false)
   const func = () => {
@@ -63,13 +66,13 @@ const Header = ({ }: Props) => {
       </nav>
       <div id="btn-social">
         <a href="https://www.facebook.com/jsconfkorea" target="_blank">
-          <img src="/images/icon-facebook.svg"></img>
+          <FacebookIcon />
         </a>
         <a href="https://twitter.com/jsconfkorea" target="_blank">
-          <img src="/images/icon-twitter.svg"></img>
+          <TwitterIcon />
         </a>
         <a href="https://www.instagram.com/jsconf.korea/" target="_blank">
-          <img src="/images/icon-instagram.svg"></img>
+          <InstagramIcon />
         </a>
       </div>
     </header>
@@ -158,7 +161,7 @@ const style = css`
       height: 100%;
       margin-left: 0.2rem;
       transition: opacity 0.3s;
-      img {
+      svg {
         height: 100%;
       }
       &:hover, &:focus  {
@@ -294,8 +297,6 @@ const style = css`
   }
 
   @media screen and (max-width: 768px) {
-
-
   }
 `
 

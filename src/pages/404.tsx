@@ -1,7 +1,11 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import Header from '../components/Header'
+import NotFoundSVG from '../components/svgs/NotFound'
+import Link from '../components/Link'
 import { useI18n } from '../hooks/useI18n'
+
+export { default as getStaticProps } from '../utils/getStaticProps'
 
 const NotFound = () => {
   const { t } = useI18n()
@@ -9,7 +13,7 @@ const NotFound = () => {
     <>
       <Header></Header>
       <div css={style}>
-        <img src="/images/404_gray.svg"></img>
+        <NotFoundSVG />
         <p>404 Not Found</p>
       </div>
     </>
@@ -18,19 +22,19 @@ const NotFound = () => {
 
 const style = css`
   position: absolute;
-  left:50%;
-  top:50%;
-  transform:translate3d(-50%,-50%,0);
-  img{
-    display:block;
-    width:200px;
-    margin:0 auto;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  svg {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
   }
-  p{
-    font-size:28px;
-    text-align:center;
-    font-weight:900;
-    color:#aaa;
+  p {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 900;
+    color: #aaa;
   }
 `
 
