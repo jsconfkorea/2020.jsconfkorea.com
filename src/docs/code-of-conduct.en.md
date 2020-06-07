@@ -36,7 +36,7 @@ Any speech that reinforces harmful stereotypes is unwelcome. Examples include bu
 
 # PHOTO POLICY
 
-Photographs and videos taken during the conference may be released through JSConf Korea's official channels. These include screenshots and screen recordings of our video conferences.
+Photographs and videos taken during the conference may be released through JSConf Korea's official channels. These include screenshots and screen recordings of our online conference.
 
 If there are participants with their cameras on, please ask for their permission before taking any screenshots or recordings.
 
