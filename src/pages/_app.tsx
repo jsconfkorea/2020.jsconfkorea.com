@@ -12,10 +12,13 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <meta name="keywords" content="JSConf, JavaScript, Conference" />
+        <meta name="author" content="JSConf Korea" />
+
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:image" content={thumb} />
@@ -26,8 +29,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={thumb} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@jsconfkorea" />
+        <meta name="twitter:creator" content="@jsconfkorea" />
 
         <link rel="shortcut icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
