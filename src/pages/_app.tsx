@@ -2,14 +2,13 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import GlobalStyle from '../components/GlobalStyle'
 import I18nProvider from '../components/I18nProvider'
-import { StaticKitProvider } from '@statickit/react'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = '🇰🇷 Coming Soon !'
   return (
-    <StaticKitProvider site="673655d1d9c6a279c650334c1052ef86">
+    <>
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -32,7 +31,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <GlobalStyle />
         <Component {...pageProps} />
       </I18nProvider>
-    </StaticKitProvider>
+    </>
   )
 }
 

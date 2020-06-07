@@ -3,8 +3,7 @@ import { jsx, css } from '@emotion/core'
 import { useState, forwardRef } from 'react'
 import ReactDOM from 'react-dom'
 import { useI18n } from '../hooks/useI18n'
-import { useStaticKit } from '@statickit/react'
-import { addToMailchimp } from '@statickit/functions'
+import mailchimp from '../api/mailchimp'
 
 type Props = {
   isShowing: boolean
@@ -13,15 +12,19 @@ type Props = {
 
 const Popup = ({ isShowing, hide }: Props, ref: any) => {
   const { t } = useI18n()
-  const client = useStaticKit()
   const [emailAddress, setEmailAddress] = useState('')
   const [isSuccess, setIsSuccess] = useState('')
+  const [errorMsg, setErrorMsg] = useState('')
 
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
-    addToMailchimp(client, { emailAddress }).then(({ status }) => {
-      setIsSuccess(status)
+    mailchimp(emailAddress).then((res: { status: number; error: any }) => {
+      if (res.status === 201) {
+        setIsSuccess('ok')
+      } else {
+        setIsSuccess('fail')
+        setErrorMsg(res.error)
+      }
     })
   }
 
@@ -39,7 +42,7 @@ const Popup = ({ isShowing, hide }: Props, ref: any) => {
               onChange={(e) => setEmailAddress(e.target.value)}
             />
             {isSuccess === 'ok' && <p className="popup-notice">{t('success')}</p>}
-            {isSuccess === 'error' && <p className="popup-notice">{t('fail')}</p>}
+            {isSuccess === 'fail' && <p className="popup-notice">{errorMsg}</p>}
             <button id="popup-submit" type="submit">
               {t('submit')}
             </button>
