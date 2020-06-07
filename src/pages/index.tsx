@@ -74,7 +74,6 @@ const Index = ({}: Props) => {
           </div>
         </section>
       </div>
-      <Header></Header>
       <Popup ref={ref} isShowing={isShowing} hide={toggle} />
       {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
