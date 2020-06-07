@@ -9,6 +9,7 @@ import Graphic from '../components/Graphic'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Head from 'next/head'
+import ScrollArrow from '../components/svgs/ScrollArrow'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 

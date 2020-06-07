@@ -10,7 +10,7 @@ import InstagramIcon from './svgs/InstagramIcon'
 
 type Props = {}
 
-const Header = ({ }: Props) => {
+const Header = ({}: Props) => {
   const { t } = useI18n()
   const [on, setOn] = useState(false)
   const func = () => {
@@ -302,8 +302,6 @@ const style = css`
   }
 
   @media screen and (max-width: 768px) {
-
-
   }
 `
 
