@@ -1,7 +1,5 @@
 # Welcome to JSConf Korea!
 
-# About us
-
 JSConf Korea is a community conference that pushes the boundaries of what can be created using JavaScript, and an opportunity for people with diverse experiences to share their stories and positive energy with each other.
 
 Our mission is to make the Korean technology community more daring, more diverse, and more human; in short, we just want to make things better.
