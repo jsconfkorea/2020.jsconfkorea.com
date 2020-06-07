@@ -6,7 +6,8 @@ import I18nProvider from '../components/I18nProvider'
 const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
   const title = 'JSConf Korea 2020 | JSConf Korea'
-  const description = '🇰🇷 Coming Soon !'
+  const description = 'JSConf Korea 2020 - Home Edition'
+  const thumb = '/site-thumb.png'
   return (
     <>
       <Head>
@@ -17,10 +18,17 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="description" content={description} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
+        <meta property="og:image" content={thumb} />
         <meta property="og:site_name" content="JSConf Korea 2020" />
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/site-thumb.png" />
+
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={thumb} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@jsconfkorea" />
+
         <link rel="shortcut icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
