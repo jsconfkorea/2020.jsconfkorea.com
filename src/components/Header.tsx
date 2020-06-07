@@ -107,7 +107,8 @@ const style = css`
           transform: translateY(0px) rotate(-45deg) translateZ(0);
         }
       }
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         span:nth-of-type(1) {
           transform: translateY(0px) rotate(40deg) translateZ(0);
         }
@@ -137,13 +138,14 @@ const style = css`
     display: inline-block;
     font-size: 0.3rem;
     color: #333;
-    transition:opacity .3s;
+    transition: opacity 0.3s;
     & > a {
       margin: 0 0.1rem;
       color: #333;
 
-      &:hover, &:focus{
-        opacity:.5;
+      &:hover,
+      &:focus {
+        opacity: 0.5;
       }
     }
   }
@@ -164,7 +166,8 @@ const style = css`
       svg {
         height: 100%;
       }
-      &:hover, &:focus  {
+      &:hover,
+      &:focus {
         opacity: 0.5;
       }
     }
@@ -200,7 +203,8 @@ const style = css`
         }
       }
     }
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       span:nth-of-type(1) {
         transform: translateY(-0.15rem) translateZ(0);
       }
@@ -257,33 +261,34 @@ const style = css`
           color: #333;
         }
 
-        &:not(.disabled):hover, &:not(.disabled):focus {
-          color:#eee;
+        &:not(.disabled):hover,
+        &:not(.disabled):focus {
+          color: #eee;
           transform: translateY(-0.1rem) translateZ(0);
         }
       }
 
-      li:nth-child(4n+1) a:not(.disabled):hover,
-      li:nth-child(4n+1) a:not(.disabled):focus{
-        background:#ff7235;
+      li:nth-of-type(4n + 1) a:not(.disabled):hover,
+      li:nth-of-type(4n + 1) a:not(.disabled):focus {
+        background: #ff7235;
         border: solid 1px #ff7235;
         box-shadow: 0 0.1rem 0 #e64500;
       }
-      li:nth-child(4n+2) a:not(.disabled):hover,
-      li:nth-child(4n+2) a:not(.disabled):focus{
-        background:#2d68ff;
+      li:nth-of-type(4n + 2) a:not(.disabled):hover,
+      li:nth-of-type(4n + 2) a:not(.disabled):focus {
+        background: #2d68ff;
         border: solid 1px #2d68ff;
         box-shadow: 0 0.1rem 0 #0041e6;
       }
-      li:nth-child(4n+3) a:not(.disabled):hover,
-      li:nth-child(4n+3) a:not(.disabled):focus{
-        background:#efc325;
+      li:nth-of-type(4n + 3) a:not(.disabled):hover,
+      li:nth-of-type(4n + 3) a:not(.disabled):focus {
+        background: #efc325;
         border: solid 1px #efc325;
         box-shadow: 0 0.1rem 0 #d5ab10;
       }
-      li:nth-child(4n) a:not(.disabled):hover,
-      li:nth-child(4n) a:not(.disabled):focus{
-        background:#00e168;
+      li:nth-of-type(4n) a:not(.disabled):hover,
+      li:nth-of-type(4n) a:not(.disabled):focus {
+        background: #00e168;
         border: solid 1px #00e168;
         box-shadow: 0 0.1rem 0 #00b353;
       }

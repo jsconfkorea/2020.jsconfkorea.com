@@ -18,7 +18,7 @@ const Link = (props: Props) => {
   const as = `${isLangPath ? `/${activeLanguage}` : ''}${props.href === '/' ? '' : props.href}`
   if (disabled) {
     return (
-      <a href="#" className="disabled" rel="noopener">
+      <a href="#" className="disabled" rel="noopener" tabIndex={-1}>
         {children}
       </a>
     )

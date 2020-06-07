@@ -17,7 +17,6 @@ const ChangeLanguageLink = ({ lang, children, className }: Props) => {
   const isLangPath = pathname.slice(0, 7) === '/[lang]' || languages.includes(asPath.slice(1, 3))
   const href = `/[lang]${isLangPath ? asPath.slice(3) : asPath === '/' ? '' : asPath}`
   const as = `/${lang}${isLangPath ? asPath.slice(3) : asPath === '/' ? '' : asPath}`
-  console.log({ isLangPath, href, as, asPath, pathname })
   return (
     <Link href={href} as={as} scroll={false}>
       <a
