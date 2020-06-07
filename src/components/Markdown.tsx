@@ -73,7 +73,12 @@ const style = css`
   a {
     color: #333;
     border-bottom: solid 1px #333;
+
+    &:hover, &:focus{
+      opacity:0.5;
+    }
   }
+  
   blockquote {
     margin: 0;
     padding: 10px 20px;

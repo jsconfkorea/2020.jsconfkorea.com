@@ -104,7 +104,7 @@ const style = css`
           transform: translateY(0px) rotate(-45deg) translateZ(0);
         }
       }
-      &:hover {
+      &:hover, &:focus {
         span:nth-of-type(1) {
           transform: translateY(0px) rotate(40deg) translateZ(0);
         }
@@ -156,7 +156,7 @@ const style = css`
       img {
         height: 100%;
       }
-      &:hover {
+      &:hover, &:focus  {
         opacity: 0.5;
       }
     }
@@ -192,7 +192,7 @@ const style = css`
         }
       }
     }
-    &:hover {
+    &:hover, &:focus {
       span:nth-of-type(1) {
         transform: translateY(-0.15rem) translateZ(0);
       }
@@ -249,28 +249,32 @@ const style = css`
           color: #333;
         }
 
-        &:not(.disabled):hover {
+        &:not(.disabled):hover, &:not(.disabled):focus {
           color:#eee;
           transform: translateY(-0.1rem) translateZ(0);
         }
       }
 
-      li:nth-child(4n+1) a:not(.disabled):hover{
+      li:nth-child(4n+1) a:not(.disabled):hover,
+      li:nth-child(4n+1) a:not(.disabled):focus{
         background:#ff7235;
         border: solid 1px #ff7235;
         box-shadow: 0 0.1rem 0 #e64500;
       }
-      li:nth-child(4n+2) a:not(.disabled):hover{
+      li:nth-child(4n+2) a:not(.disabled):hover,
+      li:nth-child(4n+2) a:not(.disabled):focus{
         background:#2d68ff;
         border: solid 1px #2d68ff;
         box-shadow: 0 0.1rem 0 #0041e6;
       }
-      li:nth-child(4n+3) a:not(.disabled):hover{
+      li:nth-child(4n+3) a:not(.disabled):hover,
+      li:nth-child(4n+3) a:not(.disabled):focus{
         background:#efc325;
         border: solid 1px #efc325;
         box-shadow: 0 0.1rem 0 #d5ab10;
       }
-      li:nth-child(4n) a:not(.disabled):hover{
+      li:nth-child(4n) a:not(.disabled):hover,
+      li:nth-child(4n) a:not(.disabled):focus{
         background:#00e168;
         border: solid 1px #00e168;
         box-shadow: 0 0.1rem 0 #00b353;

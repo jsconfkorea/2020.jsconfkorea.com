@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react'
 import useInterval from '../hooks/useInterval'
 
 const Graphic = () => {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(Math.floor(Math.random() * 10))
   const [dCount, setDCount] = useState(0)
-  const [nextInterval, setInterval] = useState(6500)
+  const [nextInterval, setInterval] = useState(3000)
 
   useInterval(() => {
     let c = count + 1;

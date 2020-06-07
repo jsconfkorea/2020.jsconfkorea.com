@@ -18,7 +18,7 @@ const Letter = (props: Props) => {
   const [count, setCount] = useState(Math.floor(/*Math.random() * 5 + */props.num + 30))
   const colors = ["#2d68ff", "#00e168", "#efc325", "#ff7235"];
 
-  useRequestAnimationFrame(() => {
+  useInterval(() => {
     if (count <= 0) {
       setLetter(props.letter);
       setColor({ color: "#333", transform: "skewY(0) translateZ(0)" });
@@ -31,7 +31,7 @@ const Letter = (props: Props) => {
     else {
       setCount(count - 1);
     }
-  })
+  }, 30)
 
   const reset = () => {
     setCount(6);

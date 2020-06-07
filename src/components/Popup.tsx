@@ -147,7 +147,7 @@ const style = css`
           box-shadow:0px 6px 0 rgba(0,0,0,0.3);
           transition:transform .2s, box-shadow .2s;
         }
-        button:hover{
+        button:hover, button:focus{
           transform:translate3d(0px,-4px,0);
           box-shadow:0px 4px 0 #ff7235;
         }

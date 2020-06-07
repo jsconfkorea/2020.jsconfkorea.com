@@ -184,7 +184,7 @@ const style = css`
         a {
           transform: translateY(0) translateZ(0);
           transition: all 0.3s;
-          &:hover {
+          &:hover, &:focus {
             transform: translateY(-10px) translateZ(0);
             box-shadow: 0 10px 0 rgba(0, 0, 0, 0.3);
           }
@@ -209,7 +209,7 @@ const style = css`
             transform: translateY(100%) translateZ(0);
           }
 
-          &:hover > .inner {
+          &:hover > .inner, &:focus > .inner {
             transform: translateY(0) translateZ(0);
           }
         }
