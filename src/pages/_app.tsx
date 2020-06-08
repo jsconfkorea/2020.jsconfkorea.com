@@ -2,6 +2,7 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import GlobalStyle from '../components/GlobalStyle'
 import I18nProvider from '../components/I18nProvider'
+import { ThemeProvider } from '@chakra-ui/core'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
@@ -44,11 +45,14 @@ const App = ({ Component, pageProps }: AppProps) => {
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro&display=swap"
           rel="stylesheet"
           media="print"
+          onLoad={`this.media='all'` as any}
         />
       </Head>
+      <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
-        <GlobalStyle />
-        <Component {...pageProps} />
+        <ThemeProvider>
+          <Component {...pageProps} />
+        </ThemeProvider>
       </I18nProvider>
     </>
   )

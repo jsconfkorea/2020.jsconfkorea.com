@@ -5,7 +5,7 @@ export const en = {
   video: 'VIDEO',
   cfp: 'CFP',
   sponsor: 'SPONSOR',
-  news_letter: 'NEWS LETTER',
+  newsletter: 'NEWSLETTER',
 
   // menu
   home: 'HOME',
@@ -17,8 +17,9 @@ export const en = {
   privacy_policy: 'Privacy Policy',
 
   //newsletter
-  input_email: 'Please enter your e-mail address',
-  submit: 'Submit',
-  success: 'Success!',
-  fail: 'Fail',
+  newsletter_message: 'Subscribe to our Newsletter!',
+  subscribe: 'Subscribe',
+  newsletter_placeholder: 'Email Address',
+  newsletter_success: 'Subscribed!',
+  newsletter_error: 'Something wrong! Try again.',
 }

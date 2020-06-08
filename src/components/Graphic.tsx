@@ -2,9 +2,10 @@
 import { jsx, css } from '@emotion/core'
 import { useState, useEffect } from 'react'
 import useInterval from '../hooks/useInterval'
+import IntroHouse from './svgs/IntroHouse'
 
 const Graphic = () => {
-  const [count, setCount] = useState(Math.floor(Math.random() * 10))
+  const [count, setCount] = useState(0)
   const [dCount, setDCount] = useState(0)
   const [nextInterval, setInterval] = useState(3000)
 
@@ -21,7 +22,7 @@ const Graphic = () => {
   return (
     <>
       <div id="graphic" css={style}>
-        <img src={`/images/intro_${count}.svg`} alt="house"></img>
+        <IntroHouse num={count} />
       </div>
     </>
   )
@@ -29,7 +30,7 @@ const Graphic = () => {
 
 const style = css`
   height: 100%;
-  img {
+  svg {
     width: 300px;
     height: auto;
     position: absolute;
@@ -38,7 +39,7 @@ const style = css`
     transform: translate3d(-50%, -50%, 0);
   }
   @media screen and (max-width: 768px) {
-    img {
+    svg {
       width: 50%;
     }
   }

@@ -5,7 +5,7 @@ export const ko = {
   video: '영상',
   cfp: '발표자 지원',
   sponsor: '스폰서 지원',
-  news_letter: '뉴스레터',
+  newsletter: '뉴스레터',
 
   // menu
   home: '홈',
@@ -17,8 +17,9 @@ export const ko = {
   privacy_policy: '개인정보처리방침',
 
   //newsletter
-  input_email: '이메일 주소를 입력해 주세요.',
-  submit: '제출',
-  success: '성공!',
-  fail: '실패!',
+  newsletter_message: '최신 소식을 빠르게 받아보세요!',
+  subscribe: '구독하기',
+  newsletter_placeholder: '이메일 주소',
+  newsletter_success: '구독 완료',
+  newsletter_error: '오류가 있습니다. 다시시도해보세요.',
 }
