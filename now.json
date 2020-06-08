@@ -1,7 +1,3 @@
 {
-  "routes": [{ "src": "/.*", "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" } }],
-  "env": {
-    "MAILCHIMP_LIST_ID": "@mailchimp_list_id",
-    "MAILCHIMP_API_KEY": "@mailchimp_api_key"
-  }
+  "routes": [{ "src": "/.*", "headers": { "cache-control": "s-maxage=1, stale-while-revalidate" } }]
 }
