@@ -1,13 +1,15 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import { useScroll } from '../hooks/useScroll'
 import { useModal } from '../hooks/useModal'
+import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import Header from '../components/Header'
 import Graphic from '../components/Graphic'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
+import Popup from '../components/Popup'
 import Head from 'next/head'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
@@ -17,12 +19,10 @@ type Props = {}
 const Index = ({}: Props) => {
   const { t } = useI18n()
   const { y } = useScroll()
+  const ref = useRef<HTMLFormElement>(null)
+  const { isShowing, toggle, close } = useModal()
 
-  const [, setActive] = useState(false)
-  const popupActivate = () => {
-    setActive((popupActive) => !popupActive)
-  }
-  // useOnClickOutside(ref, close)
+  useOnClickOutside(ref, close)
 
   return (
     <>
@@ -53,7 +53,7 @@ const Index = ({}: Props) => {
               </div>
             </div>
             <div id="btn-newsletter">
-              <button className="btn-default" onClick={popupActivate}>
+              <button className="btn-default" onClick={toggle}>
                 {t('news_letter')}
               </button>
             </div>
@@ -72,7 +72,7 @@ const Index = ({}: Props) => {
           </div>
         </section>
       </div>
-      {/* <Popup ref={ref} isShowing={isShowing} hide={toggle} /> */}
+      <Popup ref={ref} isShowing={isShowing} hide={toggle} />
       {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
       <script defer src="/threejs/typo.js"></script> */}
