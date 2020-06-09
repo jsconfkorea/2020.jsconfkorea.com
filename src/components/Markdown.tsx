@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import ReactMarkdown from 'react-markdown'
-import { ReactNode } from 'react'
+import React, { Children, ReactNode } from 'react'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -9,11 +9,24 @@ type Props = {
   children: ReactNode
 }
 
+function flatten(text: string, child: any): any {
+  return typeof child === 'string' ? text + child : Children.toArray(child.props.children).reduce(flatten, text)
+}
+
+function HeadingRenderer(props: any) {
+  var children = Children.toArray(props.children)
+  var text = children.reduce(flatten, '')
+  var slug = text.toLowerCase().replace(/\W/g, '-')
+  return React.createElement('h' + props.level, { id: slug }, props.children)
+}
+
 const Markdown = ({ children }: Props) => {
   return (
     <>
       <div css={style}>
-        <ReactMarkdown>{children}</ReactMarkdown>
+        <ReactMarkdown renderers={{ heading: HeadingRenderer }} linkTarget="_blank">
+          {children}
+        </ReactMarkdown>
       </div>
     </>
   )
