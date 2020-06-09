@@ -16,7 +16,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({}: Props) => {
+const Index = ({ }: Props) => {
   const { t } = useI18n()
   const { y } = useScroll()
   const ref = useRef<HTMLFormElement>(null)
