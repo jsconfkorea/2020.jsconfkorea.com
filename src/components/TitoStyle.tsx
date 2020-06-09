@@ -92,7 +92,7 @@ const titoStyle = css`
     font-size: 12px;
   }
   .tito-degressive-price-desc + .tito-ticket-description {
-    margin-top: 0.5rem;
+    margin-top: 2rem;
   }
   .tito-ticket-price-quantity {
     text-align: right;

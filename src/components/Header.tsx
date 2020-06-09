@@ -89,7 +89,7 @@ const style = css`
   background: #ddd;
   overflow: hidden;
   z-index: 99;
-  height: 1rem;
+  height: 4rem;
   font-weight: 900;
 
   &.active {
@@ -126,8 +126,8 @@ const style = css`
 
   #btn-right {
     position: absolute;
-    right: 0.28rem;
-    top: 0.35rem;
+    right: 1.12rem;
+    top: 1.4rem;
     white-space: nowrap;
 
     & > * {
@@ -136,11 +136,11 @@ const style = css`
   }
   #btn-lang {
     display: inline-block;
-    font-size: 0.3rem;
+    font-size: 1.2rem;
     color: #333;
     transition: opacity 0.3s;
     & > a {
-      margin: 0 0.1rem;
+      margin: 0 0.4rem;
       color: #333;
 
       &:hover,
@@ -153,15 +153,15 @@ const style = css`
     position: absolute;
     opacity: 0;
     visibility: hidden;
-    right: 0.3rem;
-    bottom: 0.3rem;
-    height: 0.4rem;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    height: 1.6rem;
     font-size: 0;
 
     & > a {
       display: inline-block;
       height: 100%;
-      margin-left: 0.2rem;
+      margin-left: 0.8rem;
       transition: opacity 0.3s;
       svg {
         height: 100%;
@@ -174,14 +174,14 @@ const style = css`
   }
 
   #btn-menu {
-    width: 1rem;
-    height: 1rem;
+    width: 4rem;
+    height: 4rem;
     display: inline-block;
     padding: 0;
     position: absolute;
     & > div {
-      width: 0.5rem;
-      height: 0.22rem;
+      width: 2rem;
+      height: 0.88rem;
       margin: auto;
       span {
         display: block;
@@ -189,27 +189,27 @@ const style = css`
         width: 100%;
         height: 2px;
         background-color: #333;
-        top: 0.1rem;
+        top: 0.4rem;
         transition: transform 0.3s;
 
         &:nth-of-type(1) {
-          transform: translateY(-0.1rem) translateZ(0);
+          transform: translateY(-0.4rem) translateZ(0);
         }
         &:nth-of-type(2) {
           transition: opacity 0.3s;
         }
         &:nth-of-type(3) {
-          transform: translateY(0.1rem) translateZ(0);
+          transform: translateY(0.4rem) translateZ(0);
         }
       }
     }
     &:hover,
     &:focus {
       span:nth-of-type(1) {
-        transform: translateY(-0.15rem) translateZ(0);
+        transform: translateY(-0.6rem) translateZ(0);
       }
       span:nth-of-type(3) {
-        transform: translateY(0.15rem) translateZ(0);
+        transform: translateY(0.6rem) translateZ(0);
       }
     }
   }
@@ -232,7 +232,7 @@ const style = css`
       margin: 0;
 
       &.menu-main {
-        font-size: 0.5rem;
+        font-size: 2rem;
         line-height: 1.5em;
 
         .disabled {
@@ -243,7 +243,7 @@ const style = css`
       }
 
       &.menu-docs {
-        font-size: 0.25rem;
+        font-size: 1rem;
         line-height: 1.5em;
         margin-top: 20px;
       }
@@ -264,7 +264,7 @@ const style = css`
         &:not(.disabled):hover,
         &:not(.disabled):focus {
           color: #eee;
-          transform: translateY(-0.1rem) translateZ(0);
+          transform: translateY(-0.4rem) translateZ(0);
         }
       }
 
@@ -272,25 +272,25 @@ const style = css`
       li:nth-of-type(4n + 1) a:not(.disabled):focus {
         background: #ff7235;
         border: solid 1px #ff7235;
-        box-shadow: 0 0.1rem 0 #e64500;
+        box-shadow: 0 0.4rem 0 #e64500;
       }
       li:nth-of-type(4n + 2) a:not(.disabled):hover,
       li:nth-of-type(4n + 2) a:not(.disabled):focus {
         background: #2d68ff;
         border: solid 1px #2d68ff;
-        box-shadow: 0 0.1rem 0 #0041e6;
+        box-shadow: 0 0.4rem 0 #0041e6;
       }
       li:nth-of-type(4n + 3) a:not(.disabled):hover,
       li:nth-of-type(4n + 3) a:not(.disabled):focus {
         background: #efc325;
         border: solid 1px #efc325;
-        box-shadow: 0 0.1rem 0 #d5ab10;
+        box-shadow: 0 0.4rem 0 #d5ab10;
       }
       li:nth-of-type(4n) a:not(.disabled):hover,
       li:nth-of-type(4n) a:not(.disabled):focus {
         background: #00e168;
         border: solid 1px #00e168;
-        box-shadow: 0 0.1rem 0 #00b353;
+        box-shadow: 0 0.4rem 0 #00b353;
       }
     }
   }
