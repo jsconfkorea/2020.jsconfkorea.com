@@ -60,7 +60,7 @@ const Index = ({ }: Props) => {
           </div>
           <div>
             <div id="btn-sponsor">
-              <Link href="/" className="btn-default">
+              <Link href="/sponsorship" className="btn-default">
                 {t('sponsor')}
               </Link>
             </div>
