@@ -1,11 +1,11 @@
 import fetch from 'node-fetch'
+import { NextApiRequest, NextApiResponse } from 'next'
 
-const mailchimp = async (email: string) => {
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const { email } = req.body
+
   if (!email) {
-    return {
-      status: 400,
-      error: 'Email is required',
-    }
+    return res.status(400).json({ error: 'Email is required' })
   }
 
   try {
@@ -28,22 +28,13 @@ const mailchimp = async (email: string) => {
     })
 
     if (response.status >= 400) {
-      return {
-        status: 400,
+      return res.status(400).json({
         error: `There was an error subscribing to the newsletter. Shoot me an email at [me@leerob.io] and I'll add you to the list.`,
-      }
+      })
     }
 
-    return {
-      status: 201,
-      error: '',
-    }
+    return res.status(201).json({ error: '' })
   } catch (error) {
-    return {
-      status: 500,
-      error: error.message || error.toString(),
-    }
+    return res.status(500).json({ error: error.message || error.toString() })
   }
 }
-
-export default mailchimp

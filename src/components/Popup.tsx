@@ -1,106 +1,177 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useState, forwardRef } from 'react'
-import ReactDOM from 'react-dom'
+import { useState, forwardRef, useEffect, useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
-import mailchimp from '../api/mailchimp'
+import { AnimatePresence, motion } from 'framer-motion'
+import fetch from 'node-fetch'
+import CloseButton from './svgs/CloseButton'
+import { useKey } from 'react-use'
+import { useToast } from '@chakra-ui/core'
 
 type Props = {
   isShowing: boolean
-  hide: (event: React.MouseEvent) => void
+  close: () => void
 }
 
-const Popup = ({ isShowing, hide }: Props, ref: any) => {
+const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+
+const Popup = ({ isShowing, close }: Props, ref: any) => {
   const { t } = useI18n()
-  const [emailAddress, setEmailAddress] = useState('')
-  const [isSuccess, setIsSuccess] = useState('')
-  const [errorMsg, setErrorMsg] = useState('')
+  const [email, setEmail] = useState('')
+  const toast = useToast()
 
-  const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    mailchimp(emailAddress).then((res: { status: number; error: any }) => {
-      if (res.status === 201) {
-        setIsSuccess('ok')
+    if (!emailRegex.test(email)) return
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (response.status < 300) {
+        toast({
+          position: 'top',
+          title: t('newsletter_success'),
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        })
       } else {
-        setIsSuccess('fail')
-        setErrorMsg(res.error)
+        toast({
+          position: 'top',
+          title: t('newsletter_error'),
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
       }
-    })
+    } catch {
+      toast({
+        position: 'top',
+        title: t('newsletter_error'),
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      })
+    }
+
+    close()
   }
 
-  if (isShowing) {
-    return ReactDOM.createPortal(
-      <div id="popup" css={style} className="active">
-        <div className="inner">
-          <form id="popup-form" ref={ref} onSubmit={handleOnSubmit}>
-            <p className="popup-message">{t('input_email')}</p>
-            <input
-              type="email"
-              placeholder="email address"
-              value={emailAddress}
-              onChange={(e) => setEmailAddress(e.target.value)}
-            />
-            {isSuccess === 'ok' && <p className="popup-notice">{t('success')}</p>}
-            {isSuccess === 'fail' && <p className="popup-notice">{errorMsg}</p>}
-            <button type="submit">{t('submit')}</button>
-          </form>
-          <button className="popup-close-button" onClick={hide} />
-        </div>
-      </div>,
-      document.body,
-    )
-  } else {
-    return null
-  }
+  useKey((e) => e.keyCode === 27, close)
+  useKey(
+    (e) => isShowing && e.key === 'Enter',
+    (e) => handleOnSubmit(e as any),
+  )
+
+  return (
+    <AnimatePresence>
+      {isShowing && (
+        <>
+          <motion.div css={dimStyle} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
+          <motion.div css={style}>
+            <motion.div
+              ref={ref}
+              className="inner"
+              initial={{ y: 1000, display: 'none' }}
+              animate={{ opacity: 1, y: 0, display: 'block' }}
+              exit={{ y: 1000 }}
+            >
+              <button onClick={close}>
+                <CloseButton />
+              </button>
+              <form onSubmit={handleOnSubmit}>
+                <p>{t('newsletter_message')}</p>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder={t('newsletter_placeholder')}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleOnSubmit(e as any)}
+                />
+                <button type="submit" disabled={!emailRegex.test(email)}>
+                  {t('subscribe')}
+                </button>
+              </form>
+            </motion.div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
+  )
 }
 
-const style = css`
-  position: fixed;
+const dimStyle = css`
+  position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
-  background: #ffffff33;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff55;
   z-index: 10;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0s 0.1s;
+`
+
+const style = css`
+  position: absolute;
+  display: grid;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 99;
-
-  &.active {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.1s, visibility 0s;
-
-    & > .inner {
-      #popup-form {
-        transform: translateY(0) scaleX(1) translateZ(0);
-        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
-      }
-    }
-  }
+  overflow: hidden;
 
   & > .inner {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    justify-self: center;
+    align-self: center;
+    width: 350px;
+    height: 250px;
+    background-color: #ff7235;
+    border: solid 5px #ff7235;
+    padding: 0.8rem;
 
-    #popup-form {
-      background: white;
-      z-index: 10;
-      padding: 70px 100px;
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+
+    & > button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      svg {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        color: white;
+      }
+    }
+
+    form {
+      /* background: white; */
+      /* padding: 70px 100px;
       max-width: 500px;
       box-sizing: border-box;
-      background-color: #ff7235;
-      border: solid 5px #ff7235;
-      color: white;
-      font-size: 0;
-      transition: all 0.3s;
-      z-index: 1;
+      color: white; */
 
       transform: translateY(10px) translateZ(0);
       box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+
+      p {
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.5em;
+        text-align: center;
+      }
 
       input {
         width: 100%;
@@ -116,29 +187,14 @@ const style = css`
         margin-top: 20px;
         box-sizing: border-box;
         -webkit-appearance: none;
+        &::placeholder,
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder {
+          color: #ffffff99;
+        }
       }
 
-      input::-webkit-input-placeholder {
-        /* Edge */
-        color: #ffffff99;
-      }
-
-      input:-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: #ffffff99;
-      }
-
-      input::placeholder {
-        color: #ffffff99;
-      }
-
-      .popup-message {
-        color: #fff;
-        font-size: 20px;
-        line-height: 1.5em;
-      }
-
-      button {
+      & > button {
         display: block;
         border: solid 1px rgba(0, 0, 0, 0.1);
         color: #fff;
@@ -151,71 +207,37 @@ const style = css`
         border-radius: 3px;
         font-size: 20px;
 
-          cursor:pointer;
-          transform:translate3d(0px,-6px,0);
-          box-shadow:0px 6px 0 rgba(0,0,0,0.3);
-          transition:transform .2s, box-shadow .2s;
+        cursor: pointer;
+        transform: translate3d(0px, -6px, 0);
+        box-shadow: 0px 6px 0 rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+        &[disabled] {
+          transform: translate3d(0px, -2px, 0);
+          background: #9b4206;
+          box-shadow: 0px 2px 0 #ff7235;
         }
-        button:hover, button:focus{
-          transform:translate3d(0px,-4px,0);
-          box-shadow:0px 4px 0 #ff7235;
+        &:hover:not([disabled]),
+        &:focus:not([disabled]) {
+          transform: translate3d(0px, -4px, 0);
+          box-shadow: 0px 4px 0 #ff7235;
         }
-        button:active{
-          transform:translate3d(0px,-2px,0);
-          box-shadow:0px 2px 0 #ff7235;
+        &:active:not([disabled]) {
+          transform: translate3d(0px, -2px, 0);
+          box-shadow: 0px 2px 0 #ff7235;
         }
-      }
-      button:hover {
-        transform: translate3d(0px, -4px, 0);
-        box-shadow: 0px 4px 0 #ff7235;
-      }
-      button:active {
-        transform: translate3d(0px, -2px, 0);
-        box-shadow: 0px 2px 0 #ff7235;
       }
     }
-  }
-
-  .popup-close-button::before {
-    content: 'x';
-    color: #fff;
-    font-size: 30px;
-  }
-
-  .popup-close-button {
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 20px;
-    top: -30px;
-    z-index: 9999;
-    padding: 0;
-  }
-
-  .popup-notice {
-    color: #fff;
-    font-size: 15px;
-    line-height: 1.5em;
-    padding: 5px 0;
-    box-sizing: border-box;
-    transition: height 0.2s;
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    height: auto;
-    opacity: 1;
-    visibility: visible;
   }
 
   @media screen and (max-width: 768px) {
-    & > .inner #popup-form {
-      width: calc(100vw - 25px);
+    & > .inner form {
+      /* width: calc(100vw - 25px);
       padding: 30px 30px;
       border: solid 3px #ff7235;
-      box-shadow: 0px 0px 0 #ff7235;
+      box-shadow: 0px 0px 0 #ff7235; */
     }
-    &.active > .inner #popup-form {
-      box-shadow: 6px 8px 0 #ff7235;
+    &.active > .inner form {
+      /* box-shadow: 6px 8px 0 #ff7235; */
     }
   }
 `

@@ -23,6 +23,7 @@ const style = css`
     -ms-overflow-style: none;
     transform: none;
   }
+
   body::-webkit-scrollbar,
   #__next::-webkit-scrollbar {
     display: none;
@@ -30,7 +31,7 @@ const style = css`
 
   html {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 100px;
+    font-size: 25px;
   }
   body {
     background-color: #ddd;
@@ -38,7 +39,7 @@ const style = css`
     font-weight: 400;
   }
   #__next {
-    padding-top: 1rem;
+    padding-top: 4rem;
   }
 
   .btn-default {
@@ -49,7 +50,7 @@ const style = css`
   }
 
   .block {
-    height: 1rem;
+    height: 4rem;
   }
 
   *:focus {
@@ -63,15 +64,27 @@ const style = css`
     padding: 0;
   }
 
+  .Toaster {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    button {
+      background: none;
+      border: none;
+      color: white;
+    }
+  }
+
   @media screen and (max-width: 1200px) {
     html {
-      font-size: 80px;
+      font-size: 20px;
     }
   }
 
   @media screen and (max-width: 768px) {
     html {
-      font-size: 60px;
+      font-size: 15px;
     }
   }
 `

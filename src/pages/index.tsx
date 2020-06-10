@@ -1,13 +1,15 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import { useScroll } from '../hooks/useScroll'
 import { useModal } from '../hooks/useModal'
+import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import Header from '../components/Header'
 import Graphic from '../components/Graphic'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
+import Popup from '../components/Popup'
 import Head from 'next/head'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
@@ -17,12 +19,10 @@ type Props = {}
 const Index = ({}: Props) => {
   const { t } = useI18n()
   const { y } = useScroll()
+  const ref = useRef<HTMLFormElement>(null)
+  const { isShowing, toggle, close } = useModal()
 
-  const [, setActive] = useState(false)
-  const popupActivate = () => {
-    setActive((popupActive) => !popupActive)
-  }
-  // useOnClickOutside(ref, close)
+  useOnClickOutside(ref, close)
 
   return (
     <>
@@ -53,8 +53,8 @@ const Index = ({}: Props) => {
               </div>
             </div>
             <div id="btn-newsletter">
-              <button className="btn-default" onClick={popupActivate}>
-                {t('news_letter')}
+              <button className="btn-default" onClick={toggle}>
+                {t('newsletter')}
               </button>
             </div>
           </div>
@@ -72,7 +72,7 @@ const Index = ({}: Props) => {
           </div>
         </section>
       </div>
-      {/* <Popup ref={ref} isShowing={isShowing} hide={toggle} /> */}
+      <Popup ref={ref} isShowing={isShowing} close={close} />
       {/* <script defer src="/threejs/modules.js"></script>
       <script defer src="/threejs/index.js"></script>
       <script defer src="/threejs/typo.js"></script> */}
@@ -85,7 +85,7 @@ const style = css`
 
   #intro {
     position: relative;
-    height: calc(100% - 2rem);
+    height: calc(100% - 8rem);
 
     iframe {
       position: fixed;
@@ -105,11 +105,11 @@ const style = css`
 
     h1 {
       position: fixed;
-      top: 0.3rem;
-      left: 0.3rem;
+      top: 1.2rem;
+      left: 1.2rem;
 
       color: #333;
-      font-size: 0.75rem;
+      font-size: 3rem;
       letter-spacing: -0.05em;
       line-height: 1em;
       /* text-align: right; */
@@ -123,18 +123,18 @@ const style = css`
 
     #scroll {
       position: fixed;
-      bottom: 0.3rem;
-      left: 0.3rem;
+      bottom: 1.2rem;
+      left: 1.2rem;
       color: #333;
       transition: opacity 0.3s;
 
       div {
-        font-size: 0.15rem;
+        font-size: 0.6rem;
       }
 
       svg {
         display: relative;
-        width: 0.3rem;
+        width: 1.2rem;
         animation: loop 0.7s infinite alternate forwards;
       }
 
@@ -158,7 +158,7 @@ const style = css`
 
       & > div {
         position: relative;
-        height: 1rem;
+        height: 4rem;
         flex: 1;
         font-size: 0;
 
@@ -169,8 +169,8 @@ const style = css`
           width: 100%;
           text-align: center;
           color: #fff;
-          font-size: 0.5rem;
-          line-height: 1rem;
+          font-size: 2rem;
+          line-height: 4rem;
           font-weight: 900;
         }
 
@@ -214,11 +214,11 @@ const style = css`
       #btn-lookback {
         flex: 4;
         background: #2d68ff;
-        height: 1rem;
+        height: 4rem;
         a {
           background: #2d68ff;
           width: 50%;
-          height: 1rem;
+          height: 4rem;
         }
       }
       #btn-cfp {
@@ -226,7 +226,7 @@ const style = css`
         background: #00e168;
         a {
           background: #00e168;
-          height: 1rem;
+          height: 4rem;
         }
       }
       #btn-sponsor {
@@ -234,7 +234,7 @@ const style = css`
         background: #efc325;
         a {
           background: #efc325;
-          height: 1rem;
+          height: 4rem;
         }
       }
       #btn-newsletter {
@@ -242,7 +242,7 @@ const style = css`
         background: #ff7235;
         button {
           background: #ff7235;
-          height: 1rem;
+          height: 4rem;
         }
       }
     }
@@ -251,9 +251,9 @@ const style = css`
   @media screen and (max-width: 768px) {
     #intro {
       h1 {
-        bottom: 0.2rem;
-        right: 0.2rem;
-        font-size: 0.45rem;
+        bottom: 0.8rem;
+        right: 0.8rem;
+        font-size: 1.8rem;
       }
     }
     #main-buttons {
@@ -262,8 +262,8 @@ const style = css`
           button,
           a,
           span {
-            font-size: 0.35rem;
-            line-height: 1rem;
+            font-size: 1.4rem;
+            line-height: 4rem;
           }
         }
       }
