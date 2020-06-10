@@ -16,7 +16,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({ }: Props) => {
+const Index = ({}: Props) => {
   const { t } = useI18n()
   const { y } = useScroll()
   const ref = useRef<HTMLFormElement>(null)
@@ -26,8 +26,8 @@ const Index = ({ }: Props) => {
 
   return (
     <>
-      <Header></Header>
       <div css={style}>
+        <Header></Header>
         <section id="intro" className={y > 60 ? 'scrollup' : ''}>
           <Graphic></Graphic>
           <IntroTitle></IntroTitle>
@@ -81,6 +81,7 @@ const Index = ({ }: Props) => {
 }
 
 const style = css`
+  padding-top: 4rem;
   height: 100%;
 
   #intro {
@@ -104,7 +105,6 @@ const style = css`
     }
 
     h1 {
-      position: fixed;
       top: 1.2rem;
       left: 1.2rem;
 
@@ -122,7 +122,6 @@ const style = css`
     }
 
     #scroll {
-      position: fixed;
       bottom: 1.2rem;
       left: 1.2rem;
       color: #333;

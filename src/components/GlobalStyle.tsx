@@ -10,7 +10,6 @@ const style = css`
 
   * {
     box-sizing: border-box;
-    transform: translateZ(0);
 
     -webkit-tap-highlight-color: transparent;
     margin: 0;
@@ -20,10 +19,9 @@ const style = css`
   html,
   body,
   #__next {
-    height: 100%;
     width: 100%;
+    height: 100%;
     -ms-overflow-style: none;
-    transform: none;
   }
 
   body::-webkit-scrollbar,
@@ -32,7 +30,7 @@ const style = css`
   }
 
   html {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Noto Sans KR', 'Roboto Mono', sans-serif;
     font-size: 25px;
     touch-action: manipulation;
   }
@@ -46,7 +44,7 @@ const style = css`
     -moz-osx-font-smoothing: grayscale;
   }
   #__next {
-    padding-top: 4rem;
+    position: relative;
   }
 
   .btn-default {

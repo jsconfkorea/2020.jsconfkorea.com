@@ -22,4 +22,7 @@ export const en = {
   newsletter_placeholder: 'Email Address',
   newsletter_success: 'Subscribed!',
   newsletter_error: 'Something wrong! Try again.',
+
+  // call-for-proposals
+  submit_proposal: 'Submit Proposal',
 }
