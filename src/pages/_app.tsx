@@ -6,6 +6,12 @@ import { ThemeProvider } from '@chakra-ui/core'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import ReactGA from 'react-ga'
+
+ReactGA.initialize('UA-139256354-2')
+// if (typeof window !== 'undefined') {
+//   ReactGA.pageview(window.location.pathname + window.location.search)
+// }
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -59,6 +65,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
         <meta property="og:type" content="website" />
         <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
+        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139256354-2"></script>
+        <script src="/ga.js"></script> */}
       </Head>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
