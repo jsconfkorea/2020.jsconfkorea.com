@@ -7,6 +7,8 @@ import { useI18n } from '../hooks/useI18n'
 import FacebookIcon from './svgs/FacebookIcon'
 import TwitterIcon from './svgs/TwitterIcon'
 import InstagramIcon from './svgs/InstagramIcon'
+import YoutubeIcon from './svgs/YoutubeIcon'
+import GithubIcon from './svgs/GithubIcon'
 
 type Props = {}
 
@@ -68,11 +70,17 @@ const Header = ({}: Props) => {
         <a href="https://www.facebook.com/jsconfkorea" target="_blank" rel="noopener">
           <FacebookIcon />
         </a>
+        <a href="https://www.instagram.com/jsconf.korea" target="_blank" rel="noopener">
+          <InstagramIcon />
+        </a>
         <a href="https://twitter.com/jsconfkorea" target="_blank" rel="noopener">
           <TwitterIcon />
         </a>
-        <a href="https://www.instagram.com/jsconf.korea/" target="_blank" rel="noopener">
-          <InstagramIcon />
+        <a href="https://www.youtube.com/channel/UCkHwMMujxwX2s_nxXFsUcLQ" target="_blank" rel="noopener">
+          <YoutubeIcon />
+        </a>
+        <a href="https://github.com/jsconfkorea/" target="_blank" rel="noopener">
+          <GithubIcon />
         </a>
       </div>
     </header>
@@ -153,18 +161,22 @@ const style = css`
   #btn-social {
     position: absolute;
     opacity: 0;
-    visibility: hidden;
-    right: 1.2rem;
-    bottom: 1.2rem;
-    height: 1.6rem;
-    font-size: 0;
+    /* visibility: hidden; */
+    right: 0.5rem;
+    bottom: 1rem;
+    /* height: rem; */
+    /* font-size: 0; */
 
     & > a {
+      /* width: 2.5rem; */
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem;
       display: inline-block;
-      height: 100%;
-      margin-left: 0.8rem;
+      /* margin-left: 0.8rem; */
       transition: opacity 0.3s;
       svg {
+        width: 100%;
         height: 100%;
       }
       &:hover,
