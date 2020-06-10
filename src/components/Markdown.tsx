@@ -14,9 +14,9 @@ function flatten(text: string, child: any): any {
 }
 
 function HeadingRenderer(props: any) {
-  var children = Children.toArray(props.children)
-  var text = children.reduce(flatten, '')
-  var slug = text.toLowerCase().replace(/\W/g, '-')
+  const children = Children.toArray(props.children)
+  const text = children.reduce(flatten, '')
+  const slug = text.toLowerCase().replace(/\W/g, '-')
   return React.createElement('h' + props.level, { id: slug }, props.children)
 }
 
@@ -87,42 +87,43 @@ const style = css`
     color: #333;
     border-bottom: solid 1px #333;
 
-    &:hover, &:focus{
-      opacity:0.5;
+    &:hover,
+    &:focus {
+      opacity: 0.5;
     }
   }
-  
+
   blockquote {
     margin: 0;
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.05);
     border: solid 1px rgba(0, 0, 0, 0.1);
   }
-  button{
-    display:block;
-    border:solid 1px rgba(0,0,0,0.1);
-    color:#fff;
-    background:#555;
-    max-width:300px;
+  button {
+    display: block;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background: #555;
+    max-width: 300px;
 
-    margin:20px auto 30px;
-    padding:10px 20px;
-    outline:none;
-    border-radius:3px;
-    font-size:20px;
+    margin: 20px auto 30px;
+    padding: 10px 20px;
+    outline: none;
+    border-radius: 3px;
+    font-size: 20px;
 
-    cursor:pointer;
-    transform:translate3d(0px,-6px,0);
-    box-shadow:0px 6px 0 #111;
-    transition:transform .2s, box-shadow .2s;
+    cursor: pointer;
+    transform: translate3d(0px, -6px, 0);
+    box-shadow: 0px 6px 0 #111;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
-  button:hover{
-    transform:translate3d(0px,-4px,0);
-    box-shadow:0px 4px 0 #111;
+  button:hover {
+    transform: translate3d(0px, -4px, 0);
+    box-shadow: 0px 4px 0 #111;
   }
-  button:active{
-    transform:translate3d(0px,-2px,0);
-    box-shadow:0px 2px 0 #111;
+  button:active {
+    transform: translate3d(0px, -2px, 0);
+    box-shadow: 0px 2px 0 #111;
   }
 
   @media screen and (max-width: 1200px) {
