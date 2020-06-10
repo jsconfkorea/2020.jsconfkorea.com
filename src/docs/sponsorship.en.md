@@ -1,3 +1,3 @@
 # Sponsorship
 
-Sponsorship policy coming soon...!
+- ✨ Coming soon...!
