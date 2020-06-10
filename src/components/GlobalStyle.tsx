@@ -13,6 +13,8 @@ const style = css`
     transform: translateZ(0);
 
     -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
   }
 
   html,
@@ -32,11 +34,16 @@ const style = css`
   html {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 25px;
+    touch-action: manipulation;
   }
   body {
     background-color: #ddd;
     /* background-color:#000; */
     font-weight: 400;
+    overscroll-behavior-y: none;
+    overflow-y: auto;
+    direction: ltr;
+    -moz-osx-font-smoothing: grayscale;
   }
   #__next {
     padding-top: 4rem;

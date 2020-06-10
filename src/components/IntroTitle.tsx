@@ -13,7 +13,7 @@ const d = `ONLINE
 const IntroTitle = memo(() => {
   return (
     <>
-      <h1 css={title_style}>
+      <h1 css={titleStyle}>
         {str.split('').map((s, i) => {
           const key = shortid.generate()
           if (s === ' ') {
@@ -25,7 +25,7 @@ const IntroTitle = memo(() => {
           }
         })}
       </h1>
-      <div id="date" css={date_style}>
+      <div css={dateStyle}>
         {d.split('').map((s, i) => {
           const key = shortid.generate()
           if (s === ' ') {
@@ -41,7 +41,7 @@ const IntroTitle = memo(() => {
   )
 })
 
-const title_style = css`
+const titleStyle = css`
   position: absolute;
   top: 1.2rem;
   left: 1.2rem;
@@ -72,7 +72,7 @@ const title_style = css`
   }
 `
 
-const date_style = css`
+const dateStyle = css`
   position: absolute;
   bottom: 1.2rem;
   right: 1.2rem;

@@ -9,7 +9,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const CFP = ({ }: Props) => {
+const CFP = ({}: Props) => {
   const { t } = useI18n()
   return (
     <>

@@ -12,6 +12,23 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com"></link>
+        <link rel="dns-prefetch" href="//jsconf.now.sh"></link>
+        <link rel="dns-prefetch" href="//now.sh"></link>
+        <link rel="dns-prefetch" href="//jsconfkorea.com"></link>
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preload"
+          as="font"
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro&display=swap"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro&display=swap"
+          rel="stylesheet"
+          media="print"
+          onLoad={`this.media='all'` as any}
+        />
         <meta charSet="UTF-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -33,20 +50,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:site_name" content="JSConf Korea 2020" />
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
         <meta property="og:type" content="website" />
-
-        <link rel="shortcut icon" href="/favicon.png" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro&display=swap"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;700;900&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro&display=swap"
-          rel="stylesheet"
-          media="print"
-          onLoad={`this.media='all'` as any}
-        />
       </Head>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
