@@ -9,16 +9,18 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const About = ({ }: Props) => {
+const About = ({}: Props) => {
   const { t } = useI18n()
   return (
-    <>
+    <div css={style}>
       <Header></Header>
       <Markdown>{t('about-md')}</Markdown>
       <TopButton></TopButton>
-    </>
+    </div>
   )
 }
-const style = css``
+const style = css`
+  padding: 5rem 0 5rem 0;
+`
 
 export default About

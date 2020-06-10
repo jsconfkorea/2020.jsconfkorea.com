@@ -81,6 +81,7 @@ const Header = ({}: Props) => {
 
 const style = css`
   position: fixed;
+  display: block;
   top: 0;
   left: 0;
   right: 0;
@@ -98,22 +99,22 @@ const style = css`
     #btn-menu {
       & > div {
         & > span:nth-of-type(1) {
-          transform: translateY(0px) rotate(45deg) translateZ(0);
+          transform: translateY(1px) rotate(45deg) translateZ(0);
         }
         & > span:nth-of-type(2) {
           opacity: 0;
         }
         & > span:nth-of-type(3) {
-          transform: translateY(0px) rotate(-45deg) translateZ(0);
+          transform: translateY(-1px) rotate(-45deg) translateZ(0);
         }
       }
       &:hover,
       &:focus {
         span:nth-of-type(1) {
-          transform: translateY(0px) rotate(40deg) translateZ(0);
+          transform: translateY(1px) rotate(40deg) translateZ(0);
         }
         span:nth-of-type(3) {
-          transform: translateY(0px) rotate(-40deg) translateZ(0);
+          transform: translateY(-1px) rotate(-40deg) translateZ(0);
         }
       }
     }
@@ -180,13 +181,15 @@ const style = css`
     padding: 0;
     position: absolute;
     & > div {
-      width: 2rem;
-      height: 0.88rem;
-      margin: auto;
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      width: 4rem;
+      height: 4rem;
       span {
+        /* margin-top: 1.6rem; */
         display: block;
-        position: absolute;
-        width: 100%;
+        width: 2rem;
         height: 2px;
         background-color: #333;
         top: 0.4rem;

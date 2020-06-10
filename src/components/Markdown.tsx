@@ -33,7 +33,7 @@ const Markdown = ({ children }: Props) => {
 }
 
 const style = css`
-  margin: 20px auto 100px;
+  margin: 0px auto;
   max-width: 820px;
   padding: 30px 30px;
   color: #333;
@@ -98,32 +98,6 @@ const style = css`
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.05);
     border: solid 1px rgba(0, 0, 0, 0.1);
-  }
-  button {
-    display: block;
-    border: solid 1px rgba(0, 0, 0, 0.1);
-    color: #fff;
-    background: #555;
-    max-width: 300px;
-
-    margin: 20px auto 30px;
-    padding: 10px 20px;
-    outline: none;
-    border-radius: 3px;
-    font-size: 20px;
-
-    cursor: pointer;
-    transform: translate3d(0px, -6px, 0);
-    box-shadow: 0px 6px 0 #111;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  button:hover {
-    transform: translate3d(0px, -4px, 0);
-    box-shadow: 0px 4px 0 #111;
-  }
-  button:active {
-    transform: translate3d(0px, -2px, 0);
-    box-shadow: 0px 2px 0 #111;
   }
 
   @media screen and (max-width: 1200px) {

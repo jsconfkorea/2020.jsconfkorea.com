@@ -10,17 +10,19 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const COC = ({ }: Props) => {
+const COC = ({}: Props) => {
   const { t } = useI18n()
   return (
-    <>
+    <div css={style}>
       <Header></Header>
       <Markdown>{t('privacy-policy-md')}</Markdown>
       <TopButton></TopButton>
-    </>
+    </div>
   )
 }
 
-const style = css``
+const style = css`
+  padding: 5rem 0 5rem 0;
+`
 
 export default COC

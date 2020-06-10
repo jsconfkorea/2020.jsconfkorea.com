@@ -12,14 +12,16 @@ type Props = {}
 const Sponsorship = ({}: Props) => {
   const { t } = useI18n()
   return (
-    <>
+    <div css={style}>
       <Header></Header>
       <Markdown>{t('sponsorship-md')}</Markdown>
       <TopButton></TopButton>
-    </>
+    </div>
   )
 }
 
-const style = css``
+const style = css`
+  padding: 5rem 0 5rem 0;
+`
 
 export default Sponsorship
