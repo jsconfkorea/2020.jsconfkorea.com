@@ -36,7 +36,7 @@ Any speech that reinforces harmful stereotypes is unwelcome. Examples include bu
 
 # PHOTO POLICY
 
-Photographs and videos taken during the conference may be released through JSConf Korea's official channels. These include screenshots and screen recordings of our video conferences.
+Photographs and videos taken during the conference may be released through JSConf Korea's official channels. These include screenshots and screen recordings of our online conference.
 
 If there are participants with their cameras on, please ask for their permission before taking any screenshots or recordings.
 
@@ -59,6 +59,5 @@ When taking a personal report, our staff will ensure you are safe and cannot be 
 # ATTRIBUTION
 
 This Code of Conduct was adapted from [JSConf EU’s Code of Conduct](https://2019.jsconf.eu/code-of-conduct/) to fit Korean culture and language. JSConf EU’s Code of Conduct was in turn based on [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](http://jsconfau.com/), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), the work of [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/) and [Conference Code of Conduct](https://confcodeofconduct.com/).
-
 
 Last updated June 6, 2020

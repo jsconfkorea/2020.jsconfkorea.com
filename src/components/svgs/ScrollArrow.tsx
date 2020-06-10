@@ -2,18 +2,7 @@
 import { jsx, css } from '@emotion/core'
 
 const ScrollArrow = () => (
-  <svg
-    css={style}
-    version="1.1"
-    id="레이어_1"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-    x="0px"
-    y="0px"
-    viewBox="0 0 16 39.9"
-    style={{ background: 'new 0 0 16 39.9' }}
-    xmlSpace="preserve"
-  >
+  <svg css={style} version="1.1" x="0px" y="0px" viewBox="0 0 16 39.9" style={{ background: 'new 0 0 16 39.9' }}>
     <path
       className="st0"
       d="M15.7,30.8c-0.4-0.4-1-0.4-1.4,0L9,36.1V1c0-0.6-0.4-1-1-1S7,0.4,7,1v35.1l-5.3-5.3c-0.4-0.4-1-0.4-1.4,0

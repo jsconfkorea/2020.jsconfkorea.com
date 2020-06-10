@@ -1,178 +1,245 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import Link from './Link'
-import { useState } from 'react'
+import { useState, forwardRef, useEffect, useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
+import { AnimatePresence, motion } from 'framer-motion'
+import fetch from 'node-fetch'
+import CloseButton from './svgs/CloseButton'
+import { useKey } from 'react-use'
+import { useToast } from '@chakra-ui/core'
 
 type Props = {
-  className?: string
-  active?: boolean
+  isShowing: boolean
+  close: () => void
 }
 
-const Popup = (props: Props) => {
+const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+
+const Popup = ({ isShowing, close }: Props, ref: any) => {
   const { t } = useI18n()
-  const [on, setOn] = useState(false)
-  const func = () => {
-    setOn((on) => !on)
+  const [email, setEmail] = useState('')
+  const toast = useToast()
+
+  const handleOnSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!emailRegex.test(email)) return
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      if (response.status < 300) {
+        toast({
+          position: 'top',
+          title: t('newsletter_success'),
+          status: 'success',
+          duration: 3000,
+          isClosable: true,
+        })
+      } else {
+        toast({
+          position: 'top',
+          title: t('newsletter_error'),
+          status: 'error',
+          duration: 3000,
+          isClosable: true,
+        })
+      }
+    } catch {
+      toast({
+        position: 'top',
+        title: t('newsletter_error'),
+        status: 'error',
+        duration: 3000,
+        isClosable: true,
+      })
+    }
+
+    close()
   }
 
+  useKey((e) => e.keyCode === 27, close)
+  useKey(
+    (e) => isShowing && e.key === 'Enter',
+    (e) => handleOnSubmit(e as any),
+  )
+
   return (
-    <div id="popup" css={style} className={props.active ? 'active' : ''}>
-      <div className="inner">
-        <form id="popup-form">
-          <p id="popup-message">Please enter your e-mail address</p>
-          <input id="email-input" type="email" placeholder="email address"></input>
-          <div id="popup-notice" className="">Incorrect format</div>
-          <button id="popup-submit" type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
+    <AnimatePresence>
+      {isShowing && (
+        <>
+          <motion.div css={dimStyle} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} />
+          <motion.div css={style}>
+            <motion.div
+              ref={ref}
+              className="inner"
+              initial={{ y: 1000, display: 'none' }}
+              animate={{ opacity: 1, y: 0, display: 'block' }}
+              exit={{ y: 1000 }}
+            >
+              <button onClick={close}>
+                <CloseButton />
+              </button>
+              <form onSubmit={handleOnSubmit}>
+                <p>{t('newsletter_message')}</p>
+                <input
+                  name="email"
+                  type="email"
+                  placeholder={t('newsletter_placeholder')}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleOnSubmit(e as any)}
+                />
+                <button type="submit" disabled={!emailRegex.test(email)}>
+                  {t('subscribe')}
+                </button>
+              </form>
+            </motion.div>
+          </motion.div>
+        </>
+      )}
+    </AnimatePresence>
   )
 }
 
+const dimStyle = css`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff55;
+  z-index: 10;
+`
+
 const style = css`
-  position:fixed;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
-  background:#ffffff33;
-  z-index:10;
-  opacity:0;
-  visibility: hidden;
-  transition:opacity .3s, visibility 0s .1s;
-  z-index:99;
+  position: absolute;
+  display: grid;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  overflow: hidden;
 
-  &.active{
-    opacity:1;
-    visibility: visible;
-    transition:opacity .1s, visibility 0s;
+  & > .inner {
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    width: 350px;
+    height: 250px;
+    background-color: #ff7235;
+    border: solid 5px #ff7235;
+    padding: 0.8rem;
 
-    &>.inner{
-      #popup-form{
-        transform:translateY(0) scaleX(1) translateZ(0);
-        box-shadow: 0px 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);
+
+    & > button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      svg {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        color: white;
+      }
+    }
+
+    form {
+      /* background: white; */
+      /* padding: 70px 100px;
+      max-width: 500px;
+      box-sizing: border-box;
+      color: white; */
+
+      transform: translateY(10px) translateZ(0);
+      box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+
+      p {
+        color: #fff;
+        font-size: 20px;
+        line-height: 1.5em;
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        display: block;
+        background: rgba(0, 0, 0, 0.2);
+        border: solid rgba(0, 0, 0, 0.2) 1px;
+        color: #fff;
+        outline: none;
+        font-size: 20px;
+        line-height: 30px;
+        padding: 5px 10px;
+        border-radius: 3px;
+        margin-top: 20px;
+        box-sizing: border-box;
+        -webkit-appearance: none;
+        &::placeholder,
+        &::-webkit-input-placeholder,
+        &:-ms-input-placeholder {
+          color: #ffffff99;
+        }
+      }
+
+      & > button {
+        display: block;
+        border: solid 1px rgba(0, 0, 0, 0.1);
+        color: #fff;
+        background: #ff7235;
+        width: 100%;
+
+        margin-top: 15px;
+        padding: 10px;
+        outline: none;
+        border-radius: 3px;
+        font-size: 20px;
+
+        cursor: pointer;
+        transform: translate3d(0px, -6px, 0);
+        box-shadow: 0px 6px 0 rgba(0, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+        &[disabled] {
+          transform: translate3d(0px, -2px, 0);
+          background: #9b4206;
+          box-shadow: 0px 2px 0 #ff7235;
+        }
+        &:hover:not([disabled]),
+        &:focus:not([disabled]) {
+          transform: translate3d(0px, -4px, 0);
+          box-shadow: 0px 4px 0 #ff7235;
+        }
+        &:active:not([disabled]) {
+          transform: translate3d(0px, -2px, 0);
+          box-shadow: 0px 2px 0 #ff7235;
+        }
       }
     }
   }
 
-  &>.inner{
-      position: absolute;;
-      top:50%;
-      left:50%;
-      transform:translate3d(-50%,-50%,0);
-
-      #popup-form{
-        background:white;
-        z-index: 10;
-        padding:70px 100px;
-        max-width:500px;
-        box-sizing:border-box;
-        background-color: #ff7235;
-        border:solid 5px #ff7235;
-        color:white;
-        font-size:0;
-        transition:all .3s;
-        z-index: 1;
-
-        transform:translateY(10px) translateZ(0);
-        box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
-
-        input{
-            width:100%;
-            display:block;
-            background:rgba(0,0,0,0.2);
-            border:solid rgba(0,0,0,0.2) 1px;
-            color:#fff;
-            outline:none;
-            font-size:20px;
-            line-height:30px;
-            padding:5px 10px;
-            border-radius:3px;
-            margin-top:20px;
-            box-sizing: border-box;;
-            -webkit-appearance: none;
-        }
-
-        input::-webkit-input-placeholder { /* Edge */
-          color: #ffffff99;
-        }
-
-        input:-ms-input-placeholder { /* Internet Explorer 10-11 */
-          color: #ffffff99;
-        }
-
-        input::placeholder {
-          color: #ffffff99;
-        }
-        #popup-message{
-          color:#fff;
-          font-size:20px;
-          line-height:1.5em;
-        }
-        #popup-notice{
-          color:#fff;
-          font-size:15px;
-          line-height:1.5em;
-          padding:5px 0;
-          box-sizing:border-box;
-          transition:height .2s;
-
-          height:0;
-          opacity:0;
-          visibility:hidden;
-
-          &.active{
-            height:auto;
-            opacity:1;
-            visibility:visible;
-          }
-        }
-
-        button{
-          display:block;
-          border:solid 1px rgba(0,0,0,0.1);
-          color:#fff;
-          background:#ff7235;
-          width:100%;
-
-          margin-top:15px;
-          padding:10px;
-          outline:none;
-          border-radius:3px;
-          font-size:20px;
-
-          cursor:pointer;
-          transform:translate3d(0px,-6px,0);
-          box-shadow:0px 6px 0 rgba(0,0,0,0.3);
-          transition:transform .2s, box-shadow .2s;
-        }
-        button:hover{
-          transform:translate3d(0px,-4px,0);
-          box-shadow:0px 4px 0 #ff7235;
-        }
-        button:active{
-          transform:translate3d(0px,-2px,0);
-          box-shadow:0px 2px 0 #ff7235;
-        }
-      }
-  }
-
-
-
-
-
-  @media screen and (max-width:768px){
-    &>.inner #popup-form{
-      width:calc(100vw - 25px);
-      padding:30px 30px;
-      border:solid 3px #ff7235;
-      box-shadow: 0px 0px 0 #ff7235;
+  @media screen and (max-width: 768px) {
+    & > .inner form {
+      /* width: calc(100vw - 25px);
+      padding: 30px 30px;
+      border: solid 3px #ff7235;
+      box-shadow: 0px 0px 0 #ff7235; */
     }
-    &.active>.inner #popup-form{
-      box-shadow: 6px 8px 0 #ff7235;
+    &.active > .inner form {
+      /* box-shadow: 6px 8px 0 #ff7235; */
     }
   }
 `
 
-export default Popup
+export default forwardRef(Popup)

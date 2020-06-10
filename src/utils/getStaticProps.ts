@@ -10,7 +10,7 @@ const DOC_LIST = [
   'code-of-conduct',
   'frequently-asked-questions',
   'privacy-policy',
-  'scholarships',
+  'sponsorship',
 ]
 
 const getStaticProps: GetStaticProps = async ({ params }) => {
