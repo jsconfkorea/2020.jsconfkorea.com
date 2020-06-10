@@ -8,7 +8,7 @@ This year, we come to you as _JSConf Korea 2020 Home Edition_. We're taking thin
 
 # Program
 
-- ✨Coming soon...!
+- ✨ Coming soon...!
 
 # Accessibility
 
@@ -22,4 +22,4 @@ If you have any accessibility requests, please get in touch at [contact@jsconfko
 
 JSConf Korea is a not-for-profit conference made possible by a team of volunteers.
 
-- ✨Profiles coming soon...!
+- ✨ Profiles coming soon...!
