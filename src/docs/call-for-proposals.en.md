@@ -1,6 +1,8 @@
 # Call for Proposals
 
-# Introduction
+- 📅 Submission deadline: **July 5 11:59 PM(KST)**
+- 📅 Selection period: July 6 - July 31
+
 
 We believe that progress happens when everyone has a chance to share their perspective. If you've used JavaScript on an exciting project, or have ideas, stories, or even a song to share with us, please submit a proposal! As long as it fits our [Code of Conduct](/en/code-of-conduct), anything’s on the table. Even if you don’t have any experience in giving talks, [we’re here to help](/en/call-for-proposals#speaker-support). You can pick a topic from the list below or come up with your own:
 
