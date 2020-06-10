@@ -35,16 +35,18 @@ const style = css`
     touch-action: manipulation;
   }
   body {
+    position: fixed;
     background-color: #ddd;
     /* background-color:#000; */
     font-weight: 400;
     overscroll-behavior-y: none;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     direction: ltr;
     -moz-osx-font-smoothing: grayscale;
   }
   #__next {
     position: relative;
+    overflow-y: auto;
   }
 
   .btn-default {

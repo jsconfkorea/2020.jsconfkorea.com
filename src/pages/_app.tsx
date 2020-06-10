@@ -50,6 +50,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:site_name" content="JSConf Korea 2020" />
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
         <meta property="og:type" content="website" />
+        {/* <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script> */}
       </Head>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>

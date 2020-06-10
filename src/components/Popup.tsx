@@ -131,9 +131,9 @@ const style = css`
     justify-self: center;
     align-self: center;
     width: 350px;
-    height: 250px;
+    height: 220px;
     background-color: #ff7235;
-    border: solid 5px #ff7235;
+    border: solid 0.4rem #ff7235;
     padding: 0.8rem;
 
     box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3);

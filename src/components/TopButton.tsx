@@ -5,7 +5,11 @@ import GoToTop from './svgs/GoToTop'
 const GoToTopButton = () => {
   return (
     <>
-      <button css={style} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="go to top">
+      <button
+        css={style}
+        onClick={() => document.querySelector('#__next')!.scrollTo({ top: 0, behavior: 'smooth' })}
+        aria-label="go to top"
+      >
         <GoToTop />
       </button>
     </>
