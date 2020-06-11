@@ -65,8 +65,8 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
         <meta property="og:type" content="website" />
         <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
-        {/* <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139256354-2"></script>
-        <script src="/ga.js"></script> */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139256354-2"></script>
+        <script src="/ga.js"></script>
       </Head>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
