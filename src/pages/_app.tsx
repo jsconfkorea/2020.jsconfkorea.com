@@ -6,12 +6,7 @@ import { ThemeProvider } from '@chakra-ui/core'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
-import ReactGA from 'react-ga'
-
-ReactGA.initialize('UA-139256354-2')
-// if (typeof window !== 'undefined') {
-//   ReactGA.pageview(window.location.pathname + window.location.search)
-// }
+import useGA from '../hooks/useGA'
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -23,6 +18,9 @@ const App = ({ Component, pageProps }: AppProps) => {
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = 'JSConf Korea 2020 - Home Edition'
   const thumb = '/site-thumb.png'
+
+  useGA()
+
   return (
     <>
       <Head>
