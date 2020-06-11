@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = 'JSConf Korea 2020 - Home Edition'
-  const thumb = '/site-thumb.png'
+  const thumb = '/og-image.png'
 
   useGA()
 
