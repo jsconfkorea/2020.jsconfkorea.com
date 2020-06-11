@@ -28,8 +28,10 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="dns-prefetch" href="//jsconf.now.sh"></link>
         <link rel="dns-prefetch" href="//now.sh"></link>
         <link rel="dns-prefetch" href="//jsconfkorea.com"></link>
+        <link rel="dns-prefetch" href="//www.google-analytics.com"></link>
         <link rel="shortcut icon" href="/favicon.png" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+
         <link
           rel="preload"
           as="style"
@@ -63,8 +65,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:url" content="https://2020.jsconfkorea.com" />
         <meta property="og:type" content="website" />
         <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139256354-2"></script>
-        <script src="/ga.js"></script>
       </Head>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
