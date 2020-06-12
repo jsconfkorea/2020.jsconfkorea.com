@@ -9,72 +9,92 @@
 
 <url>
   <loc>https://jsconfkorea.com/</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/en</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/ko</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/redirect/2019-website</loc>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/redirect/2019-videos</loc>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/sponsorship</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/call-for-proposals</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/en/sponsorship</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/en/call-for-proposals</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/ko/sponsorship</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/ko/call-for-proposals</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/en/code-of-conduct</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/redirect/cfp-form-en</loc>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/ko/code-of-conduct</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/redirect/cfp-form-ko</loc>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/report/</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/en/404</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://jsconfkorea.com/ko/404</loc>
-  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <lastmod>2020-06-12T05:05:04+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 
