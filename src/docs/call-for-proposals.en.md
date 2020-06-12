@@ -3,7 +3,6 @@
 - 📅 Submission deadline: **July 5 11:59 PM(KST)**
 - 📅 Selection period: July 6 - July 31
 
-
 We believe that progress happens when everyone has a chance to share their perspective. If you've used JavaScript on an exciting project, or have ideas, stories, or even a song to share with us, please submit a proposal! As long as it fits our [Code of Conduct](/en/code-of-conduct), anything’s on the table. Even if you don’t have any experience in giving talks, [we’re here to help](/en/call-for-proposals#speaker-support). You can pick a topic from the list below or come up with your own:
 
 ## Topics
@@ -49,6 +48,7 @@ Again, whatever else you might need, we’re here to help. Get in touch with us 
 # Talk Format
 
 ## Location
+
 JSConf Korea 2020 Home Edition will be **online**. You can present anywhere in the world with a reliable internet connection.
 
 If you prefer, you can give your talk at a studio in Seoul on the day of the conference. This studio will be provided for the speakers and MCs by the JSConf Korea team.

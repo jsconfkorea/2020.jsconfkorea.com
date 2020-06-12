@@ -2,7 +2,6 @@
 import { jsx, css } from '@emotion/core'
 import { useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
-import { useScroll } from '../hooks/useScroll'
 import { useModal } from '../hooks/useModal'
 import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import Header from '../components/Header'
@@ -17,7 +16,6 @@ type Props = {}
 
 const Index = ({}: Props) => {
   const { t } = useI18n()
-  const { y } = useScroll()
   const ref = useRef<HTMLFormElement>(null)
   const { isShowing, toggle, close } = useModal()
 
@@ -27,7 +25,7 @@ const Index = ({}: Props) => {
     <>
       <div css={style}>
         <Header></Header>
-        <section id="intro" className={y > 60 ? 'scrollup' : ''}>
+        <section id="intro">
           <Graphic></Graphic>
           <IntroTitle></IntroTitle>
         </section>
@@ -139,9 +137,6 @@ const style = css`
           transform: translateY(-10px) translateZ(0);
         }
       }
-    }
-    &.scrollup > #scroll {
-      opacity: 0;
     }
   }
 

@@ -65,11 +65,11 @@ const style = css`
   overflow: hidden;
   white-space: pre;
 
-  @media screen and (max-width:768px){
-    font-size:10px;
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
     left: 10px;
     top: 10px;
-    width:calc(100% - 20px);
+    width: calc(100% - 20px);
   }
 `
 

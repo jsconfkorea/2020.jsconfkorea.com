@@ -14,6 +14,7 @@ const CFP = ({}: Props) => {
   const { t, activeLanguage } = useI18n()
   const title = `JSConf Korea 2020 - ${t('cfp_title')}`
   const description = t('cfp_description')
+
   return (
     <>
       <Head>
