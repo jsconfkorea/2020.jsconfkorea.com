@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://jsconfkorea.com/</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/en</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/ko</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/sponsorship</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/call-for-proposals</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/en/sponsorship</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/en/call-for-proposals</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/ko/sponsorship</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/ko/call-for-proposals</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/en/code-of-conduct</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/ko/code-of-conduct</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/report/</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/en/404</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://jsconfkorea.com/ko/404</loc>
+  <lastmod>2020-06-12T03:44:00+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>
