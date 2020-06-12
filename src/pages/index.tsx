@@ -37,15 +37,10 @@ const Index = ({}: Props) => {
               <div className="btn-default">
                 <span>{t('look_back_2019')}</span>
                 <div className="inner">
-                  <a href="https://2019.jsconfkorea.com/" className="btn-default block" target="_blank" rel="noopener">
+                  <a href="/redirect/2019-website" className="btn-default block" target="_blank" rel="noopener">
                     {t('website')}
                   </a>
-                  <a
-                    href="https://www.youtube.com/playlist?list=PL8vHvcFj-bKrg-fp-4bnawVf5y30mi5xd"
-                    className="btn-default block"
-                    target="_blank"
-                    rel="noopener"
-                  >
+                  <a href="/redirect/2019-videos" className="btn-default block" target="_blank" rel="noopener">
                     {t('video')}
                   </a>
                 </div>

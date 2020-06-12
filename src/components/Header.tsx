@@ -81,19 +81,19 @@ const Header = ({}: Props) => {
                 </ul>
               </nav>
               <div id="btn-social">
-                <a href="https://www.facebook.com/jsconfkorea" target="_blank" rel="noopener">
+                <a href="/redirect/facebook" target="_blank" rel="noopener">
                   <FacebookIcon />
                 </a>
-                <a href="https://www.instagram.com/jsconf.korea" target="_blank" rel="noopener">
+                <a href="/redirect/instagram" target="_blank" rel="noopener">
                   <InstagramIcon />
                 </a>
-                <a href="https://twitter.com/jsconfkorea" target="_blank" rel="noopener">
+                <a href="/redirect/twitter" target="_blank" rel="noopener">
                   <TwitterIcon />
                 </a>
-                <a href="https://www.youtube.com/channel/UCkHwMMujxwX2s_nxXFsUcLQ" target="_blank" rel="noopener">
+                <a href="/redirect/youtube" target="_blank" rel="noopener">
                   <YoutubeIcon />
                 </a>
-                <a href="https://github.com/jsconfkorea/" target="_blank" rel="noopener">
+                <a href="/redirect/github" target="_blank" rel="noopener">
                   <GithubIcon />
                 </a>
               </div>

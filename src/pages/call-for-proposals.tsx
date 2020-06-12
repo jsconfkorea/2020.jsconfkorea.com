@@ -9,18 +9,13 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const CFP_FORM_URL: { [key: string]: string } = {
-  ko: 'https://forms.gle/4fuou7MXeXuKJ4rP9',
-  en: 'https://forms.gle/uD1UxdSTKQZDjJMA8',
-}
-
 const CFP = ({}: Props) => {
   const { t, activeLanguage } = useI18n()
   return (
     <div css={style}>
       <Header></Header>
       <Markdown>{t('call-for-proposals-md')}</Markdown>
-      <a href={CFP_FORM_URL[activeLanguage]} target="_blank" rel="noopener">
+      <a href={`/redirect/cfp-form-${activeLanguage}`} target="_blank" rel="noopener">
         {t('submit_proposal')}
       </a>
       <TopButton></TopButton>
