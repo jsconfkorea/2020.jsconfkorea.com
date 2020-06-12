@@ -3,8 +3,8 @@ export const ko = {
   look_back_2019: '2019년 행사보기',
   website: '웹사이트',
   video: '영상',
-  cfp: '발표자 지원',
-  sponsor: '스폰서 지원',
+  cfp: '발표자 모집',
+  sponsor: '스폰서 모집',
   newsletter: '뉴스레터',
 
   // menu
@@ -25,4 +25,7 @@ export const ko = {
 
   // call-for-proposals
   submit_proposal: '발표 지원하기',
+
+  cfp_title: '발표자 모집',
+  cfp_description: '🎉 JSConf Korea 2020의 연사를 모집합니다!',
 }

@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import TopButton from '../components/TopButton'
 import { useI18n } from '../hooks/useI18n'
 import Markdown from '../components/Markdown'
+import Head from 'next/head'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -11,15 +12,29 @@ type Props = {}
 
 const CFP = ({}: Props) => {
   const { t, activeLanguage } = useI18n()
+  const title = `JSConf Korea 2020 - ${t('cfp_title')}`
+  const description = t('cfp_description')
   return (
-    <div css={style}>
-      <Header></Header>
-      <Markdown>{t('call-for-proposals-md')}</Markdown>
-      <a href={`/redirect/cfp-form-${activeLanguage}`} target="_blank" rel="noopener">
-        {t('submit_proposal')}
-      </a>
-      <TopButton></TopButton>
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+        <meta name="description" content={description} key="description" />
+
+        <meta name="twitter:title" content={title} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:title" />
+
+        <meta property="og:title" content={title} key="og:title" />
+        <meta property="og:description" content={description} key="og:description" />
+      </Head>
+      <div css={style}>
+        <Header></Header>
+        <Markdown>{t('call-for-proposals-md')}</Markdown>
+        <a href={`/redirect/cfp-form-${activeLanguage}`} target="_blank" rel="noopener">
+          {t('submit_proposal')}
+        </a>
+        <TopButton></TopButton>
+      </div>
+    </>
   )
 }
 

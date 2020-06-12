@@ -25,4 +25,7 @@ export const en = {
 
   // call-for-proposals
   submit_proposal: 'Submit Proposal',
+
+  cfp_title: 'Call For Proposals',
+  cfp_description: '🎉 We are now accepting talk proposals for JSConf Korea 2020!',
 }
