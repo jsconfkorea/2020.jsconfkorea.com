@@ -140,6 +140,7 @@ const style = css`
           font-size: 2rem;
           line-height: 4rem;
           font-weight: 900;
+          transition: all 0.3s;
         }
 
         button,
