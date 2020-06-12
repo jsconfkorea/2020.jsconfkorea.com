@@ -125,7 +125,7 @@ const style = css`
     font-size: 25px;
     touch-action: manipulation;
     letter-spacing: -0.03rem;
-    /* -moz-osx-font-smoothing: grayscale; */
+    -moz-osx-font-smoothing: grayscale;
   }
   body {
     position: fixed;

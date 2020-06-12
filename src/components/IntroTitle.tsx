@@ -49,7 +49,7 @@ const titleStyle = css`
   color: #333;
   font-size: 3rem;
   font-weight: 900;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.05rem;
   line-height: 1em;
 
   margin: 0;
@@ -77,7 +77,7 @@ const dateStyle = css`
 
   color: #333;
   font-size: 3rem;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.05rem;
   line-height: 1em;
   font-weight: 900;
   text-align: right;

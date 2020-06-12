@@ -168,7 +168,7 @@ const style = css`
     transition: opacity 0.3s;
     & > span {
       display: inline-block;
-      transform: translateY(-1.5px);
+      transform: translateY(-1px);
     }
     & > a {
       margin: 0 0.4rem;

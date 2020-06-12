@@ -93,23 +93,6 @@ const style = css`
       height: 100%;
     }
 
-    h1 {
-      top: 1.2rem;
-      left: 1.2rem;
-
-      color: #333;
-      font-size: 3rem;
-      letter-spacing: -0.05em;
-      line-height: 1em;
-      /* text-align: right; */
-
-      margin: 0;
-
-      p {
-        margin: 0;
-      }
-    }
-
     #scroll {
       bottom: 1.2rem;
       left: 1.2rem;
@@ -234,13 +217,6 @@ const style = css`
   }
 
   @media screen and (max-width: 768px) {
-    #intro {
-      h1 {
-        bottom: 0.8rem;
-        right: 0.8rem;
-        font-size: 1.8rem;
-      }
-    }
     #main-buttons {
       & > div {
         & > div {

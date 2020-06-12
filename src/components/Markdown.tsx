@@ -33,7 +33,7 @@ const Markdown = ({ children }: Props) => {
 }
 
 const style = css`
-  font-family: 'Airbnb Cereal App Book', 'Noto Sans KR', 'Roboto Mono', sans-serif;
+  font-family: 'Airbnb Cereal App Book', sans-serif;
   letter-spacing: 0px;
   margin: 0px auto;
   max-width: 820px;
@@ -48,10 +48,13 @@ const style = css`
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+    font-family: 'Airbnb Cereal App Bold', sans-serif;
+  }
+
   a,
   strong {
-    font-family: 'Airbnb Cereal App Medium', 'Noto Sans KR', 'Roboto Mono', sans-serif;
+    font-family: 'Airbnb Cereal App Medium', sans-serif;
   }
 
   h1 {

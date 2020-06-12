@@ -130,7 +130,8 @@ const style = css`
     position: absolute;
     justify-self: center;
     align-self: center;
-    width: 350px;
+    width: 90%;
+    max-width: 350px;
     height: 220px;
     background-color: #ff7235;
     border: solid 0.4rem #ff7235;
