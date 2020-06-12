@@ -26,12 +26,22 @@ const App = ({ Component, pageProps }: AppProps) => {
     <>
       <Head>
         <link rel="dns-prefetch" href="//fonts.googleapis.com"></link>
+        <link rel="dns-prefetch" href="//fonts.gstatic.com"></link>
         <link rel="dns-prefetch" href="//jsconf.now.sh"></link>
         <link rel="dns-prefetch" href="//now.sh"></link>
         <link rel="dns-prefetch" href="//jsconfkorea.com"></link>
         <link rel="dns-prefetch" href="//www.google-analytics.com"></link>
-        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="dns-prefetch" href="//polyfill.io"></link>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://jsconf.now.sh" crossOrigin="anonymous"></link>
+        <link rel="preconnect" href="https://now.sh" crossOrigin="anonymous"></link>
+        <link rel="preconnect" href="https://jsconfkorea.com" crossOrigin="anonymous"></link>
+        <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous"></link>
+        <link rel="preconnect" href="https://polyfill.io" crossOrigin="anonymous"></link>
+
+        <link rel="shortcut icon" href="/favicon.png" />
 
         <link
           rel="preload"
@@ -65,6 +75,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:site_name" content="JSConf Korea 2020" />
         <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
+
+        <meta name="google" content="notranslate"></meta>
+
         <script async src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
       </Head>
       <GlobalStyle />
