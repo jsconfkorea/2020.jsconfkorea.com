@@ -10,7 +10,6 @@ import Graphic from '../components/Graphic'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Popup from '../components/Popup'
-import Head from 'next/head'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 

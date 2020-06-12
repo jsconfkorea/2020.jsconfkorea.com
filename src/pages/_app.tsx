@@ -18,6 +18,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = 'JSConf Korea 2020 - Home Edition'
   const thumb = '/og-image.png'
+  const url = 'https://jsconfkorea.com'
 
   useGA()
 
@@ -62,9 +63,9 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta property="og:description" content={description} />
         <meta property="og:image" content={thumb} />
         <meta property="og:site_name" content="JSConf Korea 2020" />
-        <meta property="og:url" content="https://2020.jsconfkorea.com" />
+        <meta property="og:url" content={url} />
         <meta property="og:type" content="website" />
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
+        <script async src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
       </Head>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>

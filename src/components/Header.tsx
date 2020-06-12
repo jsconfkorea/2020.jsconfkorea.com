@@ -37,7 +37,9 @@ const Header = ({}: Props) => {
         </button>
         <div id="btn-right">
           <div id="btn-lang">
-            <ChangeLanguageLink lang="en">EN</ChangeLanguageLink>|<ChangeLanguageLink lang="ko">KR</ChangeLanguageLink>
+            <ChangeLanguageLink lang="en">EN</ChangeLanguageLink>
+            <span>|</span>
+            <ChangeLanguageLink lang="ko">KR</ChangeLanguageLink>
           </div>
         </div>
       </header>
@@ -164,6 +166,10 @@ const style = css`
     font-size: 1.2rem;
     color: #333;
     transition: opacity 0.3s;
+    & > span {
+      display: inline-block;
+      transform: translateY(-1.5px);
+    }
     & > a {
       margin: 0 0.4rem;
       color: #333;
