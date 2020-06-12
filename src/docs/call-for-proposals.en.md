@@ -48,6 +48,11 @@ Again, whatever else you might need, we’re here to help. Get in touch with us 
 
 # Talk Format
 
+## Location
+JSConf Korea 2020 Home Edition will be **online**. You can present anywhere in the world with a reliable internet connection.
+
+If you prefer, you can give your talk at a studio in Seoul on the day of the conference. This studio will be provided for the speakers and MCs by the JSConf Korea team.
+
 ## Duration
 
 Prepare your talk to be less than **25 minutes long**. You will have 30 minutes for transition, preparation, and the talk.
