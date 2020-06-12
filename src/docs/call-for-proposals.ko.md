@@ -101,23 +101,28 @@ JSConf Korea 2020 Home Edition은 **온라인**으로 진행됩니다. 인터넷
 > 화면이 멈추거나, 애니메이션이 버벅거리거나, 클릭 혹은 스크롤 등이 제때 반응하지 않는다거나하는 현상은 서비스의 사용성, 사용자 경험을 해치는 요소들이 될 수 있습니다. 이러한 현상들과 그 원인을 자바스크립트 엔진의 구조, task, call-stack, event-loop 개념 중심으로 알아보고 이를 해결하기 위한 몇가지 방법들을 소개합니다. 이해를 돕기 위해, 이슈가 발생하는 상황을 가정한 데모를 활용해 소개한 해결방법들이 어떻게 개선시켜 나가는지도 함께 설명합니다.
 >
 > - 대표적인 사용자 경험을 방해하는 요소들
->   - "스크롤이 자꾸 끊겨요."
->   - "타이핑한게 화면에 바로바로 반영이 안돼요."
->   - "애니메이션이 매끄럽게 동작하지 않아요."
+>
+> 1. "스크롤이 자꾸 끊겨요."
+> 2. "타이핑한게 화면에 바로바로 반영이 안돼요."
+> 3. "애니메이션이 매끄럽게 동작하지 않아요."
+>
 > - 왜 이러한 현상이 일어나는가?
->   - 원인은 진행중인 task가 event loop를 차단하기 때문
->   - javascript engine 구조
->   - main thread, call stack, event loop
->   - run-to-completion
+>
+> 1. 원인은 진행중인 task가 event loop를 차단하기 때문
+> 2. javascript engine 구조
+> 3. main thread, call stack, event loop
+> 4. run-to-completion
+>
 > - 이를 해결하려면?
->   - don't block the event loop!
->   - web worker
->   - javascript code를 별도의 worker thread에서 돌릴 수 있는 api
->   - task를 잘게 쪼개서 중간중간 다른 작업을 끼워 넣기
->   - 큰 task를 micro task로 세분화하고 이를 setTimeout, requestIdleCallback과 같은 api를 이용하여 프레임 사이사이 에서 실행될 수 있도록 한다.
->   - 그 외 framework/library 차원에서 시도되고 있는 노력들
-> - 주의할 점
->   - 과도한 micro-optimization 등
+>
+> 1. don't block the event loop!
+> 2. web worker
+> 3. javascript code를 별도의 worker thread에서 돌릴 수 있는 api
+> 4. task를 잘게 쪼개서 중간중간 다른 작업을 끼워 넣기
+> 5. 큰 task를 micro task로 세분화하고 이를 setTimeout, requestIdleCallback과 같은 api를 이용하여 프레임 사이사이 에서 실행될 수 있도록 한다.
+> 6. 그 외 framework/library 차원에서 시도되고 있는 노력들
+>
+> - 주의할 점: 과도한 micro-optimization 등
 >
 > — [강재석](https://twitter.com/kang89kr)님의 지원서에서
 

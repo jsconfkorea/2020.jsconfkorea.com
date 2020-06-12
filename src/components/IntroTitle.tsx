@@ -58,8 +58,6 @@ const titleStyle = css`
     margin: 0;
   }
 
-  font-family: 'Noto Sans KR', sans-serif;
-
   span {
     display: inline-block;
     transition: transform 0.3s;
@@ -89,8 +87,6 @@ const dateStyle = css`
   p {
     margin: 0;
   }
-
-  font-family: 'Noto Sans KR', sans-serif;
 
   span {
     display: inline-block;

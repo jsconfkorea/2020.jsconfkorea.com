@@ -8,6 +8,96 @@ export default GlobalStyle
 const style = css`
   ${emotionNormalize}
 
+  @font-face {
+    font-family: 'Airbnb Cereal App Book';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Book'), url('/fonts/AirbnbCerealBook.woff') format('woff');
+  }
+
+  /* @font-face {
+    font-family: 'Airbnb Cereal App Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Light'), url('/fonts/AirbnbCerealLight.woff') format('woff');
+  } */
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Medium'), url('/fonts/AirbnbCerealMedium.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Bold'), url('/fonts/AirbnbCerealBold.woff') format('woff');
+  }
+
+  /* @font-face {
+    font-family: 'Airbnb Cereal App Extra Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Extra Bold'), url('/fonts/AirbnbCerealExtraBold.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Airbnb Cereal App Black'), url('/fonts/AirbnbCerealBlack.woff') format('woff');
+  } */
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Book';
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+AC00-D7AF;
+    src: url('/fonts/Spoqa Han Sans Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Medium';
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+AC00-D7AF;
+    src: url('/fonts/Spoqa Han Sans Regular.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Bold';
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+AC00-D7AF;
+    src: url('/fonts/Spoqa Han Sans Bold.woff') format('woff');
+  }
+
+  /* @font-face {
+    font-family: 'Airbnb Cereal App Book';
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+AC00-D7AF;
+    src: local('Noto Sans KR'), url('/fonts/NotoSansKR-Regular.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Medium';
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+AC00-D7AF;
+    src: local('Noto Sans KR'), url('/fonts/NotoSansKR-Medium.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: 'Airbnb Cereal App Bold';
+    font-style: normal;
+    font-weight: normal;
+    unicode-range: U+AC00-D7AF;
+    src: local('Noto Sans KR'), url('/fonts/NotoSansKR-Bold.otf') format('opentype');
+  } */
+
   * {
     box-sizing: border-box;
 
@@ -22,6 +112,7 @@ const style = css`
     width: 100%;
     height: 100%;
     -ms-overflow-style: none;
+    word-break: keep-all;
   }
 
   body::-webkit-scrollbar,
@@ -30,19 +121,20 @@ const style = css`
   }
 
   html {
-    font-family: 'Noto Sans KR', 'Roboto Mono', sans-serif;
+    font-family: 'Airbnb Cereal App Bold', sans-serif;
     font-size: 25px;
     touch-action: manipulation;
+    letter-spacing: -0.03rem;
+    /* -moz-osx-font-smoothing: grayscale; */
   }
   body {
     position: fixed;
     background-color: #ddd;
     /* background-color:#000; */
-    font-weight: 400;
+    /* font-weight: 400; */
     overscroll-behavior-y: none;
     /* overflow-y: auto; */
     direction: ltr;
-    -moz-osx-font-smoothing: grayscale;
   }
   #__next {
     position: relative;

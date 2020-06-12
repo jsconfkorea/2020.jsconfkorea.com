@@ -70,6 +70,9 @@ const style = css`
       box-shadow: 0px 2px 0 #111;
     }
   }
+
+  @media screen and (max-width: 768px) {
+  }
 `
 
 export default CFP

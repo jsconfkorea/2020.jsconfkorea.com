@@ -33,6 +33,8 @@ const Markdown = ({ children }: Props) => {
 }
 
 const style = css`
+  font-family: 'Airbnb Cereal App Book', 'Noto Sans KR', 'Roboto Mono', sans-serif;
+  letter-spacing: 0px;
   margin: 0px auto;
   max-width: 820px;
   padding: 30px 30px;
@@ -40,6 +42,17 @@ const style = css`
   border: solid 1px rgba(0, 0, 0, 0.1);
   background-color: rgba(255, 255, 255, 0.2);
   box-sizing: border-box;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a,
+  strong {
+    font-family: 'Airbnb Cereal App Medium', 'Noto Sans KR', 'Roboto Mono', sans-serif;
+  }
 
   h1 {
     margin-top: 80px;
@@ -82,6 +95,10 @@ const style = css`
   ul li {
     border: solid 1px #333;
     padding: 6px 12px;
+  }
+
+  ol li {
+    margin-left: 20px;
   }
   a {
     color: #333;

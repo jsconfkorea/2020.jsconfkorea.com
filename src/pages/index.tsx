@@ -65,9 +65,6 @@ const Index = ({}: Props) => {
         </section>
       </div>
       <Popup ref={ref} isShowing={isShowing} close={close} />
-      {/* <script defer src="/threejs/modules.js"></script>
-      <script defer src="/threejs/index.js"></script>
-      <script defer src="/threejs/typo.js"></script> */}
     </>
   )
 }
@@ -226,7 +223,7 @@ const style = css`
         }
       }
       #btn-newsletter {
-        flex: 3;
+        flex: 3.3;
         background: #ff7235;
         button {
           background: #ff7235;
