@@ -21,7 +21,7 @@ const CFP = ({}: Props) => {
         <meta name="description" content={description} key="description" />
 
         <meta name="twitter:title" content={title} key="twitter:title" />
-        <meta name="twitter:description" content={description} key="twitter:title" />
+        <meta name="twitter:description" content={description} key="twitter:description" />
 
         <meta property="og:title" content={title} key="og:title" />
         <meta property="og:description" content={description} key="og:description" />
