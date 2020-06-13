@@ -139,6 +139,7 @@ const style = css`
   #__next {
     position: relative;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .btn-default {
