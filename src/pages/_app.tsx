@@ -18,7 +18,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = 'JSConf Korea 2020 - Home Edition'
   const thumb = '/og-image.png'
-  const url = 'https://jsconfkorea.com'
+  const url = 'https://jsconfkorea.com/'
 
   useGA()
 
@@ -69,12 +69,13 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta key="og:url" property="og:url" content={url} />
         <meta key="og:type" property="og:type" content="website" />
 
+        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
+        <meta key="twitter:curl" name="twitter:url" content={url} />
+        <meta key="twitter:site" name="twitter:site" content="@jsconfkorea" />
         <meta key="twitter:title" name="twitter:title" content={title} />
         <meta key="twitter:description" name="twitter:description" content={description} />
-        {/* <meta key="twitter:image" name="twitter:image" content={thumb} /> */}
         <meta key="twitter:image:src" name="twitter:image:src" content={thumb} />
-        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-        <meta key="twitter:site" name="twitter:site" content="@jsconfkorea" />
+        {/* <meta key="twitter:image" name="twitter:image" content={thumb} /> */}
         <meta key="twitter:creator" name="twitter:creator" content="@jsconfkorea" />
 
         <meta name="google" content="notranslate"></meta>
