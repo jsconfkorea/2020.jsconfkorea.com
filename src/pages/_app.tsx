@@ -62,6 +62,13 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta name="keywords" content="JSConf, JavaScript, Conference" />
         <meta name="author" content="JSConf Korea" />
 
+        <meta key="og:title" property="og:title" content={title} />
+        <meta key="og:description" property="og:description" content={description} />
+        <meta key="og:image" property="og:image" content={thumb} />
+        <meta key="og:site_name" property="og:site_name" content="JSConf Korea 2020" />
+        <meta key="og:url" property="og:url" content={url} />
+        <meta key="og:type" property="og:type" content="website" />
+
         <meta key="twitter:title" name="twitter:title" content={title} />
         <meta key="twitter:description" name="twitter:description" content={description} />
         {/* <meta key="twitter:image" name="twitter:image" content={thumb} /> */}
@@ -69,13 +76,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
         <meta key="twitter:site" name="twitter:site" content="@jsconfkorea" />
         <meta key="twitter:creator" name="twitter:creator" content="@jsconfkorea" />
-
-        <meta key="og:title" property="og:title" content={title} />
-        <meta key="og:description" property="og:description" content={description} />
-        <meta key="og:image" property="og:image" content={thumb} />
-        <meta key="og:site_name" property="og:site_name" content="JSConf Korea 2020" />
-        <meta key="og:url" property="og:url" content={url} />
-        <meta key="og:type" property="og:type" content="website" />
 
         <meta name="google" content="notranslate"></meta>
 
