@@ -188,9 +188,10 @@ const style = css`
         margin-top: 20px;
         box-sizing: border-box;
         -webkit-appearance: none;
-        &::placeholder,
         &::-webkit-input-placeholder,
-        &:-ms-input-placeholder {
+        &::-moz-placeholder,
+        &::-ms-placeholder,
+        &::placeholder {
           color: #ffffff99;
         }
       }
