@@ -26,7 +26,6 @@ const Ticket = ({}: Props) => {
 
 const style = css`
   .tito-wrapper {
-    /* background: black; */
   }
 `
 
