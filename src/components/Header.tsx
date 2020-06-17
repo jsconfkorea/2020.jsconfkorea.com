@@ -13,7 +13,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 type Props = {}
 
-const Header = ({}: Props) => {
+const Header = () => {
   const { t } = useI18n()
   const [on, setOn] = useState(false)
   const func = () => {
@@ -21,8 +21,8 @@ const Header = ({}: Props) => {
   }
 
   useEffect(() => {
-    if (on) document.querySelector('#__next')!.setAttribute('style', 'overflow-y:hidden;')
-    else document.querySelector('#__next')!.setAttribute('style', 'overflow-y:auto;')
+    if (on) document.querySelector('#__next')?.setAttribute('style', 'overflow-y:hidden;')
+    else document.querySelector('#__next')?.setAttribute('style', 'overflow-y:auto;')
   }, [on])
 
   return (

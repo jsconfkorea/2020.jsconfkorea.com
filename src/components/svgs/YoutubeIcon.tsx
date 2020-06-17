@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
-
 const YoutubeIcon = () => (
   <svg
     width="100"
@@ -16,7 +13,5 @@ const YoutubeIcon = () => (
     <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
   </svg>
 )
-
-const style = css``
 
 export default YoutubeIcon

@@ -10,7 +10,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const CFP = ({}: Props) => {
+const CFP = () => {
   const { t, activeLanguage } = useI18n()
   const title = `JSConf Korea 2020 - ${t('cfp_title')}`
   const description = t('cfp_description')
@@ -30,7 +30,7 @@ const CFP = ({}: Props) => {
       <div css={style}>
         <Header></Header>
         <Markdown>{t('call-for-proposals-md')}</Markdown>
-        <a href={`/redirect/cfp-form-${activeLanguage}`} target="_blank" rel="noopener">
+        <a href={`/redirect/cfp-form-${activeLanguage}`} target="_blank" rel="noreferrer">
           {t('submit_proposal')}
         </a>
         <TopButton></TopButton>

@@ -9,7 +9,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const COC = ({}: Props) => {
+const COC = () => {
   const { t } = useI18n()
   return (
     <div css={style}>

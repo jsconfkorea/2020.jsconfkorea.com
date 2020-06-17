@@ -9,7 +9,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Ticket = ({}: Props) => {
+const Ticket = () => {
   const { t } = useI18n()
   return (
     <>

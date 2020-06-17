@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import useInterval from '../hooks/useInterval'
 import IntroHouse from './svgs/IntroHouse'
 
@@ -11,7 +11,7 @@ const Graphic = () => {
 
   useInterval(() => {
     let c = count + 1
-    let d = (dCount + 1) % 7
+    const d = (dCount + 1) % 7
     if (d == 0) setInterval(2000)
     else setInterval(200)
     setDCount(d)

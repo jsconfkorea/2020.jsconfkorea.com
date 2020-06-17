@@ -14,7 +14,7 @@ export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
-const Index = ({}: Props) => {
+const Index = () => {
   const { t } = useI18n()
   const ref = useRef<HTMLFormElement>(null)
   const { isShowing, toggle, close } = useModal()

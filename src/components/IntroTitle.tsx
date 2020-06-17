@@ -10,7 +10,7 @@ HOME EDITION`
 const d = `ONLINE
 2020.9.20`
 
-const IntroTitle = memo(() => {
+const IntroTitle = () => {
   return (
     <>
       <h1 css={titleStyle}>
@@ -39,7 +39,7 @@ const IntroTitle = memo(() => {
       </div>
     </>
   )
-})
+}
 
 const titleStyle = css`
   position: absolute;
@@ -100,4 +100,4 @@ const dateStyle = css`
   }
 `
 
-export default IntroTitle
+export default memo(IntroTitle)

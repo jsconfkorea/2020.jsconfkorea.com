@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useState, forwardRef, useEffect, useRef } from 'react'
+import { useState, forwardRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import { AnimatePresence, motion } from 'framer-motion'
 import fetch from 'node-fetch'
@@ -13,7 +13,7 @@ type Props = {
   close: () => void
 }
 
-const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/
+const emailRegex = /^([a-zA-Z0-9_\-.]+)@([a-zA-Z0-9_\-.]+)\.([a-zA-Z]{2,5})$/
 
 const Popup = ({ isShowing, close }: Props, ref: any) => {
   const { t } = useI18n()
