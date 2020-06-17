@@ -7,6 +7,9 @@ import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import useGA from '../hooks/useGA'
+import TagManager from 'react-gtm-module'
+
+TagManager.initialize({ gtmId: 'GTM-NNG9RWK' })
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
