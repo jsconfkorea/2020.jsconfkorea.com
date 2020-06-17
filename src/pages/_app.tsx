@@ -7,9 +7,7 @@ import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import useGA from '../hooks/useGA'
-import TagManager from 'react-gtm-module'
-
-TagManager.initialize({ gtmId: 'GTM-NNG9RWK' })
+import useGTM from '../hooks/useGTM'
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -24,6 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const thumb = `${url}og-image.png`
 
   useGA()
+  useGTM()
 
   return (
     <>
