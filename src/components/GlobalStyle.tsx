@@ -107,8 +107,7 @@ const style = css`
   }
 
   html,
-  body,
-  #__next {
+  body {
     width: 100%;
     height: 100%;
     -ms-overflow-style: none;
@@ -128,18 +127,22 @@ const style = css`
     -moz-osx-font-smoothing: grayscale;
   }
   body {
-    position: fixed;
+    /* position: fixed; */
     background-color: #ddd;
     /* background-color:#000; */
     /* font-weight: 400; */
-    overscroll-behavior-y: none;
+    /* overscroll-behavior-y: none; */
     /* overflow-y: auto; */
     direction: ltr;
+    -webkit-overflow-scrolling: touch;
   }
   #__next {
-    position: relative;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    /* overflow-y: auto; */
+    /* overscroll-behavior-y: none; */
+    /* -webkit-overflow-scrolling: touch; */
   }
 
   .btn-default {

@@ -2,6 +2,7 @@
 import { jsx, css } from '@emotion/core'
 import ReactMarkdown from 'react-markdown'
 import React, { Children, ReactNode } from 'react'
+import { motion } from 'framer-motion'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -23,11 +24,16 @@ function HeadingRenderer(props: any) {
 const Markdown = ({ children }: Props) => {
   return (
     <>
-      <div css={style}>
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
+        css={style}
+      >
         <ReactMarkdown renderers={{ heading: HeadingRenderer }} linkTarget="_blank">
           {children}
         </ReactMarkdown>
-      </div>
+      </motion.div>
     </>
   )
 }

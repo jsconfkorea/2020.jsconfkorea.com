@@ -1,18 +1,42 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import GoToTop from './svgs/GoToTop'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const GoToTopButton = () => {
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    const scrollEl = document.querySelector('#__next')
+    const callback = (e: any) => {
+      if (e.target.scrollTop > window.innerHeight / 2) {
+        setShow(true)
+      } else {
+        setShow(false)
+      }
+    }
+    scrollEl?.addEventListener('scroll', callback)
+
+    return () => scrollEl?.removeEventListener('scroll', callback)
+  }, [])
+
   return (
-    <>
-      <button
-        css={style}
-        onClick={() => document.querySelector('#__next')!.scrollTo({ top: 0, behavior: 'smooth' })}
-        aria-label="go to top"
-      >
-        <GoToTop />
-      </button>
-    </>
+    <AnimatePresence>
+      {show && (
+        <motion.button
+          initial={{ y: 200 }}
+          animate={{ y: 0 }}
+          exit={{ y: 200 }}
+          transition={{ type: 'tween', duration: 0.1 }}
+          css={style}
+          onClick={() => document.querySelector('#__next')?.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="go to top"
+        >
+          <GoToTop />
+        </motion.button>
+      )}
+    </AnimatePresence>
   )
 }
 
