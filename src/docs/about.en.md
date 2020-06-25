@@ -1,3 +1,5 @@
+![2019_thumbnail](/images/2019_thumb.jpg)
+
 # Welcome to JSConf Korea!
 
 JSConf Korea is a community conference that pushes the boundaries of what can be created using JavaScript, and an opportunity for people with diverse experiences to share their stories and positive energy with each other.

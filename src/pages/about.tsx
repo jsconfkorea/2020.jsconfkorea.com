@@ -21,6 +21,22 @@ const About = () => {
 }
 const style = css`
   padding: 5rem 0 5rem 0;
+
+  img[alt='2019_thumbnail'] {
+    display: block;
+    margin: -2rem 0 2rem -1rem;
+    width: calc(100% + 30px);
+
+    @media screen and (min-width: 768px) {
+      margin: -45px 0 2rem -30px;
+      width: calc(100% + 60px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin: -45px 0 2rem -30px;
+      width: calc(100% + 60px);
+    }
+  }
 `
 
 export default About
