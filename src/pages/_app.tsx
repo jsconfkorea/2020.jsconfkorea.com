@@ -32,12 +32,14 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="dns-prefetch" href="//jsconfkorea.com"></link>
         <link rel="dns-prefetch" href="//www.google-analytics.com"></link>
         <link rel="dns-prefetch" href="//polyfill.io"></link>
+        <link rel="dns-prefetch" href="//www.googletagmanager.com"></link>
 
         <link rel="preconnect" href="https://jsconf.now.sh" crossOrigin="anonymous"></link>
         <link rel="preconnect" href="https://now.sh" crossOrigin="anonymous"></link>
         <link rel="preconnect" href="https://jsconfkorea.com" crossOrigin="anonymous"></link>
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous"></link>
         <link rel="preconnect" href="https://polyfill.io" crossOrigin="anonymous"></link>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous"></link>
 
         <link rel="shortcut icon" href="/favicon.png" />
 
