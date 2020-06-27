@@ -46,7 +46,7 @@ const style = css`
   padding: 30px 30px;
   color: #333;
   border: solid 1px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(228, 228, 228);
   box-sizing: border-box;
 
   h1,
@@ -128,7 +128,7 @@ const style = css`
 
   @media screen and (max-width: 1200px) {
     font-size: 80px;
-    max-width: 738px;
+    max-width: 768px;
   }
 
   @media screen and (max-width: 768px) {

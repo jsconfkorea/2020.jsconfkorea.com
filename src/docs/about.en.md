@@ -23,5 +23,3 @@ If you have any accessibility requests, please get in touch at [contact@jsconfko
 # Team
 
 JSConf Korea is a not-for-profit conference made possible by a team of volunteers.
-
-- ✨ Profiles coming soon...!

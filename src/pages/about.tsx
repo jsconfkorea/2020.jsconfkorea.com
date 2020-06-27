@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import TopButton from '../components/TopButton'
 import { useI18n } from '../hooks/useI18n'
 import Markdown from '../components/Markdown'
+import Teams from '../components/Teams'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -15,6 +16,7 @@ const About = () => {
     <div css={style}>
       <Header></Header>
       <Markdown>{t('about-md')}</Markdown>
+      <Teams />
       <TopButton></TopButton>
     </div>
   )
