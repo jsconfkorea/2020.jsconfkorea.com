@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 const teams = [
   {
     name: {
-      en: 'Sona Lee',
+      en: 'Soeun Lee',
       ko: '이소은',
     },
     link: 'https://about.sonalee.me',
@@ -73,12 +73,14 @@ const Teams = () => {
         css={style}
       >
         <div>
-          {teams.map(({ name, link, image }) => (
-            <a href={link} target="_blank" rel="noreferrer" key={link}>
-              <img src={image} alt={name[lang]} />
-              <div>{name[lang]}</div>
-            </a>
-          ))}
+          {teams
+            .sort((a, b) => (a.name[lang] > b.name[lang] ? 1 : -1))
+            .map(({ name, link, image }) => (
+              <a href={link} target="_blank" rel="noreferrer" key={link}>
+                <img src={image} alt={name[lang]} />
+                <div>{name[lang]}</div>
+              </a>
+            ))}
         </div>
       </motion.section>
     </>
