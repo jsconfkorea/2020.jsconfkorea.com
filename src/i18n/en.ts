@@ -4,7 +4,7 @@ export const en = {
   website: 'WEBSITE',
   video: 'VIDEO',
   cfp: 'CFP',
-  sponsor: 'SPONSOR',
+  sponsor: 'SPONSORSHIP',
   newsletter: 'NEWSLETTER',
 
   // menu
