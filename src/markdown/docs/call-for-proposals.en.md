@@ -35,7 +35,7 @@ We believe that progress happens when everyone has a chance to share their persp
 By becoming speaker, you get...
 
 - 🎟 A free ticket to attend the next JSConf Korea
-- Honorarium
+- A modest honorarium
 
 ## Speaker Support
 
