@@ -2,13 +2,13 @@
 import { jsx, css } from '@emotion/core'
 import { useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
-import { useModal } from '../hooks/useModal'
 import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import Header from '../components/Header'
 import Graphic from '../components/Graphic'
 import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Popup from '../components/Popup'
+import { useDisclosure } from '@chakra-ui/core'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -17,9 +17,9 @@ type Props = {}
 const Index = () => {
   const { t } = useI18n()
   const ref = useRef<HTMLFormElement>(null)
-  const { isShowing, toggle, close } = useModal()
+  const { isOpen, onClose, onOpen } = useDisclosure()
 
-  useOnClickOutside(ref, close)
+  useOnClickOutside(ref, onClose)
 
   return (
     <>
@@ -45,7 +45,7 @@ const Index = () => {
               </div>
             </div>
             <div id="btn-newsletter">
-              <button className="btn-default" onClick={toggle}>
+              <button className="btn-default" onClick={onOpen}>
                 {t('newsletter')}
               </button>
             </div>
@@ -64,7 +64,7 @@ const Index = () => {
           </div>
         </section>
       </div>
-      <Popup ref={ref} isShowing={isShowing} close={close} />
+      <Popup ref={ref} isShowing={isOpen} close={onClose} />
     </>
   )
 }

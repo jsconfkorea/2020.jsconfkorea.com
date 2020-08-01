@@ -6,8 +6,9 @@ import { useRouter } from 'next/router'
 import { NUMBER_OF_SPEAKERS } from '../pages/speakers'
 import Link from './Link'
 import TwitterIcon from './svgs/TwitterIcon'
-import { Box, Heading, Image, Divider, Stack, Text, Grid, CloseButton } from '@chakra-ui/core'
+import { Box, Heading, Image, Divider, Text, Grid, CloseButton, PseudoBox } from '@chakra-ui/core'
 import { createPortal } from 'react-dom'
+import { useKey } from 'react-use'
 
 const Speakers = () => {
   const i18n = useI18n()
@@ -16,6 +17,10 @@ const Speakers = () => {
   const router = useRouter()
   const { query } = router
   const selectedSpeaker = [...Array(NUMBER_OF_SPEAKERS)].map((_, i) => i).filter((_, i) => query[t(`${i}.key`)] === '')
+  const onClose = () => router.push(`/[lang]/speakers`, `/${lang}/speakers`, { shallow: true })
+
+  useKey((e) => e.keyCode === 27, onClose)
+
   return (
     <>
       <main css={style}>
@@ -31,7 +36,14 @@ const Speakers = () => {
           <Grid gridGap={8}>
             {[...Array(NUMBER_OF_SPEAKERS)].map((_, i) => (
               <Link href={`/speakers?${t(`${i}.key`)}`} as={`/speakers?${t(`${i}.key`)}`} key={i}>
-                <Grid key={i} gridAutoFlow="column" gridTemplateColumns="4.5rem 1fr">
+                <PseudoBox
+                  as={Grid}
+                  key={i}
+                  gridAutoFlow="column"
+                  gridTemplateColumns="4.5rem 1fr"
+                  transition="all .2s"
+                  // _hover={{ boxShadow: 'lg' }}
+                >
                   <Image d="inline-block" src={t(`${i}.image`)} alt={t(`${i}.name`)} w="4.5rem" h="4.5rem" />
                   <Box d="inline-block" verticalAlign="top" ml={4}>
                     <Text fontSize="sm" my={2}>
@@ -41,7 +53,7 @@ const Speakers = () => {
                       {t(`${i}.title`)}
                     </Heading>
                   </Box>
-                </Grid>
+                </PseudoBox>
               </Link>
             ))}
           </Grid>
@@ -64,7 +76,7 @@ const Speakers = () => {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      onClick={() => router.push(`/[lang]/speakers`, `/${lang}/speakers`, { shallow: true })}
+                      onClick={onClose}
                     ></motion.div>
                     <motion.section
                       initial={{ y: '50%', opacity: 0 }}
@@ -72,9 +84,7 @@ const Speakers = () => {
                       exit={{ y: '50%', opacity: 0 }}
                       transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
                     >
-                      <CloseButton
-                        onClick={() => router.push(`/[lang]/speakers`, `/${lang}/speakers`, { shallow: true })}
-                      />
+                      <CloseButton onClick={onClose} />
                       <header>
                         <img src={t(`${selectedSpeaker}.image`)} alt={t(`${selectedSpeaker}.name`)} />
                         <div>
