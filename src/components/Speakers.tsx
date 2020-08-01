@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { NUMBER_OF_SPEAKERS } from '../pages/speakers'
 import Link from './Link'
 import TwitterIcon from './svgs/TwitterIcon'
-import { Box, Heading, Image, Divider, Stack, Text, Grid } from '@chakra-ui/core'
+import { Box, Heading, Image, Divider, Stack, Text, Grid, CloseButton } from '@chakra-ui/core'
 import { createPortal } from 'react-dom'
 
 const Speakers = () => {
@@ -72,6 +72,9 @@ const Speakers = () => {
                       exit={{ y: '50%', opacity: 0 }}
                       transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
                     >
+                      <CloseButton
+                        onClick={() => router.push(`/[lang]/speakers`, `/${lang}/speakers`, { shallow: true })}
+                      />
                       <header>
                         <img src={t(`${selectedSpeaker}.image`)} alt={t(`${selectedSpeaker}.name`)} />
                         <div>
@@ -138,7 +141,6 @@ const popupStyle = css`
     background-color: rgba(0, 0, 0, 0.5);
   }
   & > section {
-    overflow: hidden;
     font-family: 'Airbnb Cereal App Medium', sans-serif;
     z-index: 20;
     position: absolute;
@@ -148,7 +150,21 @@ const popupStyle = css`
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     padding: 1.5rem;
+    padding-top: 2rem;
     background-color: white;
+    & > button {
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 0.5rem;
+      &:focus {
+        background-color: white;
+        box-shadow: none;
+      }
+    }
     header {
       display: grid;
       grid-auto-flow: column;
@@ -201,6 +217,139 @@ const popupStyle = css`
     article {
       font-family: 'Airbnb Cereal App Book', sans-serif;
       margin-top: 0.2rem;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    & > section {
+      max-width: 28rem;
+      margin: auto;
+      height: 28rem;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      header {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 4.5rem 1fr;
+        vertical-align: top;
+        width: auto;
+        img {
+          display: inline-block;
+          width: 4.5rem;
+          border-radius: 100%;
+        }
+        & > div {
+          margin: 0.5rem 0 0 1rem;
+          h1 {
+            margin: 0;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+          }
+          span {
+            font-family: 'Airbnb Cereal App Book', sans-serif;
+            display: inline-block;
+            font-size: 0.8rem;
+          }
+          svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.6rem;
+            width: 0.9rem;
+            height: 0.9rem;
+          }
+        }
+      }
+
+      .audience {
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+        font-weight: bold;
+      }
+      h2 {
+        font-family: 'Airbnb Cereal App Book', sans-serif;
+        margin-top: 0.2rem;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+      .summary {
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+        font-weight: bold;
+      }
+      article {
+        font-family: 'Airbnb Cereal App Book', sans-serif;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & > section {
+      max-width: 24rem;
+      height: 28rem;
+      padding: 2rem;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      & > button {
+        margin: 0.8rem;
+      }
+      header {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 4.5rem 1fr;
+        vertical-align: top;
+        width: auto;
+        img {
+          display: inline-block;
+          width: 4.5rem;
+          border-radius: 100%;
+        }
+        & > div {
+          margin: 0.5rem 0 0 1rem;
+          h1 {
+            margin: 0;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+          }
+          span {
+            font-family: 'Airbnb Cereal App Book', sans-serif;
+            display: inline-block;
+            font-size: 0.8rem;
+          }
+          svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.6rem;
+            width: 0.9rem;
+            height: 0.9rem;
+          }
+        }
+      }
+
+      .audience {
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+        font-weight: bold;
+      }
+      h2 {
+        font-family: 'Airbnb Cereal App Book', sans-serif;
+        margin-top: 0.2rem;
+        font-size: 1rem;
+        font-weight: normal;
+      }
+      .summary {
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+        font-weight: bold;
+      }
+      article {
+        font-family: 'Airbnb Cereal App Book', sans-serif;
+        margin-top: 0.2rem;
+      }
     }
   }
 `
