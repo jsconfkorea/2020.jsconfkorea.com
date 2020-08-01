@@ -1,7 +1,7 @@
 ---
 key: 'sona'
 name: 'Soeun Lee'
-title: "Hi. I'm Front-end Developer."
+title: 'p5 for 50+: How to Include the Middle-Aged and Elderly to Coding Education?'
 image: '/images/sona.jpg'
 link: 'https://github.com/godori'
 audience: "Who interested in Engineer's Life"

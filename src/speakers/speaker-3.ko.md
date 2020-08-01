@@ -1,7 +1,7 @@
 ---
 key: 'sona'
 name: '이소은'
-title: '안녕하세요. 이소은입니다.'
+title: 'p5 for 50+: How to Include the Middle-Aged and Elderly to Coding Education?'
 image: '/images/sona.jpg'
 link: 'https://github.com/godori'
 audience: '개발자의 삶에 관심있는 사람'

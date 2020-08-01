@@ -11,7 +11,7 @@ export const ko = {
   home: '홈',
   about: '행사소개',
   schedule: '시간표',
-  speakers: '연사자',
+  speakers: '발표자',
   sponsors: '스폰서',
   code_of_conduct: '핵심원칙',
   privacy_policy: '개인정보처리방침',

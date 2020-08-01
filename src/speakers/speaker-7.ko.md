@@ -1,8 +1,8 @@
 ---
-key: 'godori'
-name: '고은정'
-title: '화려한 디자인시스템이 UI를 감싸네 : 카카오 통합검색 디자인시스템'
-image: '/images/godori.jpg'
+key: 'seungkyu'
+name: '승규'
+title: 'Making VR More Interesting With JavaScript and Machine Learning'
+image: '/images/seungkyu.jpg'
 link: 'https://github.com/godori'
 audience: '개발자의 삶에 관심있는 사람'
 ---

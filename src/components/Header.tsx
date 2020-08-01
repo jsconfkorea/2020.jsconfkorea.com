@@ -56,12 +56,12 @@ const Header = () => {
                     <Link href="/about">{t('about')}</Link>
                   </li>
                   <li>
+                    <Link href="/speakers">{t('speakers')}</Link>
+                  </li>
+                  <li>
                     <Link href="/schedule" disabled>
                       {t('schedule')}
                     </Link>
-                  </li>
-                  <li>
-                    <Link href="/speakers">{t('speakers')}</Link>
                   </li>
                   <li>
                     <Link href="/sponsors" disabled>

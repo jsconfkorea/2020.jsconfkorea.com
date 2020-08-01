@@ -1,8 +1,8 @@
 ---
-key: 'godori'
-name: 'godori'
-title: '화려한 디자인시스템이 UI를 감싸네 : 카카오 통합검색 디자인시스템'
-image: '/images/godori.jpg'
+key: 'test2'
+name: 'Soeun Lee'
+title: '퇴근 후 집 도착 10분 전, 집 안 거실의 에어콘을 켜고 싶어서 삽질한 썰'
+image: '/images/sona.jpg'
 link: 'https://github.com/godori'
 audience: "Who interested in Engineer's Life"
 ---

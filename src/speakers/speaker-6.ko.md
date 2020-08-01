@@ -1,8 +1,8 @@
 ---
-key: 'godori'
-name: '고은정'
-title: '화려한 디자인시스템이 UI를 감싸네 : 카카오 통합검색 디자인시스템'
-image: '/images/godori.jpg'
+key: 'suzin'
+name: '수진'
+title: '오픈 소스 라이브러리를 배포해봅시다'
+image: '/images/suzin.jpg'
 link: 'https://github.com/godori'
 audience: '개발자의 삶에 관심있는 사람'
 ---

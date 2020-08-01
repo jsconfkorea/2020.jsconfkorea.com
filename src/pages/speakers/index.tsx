@@ -8,7 +8,7 @@ import { ko } from '../../i18n/ko'
 import { en } from '../../i18n/en'
 import Speakers from '../../components/Speakers'
 
-export const NUMBER_OF_SPEAKERS = 3
+export const NUMBER_OF_SPEAKERS = 10
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const ko_list = (

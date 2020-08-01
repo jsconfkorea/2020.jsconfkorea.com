@@ -1,8 +1,8 @@
 ---
-key: 'godori'
-name: '고은정'
-title: '화려한 디자인시스템이 UI를 감싸네 : 카카오 통합검색 디자인시스템'
-image: '/images/godori.jpg'
+key: 'test3'
+name: '이소은'
+title: '코드 인수분해 — 보일러플레이트 코드 정리하기'
+image: '/images/sona.jpg'
 link: 'https://github.com/godori'
 audience: '개발자의 삶에 관심있는 사람'
 ---
