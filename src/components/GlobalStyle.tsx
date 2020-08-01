@@ -160,7 +160,11 @@ const style = css`
     outline: none;
   }
   a {
+    color: initial;
     text-decoration: none;
+    &:visited {
+      color: initial;
+    }
   }
   ul {
     list-style: none;

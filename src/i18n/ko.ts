@@ -28,4 +28,8 @@ export const ko = {
 
   cfp_title: '발표자 모집',
   cfp_description: '🎉 JSConf Korea 2020의 연사를 모집합니다!',
+
+  // speakers
+  audience: '대상 청중',
+  summary: '요약',
 }

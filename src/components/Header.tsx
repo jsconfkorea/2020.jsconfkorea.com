@@ -61,9 +61,7 @@ const Header = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/speakers" disabled>
-                      {t('speakers')}
-                    </Link>
+                    <Link href="/speakers">{t('speakers')}</Link>
                   </li>
                   <li>
                     <Link href="/sponsors" disabled>

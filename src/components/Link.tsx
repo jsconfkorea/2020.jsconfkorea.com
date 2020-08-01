@@ -10,7 +10,7 @@ type Props = {
 } & LinkProps
 
 const Link = (props: Props) => {
-  const { children, className, disabled } = props
+  const { children, className, disabled, shallow } = props
   const { pathname } = useRouter()
   const isLangPath = pathname.slice(0, 7) === '/[lang]'
   const { activeLanguage } = useI18n()
@@ -24,7 +24,7 @@ const Link = (props: Props) => {
     )
   }
   return (
-    <NextLink href={href} as={as}>
+    <NextLink href={href} as={as} shallow={shallow}>
       <a className={className}>{children}</a>
     </NextLink>
   )

@@ -28,4 +28,8 @@ export const en = {
 
   cfp_title: 'Call For Proposals',
   cfp_description: '🎉 We are now accepting talk proposals for JSConf Korea 2020!',
+
+  // speakers
+  audience: 'Audience',
+  summary: 'Summary',
 }

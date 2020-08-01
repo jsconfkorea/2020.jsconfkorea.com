@@ -4,7 +4,7 @@ import { useRouter } from 'next/dist/client/router'
 
 type LANGUAGES = 'en' | 'ko'
 
-const languages: LANGUAGES[] = ['en', 'ko']
+export const languages: LANGUAGES[] = ['en', 'ko']
 
 export const useI18n = () => {
   const i18n = useContext(I18nContext)

@@ -1,5 +1,5 @@
 import { GetStaticPaths } from 'next'
-import { languages } from '../components/I18nProvider'
+import { languages } from '../hooks/useI18n'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {

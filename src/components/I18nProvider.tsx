@@ -1,10 +1,10 @@
 import Rosetta from 'rosetta'
 import { createContext, ReactNode } from 'react'
+import { languages } from '../hooks/useI18n'
 
 const i18n = Rosetta()
 
 export const defaultLanguage = 'en'
-export const languages = ['en', 'ko']
 
 export const I18nContext = createContext(i18n)
 
