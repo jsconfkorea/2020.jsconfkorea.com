@@ -17,14 +17,16 @@ const Speakers = () => {
   const t = (key: string) => i18n.t(`speaker.${key}`) || i18n.t(key)
   const router = useRouter()
   const { query } = router
-  const selectedSpeaker = [...Array(NUMBER_OF_SPEAKERS)].map((_, i) => i).filter((_, i) => query[t(`${i}.key`)] === '')
+  const selectedSpeaker = [...Array(NUMBER_OF_SPEAKERS)]
+    .map((_, i) => i)
+    .filter((_, i) => t(`${i}.key`) === query.speaker)
   const isSelected = selectedSpeaker.length === 1
   const onClose = () => router.push(`/[lang]/speakers`, `/${lang}/speakers`, { shallow: true })
 
   useKey((e) => e.keyCode === 27, onClose)
 
   const title = `JSConf Korea 2020 - ${t('speakers_title')}${isSelected ? ` | ${t(`${selectedSpeaker}.name`)}` : ''}`
-  const description = t('speakers_description')
+  const description = isSelected ? t(`${selectedSpeaker}.title`) : t('speakers_description')
 
   return (
     <>
@@ -41,7 +43,7 @@ const Speakers = () => {
           <Divider mb={6} />
           <Grid gridGap={8}>
             {[...Array(NUMBER_OF_SPEAKERS)].map((_, i) => (
-              <Link href={`/speakers?${t(`${i}.key`)}`} as={`/speakers?${t(`${i}.key`)}`} key={i}>
+              <Link href={`/speakers/[speaker]`} as={`/speakers/${t(`${i}.key`)}`} key={i}>
                 <PseudoBox
                   as={Grid}
                   key={i}

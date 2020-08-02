@@ -15,7 +15,9 @@ const Link = (props: Props) => {
   const isLangPath = pathname.slice(0, 7) === '/[lang]'
   const { activeLanguage } = useI18n()
   const href = `${isLangPath ? `/[lang]` : ''}${props.href === '/' ? '/' : props.href}`
-  const as = `${isLangPath ? `/${activeLanguage}` : ''}${props.href === '/' ? '' : props.href}`
+  const as = props.as
+    ? `${isLangPath ? `/${activeLanguage}` : ''}${props.as === '/' ? '' : props.as}`
+    : `${isLangPath ? `/${activeLanguage}` : ''}${props.href === '/' ? '' : props.href}`
   if (disabled) {
     return (
       <a href="#" className="disabled" rel="noopener" tabIndex={-1}>
