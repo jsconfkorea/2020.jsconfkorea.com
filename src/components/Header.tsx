@@ -10,31 +10,28 @@ import InstagramIcon from './svgs/InstagramIcon'
 import YoutubeIcon from './svgs/YoutubeIcon'
 import GithubIcon from './svgs/GithubIcon'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useDisclosure } from '@chakra-ui/core'
 
 type Props = {}
 
 const Header = () => {
   const { t } = useI18n()
-  const [on, setOn] = useState(false)
-  const func = () => {
-    setOn((on) => !on)
-  }
+  const { isOpen, onToggle, onOpen, onClose } = useDisclosure()
 
   useEffect(() => {
-    if (on) document.querySelector('#__next')?.setAttribute('style', 'overflow-y:hidden;')
+    if (isOpen) document.querySelector('#__next')?.setAttribute('style', 'overflow-y:hidden;')
     else document.querySelector('#__next')?.setAttribute('style', 'overflow-y:auto;')
-  }, [on])
+  }, [isOpen])
 
   return (
     <>
-      <header css={style} className={on ? 'active' : ''}>
-        <button id="btn-menu" className="btn-default" aria-label="menu" onClick={func}>
-          <div>
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
+      <header css={style} className={isOpen ? 'active' : ''}>
+        <button className={`hamburger hamburger--spin ${isOpen ? 'is-active' : ''}`} type="button" onClick={onToggle}>
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
         </button>
+
         <div id="btn-right">
           <div id="btn-lang">
             <ChangeLanguageLink lang="en">EN</ChangeLanguageLink>
@@ -44,7 +41,7 @@ const Header = () => {
         </div>
       </header>
       <AnimatePresence>
-        {on && (
+        {isOpen && (
           <motion.div css={navStyle} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
             <div>
               <nav>
@@ -120,29 +117,6 @@ const style = css`
   &.active {
     border: none;
 
-    #btn-menu {
-      & > div {
-        & > span:nth-of-type(1) {
-          transform: translateY(1px) rotate(45deg) translateZ(0);
-        }
-        & > span:nth-of-type(2) {
-          opacity: 0;
-        }
-        & > span:nth-of-type(3) {
-          transform: translateY(-1px) rotate(-45deg) translateZ(0);
-        }
-      }
-      &:hover,
-      &:focus {
-        span:nth-of-type(1) {
-          transform: translateY(1px) rotate(40deg) translateZ(0);
-        }
-        span:nth-of-type(3) {
-          transform: translateY(-1px) rotate(-40deg) translateZ(0);
-        }
-      }
-    }
-
     #btn-social {
       opacity: 1;
       visibility: visible;
@@ -179,50 +153,96 @@ const style = css`
     }
   }
 
-  #btn-menu {
+  .hamburger {
     width: 4rem;
     height: 4rem;
     display: inline-block;
     padding: 0;
-    position: absolute;
-    & > div {
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      width: 4rem;
-      height: 4rem;
-      span {
-        /* margin-top: 1.6rem; */
-        display: block;
-        width: 2rem;
-        height: 2px;
-        background-color: #333;
-        top: 0.4rem;
-        transition: transform 0.3s;
-
-        &:nth-of-type(1) {
-          transform: translateY(-0.4rem) translateZ(0);
-        }
-        &:nth-of-type(2) {
-          transition: opacity 0.3s;
-        }
-        &:nth-of-type(3) {
-          transform: translateY(0.4rem) translateZ(0);
-        }
+    .hamburger-box {
+      margin: auto;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 35px;
+      .hamburger-inner,
+      .hamburger-inner::before,
+      .hamburger-inner::after {
+        width: 100%;
+        height: 2.5px;
       }
-    }
-    &:hover,
-    &:focus {
-      span:nth-of-type(1) {
-        transform: translateY(-0.6rem) translateZ(0);
-      }
-      span:nth-of-type(3) {
-        transform: translateY(0.6rem) translateZ(0);
+      .hamburger-inner {
+        margin-top: 0;
+        &::before {
+        }
+        &::after {
+        }
       }
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (min-width: 769px) {
+    .hamburger {
+      .hamburger-box {
+        width: 45px;
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+          width: 100%;
+          height: 4px;
+        }
+        .hamburger-inner {
+          &::before {
+            top: -14px;
+          }
+          &::after {
+            bottom: -14px;
+          }
+        }
+      }
+      &.is-active {
+        .hamburger-inner {
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1201px) {
+    .hamburger {
+      .hamburger-box {
+        width: 60px;
+        .hamburger-inner,
+        .hamburger-inner::before,
+        .hamburger-inner::after {
+          width: 100%;
+          height: 4px;
+        }
+        .hamburger-inner {
+          &::before {
+            top: -18px;
+          }
+          &::after {
+            bottom: -18px;
+          }
+        }
+      }
+      &.is-active {
+        .hamburger-inner {
+          &::before {
+            top: 0;
+          }
+          &::after {
+            bottom: 0;
+          }
+        }
+      }
+    }
   }
 `
 

@@ -237,7 +237,7 @@ const popupStyle = css`
     }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 769px) {
     & > section {
       max-width: 28rem;
       margin: auto;
@@ -252,7 +252,7 @@ const popupStyle = css`
     }
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1201px) {
     & > section {
       max-width: 24rem;
       height: 28rem;

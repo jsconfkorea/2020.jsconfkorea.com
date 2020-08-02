@@ -9,6 +9,7 @@ import 'nprogress/nprogress.css'
 import useGA from '../hooks/useGA'
 import useGTM from '../hooks/useGTM'
 import { NextSeo } from 'next-seo'
+import 'hamburgers/_sass/hamburgers/hamburgers.scss'
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
