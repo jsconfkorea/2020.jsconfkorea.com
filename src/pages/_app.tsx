@@ -8,6 +8,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import useGA from '../hooks/useGA'
 import useGTM from '../hooks/useGTM'
+import { NextSeo } from 'next-seo'
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -20,6 +21,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const description = 'JSConf Korea 2020 - Home Edition'
   const url = 'https://jsconfkorea.com/'
   const thumb = `${url}og-image.png`
+  const siteName = 'JSConf Korea 2020'
 
   useGA()
   useGTM()
@@ -50,26 +52,29 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta key="description" name="description" content={description} />
         <meta name="keywords" content="JSConf, JavaScript, Conference" />
         <meta name="author" content="JSConf Korea" />
-
-        <meta key="og:title" property="og:title" content={title} />
-        <meta key="og:description" property="og:description" content={description} />
-        <meta key="og:image" property="og:image" content={thumb} />
-        <meta key="og:site_name" property="og:site_name" content="JSConf Korea 2020" />
-        <meta key="og:url" property="og:url" content={url} />
-        <meta key="og:type" property="og:type" content="website" />
-
-        <meta key="twitter:card" name="twitter:card" content="summary_large_image" />
-        <meta key="twitter:curl" name="twitter:url" content={url} />
-        <meta key="twitter:site" name="twitter:site" content="@jsconfkorea" />
-        <meta key="twitter:title" name="twitter:title" content={title} />
-        <meta key="twitter:description" name="twitter:description" content={description} />
-        <meta key="twitter:image:src" name="twitter:image:src" content={thumb} />
-        <meta key="twitter:creator" name="twitter:creator" content="@jsconfkorea" />
-
         <meta name="google" content="notranslate"></meta>
 
         <script async src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
       </Head>
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={url}
+        openGraph={{
+          title,
+          description,
+          url,
+          site_name: siteName,
+          images: [{ url: thumb, alt: siteName }],
+          type: 'website',
+          locale: lang,
+        }}
+        twitter={{
+          handle: '@jsconfkorea',
+          site: '@jsconfkorea',
+          cardType: 'summary_large_image',
+        }}
+      ></NextSeo>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
         <ThemeProvider>

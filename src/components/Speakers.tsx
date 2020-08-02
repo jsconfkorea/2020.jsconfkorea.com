@@ -9,6 +9,7 @@ import TwitterIcon from './svgs/TwitterIcon'
 import { Box, Heading, Image, Divider, Text, Grid, CloseButton, PseudoBox } from '@chakra-ui/core'
 import { createPortal } from 'react-dom'
 import { useKey } from 'react-use'
+import { NextSeo } from 'next-seo'
 
 const Speakers = () => {
   const i18n = useI18n()
@@ -17,12 +18,17 @@ const Speakers = () => {
   const router = useRouter()
   const { query } = router
   const selectedSpeaker = [...Array(NUMBER_OF_SPEAKERS)].map((_, i) => i).filter((_, i) => query[t(`${i}.key`)] === '')
+  const isSelected = selectedSpeaker.length === 1
   const onClose = () => router.push(`/[lang]/speakers`, `/${lang}/speakers`, { shallow: true })
 
   useKey((e) => e.keyCode === 27, onClose)
 
+  const title = `JSConf Korea 2020 - ${t('speakers_title')}${isSelected ? ` | ${t(`${selectedSpeaker}.name`)}` : ''}`
+  const description = t('speakers_description')
+
   return (
     <>
+      <NextSeo title={title} description={description} openGraph={{ title, description }} />
       <main css={style}>
         <motion.div
           initial={{ y: 100, opacity: 0 }}
@@ -69,7 +75,7 @@ const Speakers = () => {
                 `}
               />
               <AnimatePresence>
-                {selectedSpeaker.length === 1 && (
+                {isSelected && (
                   <>
                     <motion.div
                       className="dim"
@@ -113,7 +119,6 @@ const Speakers = () => {
 
 const style = css`
   margin: 0 auto;
-  /* margin-top: -1rem; */
   max-width: 820px;
 
   & > div {
