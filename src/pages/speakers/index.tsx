@@ -53,7 +53,7 @@ const SpeakersPage = () => {
 }
 
 const style = css`
-  padding: 5rem 0 5rem 0;
+  padding: 4rem 0 2rem 0;
 `
 
 export default SpeakersPage

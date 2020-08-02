@@ -86,7 +86,7 @@ const Speakers = () => {
                     >
                       <CloseButton onClick={onClose} />
                       <header>
-                        <img src={t(`${selectedSpeaker}.image`)} alt={t(`${selectedSpeaker}.name`)} />
+                        <Image src={t(`${selectedSpeaker}.image`)} alt={t(`${selectedSpeaker}.name`)} />
                         <div>
                           <h1>{t(`${selectedSpeaker}.title`)}</h1>
                           <span>{t(`${selectedSpeaker}.name`)}</span>
@@ -113,7 +113,7 @@ const Speakers = () => {
 
 const style = css`
   margin: 0 auto;
-  margin-top: -1rem;
+  /* margin-top: -1rem; */
   max-width: 820px;
 
   & > div {
@@ -242,59 +242,6 @@ const popupStyle = css`
       border-radius: 1rem;
       padding: 2rem;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      header {
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: 4.5rem 1fr;
-        vertical-align: top;
-        width: auto;
-        img {
-          display: inline-block;
-          width: 4.5rem;
-          border-radius: 100%;
-        }
-        & > div {
-          margin: 0.5rem 0 0 1rem;
-          h1 {
-            margin: 0;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-          }
-          span {
-            font-family: 'Airbnb Cereal App Book', sans-serif;
-            display: inline-block;
-            font-size: 0.8rem;
-          }
-          svg {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 0.6rem;
-            width: 0.9rem;
-            height: 0.9rem;
-          }
-        }
-      }
-
-      .audience {
-        font-size: 0.8rem;
-        margin-top: 1.2rem;
-        font-weight: bold;
-      }
-      h2 {
-        font-family: 'Airbnb Cereal App Book', sans-serif;
-        margin-top: 0.2rem;
-        font-size: 1rem;
-        font-weight: normal;
-      }
-      .summary {
-        font-size: 0.8rem;
-        margin-top: 1.2rem;
-        font-weight: bold;
-      }
-      article {
-        font-family: 'Airbnb Cereal App Book', sans-serif;
-        margin-top: 0.2rem;
-      }
     }
   }
 
@@ -302,63 +249,8 @@ const popupStyle = css`
     & > section {
       max-width: 24rem;
       height: 28rem;
-      padding: 2rem;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
       & > button {
         margin: 0.8rem;
-      }
-      header {
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: 4.5rem 1fr;
-        vertical-align: top;
-        width: auto;
-        img {
-          display: inline-block;
-          width: 4.5rem;
-          border-radius: 100%;
-        }
-        & > div {
-          margin: 0.5rem 0 0 1rem;
-          h1 {
-            margin: 0;
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-          }
-          span {
-            font-family: 'Airbnb Cereal App Book', sans-serif;
-            display: inline-block;
-            font-size: 0.8rem;
-          }
-          svg {
-            display: inline-block;
-            vertical-align: middle;
-            margin-left: 0.6rem;
-            width: 0.9rem;
-            height: 0.9rem;
-          }
-        }
-      }
-
-      .audience {
-        font-size: 0.8rem;
-        margin-top: 1.2rem;
-        font-weight: bold;
-      }
-      h2 {
-        font-family: 'Airbnb Cereal App Book', sans-serif;
-        margin-top: 0.2rem;
-        font-size: 1rem;
-        font-weight: normal;
-      }
-      .summary {
-        font-size: 0.8rem;
-        margin-top: 1.2rem;
-        font-weight: bold;
-      }
-      article {
-        font-family: 'Airbnb Cereal App Book', sans-serif;
-        margin-top: 0.2rem;
       }
     }
   }
