@@ -13,7 +13,9 @@ export const NUMBER_OF_SPEAKERS = 10
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const ko_list = (
     await Promise.all(
-      [...Array(NUMBER_OF_SPEAKERS)].map((_, i) => i + 1).map((i) => import(`../../speakers/speaker-${i}.ko.md`)),
+      [...Array(NUMBER_OF_SPEAKERS)]
+        .map((_, i) => i + 1)
+        .map((i) => import(`../../markdown/speakers/speaker-${i}.ko.md`)),
     )
   )
     .map((md) => matter(md.default))
@@ -23,7 +25,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     })
   const en_list = (
     await Promise.all(
-      [...Array(NUMBER_OF_SPEAKERS)].map((_, i) => i + 1).map((i) => import(`../../speakers/speaker-${i}.en.md`)),
+      [...Array(NUMBER_OF_SPEAKERS)]
+        .map((_, i) => i + 1)
+        .map((i) => import(`../../markdown/speakers/speaker-${i}.en.md`)),
     )
   )
     .map((md) => matter(md.default))

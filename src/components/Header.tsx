@@ -169,7 +169,7 @@ const style = css`
       .hamburger-inner::before,
       .hamburger-inner::after {
         width: 100%;
-        height: 2.5px;
+        height: 3px;
       }
       .hamburger-inner {
         margin-top: 0;

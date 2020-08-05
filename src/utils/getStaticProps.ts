@@ -14,10 +14,10 @@ const DOC_LIST = [
 ]
 
 const getStaticProps: GetStaticProps = async ({ params }) => {
-  const en_list = (await Promise.all(DOC_LIST.map((doc) => import(`../docs/${doc}.en.md`))))
+  const en_list = (await Promise.all(DOC_LIST.map((doc) => import(`../markdown/docs/${doc}.en.md`))))
     .map((doc) => doc.default)
     .reduce((obj, doc, idx) => ({ ...obj, [`${DOC_LIST[idx]}-md`]: doc }), {})
-  const ko_list = (await Promise.all(DOC_LIST.map((doc) => import(`../docs/${doc}.ko.md`))))
+  const ko_list = (await Promise.all(DOC_LIST.map((doc) => import(`../markdown/docs/${doc}.ko.md`))))
     .map((doc) => doc.default)
     .reduce((obj, doc, idx) => ({ ...obj, [`${DOC_LIST[idx]}-md`]: doc }), {})
 

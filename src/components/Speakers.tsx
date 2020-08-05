@@ -37,10 +37,10 @@ const Speakers = () => {
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
         >
-          <Heading as="h1" size="xl" m={0}>
+          <Heading as="h1" size="xl" m={0} mb={4}>
             {t('speakers')}
           </Heading>
-          <Divider mb={6} />
+          {/* <Divider mb={6} /> */}
           <Grid gridGap={8}>
             {[...Array(NUMBER_OF_SPEAKERS)].map((_, i) => (
               <Link href={`/speakers/[speaker]`} as={`/speakers/${t(`${i}.key`)}`} key={i}>
