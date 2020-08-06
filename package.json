@@ -15,7 +15,7 @@
     "@chakra-ui/core": "^0.8.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
-    "@types/lodash": "^4.14.158",
+    "@types/lodash": "^4.14.159",
     "@types/react-gtm-module": "^2.0.0",
     "emotion-normalize": "^10.1.0",
     "emotion-theming": "^10.0.27",

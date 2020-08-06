@@ -56,13 +56,11 @@ const Header = () => {
                     <Link href="/speakers">{t('speakers')}</Link>
                   </li>
                   <li>
-                    <Link href="/schedule" disabled>
-                      {t('schedule')}
-                    </Link>
+                    <Link href="/sponsors">{t('sponsors')}</Link>
                   </li>
                   <li>
-                    <Link href="/sponsors" disabled>
-                      {t('sponsors')}
+                    <Link href="/schedule" disabled>
+                      {t('schedule')}
                     </Link>
                   </li>
                 </ul>
@@ -107,15 +105,16 @@ const style = css`
   left: 0;
   right: 0;
 
-  border-bottom: solid 1px #333;
+  border-bottom: solid 1px rgba(3, 3, 3, 1);
   background: #ddd;
   overflow: hidden;
   z-index: 11;
   height: 4rem;
   font-weight: 900;
+  transition: all 0.35s ease-in-out;
 
   &.active {
-    border: none;
+    border-bottom: solid 1px rgba(3, 3, 3, 0);
 
     #btn-social {
       opacity: 1;

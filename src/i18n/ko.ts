@@ -4,7 +4,7 @@ export const ko = {
   website: '웹사이트',
   video: '영상',
   cfp: '발표자 모집',
-  sponsor: '스폰서 모집',
+  sponsorship: '스폰서 모집',
   newsletter: '뉴스레터',
 
   // menu
@@ -34,4 +34,10 @@ export const ko = {
   speakers_description: '🎉 JSConf Korea 2020를 빛낼 발표자분들',
   audience: '대상 청중',
   summary: '요약',
+
+  // sponsors
+  sponsors_description: '🎉 JSConf Korea를 후원해주신 분들',
+  platinum: '플레티넘',
+  gold: '골드',
+  accessibility: '접근성',
 }

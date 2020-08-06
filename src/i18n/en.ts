@@ -4,7 +4,7 @@ export const en = {
   website: 'WEBSITE',
   video: 'VIDEO',
   cfp: 'CFP',
-  sponsor: 'SPONSORSHIP',
+  sponsorship: 'SPONSORSHIP',
   newsletter: 'NEWSLETTER',
 
   // menu
@@ -34,4 +34,10 @@ export const en = {
   speakers_description: '🎉 Our speakers to shine JSConf Korea 2020',
   audience: 'Audience',
   summary: 'Summary',
+
+  // sponsors
+  sponsors_description: '🎉 Special thanks to our sponsors!',
+  platinum: 'Platinum',
+  gold: 'Gold',
+  accessibility: 'Accessibility',
 }

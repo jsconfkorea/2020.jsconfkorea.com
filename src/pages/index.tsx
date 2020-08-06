@@ -52,8 +52,8 @@ const Index = () => {
           </div>
           <div>
             <div id="btn-sponsor">
-              <Link href="/sponsorship" className="btn-default">
-                {t('sponsor')}
+              <Link href="/sponsors" className="btn-default">
+                {t('sponsors')}
               </Link>
             </div>
             <div id="btn-cfp">
