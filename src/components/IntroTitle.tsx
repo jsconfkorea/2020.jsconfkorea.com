@@ -63,7 +63,7 @@ const titleStyle = css`
     transition: transform 0.3s;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     top: 0.8rem;
     left: 0.8rem;
     font-size: 1.8rem;
@@ -93,7 +93,7 @@ const dateStyle = css`
     transition: transform 0.3s;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     bottom: 0.8rem;
     right: 0.8rem;
     font-size: 1.8rem;

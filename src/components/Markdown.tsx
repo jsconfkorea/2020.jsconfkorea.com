@@ -126,12 +126,12 @@ const style = css`
     border: solid 1px rgba(0, 0, 0, 0.1);
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     font-size: 80px;
     max-width: 768px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     font-size: 60px;
     margin: 8px 8px 20px;
     padding: 15px;

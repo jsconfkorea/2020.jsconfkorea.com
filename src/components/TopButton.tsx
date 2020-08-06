@@ -75,7 +75,7 @@ const style = css`
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     border: solid 1px rgba(0, 0, 0, 0.1);
     right: 15px;
     bottom: 10px;

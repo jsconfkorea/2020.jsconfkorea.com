@@ -38,7 +38,7 @@ const style = css`
     top: 50%;
     transform: translate3d(-50%, -50%, 0);
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     svg {
       width: 50%;
     }

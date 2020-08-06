@@ -92,11 +92,11 @@ const style = css`
   margin-top: -1rem;
   max-width: 820px;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     max-width: 768px;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     width: 100%;
   }
 
@@ -112,7 +112,7 @@ const style = css`
     z-index: 1;
     font-size: 0.7rem;
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1199px) {
       grid-template-columns: repeat(3, 1fr);
       margin: -24px 0px 0 0px;
       padding: 30px;
@@ -120,7 +120,7 @@ const style = css`
       font-size: 0.8rem;
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 767px) {
       grid-template-columns: repeat(2, 1fr);
       margin: -24px 8px 0 8px;
       max-width: 768px;

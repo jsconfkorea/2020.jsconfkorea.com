@@ -231,7 +231,7 @@ const style = css`
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     & > .inner form {
       /* width: calc(100vw - 25px);
       padding: 30px 30px;

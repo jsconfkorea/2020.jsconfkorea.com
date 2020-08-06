@@ -12,7 +12,7 @@ import { NUMBER_OF_SPONSORS } from '../pages/sponsors'
 import { useEffect } from 'react'
 import Sponsor from './Sponsor'
 import { useDisclosure, CloseButton } from '@chakra-ui/core'
-import { Heading, Grid, Divider } from './MotionChakra'
+import { Heading, Grid, Divider, Image, Box, Button, A } from './MotionChakra'
 import { capitalize } from 'lodash/fp'
 
 export const fadeIn = {
@@ -36,6 +36,15 @@ export const fadeInUp = {
     },
   },
 }
+
+export const listStack = (delayChildren: number) => ({
+  open: {
+    transition: { delayChildren, staggerChildren: 0.15 },
+  },
+  closed: {
+    transition: { staggerChildren: 0.05, staggerDirection: -1 },
+  },
+})
 
 const Sponsors = () => {
   const i18n = useI18n()
@@ -69,46 +78,44 @@ const Sponsors = () => {
           <Heading as="h1" size="xl" m={0} mb={4} variants={fadeInUp}>
             {t('sponsors')}
           </Heading>
-          <Grid
-            variants={{
-              open: {
-                transition: { delayChildren: 0.2, staggerChildren: 0.15 },
-              },
-              closed: {
-                transition: { staggerChildren: 0.05, staggerDirection: -1 },
-              },
-            }}
-          >
+          <Grid variants={listStack(0.2)}>
             <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('platinum')}
             </Heading>
             <Divider mb="1rem" variants={fadeIn} />
-            {[...Array(NUMBER_OF_SPONSORS)]
-              .map((_, i) => i)
-              .slice(0, 2)
-              .map((i) => (
-                <Sponsor key={i} i={i} />
-              ))}
+            <Grid gridAutoFlow={['row', 'column']} gridGap={['0', '1rem']} variants={listStack(0.2)}>
+              {[...Array(NUMBER_OF_SPONSORS)]
+                .map((_, i) => i)
+                .slice(0, 2)
+                .map((i) => (
+                  <Sponsor key={i} i={i} />
+                ))}
+            </Grid>
             <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('gold')}
             </Heading>
             <Divider mb="1rem" />
-            {[...Array(NUMBER_OF_SPONSORS)]
-              .map((_, i) => i)
-              .slice(2, 4)
-              .map((i) => (
-                <Sponsor key={i} i={i} />
-              ))}
+            <Grid gridAutoFlow={['row', 'column']} gridGap={['0', '1rem']} variants={listStack(0.6)}>
+              {[...Array(NUMBER_OF_SPONSORS)]
+                .map((_, i) => i)
+                .slice(2, 4)
+                .map((i) => (
+                  <Sponsor key={i} i={i} />
+                ))}
+            </Grid>
             <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('accessibility')}
             </Heading>
             <Divider mb="1rem" />
-            {[...Array(NUMBER_OF_SPONSORS)]
-              .map((_, i) => i)
-              .slice(4, 5)
-              .map((i) => (
-                <Sponsor key={i} i={i} />
-              ))}
+            <Grid gridAutoFlow={['row', 'column']} gridGap={['0', '1rem']} variants={listStack(1)}>
+              {[...Array(NUMBER_OF_SPONSORS)]
+                .map((_, i) => i)
+                .slice(4, 5)
+                .map((i) => (
+                  <Sponsor key={i} i={i} />
+                ))}
+              <div></div>
+            </Grid>
           </Grid>
         </motion.div>
         {typeof window !== 'undefined' &&
@@ -138,20 +145,38 @@ const Sponsors = () => {
                       transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
                     >
                       <CloseButton onClick={onClose} />
-                      {/* <header>
-                        <Image src={t(`${selectedSpeaker}.image`)} alt={t(`${selectedSpeaker}.name`)} />
-                        <div>
-                          <h1>{t(`${selectedSpeaker}.title`)}</h1>
-                          <span>{t(`${selectedSpeaker}.name`)}</span>
-                          <a href={t(`${selectedSpeaker}.link`)} target="_blank" rel="noopener noreferrer">
-                            <TwitterIcon />
-                          </a>
-                        </div>
-                      </header>
-                      <div className="audience">{t('audience')}</div>
-                      <h2>{t(`${selectedSpeaker}.audience`)}</h2>
-                      <div className="summary">{t('summary')}</div>
-                      <article>{t(`${selectedSpeaker}.content`)}</article> */}
+                      <Image
+                        src={t(`${selectedSponsor}.logo`)}
+                        alt={t(`${selectedSponsor}.name`)}
+                        w="100%"
+                        mb="2rem"
+                        mt="0.5rem"
+                      />
+                      <Box
+                        // minH="0"
+                        h="100%"
+                        // maxH="300px"
+                        overflow="scroll"
+                        borderTop="2px solid"
+                        borderBottom="2px solid"
+                        // fontSize="1.2rem"
+                        lineHeight="1.7rem"
+                        mb="2rem"
+                        flex={1}
+                      >
+                        {t(`${selectedSponsor}.content`)}
+                      </Box>
+                      <A
+                        href={t(`${selectedSponsor}.link`)}
+                        isExternal
+                        // position="absolute"
+                        bottom="6rem"
+                        // w="calc(100% - 4rem)"
+                      >
+                        <Button rightIcon="arrow-forward" variantColor="teal" variant="outline" size="lg" w="100%">
+                          Go To Website
+                        </Button>
+                      </A>
                     </motion.section>
                   </>
                 )}
@@ -189,16 +214,22 @@ const popupStyle = css`
   & > section {
     font-family: 'Airbnb Cereal App Medium', sans-serif;
     z-index: 20;
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 25%;
-    height: 120%;
+    /* top: 15%; */
+    bottom: -2rem;
+    /* min-height: 40rem; */
+    height: calc(80% + 2rem);
+    /* max-height: 50rem; */
     width: 100%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    padding: 1.5rem;
-    padding-top: 2rem;
+    padding: 2rem;
+    padding-bottom: 4rem;
+    padding-top: 2.5rem;
     background-color: white;
-    & > button {
+    & > button:first-of-type {
       border: none;
       background-color: white;
       cursor: pointer;
@@ -211,66 +242,16 @@ const popupStyle = css`
         box-shadow: none;
       }
     }
-    header {
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-columns: 4.5rem 1fr;
-      vertical-align: top;
-      width: auto;
-      img {
-        display: inline-block;
-        width: 4.5rem;
-        border-radius: 100%;
-      }
-      & > div {
-        margin: 0.5rem 0 0 1rem;
-        h1 {
-          margin: 0;
-          font-size: 1rem;
-          margin-bottom: 0.5rem;
-        }
-        span {
-          font-family: 'Airbnb Cereal App Book', sans-serif;
-          display: inline-block;
-          font-size: 0.8rem;
-        }
-        svg {
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: 0.6rem;
-          width: 0.9rem;
-          height: 0.9rem;
-        }
-      }
-    }
-
-    .audience {
-      font-size: 0.8rem;
-      margin-top: 1.2rem;
-      font-weight: bold;
-    }
-    h2 {
-      font-family: 'Airbnb Cereal App Book', sans-serif;
-      margin-top: 0.2rem;
-      font-size: 1rem;
-      font-weight: normal;
-    }
-    .summary {
-      font-size: 0.8rem;
-      margin-top: 1.2rem;
-      font-weight: bold;
-    }
-    article {
-      font-family: 'Airbnb Cereal App Book', sans-serif;
-      margin-top: 0.2rem;
+    button {
+      cursor: pointer;
     }
   }
 
-  @media screen and (min-width: 769px) {
+  @media screen and (min-width: 768px) {
     & > section {
       max-width: 28rem;
       margin: auto;
-      height: 28rem;
+      height: 70%;
       top: 0;
       left: 0;
       right: 0;
@@ -278,13 +259,19 @@ const popupStyle = css`
       border-radius: 1rem;
       padding: 2rem;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      & > button:first-of-type {
+        & > svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
     }
   }
 
-  @media screen and (min-width: 1201px) {
+  @media screen and (min-width: 1200px) {
     & > section {
-      max-width: 24rem;
-      height: 28rem;
+      max-width: 30rem;
+      height: 38rem;
       & > button {
         margin: 0.8rem;
       }

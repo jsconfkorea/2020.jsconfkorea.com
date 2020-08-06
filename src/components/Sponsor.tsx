@@ -43,7 +43,7 @@ const Sponsor = ({ i }: Props) => {
       key={i}
       mb="1.2rem"
     >
-      <Link href={`/sponsors/[sponsors]`} as={`/sponsors/${t(`${i}.key`)}`} shallow={true}>
+      <Link href={`/sponsors/[sponsor]`} as={`/sponsors/${t(`${i}.key`)}`} shallow>
         <Image
           src={t(`${i}.logo`)}
           alt={t(`${i}.key`)}
@@ -61,6 +61,15 @@ const Sponsor = ({ i }: Props) => {
 }
 
 const style = css`
+  transition: all 0.1s ease-out;
+  &:active {
+    transform: scale(0.95) !important;
+  }
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(0.95) !important;
+    }
+  }
   & > a {
     position: absolute;
     width: 100%;

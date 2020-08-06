@@ -10,6 +10,7 @@ import useGA from '../hooks/useGA'
 import useGTM from '../hooks/useGTM'
 import { NextSeo } from 'next-seo'
 import 'hamburgers/_sass/hamburgers/hamburgers.scss'
+import { theme } from '../utils/theme'
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -78,7 +79,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       ></NextSeo>
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
-        <ThemeProvider>
+        <ThemeProvider theme={theme}>
           <Component {...pageProps} />
         </ThemeProvider>
       </I18nProvider>

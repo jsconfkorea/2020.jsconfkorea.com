@@ -114,6 +114,14 @@ const style = css`
     word-break: keep-all;
   }
 
+  * {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
   body::-webkit-scrollbar,
   #__next::-webkit-scrollbar {
     display: none;
@@ -183,13 +191,13 @@ const style = css`
     }
   }
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     html {
       font-size: 20px;
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     html {
       font-size: 15px;
     }
