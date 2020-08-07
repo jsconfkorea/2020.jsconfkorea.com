@@ -4,14 +4,16 @@ import { useI18n } from '../hooks/useI18n'
 import { motion } from 'framer-motion'
 import Link from './Link'
 import { Box, Image } from '@chakra-ui/core'
+import { fadeInUp } from './Sponsors'
 
 const MotionBox = motion.custom(Box)
 
 type Props = {
   i: number
+  hide?: boolean
 }
 
-const Sponsor = ({ i }: Props) => {
+const Sponsor = ({ i, hide }: Props) => {
   const i18n = useI18n()
   const t = (key: string) => i18n.t(`sponsor.${key}`) || i18n.t(key)
 
@@ -24,36 +26,25 @@ const Sponsor = ({ i }: Props) => {
       boxShadow="0 0 10px 0 rgba(123,136,157,.15)"
       cursor="pointer"
       css={style}
-      variants={{
-        open: {
-          opacity: 1,
-          transition: {
-            ease: 'backOut',
-          },
-        },
-        closed: {
-          opacity: 0,
-          transition: {
-            y: { stiffness: 1000 },
-          },
-        },
-      }}
+      variants={fadeInUp}
       key={i}
       mb="1.2rem"
     >
-      <Link href={`/sponsors/[sponsor]`} as={`/sponsors/${t(`${i}.key`)}`} shallow>
-        <Image
-          src={t(`${i}.logo`)}
-          alt={t(`${i}.key`)}
-          w="calc(100% - 4rem)"
-          pos="absolute"
-          m="auto"
-          top={0}
-          bottom={0}
-          left={0}
-          right={0}
-        />
-      </Link>
+      {!hide && (
+        <Link href={`/sponsors/[sponsor]`} as={`/sponsors/${t(`${i}.key`)}`} shallow>
+          <Image
+            src={t(`${i}.logo`)}
+            alt={t(`${i}.key`)}
+            w="calc(100% - 4rem)"
+            pos="absolute"
+            m="auto"
+            top={0}
+            bottom={0}
+            left={0}
+            right={0}
+          />
+        </Link>
+      )}
     </MotionBox>
   )
 }

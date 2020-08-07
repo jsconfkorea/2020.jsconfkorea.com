@@ -1,6 +1,7 @@
 ---
 key: 'odkmedia'
 name: 'ODK Media'
+type: 'gold'
 logo: '/images/sponsors/odkmedia.png'
 link: 'https://www.odkmedia.net/'
 ---

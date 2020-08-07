@@ -1,6 +1,7 @@
 ---
 key: 'yanolja'
 name: '야놀자'
+type: 'gold'
 logo: '/images/sponsors/yanolja.png'
 link: 'https://www.yanolja.com/'
 ---

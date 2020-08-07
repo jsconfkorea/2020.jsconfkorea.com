@@ -33,8 +33,8 @@ const Speakers = () => {
       <NextSeo title={title} description={description} openGraph={{ title, description }} />
       <main css={style}>
         <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
         >
           <Heading as="h1" size="xl" m={0} mb={4}>

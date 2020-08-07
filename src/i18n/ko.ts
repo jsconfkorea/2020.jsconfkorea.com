@@ -4,7 +4,7 @@ export const ko = {
   website: '웹사이트',
   video: '영상',
   cfp: '발표자 모집',
-  sponsorship: '스폰서 모집',
+  sponsorship: '후원사 모집',
   newsletter: '뉴스레터',
 
   // menu
@@ -12,7 +12,7 @@ export const ko = {
   about: '행사소개',
   schedule: '시간표',
   speakers: '발표자',
-  sponsors: '스폰서',
+  sponsors: '후원사',
   code_of_conduct: '핵심원칙',
   privacy_policy: '개인정보처리방침',
 

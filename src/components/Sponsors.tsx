@@ -78,43 +78,59 @@ const Sponsors = () => {
           <Heading as="h1" size="xl" m={0} mb={4} variants={fadeInUp}>
             {t('sponsors')}
           </Heading>
-          <Grid variants={listStack(0.2)}>
+          <Grid variants={fadeIn}>
             <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('platinum')}
             </Heading>
             <Divider mb="1rem" variants={fadeIn} />
-            <Grid gridAutoFlow={['row', 'column']} gridGap={['0', '1rem']} variants={listStack(0.2)}>
+            <Grid
+              gridTemplateColumns={['1fr', '1fr 1fr']}
+              gridAutoFlow={['row', 'column']}
+              gridGap={['0', '1rem']}
+              variants={listStack(0.2)}
+            >
               {[...Array(NUMBER_OF_SPONSORS)]
                 .map((_, i) => i)
-                .slice(0, 2)
+                .slice(0, 1)
                 .map((i) => (
                   <Sponsor key={i} i={i} />
                 ))}
+              <Sponsor i={0} hide />
             </Grid>
             <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('gold')}
             </Heading>
             <Divider mb="1rem" />
-            <Grid gridAutoFlow={['row', 'column']} gridGap={['0', '1rem']} variants={listStack(0.6)}>
+            <Grid
+              gridTemplateColumns={['1fr', '1fr 1fr']}
+              gridAutoFlow={['row', 'column']}
+              gridGap={['0', '1rem']}
+              variants={listStack(0.6)}
+            >
               {[...Array(NUMBER_OF_SPONSORS)]
                 .map((_, i) => i)
-                .slice(2, 4)
+                .slice(2, 3)
                 .map((i) => (
                   <Sponsor key={i} i={i} />
                 ))}
+              <Sponsor i={0} hide />
             </Grid>
             <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('accessibility')}
             </Heading>
             <Divider mb="1rem" />
-            <Grid gridAutoFlow={['row', 'column']} gridGap={['0', '1rem']} variants={listStack(1)}>
+            <Grid
+              gridTemplateColumns={['1fr', '1fr 1fr']}
+              gridAutoFlow={['row', 'column']}
+              gridGap={['0', '1rem']}
+              variants={listStack(1)}
+            >
               {[...Array(NUMBER_OF_SPONSORS)]
                 .map((_, i) => i)
                 .slice(4, 5)
                 .map((i) => (
-                  <Sponsor key={i} i={i} />
+                  <Sponsor key={i} i={i} hide />
                 ))}
-              <div></div>
             </Grid>
           </Grid>
         </motion.div>
@@ -145,13 +161,19 @@ const Sponsors = () => {
                       transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
                     >
                       <CloseButton onClick={onClose} />
-                      <Image
-                        src={t(`${selectedSponsor}.logo`)}
-                        alt={t(`${selectedSponsor}.name`)}
-                        w="100%"
-                        mb="2rem"
-                        mt="0.5rem"
-                      />
+                      <Box w="100%" pb="50%" pos="relative">
+                        <Image
+                          src={t(`${selectedSponsor}.logo`)}
+                          alt={t(`${selectedSponsor}.name`)}
+                          w="calc(100% - 2rem)"
+                          pos="absolute"
+                          m="auto"
+                          top={0}
+                          bottom={0}
+                          left={0}
+                          right={0}
+                        />
+                      </Box>
                       <Box
                         // minH="0"
                         h="100%"
@@ -163,9 +185,10 @@ const Sponsors = () => {
                         lineHeight="1.7rem"
                         mb="2rem"
                         flex={1}
-                      >
-                        {t(`${selectedSponsor}.content`)}
-                      </Box>
+                        dangerouslySetInnerHTML={{
+                          __html: t(`${selectedSponsor}.content`),
+                        }}
+                      ></Box>
                       <A
                         href={t(`${selectedSponsor}.link`)}
                         isExternal
@@ -227,7 +250,7 @@ const popupStyle = css`
     border-top-right-radius: 1rem;
     padding: 2rem;
     padding-bottom: 4rem;
-    padding-top: 2.5rem;
+    padding-top: 1rem;
     background-color: white;
     & > button:first-of-type {
       border: none;
@@ -245,6 +268,11 @@ const popupStyle = css`
     button {
       cursor: pointer;
     }
+    & > a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -252,12 +280,14 @@ const popupStyle = css`
       max-width: 28rem;
       margin: auto;
       height: 70%;
+      max-height: 35rem;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       border-radius: 1rem;
       padding: 2rem;
+      padding-top: 1rem;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
       & > button:first-of-type {
         & > svg {
@@ -270,7 +300,7 @@ const popupStyle = css`
 
   @media screen and (min-width: 1200px) {
     & > section {
-      max-width: 30rem;
+      max-width: 26rem;
       height: 38rem;
       & > button {
         margin: 0.8rem;

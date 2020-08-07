@@ -1,6 +1,7 @@
 ---
 key: 'kakao'
 name: 'kakao'
+type: 'accessibility'
 logo: '/images/sponsors/kakao.png'
 link: 'https://www.kakaocorp.com/'
 ---
