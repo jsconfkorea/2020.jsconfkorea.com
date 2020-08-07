@@ -26,14 +26,12 @@ const Sponsor = ({ i }: Props) => {
       css={style}
       variants={{
         open: {
-          y: 0,
           opacity: 1,
           transition: {
             ease: 'backOut',
           },
         },
         closed: {
-          y: 50,
           opacity: 0,
           transition: {
             y: { stiffness: 1000 },
