@@ -3,8 +3,6 @@ import { jsx, css, Global } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
-import Link from './Link'
-import TwitterIcon from './svgs/TwitterIcon'
 import { createPortal } from 'react-dom'
 import { useKey } from 'react-use'
 import { NextSeo } from 'next-seo'
@@ -95,7 +93,7 @@ const Sponsors = () => {
                 .map((i) => (
                   <Sponsor key={i} i={i} />
                 ))}
-              <Sponsor i={0} hide />
+              {/* <Sponsor i={0} hide /> */}
             </Grid>
             <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('gold')}
@@ -113,9 +111,9 @@ const Sponsors = () => {
                 .map((i) => (
                   <Sponsor key={i} i={i} />
                 ))}
-              <Sponsor i={0} hide />
+              {/* <Sponsor i={0} hide /> */}
             </Grid>
-            <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
+            {/* <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('accessibility')}
             </Heading>
             <Divider mb="1rem" />
@@ -129,9 +127,9 @@ const Sponsors = () => {
                 .map((_, i) => i)
                 .slice(4, 5)
                 .map((i) => (
-                  <Sponsor key={i} i={i} hide />
+                  <Sponsor key={i} i={i} />
                 ))}
-            </Grid>
+            </Grid> */}
           </Grid>
         </motion.div>
         {typeof window !== 'undefined' &&
@@ -179,8 +177,8 @@ const Sponsors = () => {
                         h="100%"
                         // maxH="300px"
                         overflow="scroll"
-                        borderTop="2px solid"
-                        borderBottom="2px solid"
+                        // borderTop="2px solid"
+                        // borderBottom="2px solid"
                         // fontSize="1.2rem"
                         lineHeight="1.7rem"
                         mb="2rem"
