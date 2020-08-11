@@ -113,7 +113,7 @@ const Sponsors = () => {
                 ))}
               {/* <Sponsor i={0} hide /> */}
             </Grid>
-            {/* <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
+            <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('accessibility')}
             </Heading>
             <Divider mb="1rem" />
@@ -129,7 +129,7 @@ const Sponsors = () => {
                 .map((i) => (
                   <Sponsor key={i} i={i} />
                 ))}
-            </Grid> */}
+            </Grid>
           </Grid>
         </motion.div>
         {typeof window !== 'undefined' &&
@@ -181,7 +181,7 @@ const Sponsors = () => {
                         // borderBottom="2px solid"
                         // fontSize="1.2rem"
                         lineHeight="1.7rem"
-                        mb="2rem"
+                        mb="1.5rem"
                         flex={1}
                         dangerouslySetInnerHTML={{
                           __html: t(`${selectedSponsor}.content`),
