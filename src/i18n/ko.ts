@@ -32,7 +32,7 @@ export const ko = {
   // speakers
   speakers_title: '발표자',
   speakers_description: '🎉 JSConf Korea 2020를 빛낼 발표자분들',
-  audience: '대상 청중',
+  bio: '소개',
   summary: '요약',
 
   // sponsors

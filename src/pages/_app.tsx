@@ -17,12 +17,14 @@ Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
+export const WEBSITE_URL = 'https://jsconfkorea.com'
+
 const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = 'JSConf Korea 2020 - Home Edition'
-  const url = 'https://jsconfkorea.com/'
-  const thumb = `${url}og-image.png`
+  const url = WEBSITE_URL
+  const thumb = `${url}/og-image.png`
   const siteName = 'JSConf Korea 2020'
 
   useGA()

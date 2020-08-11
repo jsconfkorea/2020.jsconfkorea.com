@@ -32,7 +32,7 @@ export const en = {
   // speakers
   speakers_title: 'Speakers',
   speakers_description: '🎉 Our speakers to shine JSConf Korea 2020',
-  audience: 'Audience',
+  bio: 'Bio',
   summary: 'Summary',
 
   // sponsors

@@ -1,12 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
-import { motion } from 'framer-motion'
 import Link from './Link'
-import { Box, Image } from '@chakra-ui/core'
+import { Image } from '@chakra-ui/core'
 import { fadeInUp } from './Sponsors'
-
-const MotionBox = motion.custom(Box)
+import { Box } from './MotionChakra'
 
 type Props = {
   i: number
@@ -18,7 +16,7 @@ const Sponsor = ({ i, hide }: Props) => {
   const t = (key: string) => i18n.t(`sponsor.${key}`) || i18n.t(key)
 
   return (
-    <MotionBox
+    <Box
       w="100%"
       pb="50%"
       bg="white"
@@ -45,7 +43,7 @@ const Sponsor = ({ i, hide }: Props) => {
           />
         </Link>
       )}
-    </MotionBox>
+    </Box>
   )
 }
 

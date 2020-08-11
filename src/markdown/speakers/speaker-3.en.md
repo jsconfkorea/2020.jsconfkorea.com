@@ -1,10 +1,12 @@
 ---
-key: 'sona'
-name: 'Soeun Lee'
+key: 'yeom'
+name: 'Inhwa Yeom & Seonghyeon Kim'
+image: '/images/speakers/yeom.jpg'
+bio: 'Inhwa Yeom is a media artist and research assistant of UVR Lab, KAIST. In her projects, she designs, develops, and evaluates AR/VR systems for collaborative creations and learning, mainly in consideration of people with less familiarity with or accessibility to 3D interfaces and interactions.'
+website: 'https://p5for50.plus/'
+sns: 'https://www.instagram.com/yinhwa.art'
+github: 'https://github.com/yinhwa'
 title: 'p5 for 50+: How to Include the Middle-Aged and Elderly to Coding Education?'
-image: '/images/sona.jpg'
-link: 'https://github.com/godori'
-audience: "Who interested in Engineer's Life"
 ---
 
-Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer. Hi. I'm Developer.
+The project “p5 for 50+” aims to improve the digital literacy and rights of the middle-aged and elderly in South Korea. Addressing the age-specific needs in coding education, the researchers prototyped a low-barrier web app for learning p5.js. In the talk, we will mainly discuss the design implications for accessible education of coding.

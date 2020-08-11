@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css, Global } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { createPortal } from 'react-dom'
 import { useKey } from 'react-use'
@@ -9,8 +9,8 @@ import { NextSeo } from 'next-seo'
 import { NUMBER_OF_SPONSORS } from '../pages/sponsors'
 import { useEffect } from 'react'
 import Sponsor from './Sponsor'
-import { useDisclosure, CloseButton } from '@chakra-ui/core'
-import { Heading, Grid, Divider, Image, Box, Button, A } from './MotionChakra'
+import { useDisclosure, CloseButton, PseudoBox } from '@chakra-ui/core'
+import { Heading, Grid, Divider, Image, Box, Button, A, Flex } from './MotionChakra'
 import { capitalize } from 'lodash/fp'
 
 export const fadeIn = {
@@ -35,9 +35,9 @@ export const fadeInUp = {
   },
 }
 
-export const listStack = (delayChildren: number) => ({
+export const listStack = (delayChildren = 0.2, staggerChildren = 0.15) => ({
   open: {
-    transition: { delayChildren, staggerChildren: 0.15 },
+    transition: { delayChildren, staggerChildren },
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
@@ -71,8 +71,8 @@ const Sponsors = () => {
   return (
     <>
       <NextSeo title={title} description={description} openGraph={{ title, description }} />
-      <main css={style}>
-        <motion.div initial={false} animate={isOpen ? 'open' : 'closed'}>
+      <Box m="0 auto" maxW={820}>
+        <Box overflow="hidden" p="1.5rem" m="0" fontSize="0.8rem" initial={false} animate={isOpen ? 'open' : 'closed'}>
           <Heading as="h1" size="xl" m={0} mb={4} variants={fadeInUp}>
             {t('sponsors')}
           </Heading>
@@ -131,10 +131,10 @@ const Sponsors = () => {
                 ))}
             </Grid>
           </Grid>
-        </motion.div>
+        </Box>
         {typeof window !== 'undefined' &&
           createPortal(
-            <div css={popupStyle}>
+            <Box css={popupStyle}>
               <Global
                 styles={css`
                   html {
@@ -145,20 +145,54 @@ const Sponsors = () => {
               <AnimatePresence>
                 {isSelected && (
                   <>
-                    <motion.div
-                      className="dim"
+                    <Box
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       onClick={onClose}
-                    ></motion.div>
-                    <motion.section
+                      pos="absolute"
+                      w="100%"
+                      h="100%"
+                      top={0}
+                      left={0}
+                      zIndex={15}
+                      backgroundColor="rgba(0, 0, 0, 0.5)"
+                    />
+                    <Flex
+                      fontFamily="'Airbnb Cereal App Medium'"
+                      zIndex={20}
+                      flexDir="column"
+                      pos="absolute"
+                      h={['calc(80% + 2rem)', '70%', '38rem']}
+                      maxH={['auto', '35rem']}
+                      w="100%"
+                      maxW={['auto', '28rem', '26rem']}
+                      m="auto"
+                      top={['auto', 0]}
+                      left={['auto', 0]}
+                      right={['auto', 0]}
+                      bottom={['-2rem', 0]}
+                      borderRadius="1rem"
+                      p={['1rem 2rem 4rem 2rem', '1rem 2rem 2rem 2rem']}
+                      backgroundColor="white"
+                      boxShadow="0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
                       initial={{ y: '50%', opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       exit={{ y: '50%', opacity: 0 }}
-                      transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
+                      // transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
                     >
-                      <CloseButton onClick={onClose} />
+                      <PseudoBox
+                        as={CloseButton}
+                        border="none"
+                        backgroundColor="white"
+                        cursor="pointer"
+                        pos="absolute"
+                        right={0}
+                        top={0}
+                        m={['0.5rem', '0.8rem']}
+                        _focus={{ boxShadow: 'none' }}
+                        onClick={onClose}
+                      />
                       <Box w="100%" pb="50%" pos="relative">
                         <Image
                           src={t(`${selectedSponsor}.logo`)}
@@ -173,13 +207,8 @@ const Sponsors = () => {
                         />
                       </Box>
                       <Box
-                        // minH="0"
                         h="100%"
-                        // maxH="300px"
                         overflow="scroll"
-                        // borderTop="2px solid"
-                        // borderBottom="2px solid"
-                        // fontSize="1.2rem"
                         lineHeight="1.7rem"
                         mb="1.5rem"
                         flex={1}
@@ -190,118 +219,42 @@ const Sponsors = () => {
                       <A
                         href={t(`${selectedSponsor}.link`)}
                         isExternal
-                        // position="absolute"
                         bottom="6rem"
-                        // w="calc(100% - 4rem)"
+                        css={css`
+                          &:hover {
+                            text-decoration: none;
+                          }
+                        `}
                       >
-                        <Button rightIcon="arrow-forward" variantColor="teal" variant="outline" size="lg" w="100%">
+                        <Button
+                          cursor="pointer"
+                          rightIcon="arrow-forward"
+                          variantColor="teal"
+                          variant="outline"
+                          size="lg"
+                          w="100%"
+                        >
                           Go To Website
                         </Button>
                       </A>
-                    </motion.section>
+                    </Flex>
                   </>
                 )}
               </AnimatePresence>
-            </div>,
+            </Box>,
             document.querySelector('body')!,
           )}
-      </main>
+      </Box>
     </>
   )
 }
 
-const style = css`
-  margin: 0 auto;
-  max-width: 820px;
-
-  & > div {
-    overflow: hidden;
-    padding: 1.5rem;
-    margin: 0;
-    font-size: 0.8rem;
-  }
-`
-
 const popupStyle = css`
-  & > .dim {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 15;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  & > section {
-    font-family: 'Airbnb Cereal App Medium', sans-serif;
-    z-index: 20;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    /* top: 15%; */
-    bottom: -2rem;
-    /* min-height: 40rem; */
-    height: calc(80% + 2rem);
-    /* max-height: 50rem; */
-    width: 100%;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    padding: 2rem;
-    padding-bottom: 4rem;
-    padding-top: 1rem;
-    background-color: white;
-    & > button:first-of-type {
-      border: none;
-      background-color: white;
-      cursor: pointer;
-      position: absolute;
-      right: 0;
-      top: 0;
-      margin: 0.5rem;
-      &:focus {
-        background-color: white;
-        box-shadow: none;
-      }
-    }
-    button {
-      cursor: pointer;
-    }
-    & > a {
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  @media screen and (min-width: 768px) {
-    & > section {
-      max-width: 28rem;
-      margin: auto;
-      height: 70%;
-      max-height: 35rem;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 1rem;
-      padding: 2rem;
-      padding-top: 1rem;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      & > button:first-of-type {
-        & > svg {
-          width: 16px;
-          height: 16px;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    & > section {
-      max-width: 26rem;
-      height: 38rem;
-      & > button {
-        margin: 0.8rem;
+  @media screen and (min-width: 769px) {
+    button:first-of-type {
+      & > svg {
+        width: 16px;
+        height: 16px;
       }
     }
   }

@@ -1,10 +1,12 @@
 ---
-key: 'sona'
-name: '이소은'
-title: 'p5 for 50+: How to Include the Middle-Aged and Elderly to Coding Education?'
-image: '/images/sona.jpg'
-link: 'https://github.com/godori'
-audience: '개발자의 삶에 관심있는 사람'
+key: 'yeom'
+name: '염인화 & 김성현'
+image: '/images/speakers/yeom.jpg'
+bio: '인화님은 미디어 아티스트이자 KAIST UVR Lab의 연구 조교입니다. 협업을 통한 학습이나 크리이에이션을위한 AR / VR 시스템을 설계, 개발 및 평가합니다. 특히 3D 인터페이스가 덜 친숙하고 더 접근하기 어려운 사람들을 염두에 둡니다.'
+website: 'https://p5for50.plus/'
+sns: 'https://www.instagram.com/yinhwa.art'
+github: 'https://github.com/yinhwa'
+title: '50대+를 위한 p5.js: 중년과 노년을 위한 코딩 교육'
 ---
 
-안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다. 안녕하세요. 개발자입니다.
+"50대+를 위한 p5"(p5 for 50+) 프로젝트는 한국의 중년층과 노년층의 디지털 리터러시와 권리 향상을 목표로 시작되었습니다. 코딩 교육의 연령별 요구 사항에 맞춰 p5.js의 학습 장벽을 낮춘 웹 앱을 프로토타입했습니다. 이 발표에서는 접근성있는 코딩 교육을 위한 디자인 관점에서의 시사점에 대해 이야기합니다.

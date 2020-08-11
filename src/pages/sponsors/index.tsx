@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import { jsx } from '@emotion/core'
 import Header from '../../components/Header'
 import { GetStaticProps } from 'next'
 import matter from 'gray-matter'
@@ -7,6 +7,7 @@ import { defaultLanguage } from '../../components/I18nProvider'
 import { ko } from '../../i18n/ko'
 import { en } from '../../i18n/en'
 import Sponsors from '../../components/Sponsors'
+import { Box } from '../../components/MotionChakra'
 
 export const NUMBER_OF_SPONSORS = 5
 
@@ -49,15 +50,11 @@ const SponsorsPage = () => {
   return (
     <>
       <Header></Header>
-      <div css={style}>
+      <Box p="4rem 0 2rem 0">
         <Sponsors />
-      </div>
+      </Box>
     </>
   )
 }
-
-const style = css`
-  padding: 4rem 0 2rem 0;
-`
 
 export default SponsorsPage

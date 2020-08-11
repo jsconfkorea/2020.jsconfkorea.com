@@ -7,6 +7,7 @@ import { defaultLanguage } from '../../components/I18nProvider'
 import { ko } from '../../i18n/ko'
 import { en } from '../../i18n/en'
 import Speakers from '../../components/Speakers'
+import { Box } from '../../components/MotionChakra'
 
 export const NUMBER_OF_SPEAKERS = 10
 
@@ -49,15 +50,11 @@ const SpeakersPage = () => {
   return (
     <>
       <Header></Header>
-      <div css={style}>
+      <Box p="4rem 0 2rem 0">
         <Speakers />
-      </div>
+      </Box>
     </>
   )
 }
-
-const style = css`
-  padding: 4rem 0 2rem 0;
-`
 
 export default SpeakersPage
