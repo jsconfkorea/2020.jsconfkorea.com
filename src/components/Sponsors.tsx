@@ -62,7 +62,7 @@ const Sponsors = () => {
     isSelected ? ` | ${t(`${selectedSponsor}.name`)}` : ''
   }`
   const description = isSelected ? t(`${selectedSponsor}.content`) : t('sponsors_description')
-  const thumb = isSelected ? `/images/sponsors/${t(`${selectedSponsor}.key`)}_thumb.jpg` : '/og-image.png'
+  const thumb = isSelected ? `/images/sponsors/${t(`${selectedSponsor}.key`)}_thumb.png` : '/og-image.png'
 
   const { isOpen, onOpen } = useDisclosure()
   useEffect(() => {
