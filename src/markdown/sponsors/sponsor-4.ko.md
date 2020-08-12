@@ -2,7 +2,7 @@
 key: 'robert-walters'
 name: '로버트 월터스 코리아'
 type: 'gold'
-logo: '/images/sponsors/yanolja.png'
+logo: '/images/sponsors/robert-walters.png'
 link: 'https://www.robertwalters.co.kr/en/'
 ---
 
