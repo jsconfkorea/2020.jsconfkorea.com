@@ -8,6 +8,7 @@ import { ko } from '../../i18n/ko'
 import { en } from '../../i18n/en'
 import Speakers from '../../components/Speakers'
 import { Box } from '../../components/MotionChakra'
+import TopButton from '../../components/TopButton'
 
 export const NUMBER_OF_SPEAKERS = 10
 
@@ -53,6 +54,7 @@ const SpeakersPage = () => {
       <Box p="4rem 0 2rem 0">
         <Speakers />
       </Box>
+      <TopButton />
     </>
   )
 }
