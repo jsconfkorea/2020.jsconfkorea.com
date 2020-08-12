@@ -86,7 +86,6 @@ const Sponsors = () => {
           description,
           images: [{ url: thumb, alt: title }],
           locale: lang,
-          url: `${WEBSITE_URL}/${lang}/speakers${isSelected ? `/${t(`${selectedSponsor}.key`)}` : ''}`,
         }}
       />
       <Box m="0 auto" maxW={820}>
