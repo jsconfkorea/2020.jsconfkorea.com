@@ -24,7 +24,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = 'JSConf Korea 2020 - Home Edition'
   const url = WEBSITE_URL
-  const thumb = `/og-image.png`
+  const thumb = `${url}/og-image.png`
   const siteName = 'JSConf Korea 2020'
 
   useGA()

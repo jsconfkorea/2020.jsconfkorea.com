@@ -1,4 +1,4 @@
-import { DefaultTheme, theme as Default, IconsType } from '@chakra-ui/core'
+import { DefaultTheme, theme as defaultTheme, IconsType } from '@chakra-ui/core'
 
 const icons: IconsType = {
   twitter: {
@@ -29,10 +29,10 @@ const icons: IconsType = {
 }
 
 export const theme: DefaultTheme = {
-  ...Default,
+  ...defaultTheme,
   breakpoints: ['768px', '1200px'],
   icons: {
-    ...Default.icons,
+    ...defaultTheme.icons,
     ...icons,
   },
 }

@@ -13,6 +13,7 @@ import { useDisclosure, CloseButton, PseudoBox } from '@chakra-ui/core'
 import { Heading, Grid, Divider, Image, Box, Button, A, Flex } from './MotionChakra'
 import { capitalize, truncate } from 'lodash/fp'
 import ReactMarkdown from 'react-markdown'
+import { WEBSITE_URL } from '../pages/_app'
 
 export const fadeIn = {
   open: { opacity: 1 },
@@ -65,7 +66,9 @@ const Sponsors = () => {
   const description = isSelected
     ? truncate({ length: 150 }, t(`${selectedSponsor}.content`))
     : t('sponsors_description')
-  const thumb = isSelected ? `/images/sponsors/${t(`${selectedSponsor}.key`)}_thumb.png` : '/og-image.png'
+  const thumb = isSelected
+    ? `${WEBSITE_URL}/images/sponsors/${t(`${selectedSponsor}.key`)}_thumb.png`
+    : `${WEBSITE_URL}/og-image.png`
 
   const { isOpen, onOpen } = useDisclosure()
   useEffect(() => {

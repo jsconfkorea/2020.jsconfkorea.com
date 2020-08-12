@@ -13,6 +13,7 @@ import { Box, Grid, Flex, A } from './MotionChakra'
 import { listStack } from './Sponsors'
 import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
+import { WEBSITE_URL } from '../pages/_app'
 
 const Speakers = () => {
   const i18n = useI18n()
@@ -30,7 +31,9 @@ const Speakers = () => {
 
   const title = `JSConf Korea 2020 - ${t('speakers_title')}${isSelected ? ` | ${t(`${selectedSpeaker}.name`)}` : ''}`
   const description = isSelected ? t(`${selectedSpeaker}.title`) : t('speakers_description')
-  const thumb = isSelected ? `/images/speakers/${t(`${selectedSpeaker}.key`)}_thumb.jpg` : '/og-image.png'
+  const thumb = isSelected
+    ? `${WEBSITE_URL}/images/speakers/${t(`${selectedSpeaker}.key`)}_thumb.jpg`
+    : `${WEBSITE_URL}/og-image.png`
 
   const { isOpen, onOpen } = useDisclosure()
   useEffect(() => {
