@@ -100,7 +100,7 @@ const Speakers = () => {
                       zIndex={20}
                       flexDir="column"
                       pos="absolute"
-                      h={['calc(80% + 2rem)', 'fit-contento', 'fit-content']}
+                      h={['calc(80% + 2rem)', 'fit-content']}
                       maxH={['auto', '75%']}
                       w="100%"
                       maxW={['auto', '28rem', '26rem']}
