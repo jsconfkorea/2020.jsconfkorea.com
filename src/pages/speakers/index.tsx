@@ -10,7 +10,7 @@ import Speakers from '../../components/Speakers'
 import { Box } from '../../components/MotionChakra'
 import TopButton from '../../components/TopButton'
 
-export const NUMBER_OF_SPEAKERS = 2
+export const NUMBER_OF_SPEAKERS = 4
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const ko_list = (
