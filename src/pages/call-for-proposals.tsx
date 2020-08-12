@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import TopButton from '../components/TopButton'
 import { useI18n } from '../hooks/useI18n'
 import Markdown from '../components/Markdown'
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -17,22 +17,20 @@ const CFP = () => {
 
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} key="description" />
-
-        <meta name="twitter:title" content={title} key="twitter:title" />
-        <meta name="twitter:description" content={description} key="twitter:description" />
-
-        <meta property="og:title" content={title} key="og:title" />
-        <meta property="og:description" content={description} key="og:description" />
-      </Head>
+      <NextSeo
+        title={title}
+        description={description}
+        openGraph={{
+          title,
+          description,
+        }}
+      />
       <div css={style}>
         <Header></Header>
         <Markdown>{t('call-for-proposals-md')}</Markdown>
-        <a href={`/redirect/cfp-form-${activeLanguage}`} target="_blank" rel="noreferrer">
+        {/* <A href={`/redirect/cfp-form-${activeLanguage}`} isExternal>
           {t('submit_proposal')}
-        </a>
+        </A> */}
         <TopButton></TopButton>
       </div>
     </>
@@ -69,9 +67,6 @@ const style = css`
       transform: translate3d(0px, -2px, 0);
       box-shadow: 0px 2px 0 #111;
     }
-  }
-
-  @media screen and (max-width: 767px) {
   }
 `
 

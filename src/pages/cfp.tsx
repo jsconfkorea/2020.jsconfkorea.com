@@ -1,14 +1,14 @@
-import Router, { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { join } from 'path'
+import { GetServerSideProps } from 'next'
+import { first, isArray } from 'lodash/fp'
 
-const CFP = () => {
-  const {
-    query: { lang },
-  } = useRouter()
-  useEffect(() => {
-    Router.replace(`${lang ? `/${lang}` : ''}/call-for-proposals`)
-  })
-  return <></>
+export const getServerSideProps: GetServerSideProps = async ({ res, query }) => {
+  const lang = isArray(query.lang) ? first(query.lang) : query.lang
+  res.statusCode = 302
+  res.setHeader('Location', join(`/${lang || ''}`, 'call-for-proposals'))
+  return { props: {} }
 }
+
+const CFP = () => <></>
 
 export default CFP

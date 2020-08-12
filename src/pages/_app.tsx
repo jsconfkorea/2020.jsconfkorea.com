@@ -24,7 +24,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const title = 'JSConf Korea 2020 | JSConf Korea'
   const description = 'JSConf Korea 2020 - Home Edition'
   const url = WEBSITE_URL
-  const thumb = `${url}/og-image.png`
+  const thumb = `/og-image.png`
   const siteName = 'JSConf Korea 2020'
 
   useGA()
@@ -52,8 +52,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta charSet="UTF-8" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <title>{title}</title>
-        <meta key="description" name="description" content={description} />
         <meta name="keywords" content="JSConf, JavaScript, Conference" />
         <meta name="author" content="JSConf Korea" />
         <meta name="google" content="notranslate"></meta>

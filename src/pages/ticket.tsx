@@ -1,9 +1,8 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
 import Header from '../components/Header'
 import Link from '../components/Link'
 import TitoWidget from '../components/TitoWidget'
+import { Box, Heading } from '../components/MotionChakra'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
@@ -14,19 +13,14 @@ const Ticket = () => {
   return (
     <>
       <Header></Header>
-      <div css={style}>
-        <h1>{t('hello_world')}</h1>
-        <div>This is Index page!</div>
+      <Box p="5rem 0">
+        <Heading as="h1">티켓</Heading>
+        <Box>This is Index page!</Box>
         <Link href="/about">about page</Link>
         <TitoWidget event="demo/exampleconf"></TitoWidget>
-      </div>
+      </Box>
     </>
   )
 }
-
-const style = css`
-  .tito-wrapper {
-  }
-`
 
 export default Ticket

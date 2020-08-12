@@ -1,14 +1,14 @@
-import Router, { useRouter } from 'next/router'
-import { useEffect } from 'react'
+import { join } from 'path'
+import { GetServerSideProps } from 'next'
+import { first, isArray } from 'lodash/fp'
 
-const COC = () => {
-  const {
-    query: { lang },
-  } = useRouter()
-  useEffect(() => {
-    Router.replace(`${lang ? `/${lang}` : ''}/code-of-conduct`)
-  })
-  return <></>
+export const getServerSideProps: GetServerSideProps = async ({ res, query }) => {
+  const lang = isArray(query.lang) ? first(query.lang) : query.lang
+  res.statusCode = 302
+  res.setHeader('Location', join(`/${lang || ''}`, 'code-of-conduct'))
+  return { props: {} }
 }
+
+const COC = () => <></>
 
 export default COC

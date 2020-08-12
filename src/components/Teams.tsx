@@ -2,6 +2,7 @@
 import { jsx, css } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
 import { motion } from 'framer-motion'
+import { A, Image, Box } from './MotionChakra'
 
 const teams = [
   {
@@ -76,10 +77,10 @@ const Teams = () => {
           {teams
             .sort((a, b) => (a.name[lang] > b.name[lang] ? 1 : -1))
             .map(({ name, link, image }) => (
-              <a href={link} target="_blank" rel="noreferrer" key={link}>
-                <img src={image} alt={name[lang]} />
-                <div>{name[lang]}</div>
-              </a>
+              <A href={link} key={link} isExternal>
+                <Image src={image} alt={name[lang]} />
+                <Box>{name[lang]}</Box>
+              </A>
             ))}
         </div>
       </motion.section>
