@@ -11,7 +11,8 @@ import { useEffect } from 'react'
 import Sponsor from './Sponsor'
 import { useDisclosure, CloseButton, PseudoBox } from '@chakra-ui/core'
 import { Heading, Grid, Divider, Image, Box, Button, A, Flex } from './MotionChakra'
-import { capitalize } from 'lodash/fp'
+import { capitalize, truncate } from 'lodash/fp'
+import ReactMarkdown from 'react-markdown'
 
 export const fadeIn = {
   open: { opacity: 1 },
@@ -61,7 +62,9 @@ const Sponsors = () => {
   const title = `JSConf Korea 2020 - ${capitalize(t('sponsors'))}${
     isSelected ? ` | ${t(`${selectedSponsor}.name`)}` : ''
   }`
-  const description = isSelected ? t(`${selectedSponsor}.content`) : t('sponsors_description')
+  const description = isSelected
+    ? truncate({ length: 150 }, t(`${selectedSponsor}.content`))
+    : t('sponsors_description')
   const thumb = isSelected ? `/images/sponsors/${t(`${selectedSponsor}.key`)}_thumb.png` : '/og-image.png'
 
   const { isOpen, onOpen } = useDisclosure()
@@ -221,10 +224,14 @@ const Sponsors = () => {
                         lineHeight="1.7rem"
                         mb="1.5rem"
                         flex={1}
-                        dangerouslySetInnerHTML={{
-                          __html: t(`${selectedSponsor}.content`),
-                        }}
-                      ></Box>
+                        css={css`
+                          p {
+                            margin-bottom: 1rem;
+                          }
+                        `}
+                      >
+                        <ReactMarkdown>{t(`${selectedSponsor}.content`)}</ReactMarkdown>
+                      </Box>
                       <A
                         href={t(`${selectedSponsor}.link`)}
                         isExternal
@@ -260,7 +267,7 @@ const Sponsors = () => {
 
 const popupStyle = css`
   @media screen and (min-width: 769px) {
-    button:first-of-type {
+    button[aria-label='Close'] {
       & > svg {
         width: 16px;
         height: 16px;
