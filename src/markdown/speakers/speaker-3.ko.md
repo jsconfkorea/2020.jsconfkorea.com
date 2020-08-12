@@ -1,7 +1,9 @@
 ---
-key: 'yeom'
+key: 'yeom-n-seonghyeon'
 name: '염인화 & 김성현'
-image: '/images/speakers/yeom.jpg'
+image:
+  - '/images/speakers/yeom.jpg'
+  - '/images/speakers/seonghyeon.jpg'
 bio: '인화님은 미디어 아티스트이자 KAIST UVR Lab의 연구 조교입니다. 협업을 통한 학습이나 크리이에이션을위한 AR / VR 시스템을 설계, 개발 및 평가합니다. 특히 3D 인터페이스가 덜 친숙하고 더 접근하기 어려운 사람들을 염두에 둡니다.'
 website: 'https://p5for50.plus/'
 sns: 'https://www.instagram.com/yinhwa.art'

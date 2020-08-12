@@ -1,7 +1,9 @@
 ---
-key: 'yeom'
+key: 'yeom-n-seonghyeon'
 name: 'Inhwa Yeom & Seonghyeon Kim'
-image: '/images/speakers/yeom.jpg'
+image:
+  - '/images/speakers/yeom.jpg'
+  - '/images/speakers/seonghyeon.jpg'
 bio: 'Inhwa Yeom is a media artist and research assistant of UVR Lab, KAIST. In her projects, she designs, develops, and evaluates AR/VR systems for collaborative creations and learning, mainly in consideration of people with less familiarity with or accessibility to 3D interfaces and interactions.'
 website: 'https://p5for50.plus/'
 sns: 'https://www.instagram.com/yinhwa.art'

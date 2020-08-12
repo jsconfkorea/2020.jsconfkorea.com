@@ -139,14 +139,33 @@ const Speakers = () => {
                         gridGap="1rem"
                       >
                         <Box>
-                          <Image
-                            src={t(`${selectedSpeaker}.image`)}
-                            alt={t(`${selectedSpeaker}.name`)}
-                            d="inline-block"
-                            w="4.5rem"
-                            mb=".5rem"
-                            borderRadius="100%"
-                          />
+                          {Array.isArray(t(`${selectedSpeaker}.image`)) ? (
+                            <Box w="4.5rem" h="4.5rem" mb=".5rem" pos="relative">
+                              {[...t(`${selectedSpeaker}.image`)].map((image, i) => (
+                                <Image
+                                  key={image}
+                                  src={image}
+                                  alt={image}
+                                  pos="absolute"
+                                  d="inline-block"
+                                  w="3rem"
+                                  right={i === 1 ? 0 : 'auto'}
+                                  bottom={i === 1 ? 0 : 'auto'}
+                                  zIndex={i === 0 ? 1 : 0}
+                                  borderRadius="100%"
+                                />
+                              ))}
+                            </Box>
+                          ) : (
+                            <Image
+                              src={t(`${selectedSpeaker}.image`)}
+                              alt={t(`${selectedSpeaker}.name`)}
+                              d="inline-block"
+                              w="4.5rem"
+                              mb=".5rem"
+                              borderRadius="100%"
+                            />
+                          )}
                           <Grid gridAutoFlow="column" justifyItems="center">
                             {t(`${selectedSpeaker}.website`) && (
                               <A

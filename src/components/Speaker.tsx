@@ -19,7 +19,7 @@ const Speaker = ({ i, hide }: Props) => {
       <Link href={`/speakers/[speaker]`} as={`/speakers/${t(`${i}.key`)}`}>
         <Grid
           gridAutoFlow="column"
-          gridTemplateColumns="4.5rem 1fr"
+          gridTemplateColumns="auto 1fr"
           backgroundColor="white"
           p="1rem"
           variants={fadeInUp}
@@ -35,18 +35,42 @@ const Speaker = ({ i, hide }: Props) => {
             }
           `}
         >
-          <Image
-            d="inline-block"
-            src={t(`${i}.image`)}
-            alt={t(`${i}.name`)}
-            w="4.5rem"
-            h="4.5rem"
-            borderRadius="100%"
-            transition="all .2s"
-            css={css`
-              filter: grayscale(1);
-            `}
-          />
+          {Array.isArray(t(`${i}.image`)) ? (
+            <Box h="4.5rem" width="4.5rem" pos="relative">
+              {[...t(`${i}.image`)].map((image, i) => (
+                <Image
+                  key={image}
+                  d="inline-block"
+                  src={image}
+                  alt={image}
+                  w="3rem"
+                  h="3rem"
+                  pos="absolute"
+                  borderRadius="100%"
+                  right={i === 1 ? 0 : 'auto'}
+                  bottom={i === 1 ? 0 : 'auto'}
+                  zIndex={i === 0 ? 1 : 0}
+                  transition="all .2s"
+                  css={css`
+                    filter: grayscale(1);
+                  `}
+                />
+              ))}
+            </Box>
+          ) : (
+            <Image
+              d="inline-block"
+              src={t(`${i}.image`)}
+              alt={t(`${i}.name`)}
+              w="4.5rem"
+              h="4.5rem"
+              borderRadius="100%"
+              transition="all .2s"
+              css={css`
+                filter: grayscale(1);
+              `}
+            />
+          )}
           <Box d="inline-block" verticalAlign="top" ml={4}>
             <Text fontSize="sm" my={2}>
               {t(`${i}.name`)}
