@@ -1,14 +1,14 @@
 ---
-key: 'eunjae'
-name: 'Eunjae Lee'
-image: '/images/speakers/eunjae.jpg'
-bio: "Eunjae works as a software engineer at Algolia who takes delight in learning something new. Born and raised in Korea, he moved to Singapore in 2017, and then to Paris in 2019. He's happy to be surrounded by good colleagues at Algolia."
-website: 'https://eunjae.dev/'
-sns: 'https://twitter.com/eunjae_lee'
-github: 'https://github.com/eunjae-lee/'
-title: "Let's Deploy an Open Source Library"
+key: 'milecia'
+name: 'Milecia McGregor'
+image: '/images/speakers/milecia.jpg'
+bio: "Milecia is a senior software engineer that's worked with JavaScript, Angular, React, Node, PHP, Python, .NET, SQL, AWS, Heroku, Azure, and many other tools to build web apps. She also has a master's degree in mechanical and aerospace engineering and has published research in machine learning and robotics. She started Flipped Coding in 2017 to help people learn web development with real-world projects and she publishes articles covering all aspects of software on several publications, including freeCodeCamp. She also travels around the world speaking at tech conferences about various software engineering topics ranging from machine learning, PWAs, and managing a career in tech."
+website: 'https://flippedcoding.com'
+sns: 'https://twitter.com/flippedcoding'
+github: 'https://github.com/flippedcoder'
+title: 'Making VR More Interesting With JavaScript and Machine Learning'
 ---
 
-Deploying an open source library can be scary. You anxiously stare at the screen hoping that it'll be a success, that you didn't make any mistakes. There are many tools that can ease your worries, but perhaps not eliminate them.
+If you are familiar with JavaScript, you can start making VR applications right now. Once you have your VR app ready to go, you can go a step further and add Brain.js to start getting insights about how users interact with your app and make real-time updates to the UI.
 
-So I present to you a new process for deploying open source libraries. This process dramatically reduces the likelihood of making mistakes, and most of the process will happen asynchronously, allowing you to review with your teammates before deployment. I will also introduce Ship.js, a tool created for this purpose. With this newly defined process, let's continuously deploy our open source libraries without fear!
+In this talk, attendees will learn how to start making VR apps, how to integrate Brain.js into a VR project, and how to use this information to make apps more accessible and interesting for users. We will cover some background material on machine learning and VR, then bring everything together in a live demo. By the end of the talk, the audience will know how to put all of these things together in a real, production-like app.

@@ -1,9 +1,9 @@
 ---
-key: 'yanolja'
-name: '야놀자'
+key: 'robert-walters'
+name: '로버트 월터스 코리아'
 type: 'gold'
 logo: '/images/sponsors/yanolja.png'
-link: 'https://www.yanolja.com/'
+link: 'https://www.robertwalters.co.kr/en/'
 ---
 
 야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야놀자야야야야야야야야 야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야야

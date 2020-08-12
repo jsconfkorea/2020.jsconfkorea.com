@@ -1,14 +1,14 @@
 ---
-key: 'jai'
-name: 'Jai Santhosh'
-image: '/images/speakers/jai.jpg'
-bio: 'Jai Santhosh works on the Microsoft Search team, building enterprise search experience across Microsoft 365 products. He is quite passionate about the Web, JavaScript and is a Web perf enthusiast. He had previously led UI efforts at a fintech startup, ClearTax and worked on building offline-heavy web applications. He was also part of the first real-world Progressive Web App, Flipkart Lite and had earlier worked in teams at large-scale like Yahoo! Maps, frontend platforms and  Media sites at Yahoo!'
-website: 'https://jaisanth.com/'
-sns: 'https://twitter.com/jaisanth'
-github: 'https://github.com/jaisanth'
-title: 'Developing in a Large Monorepo'
+key: 'eunjae'
+name: 'Eunjae Lee'
+image: '/images/speakers/eunjae.jpg'
+bio: "Eunjae works as a software engineer at Algolia who takes delight in learning something new. Born and raised in Korea, he moved to Singapore in 2017, and then to Paris in 2019. He's happy to be surrounded by good colleagues at Algolia."
+website: 'https://eunjae.dev/'
+sns: 'https://twitter.com/eunjae_lee'
+github: 'https://github.com/eunjae-lee/'
+title: "Let's Deploy an Open Source Library"
 ---
 
-At Microsoft, I work on a very large TypeScript-based git repository where over 300 developers build and write code for high-value frontend components which are used across all Microsoft365 products. It contains about 150 npm packages, containing over a million lines of TypeScript code. Co-locating these components encourages collaboration and sharing code across teams much easier.
+Deploying an open source library can be scary. You anxiously stare at the screen hoping that it'll be a success, that you didn't make any mistakes. There are many tools that can ease your worries, but perhaps not eliminate them.
 
-In this talk, we’ll focus on the tooling used and code organization to make the development easier, faster and more reliable, with a major focus on the largest pain point of package management and orchestrating common tasks across the packages.
+So I present to you a new process for deploying open source libraries. This process dramatically reduces the likelihood of making mistakes, and most of the process will happen asynchronously, allowing you to review with your teammates before deployment. I will also introduce Ship.js, a tool created for this purpose. With this newly defined process, let's continuously deploy our open source libraries without fear!

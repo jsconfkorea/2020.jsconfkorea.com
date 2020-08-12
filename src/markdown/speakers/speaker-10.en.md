@@ -1,16 +1,18 @@
 ---
-key: 'jaewon'
-name: 'Jaewon Seo'
-image: '/images/speakers/jaewon.jpg'
-bio: 'Jaewon is a student at Dongtan High School who wants to do study programming linguistics for his PhD. He is a functional programming fanatic, and has recently been into type-level programming, type theory, and canned tuna (he can even tell the difference between "mild" and "soft").'
-website: 'https://overcurried.com'
-sns: 'https://twitter.com/NvironmentE'
-github: 'https://github.com/ENvironmentSet'
-title: 'Code Factorization: How to Organize Boilerplate Codes'
+key: 'ben'
+name: 'Ben Dechrai'
+image: '/images/speakers/ben.jpg'
+bio: 'Ben Dechrai is a technologist with a staunch focus on security and privacy. This started at the age of 11, when he wrote software to stop his parents from breaking the family PC, and resulted in his working as a developer advocate for Auth0. He enjoys helping developers find the joy of experimentation, from ethical skulduggery to subversive automation, and can be found on Twitter and Instagram at @bendechrai.'
+website: 'https://bendechrai.com/'
+sns: 'https://twitter.com/bendechrai'
+github: 'https://github.com/bendechrai'
+title: 'Say Goodbye to Passwords and Hello to WebAuthn'
 ---
 
-Boilerplate code (repeatedly used pieces of code) is often the main culprit of unnecessary complexity and cognitive overload in programming. That's why many books and experienced programmers tell us to avoid boilerplate code, and we try our best by employing all kinds of methods, like inheritance and abstractions.
+Dozens of times a day, we identify ourselves to an online entity.
 
-Despite this constant effort, though, we often still encounter boilerplate code. Sometimes, we run into a 'boss' boilerplate code, which we just don't know how to deal with.
+But as the nearly 10 billion leaked accounts documented by [';--have i been pwned?](https://haveibeenpwned.com/) attest, this process has a fatal weakness–passwords.
 
-This talk is for those of you who's tired of this endless battle. I will talk about ‘code factorization’, a technique that will help you gain an edge in the war against boilerplate codes. After this talk, you will be able to declare with confidence: veni, vidi, vici.
+The Web Authentication API (or WebAuthn) is a standard from the W3C and FIDO that "allows servers to register and authenticate users using public key cryptography instead of a password". WebAuthn is part of a set of standards that enable passwordless authentication between servers, browsers, and authenticators. It's supported in all modern browsers.
+
+This talk will outline how the technologies work, and how you can take advantage of them today to create a far more secure experience for your users.

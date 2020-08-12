@@ -1,14 +1,16 @@
 ---
-key: 'anuradha'
-name: 'Anuradha Kumari'
-image: '/images/speakers/anuradha.jpg'
-bio: 'Anuradha is a tech enthusiast working as Development Specialist at Mediaocean. She is passionate about exploring new technologies and sharing knowledge and experience through tech articles and talks. She aims to spread awareness and empower the community towards achieving the common goal of inclusion through technology.'
-website: 'https://anuk79.github.io/'
-sns: 'https://twitter.com/miracle_404'
-github: 'https://github.com/anuk79'
-title: "Inaccessible websites? - it's you, not JavaScript"
+key: 'jaewon'
+name: 'Jaewon Seo'
+image: '/images/speakers/jaewon.jpg'
+bio: 'Jaewon is a student at Dongtan High School who wants to do study programming linguistics for his PhD. He is a functional programming fanatic, and has recently been into type-level programming, type theory, and canned tuna (he can even tell the difference between "mild" and "soft").'
+website: 'https://overcurried.com'
+sns: 'https://twitter.com/NvironmentE'
+github: 'https://github.com/ENvironmentSet'
+title: 'Code Factorization: How to Organize Boilerplate Codes'
 ---
 
-Accessibility is an inherent aspect of the web. And yet it is often neglected and considered as an afterthought. There are certain misconceptions lingering around it and it might appear burdensome or confusing as a result.
+Boilerplate code (repeatedly used pieces of code) is often the main culprit of unnecessary complexity and cognitive overload in programming. That's why many books and experienced programmers tell us to avoid boilerplate code, and we try our best by employing all kinds of methods, like inheritance and abstractions.
 
-As we will explore the accessibility in this session, we will discover the ways in which JavaScript code can make or break the website accessibility. The objective of the talk is to enable the audience to apply the concepts learned within their projects/frameworks allowing everyone to write accessible and interactive interfaces/websites.
+Despite this constant effort, though, we often still encounter boilerplate code. Sometimes, we run into a 'boss' boilerplate code, which we just don't know how to deal with.
+
+This talk is for those of you who's tired of this endless battle. I will talk about ‘code factorization’, a technique that will help you gain an edge in the war against boilerplate codes. After this talk, you will be able to declare with confidence: veni, vidi, vici.

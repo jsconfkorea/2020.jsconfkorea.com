@@ -1,12 +1,14 @@
 ---
-key: 'justin'
-name: 'Justin Yoo'
-image: '/images/speakers/justin.jpg'
-bio: 'Justin is a Senior Cloud Advocate at Microsoft. He is especially interested in migrating or syncing on-prem enterprise applications to cloud-based PaaS/serverless applicatons.'
-website: 'https://blog.aliencube.org'
-sns: 'https://twitter.com/justinchronicle'
-github: 'https://github.com/justinyoo'
-title: 'Lessons Learnt in a Hard Way: Turning on an Air-Con 10 Mins before Arriving at Home'
+key: 'jai'
+name: 'Jai Santhosh'
+image: '/images/speakers/jai.jpg'
+bio: 'Jai Santhosh works on the Microsoft Search team, building enterprise search experience across Microsoft 365 products. He is quite passionate about the Web, JavaScript and is a Web perf enthusiast. He had previously led UI efforts at a fintech startup, ClearTax and worked on building offline-heavy web applications. He was also part of the first real-world Progressive Web App, Flipkart Lite and had earlier worked in teams at large-scale like Yahoo! Maps, frontend platforms and  Media sites at Yahoo!'
+website: 'https://jaisanth.com/'
+sns: 'https://twitter.com/jaisanth'
+github: 'https://github.com/jaisanth'
+title: 'Developing in a Large Monorepo'
 ---
 
-Imagine one hot and humid day in summer. Would you expect your air-con at home has already been cooling down the air so that you feel refreshed on arrival? It would be perfect if I can turn on the air-con just 10 minutes before home! Are you to die for it? What if I can connect my air-con with Raspberry PI that runs a serverless application, which is triggered by a public cloud application? It sounds so sweet! But... life is not that easy. I'd like to share my hard learning experiences while setting up this home automation system, using Raspberry PI, Azure Functions, Power Automate and Power Apps.
+At Microsoft, I work on a very large TypeScript-based git repository where over 300 developers build and write code for high-value frontend components which are used across all Microsoft365 products. It contains about 150 npm packages, containing over a million lines of TypeScript code. Co-locating these components encourages collaboration and sharing code across teams much easier.
+
+In this talk, we’ll focus on the tooling used and code organization to make the development easier, faster and more reliable, with a major focus on the largest pain point of package management and orchestrating common tasks across the packages.
