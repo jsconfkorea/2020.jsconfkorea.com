@@ -31,7 +31,7 @@ const Speakers = () => {
 
   const title = `JSConf Korea 2020 - ${t('speakers_title')}${isSelected ? ` | ${t(`${selectedSpeaker}.name`)}` : ''}`
   const description = isSelected ? t(`${selectedSpeaker}.title`) : t('speakers_description')
-  const thumb = `/images/speakers/${t(`${selectedSpeaker}.key`)}_thumb.jpg`
+  const thumb = isSelected ? `/images/speakers/${t(`${selectedSpeaker}.key`)}_thumb.jpg` : '/og-image.png'
 
   const { isOpen, onOpen } = useDisclosure()
   useEffect(() => {

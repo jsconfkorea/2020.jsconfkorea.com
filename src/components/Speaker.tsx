@@ -25,7 +25,7 @@ const Speaker = ({ i, hide }: Props) => {
           variants={fadeInUp}
           // transition="all .2s"
           boxShadow="0 0 10px 0 rgba(123,136,157,.15)"
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.95 }}
           css={css`
             &:hover {
