@@ -62,6 +62,7 @@ const Sponsors = () => {
     isSelected ? ` | ${t(`${selectedSponsor}.name`)}` : ''
   }`
   const description = isSelected ? t(`${selectedSponsor}.content`) : t('sponsors_description')
+  const thumb = isSelected ? `/images/sponsors/${t(`${selectedSponsor}.key`)}_thumb.jpg` : '/og-image.png'
 
   const { isOpen, onOpen } = useDisclosure()
   useEffect(() => {
@@ -70,7 +71,15 @@ const Sponsors = () => {
 
   return (
     <>
-      <NextSeo title={title} description={description} openGraph={{ title, description }} />
+      <NextSeo
+        title={title}
+        description={description}
+        openGraph={{
+          title,
+          description,
+          images: [{ url: thumb }],
+        }}
+      />
       <Box m="0 auto" maxW={820}>
         <Box overflow="hidden" p="1.5rem" m="0" fontSize="0.8rem" initial={false} animate={isOpen ? 'open' : 'closed'}>
           <Heading as="h1" size="xl" m={0} mb={4} variants={fadeInUp}>
