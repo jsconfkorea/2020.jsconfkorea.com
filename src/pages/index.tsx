@@ -9,13 +9,15 @@ import IntroTitle from '../components/IntroTitle'
 import Link from '../components/Link'
 import Popup from '../components/Popup'
 import { useDisclosure } from '@chakra-ui/core'
+import { NextSeo } from 'next-seo'
+import { title, description, thumb, siteName } from './_app'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
 const Index = () => {
-  const { t } = useI18n()
+  const { t, activeLanguage: lang } = useI18n()
   const ref = useRef<HTMLFormElement>(null)
   const { isOpen, onClose, onOpen } = useDisclosure()
 
@@ -23,6 +25,16 @@ const Index = () => {
 
   return (
     <>
+      <NextSeo
+        title={title}
+        description={description}
+        openGraph={{
+          title,
+          description,
+          images: [{ url: thumb, alt: siteName }],
+          locale: lang,
+        }}
+      />
       <div css={style}>
         <Header></Header>
         <section id="intro">

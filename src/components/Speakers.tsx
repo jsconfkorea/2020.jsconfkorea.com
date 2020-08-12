@@ -13,7 +13,7 @@ import { Box, Grid, Flex, A } from './MotionChakra'
 import { listStack } from './Sponsors'
 import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { WEBSITE_URL } from '../pages/_app'
+import { WEBSITE_URL, WEBSITE_URL_WITH_YEAR } from '../pages/_app'
 
 const Speakers = () => {
   const i18n = useI18n()
@@ -45,10 +45,12 @@ const Speakers = () => {
       <NextSeo
         title={title}
         description={description}
+        canonical={`${WEBSITE_URL_WITH_YEAR}/${lang}/speakers${isSelected ? `/${t(`${selectedSpeaker}.key`)}` : ''}`}
         openGraph={{
           title,
           description,
-          images: [{ url: thumb }],
+          images: [{ url: thumb, alt: title }],
+          locale: lang,
         }}
       />
       <Box m="0 auto" maxW={820}>

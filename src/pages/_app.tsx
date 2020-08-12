@@ -8,9 +8,10 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import useGA from '../hooks/useGA'
 import useGTM from '../hooks/useGTM'
-import { NextSeo } from 'next-seo'
+import { DefaultSeo } from 'next-seo'
 import 'hamburgers/_sass/hamburgers/hamburgers.scss'
 import { theme } from '../utils/theme'
+import { languages } from '../hooks/useI18n'
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -18,14 +19,15 @@ Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
 export const WEBSITE_URL = 'https://jsconfkorea.com'
+export const WEBSITE_URL_WITH_YEAR = `https://2020.jsconfkorea.com`
+export const title = 'JSConf Korea 2020 | JSConf Korea'
+export const description = 'JSConf Korea 2020 - Home Edition'
+const url = WEBSITE_URL
+export const thumb = `${url}/og-image.png`
+export const siteName = 'JSConf Korea 2020'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
-  const title = 'JSConf Korea 2020 | JSConf Korea'
-  const description = 'JSConf Korea 2020 - Home Edition'
-  const url = WEBSITE_URL
-  const thumb = `${url}/og-image.png`
-  const siteName = 'JSConf Korea 2020'
 
   useGA()
   useGTM()
@@ -58,25 +60,22 @@ const App = ({ Component, pageProps }: AppProps) => {
 
         <script async src="https://polyfill.io/v3/polyfill.min.js?features=smoothscroll"></script>
       </Head>
-      <NextSeo
-        title={title}
-        description={description}
-        canonical={url}
+      <DefaultSeo
         openGraph={{
-          title,
-          description,
+          type: 'website',
           url,
           site_name: siteName,
-          images: [{ url: thumb, alt: siteName }],
-          type: 'website',
-          locale: lang,
         }}
         twitter={{
           handle: '@jsconfkorea',
           site: '@jsconfkorea',
           cardType: 'summary_large_image',
         }}
-      ></NextSeo>
+        languageAlternates={languages.map((lang) => ({
+          hrefLang: lang,
+          href: `${url}/${lang}`,
+        }))}
+      />
       <GlobalStyle />
       <I18nProvider langDict={langDict} lang={lang}>
         <ThemeProvider theme={theme}>
