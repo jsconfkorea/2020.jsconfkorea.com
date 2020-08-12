@@ -80,7 +80,7 @@ const Sponsors = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${WEBSITE_URL_WITH_YEAR}/${lang}/speakers${isSelected ? `/${t(`${selectedSponsor}.key`)}` : ''}`}
+        canonical={`${WEBSITE_URL_WITH_YEAR}/${lang}/sponsors${isSelected ? `/${t(`${selectedSponsor}.key`)}` : ''}`}
         openGraph={{
           title,
           description,
