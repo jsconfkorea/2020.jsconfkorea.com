@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css, Global } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { NUMBER_OF_SPEAKERS } from '../pages/speakers'
 import { Heading, Image, Divider, CloseButton, useDisclosure, PseudoBox, Text, Icon } from '@chakra-ui/core'
@@ -13,7 +13,6 @@ import { Box, Grid, Flex, A } from './MotionChakra'
 import { listStack } from './Sponsors'
 import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import { WEBSITE_URL } from '../pages/_app'
 
 const Speakers = () => {
   const i18n = useI18n()
@@ -101,8 +100,8 @@ const Speakers = () => {
                       zIndex={20}
                       flexDir="column"
                       pos="absolute"
-                      h={['calc(80% + 2rem)', '70%', '38rem']}
-                      maxH={['auto', '35rem']}
+                      h={['calc(80% + 2rem)', 'fit-contento', 'fit-content']}
+                      maxH={['auto', '75%']}
                       w="100%"
                       maxW={['auto', '28rem', '26rem']}
                       m="auto"
@@ -136,7 +135,7 @@ const Speakers = () => {
                         gridTemplateColumns="4.5rem 1fr"
                         verticalAlign="top"
                         w="auto"
-                        mb="1.5rem"
+                        mb="1rem"
                         gridGap="1rem"
                       >
                         <Box>
@@ -208,7 +207,7 @@ const Speakers = () => {
                           </Heading>
                         </Box>
                       </Grid>
-                      <Box overflow="scroll">
+                      <Box overflow="scroll" borderY="1px solid #888" py=".5rem">
                         <Text fontSize=".8rem" fontWeight="bold" mb=".4rem">
                           {t('summary')}
                         </Text>
@@ -236,33 +235,6 @@ const mdStyle = css`
   & > * {
     font-family: 'Airbnb Cereal App Book';
     line-height: 1.2rem;
-  }
-`
-
-const popupStyle = css`
-  @media screen and (min-width: 769px) {
-    & > section {
-      max-width: 28rem;
-      margin: auto;
-      height: 28rem;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    }
-  }
-
-  @media screen and (min-width: 1201px) {
-    & > section {
-      max-width: 24rem;
-      height: 28rem;
-      & > button {
-        margin: 0.8rem;
-      }
-    }
   }
 `
 
