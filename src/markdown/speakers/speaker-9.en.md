@@ -11,4 +11,5 @@ title: 'Developing in a Large Monorepo'
 
 At Microsoft, I work on a very large TypeScript-based git repository where over 300 developers build and write code for high-value frontend components which are used across all Microsoft365 products. It contains about 150 npm packages, containing over a million lines of TypeScript code. Co-locating these components encourages collaboration and sharing code across teams much easier.
 
+
 In this talk, we’ll focus on the tooling used and code organization to make the development easier, faster and more reliable, with a major focus on the largest pain point of package management and orchestrating common tasks across the packages.

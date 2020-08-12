@@ -2,7 +2,7 @@
 key: 'justin'
 name: '유저스틴'
 image: '/images/speakers/justin.jpg'
-bio: '마이크로소프트에서 시니어 클라우드 아드보캇으로 일하고 있습니다. 기업의 온프렘 애플리케이션을 클라우드의 PaaS/서버리스 애플리케이션으로 이전하거나 연동하는 것에 관심이 많습니다.'
+bio: '저스틴님은 마이크로소프트에서 시니어 클라우드 아드보캇으로 일하고 있습니다. 기업의 온프렘 애플리케이션을 클라우드의 PaaS/서버리스 애플리케이션으로 이전하거나 연동하는 것에 관심이 많습니다.'
 website: 'https://blog.aliencube.org'
 sns: 'https://twitter.com/justinchronicle'
 github: 'https://github.com/justinyoo'

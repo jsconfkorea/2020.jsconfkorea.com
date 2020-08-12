@@ -11,4 +11,5 @@ title: "Inaccessible websites? - it's you, not JavaScript"
 
 Accessibility is an inherent aspect of the web. And yet it is often neglected and considered as an afterthought. There are certain misconceptions lingering around it and it might appear burdensome or confusing as a result.
 
+
 As we will explore the accessibility in this session, we will discover the ways in which JavaScript code can make or break the website accessibility. The objective of the talk is to enable the audience to apply the concepts learned within their projects/frameworks allowing everyone to write accessible and interactive interfaces/websites.
