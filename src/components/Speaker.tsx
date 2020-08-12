@@ -72,12 +72,27 @@ const Speaker = ({ i, hide }: Props) => {
             />
           )}
           <Box d="inline-block" verticalAlign="top" ml={4}>
-            <Text fontSize="sm" my={2}>
+            <Text fontSize="sm" my={1}>
               {t(`${i}.name`)}
             </Text>
-            <Heading size="xs" m={0}>
+            <Heading fontSize="1.1rem" m={0}>
               {t(`${i}.title`)}
             </Heading>
+            <Text
+              fontSize="sm"
+              mt={2}
+              d="-webkit-box"
+              overflow="hidden"
+              css={css`
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+              `}
+            >
+              {t(`${i}.content`)}
+            </Text>
+            {/* <Text as="b" mt={1} d="inline-block">
+              Read more
+            </Text> */}
           </Box>
         </Grid>
       </Link>
