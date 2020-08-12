@@ -72,14 +72,24 @@ const Speaker = ({ i, hide }: Props) => {
             />
           )}
           <Box d="inline-block" verticalAlign="top" ml={4}>
-            <Text fontSize="sm" my={1}>
+            <Text
+              fontFamily={`'Airbnb Cereal App Book'`}
+              fontSize="sm"
+              mb={2}
+              backgroundColor="#333"
+              d="inline-block"
+              color="white"
+              p=".2rem .4rem"
+              borderRadius="2px"
+            >
               {t(`${i}.name`)}
             </Text>
-            <Heading fontSize="1.1rem" m={0}>
+            <Heading fontFamily={`'Airbnb Cereal App Bold'`} fontSize="1rem" m={0}>
               {t(`${i}.title`)}
             </Heading>
             <Text
-              fontSize="sm"
+              fontFamily={`'Airbnb Cereal App Book'`}
+              fontSize="0.7rem"
               mt={2}
               d="-webkit-box"
               overflow="hidden"

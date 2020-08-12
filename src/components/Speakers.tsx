@@ -64,7 +64,7 @@ const Speakers = () => {
           m="0"
           fontSize="0.8rem"
         >
-          <Heading as="h1" size="xl" m={0}>
+          <Heading fontFamily={`'Airbnb Cereal App Bold'`} as="h1" size="xl" m={0}>
             {t('speakers')}
           </Heading>
           <Divider mb="1rem" />
@@ -106,9 +106,10 @@ const Speakers = () => {
                       flexDir="column"
                       pos="absolute"
                       h={['calc(80% + 2rem)', 'fit-content']}
-                      maxH={['auto', '75%']}
+                      minH="26rem"
+                      maxH={['auto', '80%']}
                       w="100%"
-                      maxW={['auto', '28rem', '26rem']}
+                      maxW={['auto', '26rem']}
                       m="auto"
                       top={['auto', 0]}
                       left={['auto', 0]}
@@ -223,23 +224,58 @@ const Speakers = () => {
                           </Grid>
                         </Box>
                         <Box>
-                          <Text d="inline-block" fontSize="1rem" m=".5rem 0">
+                          <Text
+                            fontFamily={`'Airbnb Cereal App Book'`}
+                            d="inline-block"
+                            fontSize="0.9rem"
+                            mb=".5rem"
+                            backgroundColor="#444"
+                            color="white"
+                            p=".2rem .5rem"
+                            borderRadius="2px"
+                          >
                             {t(`${selectedSpeaker}.name`)}
                           </Text>
-                          <Heading as="h1" m="0" fontSize="1rem" mb=".5rem">
+                          <Heading fontFamily={`'Airbnb Cereal App Bold'`} as="h1" m="0" fontSize="1.1rem" mb=".5rem">
                             {t(`${selectedSpeaker}.title`)}
                           </Heading>
                         </Box>
                       </Grid>
-                      <Box overflow="scroll" borderY="1px solid #888" py=".5rem">
-                        <Text fontSize=".8rem" fontWeight="bold" mb=".4rem">
+                      <Box overflow="scroll" borderY="1px solid #888" py="1rem">
+                        <Text
+                          fontFamily={`'Airbnb Cereal App Book'`}
+                          fontSize=".8rem"
+                          fontWeight="bold"
+                          mb=".4rem"
+                          backgroundColor="#444"
+                          d="inline-block"
+                          color="white"
+                          p=".2rem .4rem"
+                          borderRadius="2px"
+                        >
                           {t('summary')}
                         </Text>
                         <ReactMarkdown css={mdStyle}>{t(`${selectedSpeaker}.content`)}</ReactMarkdown>
-                        <Text fontSize=".8rem" mt="1.2rem" fontWeight="bold">
+                        <Text
+                          fontFamily={`'Airbnb Cereal App Book'`}
+                          fontSize=".8rem"
+                          mt="1.5rem"
+                          fontWeight="bold"
+                          backgroundColor="#444"
+                          d="inline-block"
+                          color="white"
+                          p=".2rem .4rem"
+                          borderRadius="2px"
+                        >
                           {t('bio')}
                         </Text>
-                        <Text mt=".4rem" fontSize="1rem" fontWeight="normal">
+                        <Text
+                          fontFamily={`'Airbnb Cereal App Book'`}
+                          mt=".4rem"
+                          lineHeight="1.4rem"
+                          fontSize="1rem"
+                          fontWeight="normal"
+                        >
                           {t(`${selectedSpeaker}.bio`)}
                         </Text>
                       </Box>
@@ -256,9 +292,12 @@ const Speakers = () => {
 }
 
 const mdStyle = css`
+  font-family: 'Airbnb Cereal App Book';
+  & > p:not(:first-of-type) {
+    margin-top: 1rem;
+  }
   & > * {
-    font-family: 'Airbnb Cereal App Book';
-    line-height: 1.2rem;
+    line-height: 1.4rem;
   }
 `
 
