@@ -1,14 +1,14 @@
 ---
-key: 'milecia'
-name: '밀레시아 맥그리거'
-image: '/images/speakers/milecia.jpg'
-bio: '밀레시아님은 시니어 소프트웨어 엔지니어로서 자바스크립트, Angular, React, Node, PHP, Python. .NET, SQL, AWS, Heroku, Azure 및 기타 웹 앱을 구축하기 위한 많은 도구를 사용해왔습니다. 기계와 항공우주공학 석사이기도 하며 머신러닝과 로봇공학에 관한 연구를 출판하기도 했습니다. 사람들이 직접 프로젝트를 통해 웹 개발을 배울 수 있도록 2017년 Flipped Coding을 시작했으며,  freeCodeCamp를 포함한 여러 매체에 소프트웨어의 다방면을 다루는 기사를 게재하고 있습니다. 지구 곳곳을 여행하며 머신러닝, PWA, 기술 경력 관리 등 개발에 관한 다양한 주제에 대해 발표합니다.'
-website: 'https://flippedcoding.com'
-sns: 'https://twitter.com/flippedcoding'
-github: 'https://github.com/flippedcoder'
-title: '자바스크립트와 머신러닝으로 VR에 날개 달기'
+key: 'yeom-n-seonghyeon'
+name: '염인화 & 김성현'
+image:
+  - '/images/speakers/yeom.jpg'
+  - '/images/speakers/seonghyeon.jpg'
+bio: '인화님은 미디어 아티스트이자 KAIST UVR Lab의 연구 조교입니다. 협업을 통한 학습이나 크리이에이션을위한 AR / VR 시스템을 설계, 개발 및 평가합니다. 특히 3D 인터페이스가 덜 친숙하고 더 접근하기 어려운 사람들을 염두에 둡니다. 김성현님은 그래픽 프로그래밍 기술을 연구하는 연구원이자 미디어 아티스트입니다. 현재, 성현님은 카이스트의 Visual Media Lab 에서 석사과정을 밟고 있습니다, 그의 연구 관심사는 가상인물의 얼굴 애니메이션을 합성하는 것이며, 대학생시절, 100명이 넘는 디자이너들을 위한  “Chocoding”이라는 이름의 프로그래밍 클럽을 설립했습니다.'
+website: 'https://p5for50.plus/'
+sns: 'https://www.instagram.com/yinhwa.art'
+github: 'https://github.com/yinhwa'
+title: '50대+를 위한 p5.js: 중년과 노년을 위한 코딩 교육'
 ---
 
-자바스크립트에 익숙하다면 여러분은 지금 바로 VR 애플리케이션을 만들 수 있습니다. VR 앱을 만들고 나서는 한 걸음 더 나아가 Brain.js를 추가할 수도 있습니다. 이를 통해 사용자가 앱과 어떻게 인터랙트하는지 파악하고, 이를 바탕으로 실시간으로 UI를 업데이트할 수 있습니다.
-
-이 발표에서는 VR 앱을 제작하기 위한 첫걸음과 Brain.js를 이 VR 앱에 연결하는 방법, 그리고 이를 활용해 앱의 접근성과 흥미를 향상시킬 수 있는 방법을 알려드립니다. 머신러닝과 VR에 관한 배경지식을 짧게 다룬 후, 배운 내용을 라이브 데모로 보여드립니다. 이 발표를 통해 실제 사용 가능한 앱을 만드는 법을 배워가실 수 있습니다.
+"50대+를 위한 p5"(p5 for 50+) 프로젝트는 한국의 중년층과 노년층의 디지털 리터러시와 권리 향상을 목표로 시작되었습니다. 코딩 교육의 연령별 요구 사항에 맞춰 p5.js의 학습 장벽을 낮춘 웹 앱을 프로토타입했습니다. 이 발표에서는 접근성있는 코딩 교육을 위한 디자인 관점에서의 시사점에 대해 이야기합니다.
