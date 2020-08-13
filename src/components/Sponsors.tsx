@@ -80,22 +80,21 @@ const Sponsors = () => {
       <NextSeo
         title={title}
         description={description}
-        canonical={`${WEBSITE_URL_WITH_YEAR}/${lang}/speakers${isSelected ? `/${t(`${selectedSponsor}.key`)}` : ''}`}
+        canonical={`${WEBSITE_URL_WITH_YEAR}/${lang}/sponsors${isSelected ? `/${t(`${selectedSponsor}.key`)}` : ''}`}
         openGraph={{
           title,
           description,
           images: [{ url: thumb, alt: title }],
           locale: lang,
-          url: `${WEBSITE_URL}/${lang}/speakers${isSelected ? `/${t(`${selectedSponsor}.key`)}` : ''}`,
         }}
       />
       <Box m="0 auto" maxW={820}>
         <Box overflow="hidden" p="1.5rem" m="0" fontSize="0.8rem" initial={false} animate={isOpen ? 'open' : 'closed'}>
-          <Heading as="h1" size="xl" m={0} mb={4} variants={fadeInUp}>
+          <Heading fontFamily={`'Airbnb Cereal App Bold'`} as="h1" size="xl" m={0} mb={4} variants={fadeInUp}>
             {t('sponsors')}
           </Heading>
           <Grid variants={fadeIn}>
-            <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
+            <Heading fontFamily={`'Airbnb Cereal App Bold'`} as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('platinum')}
             </Heading>
             <Divider mb="1rem" variants={fadeIn} />
@@ -113,7 +112,7 @@ const Sponsors = () => {
                 ))}
               {/* <Sponsor i={0} hide /> */}
             </Grid>
-            <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
+            <Heading fontFamily={`'Airbnb Cereal App Bold'`} as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('gold')}
             </Heading>
             <Divider mb="1rem" />
@@ -131,7 +130,7 @@ const Sponsors = () => {
                 ))}
               {/* <Sponsor i={0} hide /> */}
             </Grid>
-            <Heading as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
+            <Heading fontFamily={`'Airbnb Cereal App Bold'`} as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('accessibility')}
             </Heading>
             <Divider mb="1rem" />
@@ -177,14 +176,15 @@ const Sponsors = () => {
                       backgroundColor="rgba(0, 0, 0, 0.5)"
                     />
                     <Flex
-                      fontFamily="'Airbnb Cereal App Medium'"
+                      fontFamily={`'Airbnb Cereal App Bold'`}
                       zIndex={20}
                       flexDir="column"
                       pos="absolute"
-                      h={['calc(80% + 2rem)', '70%', '38rem']}
-                      maxH={['auto', '35rem']}
+                      h={['calc(80% + 2rem)', 'fit-content']}
+                      minH="26rem"
+                      maxH={['auto', '75%']}
                       w="100%"
-                      maxW={['auto', '28rem', '26rem']}
+                      maxW={['auto', '25rem']}
                       m="auto"
                       top={['auto', 0]}
                       left={['auto', 0]}
@@ -236,7 +236,14 @@ const Sponsors = () => {
                           }
                         `}
                       >
-                        <ReactMarkdown>{t(`${selectedSponsor}.content`)}</ReactMarkdown>
+                        <ReactMarkdown
+                          css={css`
+                            font-family: 'Airbnb Cereal App Book';
+                            font-size: 0.9rem;
+                          `}
+                        >
+                          {t(`${selectedSponsor}.content`)}
+                        </ReactMarkdown>
                       </Box>
                       <A
                         href={t(`${selectedSponsor}.link`)}
@@ -253,7 +260,7 @@ const Sponsors = () => {
                           rightIcon="arrow-forward"
                           variantColor="teal"
                           variant="outline"
-                          size="lg"
+                          size="md"
                           w="100%"
                         >
                           Go To Website

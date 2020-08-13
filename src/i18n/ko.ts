@@ -23,6 +23,16 @@ export const ko = {
   newsletter_success: '구독 완료',
   newsletter_error: '오류가 있습니다. 다시시도해보세요.',
 
+  // about
+  about_description: '🎉 JSConf Korea에 오신 것을 환영합니다!',
+
+  // code-of-conduct
+  code_of_conduct_description:
+    'JSConf Korea는 성별, 성 정체성 및 표현 방법, 성적 지향, 장애, 외모, 신체 사이즈, 인종, 연령, 종교, 출신 지역, 학력, 경력, 사용 기술이나 언어, 뉴로타입에 상관없이 모두가 존중받는 컨퍼런스 경험을 제공하기 위해 최선을 다하고 있습니다.',
+
+  // privacy-policy
+  privacy_policy_description: 'JSConf Korea는 다음 경로로 참가자/지원자의 정보를 수집합니다.',
+
   // call-for-proposals
   submit_proposal: '발표 지원하기',
 
@@ -36,7 +46,7 @@ export const ko = {
   summary: '요약',
 
   // sponsors
-  sponsors_description: '🎉 JSConf Korea를 후원해주신 분들',
+  sponsors_description: '🎉 JSConf Korea를 후원해주신 분들',
   platinum: '플레티넘',
   gold: '골드',
   accessibility: '접근성',

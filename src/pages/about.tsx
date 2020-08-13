@@ -6,15 +6,31 @@ import { useI18n } from '../hooks/useI18n'
 import Markdown from '../components/Markdown'
 import Teams from '../components/Teams'
 import { Box } from '../components/MotionChakra'
+import { NextSeo } from 'next-seo'
+import { siteName, WEBSITE_URL_WITH_YEAR, WEBSITE_URL } from './_app'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {}
 
 const About = () => {
-  const { t } = useI18n()
+  const { t, activeLanguage: lang } = useI18n()
+  const title = `${siteName} | ${t(`about`)}`
+  const description = t('about_description')
+
   return (
     <Box css={style} p="5rem 0">
+      <NextSeo
+        title={title}
+        description={description}
+        canonical={`${WEBSITE_URL_WITH_YEAR}/${lang}/about`}
+        openGraph={{
+          title,
+          description,
+          images: [{ url: `${WEBSITE_URL}/images/2019_thumb.jpg`, alt: siteName }],
+          locale: lang,
+        }}
+      />
       <Header></Header>
       <Markdown>{t('about-md')}</Markdown>
       <Teams />

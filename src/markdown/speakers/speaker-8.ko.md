@@ -2,7 +2,7 @@
 key: 'jaewon'
 name: '서재원'
 image: '/images/speakers/jaewon.jpg'
-bio: '프로그래밍 언어론에서 Ph.D를 취득하고 싶은, 동탄고등학교에서 공부중인 학생입니다. 함수형 프로그래밍의 광팬이며, 요즘은 타입 레벨 프로그래밍과 타입 이론, 그리고 참치캔에 빠져 있습니다(마일드와 순살의 차이를 알 정도입니다).'
+bio: '재원님은 프로그래밍 언어론에서 Ph.D를 취득하고 싶은, 동탄고등학교에서 공부중인 학생입니다. 함수형 프로그래밍의 광팬이며, 요즘은 타입 레벨 프로그래밍과 타입 이론, 그리고 참치캔에 빠져 있습니다(마일드와 순살의 차이를 알 정도입니다).'
 website: 'https://overcurried.com'
 sns: 'https://twitter.com/NvironmentE'
 github: 'https://github.com/ENvironmentSet'

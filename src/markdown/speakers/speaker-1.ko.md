@@ -2,7 +2,7 @@
 key: 'chloe'
 name: '노지연'
 image: '/images/speakers/chloe.jpg'
-bio: '현재 카카오뱅크에서 빅데이터 BI 시각화를 개발하고 있는 소프트웨어 엔지니어입니다. 스크립트 언어를 좋아해서 평소 이것저것 만지작 거리기도 하고, 요즘은 명확한 정보전달을 위한 시각화 방법론에 관심이 많습니다.'
+bio: '지연님은 현재 카카오뱅크에서 빅데이터 BI 시각화를 개발하고 있는 소프트웨어 엔지니어입니다. 스크립트 언어를 좋아해서 평소 이것저것 만지작 거리기도 하고, 요즘은 명확한 정보전달을 위한 시각화 방법론에 관심이 많습니다.'
 website: 'https://observablehq.com/@shwldus3'
 sns: 'https://twitter.com/ChloeNoh'
 github: 'https://github.com/shwldus3'

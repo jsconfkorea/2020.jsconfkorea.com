@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
+import { jsx } from '@emotion/core'
 import Header from '../../components/Header'
 import { GetStaticProps } from 'next'
 import matter from 'gray-matter'

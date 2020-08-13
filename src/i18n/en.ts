@@ -23,6 +23,16 @@ export const en = {
   newsletter_success: 'Subscribed!',
   newsletter_error: 'Something wrong! Try again.',
 
+  // about
+  about_description: '🎉 Welcome to JSConf Korea!',
+
+  // code-of-conduct
+  code_of_conduct_description:
+    'JSConf Korea is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion, hometown, educational background, seniority level, choice of technology, language, or neurotype.',
+
+  // privacy-policy
+  privacy_policy_description: 'JSConf Korea can collect attendee and applicant information through following forms.',
+
   // call-for-proposals
   submit_proposal: 'Submit Proposal',
 

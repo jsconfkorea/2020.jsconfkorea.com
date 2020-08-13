@@ -20,11 +20,11 @@ Router.events.on('routeChangeError', () => NProgress.done())
 
 export const WEBSITE_URL = 'https://jsconfkorea.com'
 export const WEBSITE_URL_WITH_YEAR = `https://2020.jsconfkorea.com`
-export const title = 'JSConf Korea 2020 | JSConf Korea'
-export const description = 'JSConf Korea 2020 - Home Edition'
+export const siteName = 'JSConf Korea 2020'
+export const title = `${siteName} | JSConf Korea`
+export const description = `${siteName} - Home Edition`
 const url = WEBSITE_URL
 export const thumb = `${url}/og-image.png`
-export const siteName = 'JSConf Korea 2020'
 
 const App = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps

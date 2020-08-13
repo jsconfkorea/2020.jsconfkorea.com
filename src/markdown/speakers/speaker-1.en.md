@@ -2,7 +2,7 @@
 key: 'chloe'
 name: 'Chloe Noh'
 image: '/images/speakers/chloe.jpg'
-bio: 'Chloe Noh is a software engineer working on data viz for Big Data BI at Kakao Bank. She likes fiddling with scripting languages, and recently is interested in visualization methodology for clearer communication.'
+bio: 'Chloe is a software engineer working on data visualization for Big Data BI at Kakao Bank. She likes fiddling with scripting languages, and recently has been interested in visualization methods for clearer communication.'
 website: 'https://observablehq.com/@shwldus3'
 sns: 'https://twitter.com/ChloeNoh'
 github: 'https://github.com/shwldus3'
