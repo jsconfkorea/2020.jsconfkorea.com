@@ -1,14 +1,20 @@
 ---
-key: 'jai'
-name: 'Jai Santhosh'
-image: '/images/speakers/jai.jpg'
-bio: 'Jai Santhosh works on the Microsoft Search team, building enterprise search experience across Microsoft 365 products. He is quite passionate about the Web, JavaScript and is a Web perf enthusiast. He had previously led UI efforts at a fintech startup, ClearTax and worked on building offline-heavy web applications. He was also part of the first real-world Progressive Web App, Flipkart Lite and had earlier worked in teams at large-scale like Yahoo! Maps, frontend platforms and  Media sites at Yahoo!'
-website: 'https://jaisanth.com/'
-sns: 'https://twitter.com/jaisanth'
-github: 'https://github.com/jaisanth'
-title: 'Developing in a Large Monorepo'
+key: 'yeom-n-seonghyeon'
+name: 'Inhwa Yeom & Seonghyeon Kim'
+image:
+  - '/images/speakers/yeom.jpg'
+  - '/images/speakers/seonghyeon.jpg'
+bio: 'Inhwa Yeom is a media artist and research assistant of UVR Lab, KAIST. In her projects, she designs, develops, and evaluates AR/VR systems for collaborative creations and learning, mainly in consideration of people with less familiarity or accessibility to 3D interfaces and interactions.
+
+Seonghyeon Kim is a researcher and media artist working with graphics programming technology. Currently, he is a master’s student at KAIST, Visual Media Lab. His research interest is synthesizing facial animation of a virtual character. As an undergraduate student, he established a programming club named “Chocoding” for over 100 designers.'
+website: 'https://p5for50.plus/'
+sns:
+  - 'https://www.instagram.com/yinhwa.art'
+  - 'https://www.instagram.com/okdalto'
+github:
+  - 'https://github.com/yinhwa'
+  - 'https://github.com/okdalto'
+title: 'p5 for 50+: How to Include Older Adults to Coding Education?'
 ---
 
-At Microsoft, I work on a very large TypeScript-based git repository where over 300 developers build and write code for high-value frontend components which are used across all Microsoft365 products. It contains about 150 npm packages, containing over a million lines of TypeScript code. Co-locating these components encourages collaboration and sharing code across teams much easier.
-
-In this talk, we’ll focus on the tooling used and code organization to make the development easier, faster and more reliable, with a major focus on the largest pain point of package management and orchestrating common tasks across the packages.
+“p5 for 50+” is a 2020 Processing Foundation Fellowship project. It aims to improve the digital literacy and rights of middle-aged and older adults in South Korea — with p5.js! Addressing some age-specific needs in coding education, the speakers prototyped a low-barrier web app for learning p5.js. In the presentation, they will mainly discuss design implications for accessible education of coding.

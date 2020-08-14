@@ -1,14 +1,20 @@
 ---
-key: 'jai'
-name: '자이 산토시'
-image: '/images/speakers/jai.jpg'
-bio: '자이님는 마이크로소프트 검색 팀에서 일하며 마이크로소프트 365 제품군의 엔터프라이즈용 검색 기능을 담당하고 있습니다. 웹과 자바스크립트, 특히 웹 퍼포먼스에 대한 열정을 갖고 있습니다. 이전에 핀테크 스타트업인 Clear Tax에서 UI를 주도했으며 오프라인 위주의 웹 애플리케이션 구축에 힘썼습니다. 또한 최초의 real-world Progressive Web App인 Flipkart Lite의 팀원이었으며, 그 전에는 야후에서 지도, 프론트 엔드 플랫폼 및 미디어 사이트 같은 대규모 팀에서 일했습니다.'
-website: 'https://jaisanth.com/'
-sns: 'https://twitter.com/jaisanth'
-github: 'https://github.com/jaisanth'
-title: '모노레포에서 개발하기'
+key: 'yeom-n-seonghyeon'
+name: '염인화 & 김성현'
+image:
+  - '/images/speakers/yeom.jpg'
+  - '/images/speakers/seonghyeon.jpg'
+bio: '인화님은 미디어 아티스트이자 KAIST UVR Lab의 연구 조교입니다. 협업을 통한 학습이나 크리이에이션을위한 AR / VR 시스템을 설계, 개발 및 평가합니다. 특히 3D 인터페이스가 덜 친숙하고 더 접근하기 어려운 사람들을 염두에 둡니다. 김성현님은 그래픽 프로그래밍 기술을 연구하는 연구원이자 미디어 아티스트입니다. 
+
+현재, 성현님은 그래픽 프로그래밍 기술 기반의 리서처이자 미디어 아티스트입니다. 현재, KAIST Visual Media Lab 소속으로 석사 재학 중입니다. 주요 연구 분야는 가상 캐릭터 얼굴 애니메이션 합성이며, “초코딩(Chocoding)”이라는 프로그래밍 클럽을 설립하여 100명 이상의 디자이너를 위한 교육을 진행한 바 있습니다.'
+website: 'https://p5for50.plus/'
+sns:
+  - 'https://www.instagram.com/yinhwa.art'
+  - 'https://www.instagram.com/okdalto'
+github:
+  - 'https://github.com/yinhwa'
+  - 'https://github.com/okdalto'
+title: '50대+를 위한 p5.js: 중년과 노년을 위한 코딩 교육'
 ---
 
-저는 마이크로소프트에서 타입스크립트 기반의 대규모 git 리포지토리에 참여하고 있습니다. 여기엔 300명 이상의 개발자들이 Microsoft365 제품군에 걸친 모든 프론트엔드 기능을 개발하고 빌드합니다. 약 150가지의 npm의 패키지가 사용되고, 100만 줄 이상의 TypeScript 코드로 구성되어 있습니다. 이러한 컴포넌트들을 코로케이션(co-location)함으로써 팀 끼리의 협업 및 코드 공유가 훨씬 쉬워질 수 있습니다.
-
-이 발표에서는 개발이 쉽고 빠르고 안정적으로 진행되기 위해 필요한 도구와 코드 정리 방법에 대해 이야기합니다. 특히 가장 골치아픈 패키지 관리와 여러 패키지에 걸쳐 공통된 작업을 조정하는 문제를 집중적으로 다룹니다.
+"50대+를 위한 p5"(p5 for 50+) 프로젝트는 한국의 중년층과 노년층의 디지털 리터러시와 권리 향상을 목표로 시작되었습니다. 코딩 교육의 연령별 요구 사항에 맞춰 p5.js의 학습 장벽을 낮춘 웹 앱을 프로토타입했습니다. 이 발표에서는 접근성있는 코딩 교육을 위한 디자인 관점에서의 시사점에 대해 이야기합니다.
