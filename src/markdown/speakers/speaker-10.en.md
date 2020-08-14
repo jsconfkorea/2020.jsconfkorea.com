@@ -1,18 +1,14 @@
 ---
-key: 'ben'
-name: 'Ben Dechrai'
-image: '/images/speakers/ben.jpg'
-bio: 'Ben Dechrai is a technologist with a staunch focus on security and privacy. This started at the age of 11, when he wrote software to stop his parents from breaking the family PC, and resulted in his working as a developer advocate for Auth0. He enjoys helping developers find the joy of experimentation, from ethical skulduggery to subversive automation, and can be found on Twitter and Instagram at @bendechrai.'
-website: 'https://bendechrai.com/'
-sns: 'https://twitter.com/bendechrai'
-github: 'https://github.com/bendechrai'
-title: 'Say Goodbye to Passwords and Hello to WebAuthn'
+key: 'jai'
+name: 'Jai Santhosh'
+image: '/images/speakers/jai.jpg'
+bio: 'Jai Santhosh works on the Microsoft Search team, building enterprise search experience across Microsoft 365 products. He is quite passionate about the Web, JavaScript and is a Web perf enthusiast. He had previously led UI efforts at a fintech startup, ClearTax and worked on building offline-heavy web applications. He was also part of the first real-world Progressive Web App, Flipkart Lite and had earlier worked in teams at large-scale like Yahoo! Maps, frontend platforms and  Media sites at Yahoo!'
+website: 'https://jaisanth.com/'
+sns: 'https://twitter.com/jaisanth'
+github: 'https://github.com/jaisanth'
+title: 'Developing in a Large Monorepo'
 ---
 
-Dozens of times a day, we identify ourselves to an online entity.
+At Microsoft, I work on a very large TypeScript-based git repository where over 300 developers build and write code for high-value frontend components which are used across all Microsoft365 products. It contains about 150 npm packages, containing over a million lines of TypeScript code. Co-locating these components encourages collaboration and sharing code across teams much easier.
 
-But as the nearly 10 billion leaked accounts documented by [';--have i been pwned?](https://haveibeenpwned.com/) attest, this process has a fatal weakness–passwords.
-
-The Web Authentication API (or WebAuthn) is a standard from the W3C and FIDO that "allows servers to register and authenticate users using public key cryptography instead of a password". WebAuthn is part of a set of standards that enable passwordless authentication between servers, browsers, and authenticators. It's supported in all modern browsers.
-
-This talk will outline how the technologies work, and how you can take advantage of them today to create a far more secure experience for your users.
+In this talk, we’ll focus on the tooling used and code organization to make the development easier, faster and more reliable, with a major focus on the largest pain point of package management and orchestrating common tasks across the packages.

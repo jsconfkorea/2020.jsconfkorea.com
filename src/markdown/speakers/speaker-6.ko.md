@@ -1,18 +1,18 @@
 ---
-key: 'yeom-n-seonghyeon'
-name: '염인화 & 김성현'
-image:
-  - '/images/speakers/yeom.jpg'
-  - '/images/speakers/seonghyeon.jpg'
-bio: '인화님은 미디어 아티스트이자 KAIST UVR Lab의 연구 조교입니다. 협업을 통한 학습이나 크리이에이션을위한 AR / VR 시스템을 설계, 개발 및 평가합니다. 특히 3D 인터페이스가 덜 친숙하고 더 접근하기 어려운 사람들을 염두에 둡니다. 김성현님은 그래픽 프로그래밍 기술을 연구하는 연구원이자 미디어 아티스트입니다. 현재, 성현님은 카이스트의 Visual Media Lab 에서 석사과정을 밟고 있습니다, 그의 연구 관심사는 가상인물의 얼굴 애니메이션을 합성하는 것이며, 대학생시절, 100명이 넘는 디자이너들을 위한  “Chocoding”이라는 이름의 프로그래밍 클럽을 설립했습니다.'
-website: 'https://p5for50.plus/'
-sns:
-  - 'https://www.instagram.com/yinhwa.art'
-  - 'https://www.instagram.com/okdalto'
-github:
-  - 'https://github.com/yinhwa'
-  - 'https://github.com/okdalto'
-title: '50대+를 위한 p5.js: 중년과 노년을 위한 코딩 교육'
+key: 'ben'
+name: '벤 데크라이'
+image: '/images/speakers/ben.jpg'
+bio: '벤님은 보안과 프라이버시에 초점을 둔 테크놀로지스트입니다. 보안에 대한 관심은 11살 때부터 시작되었는데, 부모님이 가족 컴퓨터를 계속 먹통으로 만드는 걸 막기 위해 소프트웨어를 하나 만들어 본 것이 그 시작이었습니다. 결국 Auth0의 디벨로퍼 애드보킷(developer advocate)으로 일하게 되었죠. 윤리적 속임수부터 파괴적 자동화까지, 개발자들이 실험의 즐거움을 발견하게 도와주는 걸 좋아하며, 트위터와 인스타그램 @bendechrai에서 만나볼 수 있습니다.'
+website: 'https://bendechrai.com/'
+sns: 'https://twitter.com/bendechrai'
+github: 'https://github.com/bendechrai'
+title: '비밀번호에겐 작별을, WebAuthn에게 안녕을!'
 ---
 
-"50대+를 위한 p5"(p5 for 50+) 프로젝트는 한국의 중년층과 노년층의 디지털 리터러시와 권리 향상을 목표로 시작되었습니다. 코딩 교육의 연령별 요구 사항에 맞춰 p5.js의 학습 장벽을 낮춘 웹 앱을 프로토타입했습니다. 이 발표에서는 접근성있는 코딩 교육을 위한 디자인 관점에서의 시사점에 대해 이야기합니다.
+우리는 온라인에서 하루에도 수십번 우리의 아이덴티티를 증명합니다.
+
+하지만, [';--have i been pwned?](https://haveibeenpwned.com/)에 등록된 100억 개에 달하는 개인 정보 유출 건수가 보여주듯, 이 식별 과정에는 치명적인 약점이 있습니다. 바로 비밀번호입니다.
+
+Web Authentication API(또는 WebAuthn)는 "서버가 비밀번호 대신 공개키 암호화를 사용하여 사용자를 등록하고 인증할 수 있도록" 해주는 W3C와 FIDO의 표준입니다. WebAuthn은 서버와 브라우저와 인증자 간에 비밀번호 없이도 인증을 가능케 하는 여러 표준 중 하나로, 모든 현대 브라우저에서 지원됩니다.
+
+이 발표에서는 WebAuthn이 어떻게 작동하는지, 그리고 여러분이 직접 이 기술을 활용하여 어떻게 사용자에게 훨씬 안전한 온라인 경험을 제공해줄 수 있는지 설명합니다.
