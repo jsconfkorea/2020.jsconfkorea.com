@@ -172,56 +172,161 @@ const Speakers = () => {
                               borderRadius="100%"
                             />
                           )}
-                          <Grid gridAutoFlow="column" justifyItems="center">
-                            {t(`${selectedSpeaker}.website`) && (
-                              <A
-                                href={t(`${selectedSpeaker}.website`)}
-                                isExternal
-                                d="inline-block"
-                                w="1rem"
-                                h="1rem"
-                                css={css`
-                                  &:focus {
-                                    box-shadow: none;
-                                  }
-                                `}
-                              >
-                                <Icon name="link" d="inline-block" w="1rem" h="1rem" />
-                              </A>
-                            )}
-                            {t(`${selectedSpeaker}.sns`) && (
-                              <A
-                                href={t(`${selectedSpeaker}.sns`)}
-                                isExternal
-                                d="inline-block"
-                                w="1rem"
-                                h="1rem"
-                                css={css`
-                                  &:focus {
-                                    box-shadow: none;
-                                  }
-                                `}
-                              >
-                                <Icon name="twitter" d="inline-block" w="1rem" h="1rem" />
-                              </A>
-                            )}
-                            {t(`${selectedSpeaker}.github`) && (
-                              <A
-                                href={t(`${selectedSpeaker}.github`)}
-                                isExternal
-                                d="inline-block"
-                                w="1rem"
-                                h="1rem"
-                                css={css`
-                                  &:focus {
-                                    box-shadow: none;
-                                  }
-                                `}
-                              >
-                                <Icon name="github" d="inline-block" w="1rem" h="1rem" />
-                              </A>
-                            )}
-                          </Grid>
+                          {t(`${selectedSpeaker}.key`) === 'yeom-n-seonghyeon' ? (
+                            <>
+                              <Grid gridAutoFlow="column" justifyItems="center">
+                                {t(`${selectedSpeaker}.website`) && (
+                                  <A
+                                    href={t(`${selectedSpeaker}.website`)}
+                                    isExternal
+                                    d="inline-block"
+                                    w="1rem"
+                                    h="1rem"
+                                    css={css`
+                                      &:focus {
+                                        box-shadow: none;
+                                      }
+                                    `}
+                                  >
+                                    <Icon name="link" d="inline-block" w="1rem" h="1rem" />
+                                  </A>
+                                )}
+                                {t(`${selectedSpeaker}.sns`) && (
+                                  <A
+                                    href={t(`${selectedSpeaker}.sns.0`)}
+                                    isExternal
+                                    d="inline-block"
+                                    w="1rem"
+                                    h="1rem"
+                                    css={css`
+                                      &:focus {
+                                        box-shadow: none;
+                                      }
+                                    `}
+                                  >
+                                    <Icon name="twitter" d="inline-block" w="1rem" h="1rem" />
+                                  </A>
+                                )}
+                                {t(`${selectedSpeaker}.github`) && (
+                                  <A
+                                    href={t(`${selectedSpeaker}.github.0`)}
+                                    isExternal
+                                    d="inline-block"
+                                    w="1rem"
+                                    h="1rem"
+                                    css={css`
+                                      &:focus {
+                                        box-shadow: none;
+                                      }
+                                    `}
+                                  >
+                                    <Icon name="github" d="inline-block" w="1rem" h="1rem" />
+                                  </A>
+                                )}
+                              </Grid>
+                              <Grid gridAutoFlow="column" justifyItems="center" mt=".5rem">
+                                {t(`${selectedSpeaker}.website`) && (
+                                  <A
+                                    href={t(`${selectedSpeaker}.website`)}
+                                    isExternal
+                                    opacity={0}
+                                    w="1rem"
+                                    h="1rem"
+                                    css={css`
+                                      &:focus {
+                                        box-shadow: none;
+                                      }
+                                    `}
+                                  >
+                                    <Icon name="link" d="inline-block" w="1rem" h="1rem" />
+                                  </A>
+                                )}
+                                {t(`${selectedSpeaker}.sns`) && (
+                                  <A
+                                    href={t(`${selectedSpeaker}.sns.1`)}
+                                    isExternal
+                                    d="inline-block"
+                                    w="1rem"
+                                    h="1rem"
+                                    css={css`
+                                      &:focus {
+                                        box-shadow: none;
+                                      }
+                                    `}
+                                  >
+                                    <Icon name="twitter" d="inline-block" w="1rem" h="1rem" />
+                                  </A>
+                                )}
+                                {t(`${selectedSpeaker}.github`) && (
+                                  <A
+                                    href={t(`${selectedSpeaker}.github.1`)}
+                                    isExternal
+                                    d="inline-block"
+                                    w="1rem"
+                                    h="1rem"
+                                    css={css`
+                                      &:focus {
+                                        box-shadow: none;
+                                      }
+                                    `}
+                                  >
+                                    <Icon name="github" d="inline-block" w="1rem" h="1rem" />
+                                  </A>
+                                )}
+                              </Grid>
+                            </>
+                          ) : (
+                            <Grid gridAutoFlow="column" justifyItems="center">
+                              {t(`${selectedSpeaker}.website`) && (
+                                <A
+                                  href={t(`${selectedSpeaker}.website`)}
+                                  isExternal
+                                  d="inline-block"
+                                  w="1rem"
+                                  h="1rem"
+                                  css={css`
+                                    &:focus {
+                                      box-shadow: none;
+                                    }
+                                  `}
+                                >
+                                  <Icon name="link" d="inline-block" w="1rem" h="1rem" />
+                                </A>
+                              )}
+                              {t(`${selectedSpeaker}.sns`) && (
+                                <A
+                                  href={t(`${selectedSpeaker}.sns`)}
+                                  isExternal
+                                  d="inline-block"
+                                  w="1rem"
+                                  h="1rem"
+                                  css={css`
+                                    &:focus {
+                                      box-shadow: none;
+                                    }
+                                  `}
+                                >
+                                  <Icon name="twitter" d="inline-block" w="1rem" h="1rem" />
+                                </A>
+                              )}
+                              {t(`${selectedSpeaker}.github`) && (
+                                <A
+                                  href={t(`${selectedSpeaker}.github`)}
+                                  isExternal
+                                  d="inline-block"
+                                  w="1rem"
+                                  h="1rem"
+                                  css={css`
+                                    &:focus {
+                                      box-shadow: none;
+                                    }
+                                  `}
+                                >
+                                  <Icon name="github" d="inline-block" w="1rem" h="1rem" />
+                                </A>
+                              )}
+                            </Grid>
+                          )}
                         </Box>
                         <Box>
                           <Text
