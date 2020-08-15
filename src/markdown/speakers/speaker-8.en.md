@@ -6,10 +6,10 @@ bio: 'Jaewon is a student at Dongtan High School who wants to study programming 
 website: 'https://overcurried.com'
 sns: 'https://twitter.com/NvironmentE'
 github: 'https://github.com/ENvironmentSet'
-title: 'Code Factorization: How to Organize Boilerplate Codes'
+title: 'Code Factorization: How to Organize Boilerplate Code'
 ---
 
-Boilerplate code (repeatedly used pieces of code) is often the main culprit of unnecessary complexity and cognitive overload in programming. That's why many books and experienced programmers tell us to avoid boilerplate code, and we try our best by employing all kinds of methods, like inheritance and abstractions.
+Boilerplate code (repeatedly used pieces of code) is often the main culprit of unnecessary complexity and cognitive overload in programming. That's why many books and experienced programmers tell us to avoid it, and we try our best by employing all kinds of methods, like inheritance and abstraction.
 
 Despite this constant effort, we often still encounter boilerplate code. Sometimes, we run into 'boss' boilerplate code, which we just don't know how to deal with.
 
