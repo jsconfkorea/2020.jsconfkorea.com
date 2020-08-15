@@ -17,4 +17,4 @@ github:
 title: 'p5 for 50+: How to Include Older Adults to Coding Education?'
 ---
 
-“p5 for 50+” is a 2020 Processing Foundation Fellowship project. It aims to improve the digital literacy and rights of middle-aged and older adults in South Korea — with p5.js! Addressing some age-specific needs in coding education, the speakers prototyped a low-barrier web app for learning p5.js. In the presentation, they will mainly discuss design implications for accessible education of coding.
+“p5 for 50+” is a 2020 Processing Foundation Fellowship project. It aims to improve the digital literacy and rights of middle-aged and older adults in South Korea — with p5.js! Addressing some age-specific needs in coding education, we prototyped a low-barrier web app for learning p5.js. In this presentation, we will mainly discuss design implications for accessible education of coding.

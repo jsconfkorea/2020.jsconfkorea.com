@@ -9,7 +9,7 @@ github: 'https://github.com/bendechrai'
 title: 'Say Goodbye to Passwords and Hello to WebAuthn'
 ---
 
-Dozens of times a day, we identify ourselves to an online entity.
+Dozens of times a day, we identify ourselves online.
 
 But as the nearly 10 billion leaked accounts documented by [';--have i been pwned?](https://haveibeenpwned.com/) attest, this process has a fatal weakness–passwords.
 
