@@ -4,6 +4,7 @@ import { useI18n } from '../hooks/useI18n'
 import Link from './Link'
 import { Box, Grid, Text, Heading, Image } from './MotionChakra'
 import { fadeInUp } from './Sponsors'
+import ReactMarkdown from 'react-markdown'
 
 type Props = {
   i: number
@@ -87,7 +88,23 @@ const Speaker = ({ i, hide }: Props) => {
             <Heading fontFamily={`'Airbnb Cereal App Bold'`} fontSize="1rem" m={0}>
               {t(`${i}.title`)}
             </Heading>
-            <Text
+            <Box fontFamily={`'Airbnb Cereal App Book'`} mt={2}>
+              <ReactMarkdown
+                css={css`
+                  p {
+                    font-size: 0.7rem;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    line-height: 0.9rem;
+                  }
+                `}
+              >
+                {t(`${i}.content`).split('\n').join(' ')}
+              </ReactMarkdown>
+            </Box>
+            {/* <Text
               fontFamily={`'Airbnb Cereal App Book'`}
               fontSize="0.7rem"
               mt={2}
@@ -100,7 +117,7 @@ const Speaker = ({ i, hide }: Props) => {
               `}
             >
               {t(`${i}.content`)}
-            </Text>
+            </Text> */}
             {/* <Text as="b" mt={1} d="inline-block">
               Read more
             </Text> */}

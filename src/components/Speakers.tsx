@@ -411,6 +411,10 @@ const mdStyle = css`
   & > p:not(:first-of-type) {
     margin-top: 1rem;
   }
+  a {
+    color: rgb(49, 130, 206);
+    text-decoration: underline;
+  }
   & > * {
     line-height: 1.4rem;
   }
