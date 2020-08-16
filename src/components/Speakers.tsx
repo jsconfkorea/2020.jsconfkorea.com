@@ -204,7 +204,12 @@ const Speakers = () => {
                                       }
                                     `}
                                   >
-                                    <Icon name="twitter" d="inline-block" w="1rem" h="1rem" />
+                                    <Icon
+                                      name={t(`${selectedSpeaker}.sns.0`).includes('twitter') ? 'twitter' : 'instagram'}
+                                      d="inline-block"
+                                      w="1rem"
+                                      h="1rem"
+                                    />
                                   </A>
                                 )}
                                 {t(`${selectedSpeaker}.github`) && (
@@ -254,7 +259,12 @@ const Speakers = () => {
                                       }
                                     `}
                                   >
-                                    <Icon name="twitter" d="inline-block" w="1rem" h="1rem" />
+                                    <Icon
+                                      name={t(`${selectedSpeaker}.sns.1`).includes('twitter') ? 'twitter' : 'instagram'}
+                                      d="inline-block"
+                                      w="1rem"
+                                      h="1rem"
+                                    />
                                   </A>
                                 )}
                                 {t(`${selectedSpeaker}.github`) && (

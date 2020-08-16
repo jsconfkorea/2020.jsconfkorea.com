@@ -93,6 +93,7 @@ const Speaker = ({ i, hide }: Props) => {
               mt={2}
               d="-webkit-box"
               overflow="hidden"
+              lineHeight=".9rem"
               css={css`
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
