@@ -6,6 +6,7 @@ export const en = {
   cfp: 'CFP',
   sponsorship: 'SPONSORSHIP',
   newsletter: 'NEWSLETTER',
+  rsvp: 'RSVP',
 
   // menu
   home: 'HOME',

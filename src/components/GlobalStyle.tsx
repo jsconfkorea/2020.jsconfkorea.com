@@ -173,6 +173,9 @@ const style = css`
     &:visited {
       color: initial;
     }
+    &:hover {
+      text-decoration: none !important;
+    }
   }
   ul {
     list-style: none;
