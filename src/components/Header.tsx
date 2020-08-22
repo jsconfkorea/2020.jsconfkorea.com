@@ -53,6 +53,11 @@ const Header = () => {
                     <Link href="/about">{t('about')}</Link>
                   </li>
                   <li>
+                    <Link href="https://hopin.to/events/jsconf-korea-2020-home-edition" isExternal>
+                      {t('rsvp')}
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/speakers">{t('speakers')}</Link>
                   </li>
                   <li>

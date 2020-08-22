@@ -43,8 +43,8 @@ const Index = () => {
         </section>
         <section id="main-buttons">
           <div>
-            <div id="btn-lookback">
-              <div className="btn-default">
+            <div id="btn-rsvp">
+              {/* <div className="btn-default">
                 <span>{t('look_back_2019')}</span>
                 <div className="inner">
                   <a href="/redirect/2019-website" className="btn-default block" target="_blank" rel="noopener">
@@ -54,7 +54,10 @@ const Index = () => {
                     {t('video')}
                   </a>
                 </div>
-              </div>
+              </div> */}
+              <Link href="https://hopin.to/events/jsconf-korea-2020-home-edition" className="btn-default" isExternal>
+                {t('rsvp')}
+              </Link>
             </div>
             <div id="btn-newsletter">
               <button className="btn-default" onClick={onOpen}>
@@ -200,6 +203,18 @@ const style = css`
           background: #2d68ff;
           width: 50%;
           height: 4rem;
+        }
+      }
+      #btn-rsvp {
+        flex: 4;
+        background: #2d68ff;
+        height: 4rem;
+        a {
+          background: #2d68ff;
+          height: 4rem;
+          &:hover {
+            text-decoration: none;
+          }
         }
       }
       #btn-cfp {

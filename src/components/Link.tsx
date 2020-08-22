@@ -2,15 +2,17 @@ import NextLink, { LinkProps } from 'next/link'
 import { useI18n } from '../hooks/useI18n'
 import { ReactNode } from 'react'
 import { useRouter } from 'next/dist/client/router'
+import { Link as ChakraLink } from '@chakra-ui/core'
 
 type Props = {
   className?: string
   disabled?: boolean
   children: ReactNode
+  isExternal?: boolean
 } & LinkProps
 
 const Link = (props: Props) => {
-  const { children, className, disabled, shallow } = props
+  const { children, className, disabled, shallow, isExternal } = props
   const { pathname } = useRouter()
   const isLangPath = pathname.slice(0, 7) === '/[lang]'
   const { activeLanguage } = useI18n()
@@ -23,6 +25,13 @@ const Link = (props: Props) => {
       <a href="#" className="disabled" rel="noopener" tabIndex={-1}>
         {children}
       </a>
+    )
+  }
+  if (isExternal) {
+    return (
+      <ChakraLink href={props.href as string} className={className} disabled={disabled} isExternal>
+        {children}
+      </ChakraLink>
     )
   }
   return (

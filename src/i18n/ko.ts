@@ -6,6 +6,7 @@ export const ko = {
   cfp: '발표자 모집',
   sponsorship: '후원사 모집',
   newsletter: '뉴스레터',
+  rsvp: '신청하기',
 
   // menu
   home: '홈',
