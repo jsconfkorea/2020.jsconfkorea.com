@@ -10,4 +10,5 @@ export const OUT_LINKS = {
     KO: 'https://forms.gle/4fuou7MXeXuKJ4rP9',
     EN: 'https://forms.gle/uD1UxdSTKQZDjJMA8',
   },
+  HOPIN_TICKET: 'https://hopin.to/events/jsconf-korea-2020-home-edition',
 }

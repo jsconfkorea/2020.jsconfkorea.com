@@ -1,8 +1,10 @@
 import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 const useRedirect = (url: string) => {
+  const router = useRouter()
   useEffect(() => {
-    window.location.href = url
+    router.push(url)
   })
 }
 

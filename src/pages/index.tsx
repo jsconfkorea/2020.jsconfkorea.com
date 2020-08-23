@@ -44,20 +44,9 @@ const Index = () => {
         <section id="main-buttons">
           <div>
             <div id="btn-rsvp">
-              {/* <div className="btn-default">
-                <span>{t('look_back_2019')}</span>
-                <div className="inner">
-                  <a href="/redirect/2019-website" className="btn-default block" target="_blank" rel="noopener">
-                    {t('website')}
-                  </a>
-                  <a href="/redirect/2019-videos" className="btn-default block" target="_blank" rel="noopener">
-                    {t('video')}
-                  </a>
-                </div>
-              </div> */}
-              <Link href="https://hopin.to/events/jsconf-korea-2020-home-edition" className="btn-default" isExternal>
+              <a href="/ticket" target="_blank" rel="noopener">
                 {t('rsvp')}
-              </Link>
+              </a>
             </div>
             <div id="btn-newsletter">
               <button className="btn-default" onClick={onOpen}>
