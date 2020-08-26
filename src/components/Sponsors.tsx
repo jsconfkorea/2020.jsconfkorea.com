@@ -106,11 +106,10 @@ const Sponsors = () => {
             >
               {[...Array(NUMBER_OF_SPONSORS)]
                 .map((_, i) => i)
-                .slice(0, 1)
+                .slice(0, 2)
                 .map((i) => (
                   <Sponsor key={i} i={i} />
                 ))}
-              {/* <Sponsor i={0} hide /> */}
             </Grid>
             <Heading fontFamily={`'Airbnb Cereal App Bold'`} as="h2" size="md" m={0} mt="1rem" variants={fadeIn}>
               {t('gold')}
