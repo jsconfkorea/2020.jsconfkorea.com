@@ -238,6 +238,10 @@ const Sponsors = () => {
                           css={css`
                             font-family: 'Airbnb Cereal App Book';
                             font-size: 0.9rem;
+                            a {
+                              color: rgb(49, 130, 206);
+                              text-decoration: underline;
+                            }
                           `}
                         >
                           {t(`${selectedSponsor}.content`)}

@@ -167,6 +167,7 @@ const style = css`
   *:focus {
     outline: none;
   }
+
   a {
     color: initial;
     text-decoration: none;
@@ -177,6 +178,7 @@ const style = css`
       text-decoration: none !important;
     }
   }
+
   ul {
     list-style: none;
     padding: 0;
