@@ -64,9 +64,9 @@ const Header = () => {
                     <Link href="/sponsors">{t('sponsors')}</Link>
                   </li>
                   <li>
-                    <Link href="/schedule" disabled>
+                    <a href="/schedule" target="_blank" rel="noopener">
                       {t('schedule')}
-                    </Link>
+                    </a>
                   </li>
                 </ul>
                 <ul className="menu-docs">
