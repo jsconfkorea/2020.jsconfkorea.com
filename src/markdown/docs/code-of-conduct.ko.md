@@ -24,38 +24,46 @@ JSConf Korea는 성별, 성 정체성 및 표현 방법, 성적 지향, 장애, 
 
 JSConf Korea의 모든 참가자는 온/오프라인 컨퍼런스 장소 및 컨퍼런스와 관련된 모든 온/오프라인 행사와 SNS 공간에서 이 핵심원칙을 반드시 준수해야 합니다.
 
-# 우리 함께 언행에 신경써요
+# 서로에게 따뜻하게 말해요
 
-특정 집단에게 상처가 될 수 있는 고정 관념에서 비롯된 언행은 삼가주세요. 다음과 같은 예가 있지만 이에 국한되지는 않습니다.
+열린 마음을 갖고 서로를 따뜻하게 대해주세요.
 
-- 특정 집단을 무시하는 발언
-- 장애를 “비정상”적인 것이라 여기는 발언
+- 서로의 소통 방법이 다름을 염두에 두어주세요. 상대방은 소통하는데에 시간이 조금 더 걸릴 수도, 한국어가 모국어가 아닐 수도 있어요.
+- 나와 다른 사람도 포함될 수 있도록 의식적인 노력을 기울여주세요.
+- 상대방이 내 말을 어떻게 해석할 수 있을지 생각해보세요.
+- 질문은 더 알기위해 해주세요. 나의 지식을 자랑하거나 상대를 비난하기 위해 질문하지는 말아주세요.
+- 상대방의 말이 좋은 의도와 호기심에서 비롯되었을 것이라고 너그럽게 해석해주세요.
+
+위에 언급된 어떤 집단에게든 상처가 될 수 있는 고정 관념에서 비롯된 언행은 삼가주세요. 다음과 같은 예가 있지만 이에 국한되지는 않습니다.
+
+- 특정 집단을 무시하거나 일반화하는 발언
+- 장애나 젠더 이분법적이지 않은 성 정체성 등을 “비정상”으로 여기는 발언
 - 상대방의 외모에 대해 원치 않는 코멘트나 “칭찬”을 하는 것
 
 # 내 얼굴은 나의 것: 촬영 정책
 
 촬영된 사진과 영상은 JSConf Korea의 공식 채널을 통해 공개될 수 있습됩니다. 온라인 컨퍼런스의 경우 스크린샷 및 화면 녹화도 이에 포함됩니다.
 
-카메라를 켜둔 참가자가 있다면 스크린샷을 찍기 전 꼭 동의를 구하시길 바랍니다.
+카메라를 켜둔 참가자가 있다면 스크린샷을 찍기 전 꼭 동의를 구해주세요.
 
 스크린샷에 등장하고 싶지 않으신 참가자는 카메라를 끄고 참가하셔도 좋습니다.
 
 # 이렇게 신고해주세요!
 
-위협적이거나 적대적으로 느껴지는 상황이 있다면 최대한 빨리 신고해주세요. 여러분의 적극적인 참여는 JSConf Korea가 더 좋은 행사로 거듭나는데 큰 도움이 됩니다. 스태프에게 직접 신고하는 방법과 익명 신고 방법이 있습니다.
+위협적이거나 적대적으로 느껴지는 상황이 있다면 최대한 빨리 신고해주세요. 여러분의 적극적인 참여는 JSConf Korea가 더 좋은 행사로 거듭나는데 큰 도움이 됩니다.
 
 ## 익명으로 신고하기
 
-[익명 신고는 이 링크에서 하실 수 있습니다.](https://jsconfkorea.com/report/) 익명으로 신고하실 경우 신고자께 직접 연락드릴 수는 없지만 최선을 다해 정황을 파악하고 같은 일이 일어나지 않도록 조치하겠습니다.
+[익명 신고는 이 링크에서 하실 수 있습니다.](https://forms.gle/f2ZwpSuKdQxh8SJ79) 익명으로 신고하실 경우 신고자께 직접 연락드릴 수는 없지만 최선을 다해 정황을 파악하고 같은 일이 일어나지 않도록 조치하겠습니다.
 
 ## 직접 신고하기
 
-[contact@jsconfkorea.com](mailto:contact@jsconfkorea.com)로 직접 신고 내용을 전달해주시기 바랍니다.
+[contact@jsconfkorea.com](mailto:contact@jsconfkorea.com)나 Hopin 플랫폼을 통해 오거나이저 '수진'님에게 직접 신고 내용을 전달해주시기 바랍니다. (Hopin 이벤트 화면의 가장 오른쪽 People 탭에서 검색)
 
 스태프는 신고자의 안전과 비밀을 보장하기 위해 최선을 다할 것입니다. 신고에 적절히 대응하기 위해 다른 스태프에게 신고 내용을 알려야 할 수도 있습니다. 먼저 신고자의 안전을 보장한 후, 신고자의 존엄을 지키며 어떤 일이 일어났는지 물어볼 것입니다. 신고자께서는 누구를 직면해야 할 일도 없을 것이고 신분이 공개되는 일도 없을 것입니다.
 
 # 참고 문서
 
-JSConf Korea의 핵심원칙은 [JSConf EU의 행동강령(Code of Conduct)](https://2019.jsconf.eu/code-of-conduct/)을 한국의 문화와 언어에 맞게 수정하여 작성하였습니다. JSConf EU의 행동강령은 [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](http://jsconfau.com/), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), 그리고 [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/)님의 글 및 [Conference Code of Conduct](https://confcodeofconduct.com/)을 참고하여 작성되었습니다.
+JSConf Korea의 핵심원칙은 [JSConf EU의 행동강령(Code of Conduct)](https://2019.jsconf.eu/code-of-conduct/)과 [Microsoft Virtual Events의 행동강령](https://github.com/microsoft/virtual-events/blob/main/virtual-event-code-of-conduct.md)를 번역하고 일부 내용은 한국의 문화에 맞게 수정하여 작성하였습니다. JSConf EU의 행동강령은 [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](https://twitter.com/JSConfAU), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), 그리고 [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/)님의 글 및 [Conference Code of Conduct](https://confcodeofconduct.com/)을 참고하여 작성되었습니다.
 
-마지막 수정일: 2020년 6월 6일
+마지막 수정일: 2020년 9월 11일
