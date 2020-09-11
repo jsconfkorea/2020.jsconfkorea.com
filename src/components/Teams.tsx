@@ -61,6 +61,14 @@ const teams = [
     link: 'https://github.com/doondoony',
     image: '/images/kiwoong.jpg',
   },
+  {
+    name: {
+      en: 'Jiyoung Hwang',
+      ko: '황지영',
+    },
+    link: 'https://twitter.com/jyhwng',
+    image: '/images/jiyoung.jpg',
+  },
 ]
 
 const Teams = () => {
