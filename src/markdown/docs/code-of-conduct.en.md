@@ -26,13 +26,21 @@ Event organizers may take action to address anything designed to, or with the cl
 
 We expect participants to follow these rules at all event spaces and event-related activities, both online and offline. These include our social media posts and chat rooms in online conferencing platforms.
 
-# INCLUSIVE LANGUAGE
+# INCLUSIVE COMMUNICATION
+
+Treat each other with kindness and an open mind.
+
+- Keep in mind that people can have different ways of communicating. For some, talking or typing might take more time, while for some others, English might not be their first language.
+- Make a conscious effort to include people who are not like you.
+- Think about how others might interpret what you say.
+- Be charitable in how you interpret others' questions or comments. Assume good intent, and respond in good faith.
+- Ask questions to understand, not to boast or denounce.
 
 Any speech that reinforces harmful stereotypes is unwelcome. Examples include but are not limited to:
 
-- Making undue assumptions and/or sweeping generalizations about a group of people.
-- Any language that deems disability a defect.
-- Any unwelcome comments on one’s physical appearance.
+- Making undue assumptions and/or sweeping generalizations about a group of people
+- Any language that deems disability a 'defect'
+- Any unwelcome comments on one’s physical appearance
 
 # PHOTO POLICY
 
@@ -48,16 +56,16 @@ If someone makes you or anyone else feel unsafe or unwelcome, please report it a
 
 ## Anonymous report
 
-[You can file an anonymous report here](https://jsconfkorea.com/report/). We can’t follow up on an anonymous report with you directly, but we will fully investigate it and take whatever action is necessary to prevent a recurrence.
+[You can file an anonymous report here](https://forms.gle/f2ZwpSuKdQxh8SJ79). We can’t follow up on an anonymous report with you directly, but we will fully investigate it and take whatever action is necessary to prevent a recurrence.
 
 ## Personal report
 
-Email us at [contact@jsconfkorea.com](mailto:contact@jsconfkorea.com) with your report.
+Email us at [contact@jsconfkorea.com](mailto:contact@jsconfkorea.com) or message Suzin on Hopin. You can search for them on the People tab on the far right of the Hopin event page.
 
 When taking a personal report, our staff will ensure you are safe and cannot be overheard. They may involve other event staff to ensure your report is managed properly. Once safe, we’ll ask you to tell us about what happened. This can be upsetting, but we’ll handle it as respectfully as possible. You won’t be asked to confront anyone and we won’t tell anyone who you are.
 
 # ATTRIBUTION
 
-This Code of Conduct was adapted from [JSConf EU’s Code of Conduct](https://2019.jsconf.eu/code-of-conduct/) to fit Korean culture and language. JSConf EU’s Code of Conduct was in turn based on [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](http://jsconfau.com/), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), the work of [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/) and [Conference Code of Conduct](https://confcodeofconduct.com/).
+This Code of Conduct is based on [JSConf EU’s Code of Conduct](https://2019.jsconf.eu/code-of-conduct/) and [Microsoft Virtual Events Code of Conduct](https://github.com/microsoft/virtual-events/blob/main/virtual-event-code-of-conduct.md) and was adapted to fit Korean culture and language. JSConf EU’s Code of Conduct was in turn based on [CSSConf](https://2019.cssconf.eu/code-of-conduct/) / [JSConf AU](https://twitter.com/JSConfAU), [The Geek Feminism Wiki](https://geekfeminism.wikia.org/wiki/Diversity_statement), the work of [Valerie Aurora](https://frameshiftconsulting.com/code-of-conduct-training/) and [Conference Code of Conduct](https://confcodeofconduct.com/).
 
-Last updated June 6, 2020
+Last updated September 11, 2020
