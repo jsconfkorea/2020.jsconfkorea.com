@@ -8,7 +8,7 @@ JSConf Korea는 자바스크립트 커뮤니티를 이루는 국내외의 구성
 
 # 프로그램
 
-- ✨ 준비중입니다.
+- [스케쥴 확인하기](https://hopin.to/events/jsconf-korea-2020-home-edition#schedule)
 
 # 접근성
 
