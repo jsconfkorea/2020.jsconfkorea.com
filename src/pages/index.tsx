@@ -44,8 +44,8 @@ const Index = () => {
         <section id="main-buttons">
           <div>
             <div id="btn-rsvp">
-              <a href="/ticket" target="_blank" rel="noopener">
-                {t('rsvp')}
+              <a href="/schedule" target="_blank" rel="noopener">
+                {t('program')}
               </a>
             </div>
             <div id="btn-newsletter">
