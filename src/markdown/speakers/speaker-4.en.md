@@ -7,6 +7,7 @@ website: 'https://eunjae.dev/'
 sns: 'https://twitter.com/eunjae_lee'
 github: 'https://github.com/eunjae-lee/'
 title: "Let's Deploy an Open Source Library"
+youtube_video_key: 'JbzdDYo2w_I'
 ---
 
 Deploying an open source library can be scary. You anxiously stare at the screen hoping that it'll be a success, that you didn't make any mistakes. There are many tools that can ease your worries, but perhaps can't eliminate them.

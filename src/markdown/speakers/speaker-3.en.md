@@ -7,6 +7,7 @@ website: 'https://flippedcoding.com'
 sns: 'https://twitter.com/flippedcoding'
 github: 'https://github.com/flippedcoder'
 title: 'Making VR More Interesting With JavaScript and Machine Learning'
+youtube_video_key: 'qgBFdVIRTu4'
 ---
 
 If you are familiar with JavaScript, you can start making VR applications right now. Once you have your VR app ready to go, you can go a step further and add Brain.js to start getting insights about how users interact with your app and make real-time updates to the UI.

@@ -7,6 +7,7 @@ website: 'https://anuk79.github.io/'
 sns: 'https://twitter.com/miracle_404'
 github: 'https://github.com/anuk79'
 title: '접근성이 떨어지는 웹사이트? 자바스크립트의 잘못은 아니랍니다.'
+youtube_video_key: 'J42a3SP9obY'
 ---
 
 접근성은 웹의 고유한 측면입니다. 그럼에도 불구하고 자주 무시하게되거나 우선순위에서 밀리게 됩니다. 접근성을 둘러싼 많은 오해들 때문에 귀찮거나 어렵게 느껴집니다.

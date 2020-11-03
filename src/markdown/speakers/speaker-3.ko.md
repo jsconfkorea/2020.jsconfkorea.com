@@ -7,6 +7,7 @@ website: 'https://flippedcoding.com'
 sns: 'https://twitter.com/flippedcoding'
 github: 'https://github.com/flippedcoder'
 title: '자바스크립트와 머신러닝으로 VR에 날개 달기'
+youtube_video_key: 'qgBFdVIRTu4'
 ---
 
 자바스크립트에 익숙하다면 여러분은 지금 바로 VR 애플리케이션을 만들 수 있습니다. VR 앱을 만들고 나서는 한 걸음 더 나아가 Brain.js를 추가할 수도 있습니다. 이를 통해 사용자가 앱과 어떻게 인터랙트하는지 파악하고, 이를 바탕으로 실시간으로 UI를 업데이트할 수 있습니다.

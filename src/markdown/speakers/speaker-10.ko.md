@@ -7,6 +7,7 @@ website: 'https://jaisanth.com/'
 sns: 'https://twitter.com/jaisanth'
 github: 'https://github.com/jaisanth'
 title: '모노레포에서 개발하기'
+youtube_video_key: 'pTi0MQbD7No'
 ---
 
 저는 마이크로소프트에서 타입스크립트 기반의 대규모 git 리포지토리에 참여하고 있습니다. 여기엔 300명 이상의 개발자들이 Microsoft365 제품군에 걸친 모든 프론트엔드 기능을 개발하고 빌드합니다. 약 150가지의 npm의 패키지가 사용되고, 100만 줄 이상의 TypeScript 코드로 구성되어 있습니다. 이러한 컴포넌트들을 코로케이션(co-location)함으로써 팀 끼리의 협업 및 코드 공유가 훨씬 쉬워질 수 있습니다.
