@@ -7,6 +7,7 @@ website: 'https://bendechrai.com/'
 sns: 'https://twitter.com/bendechrai'
 github: 'https://github.com/bendechrai'
 title: 'Say Goodbye to Passwords and Hello to WebAuthn'
+youtube_video_key: 'rUqhBkt0xIc'
 ---
 
 Dozens of times a day, we identify ourselves online.

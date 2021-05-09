@@ -7,6 +7,7 @@ export const en = {
   sponsorship: 'SPONSORSHIP',
   newsletter: 'NEWSLETTER',
   rsvp: 'TICKET',
+  program: 'PROGRAM',
 
   // menu
   home: 'HOME',

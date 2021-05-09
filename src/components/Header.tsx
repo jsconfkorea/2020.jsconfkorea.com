@@ -53,8 +53,8 @@ const Header = () => {
                     <Link href="/about">{t('about')}</Link>
                   </li>
                   <li>
-                    <a href="/ticket" target="_blank" rel="noopener">
-                      {t('rsvp')}
+                    <a href="/schedule" target="_blank" rel="noopener">
+                      {t('schedule')}
                     </a>
                   </li>
                   <li>
@@ -62,11 +62,6 @@ const Header = () => {
                   </li>
                   <li>
                     <Link href="/sponsors">{t('sponsors')}</Link>
-                  </li>
-                  <li>
-                    <a href="/schedule" target="_blank" rel="noopener">
-                      {t('schedule')}
-                    </a>
                   </li>
                 </ul>
                 <ul className="menu-docs">

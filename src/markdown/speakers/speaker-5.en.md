@@ -7,6 +7,7 @@ website: 'https://anuk79.github.io/'
 sns: 'https://twitter.com/miracle_404'
 github: 'https://github.com/anuk79'
 title: "Inaccessible websites? - it's you, not JavaScript"
+youtube_video_key: 'J42a3SP9obY'
 ---
 
 Accessibility is an inherent aspect of the web. And yet it is often neglected and considered as an afterthought. There are certain misconceptions lingering around it and it might appear burdensome or confusing as a result.

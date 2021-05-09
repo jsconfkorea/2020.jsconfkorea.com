@@ -9,7 +9,7 @@ import { createPortal } from 'react-dom'
 import { useKey } from 'react-use'
 import { NextSeo } from 'next-seo'
 import Speaker from './Speaker'
-import { Box, Grid, Flex, A } from './MotionChakra'
+import { Box, Grid, Flex, A, Button } from './MotionChakra'
 import { listStack } from './Sponsors'
 import { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
@@ -394,6 +394,28 @@ const Speakers = () => {
                           {t(`${selectedSpeaker}.bio`)}
                         </Text>
                       </Box>
+                      <A
+                        href={`https://www.youtube.com/watch?v=${t(`${selectedSpeaker}.youtube_video_key`)}`}
+                        isExternal
+                        mt="1rem"
+                        bottom="6rem"
+                        css={css`
+                          &:hover {
+                            text-decoration: none;
+                          }
+                        `}
+                      >
+                        <Button
+                          cursor="pointer"
+                          rightIcon="arrow-forward"
+                          variantColor="teal"
+                          variant="outline"
+                          size="md"
+                          w="100%"
+                        >
+                          Go To Youtube Video
+                        </Button>
+                      </A>
                     </Flex>
                   </>
                 )}

@@ -10,7 +10,7 @@ This year, we come to you as _JSConf Korea 2020 Home Edition_. We're taking thin
 
 # Program
 
-- ✨ Coming soon...!
+- [Schedule](https://hopin.to/events/jsconf-korea-2020-home-edition#schedule)
 
 # Accessibility
 

@@ -7,6 +7,7 @@ website: 'https://bendechrai.com/'
 sns: 'https://twitter.com/bendechrai'
 github: 'https://github.com/bendechrai'
 title: '비밀번호에겐 작별을, WebAuthn에게 안녕을!'
+youtube_video_key: 'rUqhBkt0xIc'
 ---
 
 우리는 온라인에서 하루에도 수십번 우리의 아이덴티티를 증명합니다.

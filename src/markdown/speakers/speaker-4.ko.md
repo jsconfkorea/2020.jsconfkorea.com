@@ -7,6 +7,7 @@ website: 'https://eunjae.dev/'
 sns: 'https://twitter.com/eunjae_lee'
 github: 'https://github.com/eunjae-lee/'
 title: '오픈 소스 라이브러리를 배포해봅시다'
+youtube_video_key: 'JbzdDYo2w_I'
 ---
 
 우리는 오픈 소스 라이브러리를 배포할 때 여러 문제에 직면합니다. 실수를 하기도 하고, 배포하는 동안 아무것도 못하고 기다려야 하며, 혼자 불안에 떨며 진행합니다. 좋은 툴이 많이 있지만, 여전히 해결되지 않는 문제들이 있습니다.

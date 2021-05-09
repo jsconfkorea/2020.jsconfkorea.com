@@ -7,6 +7,7 @@ website:
 sns:
 github:
 title: 'In Search of the Lost UI: A Tale of Design System Development'
+youtube_video_key: '3Qo9mMT9VvU'
 ---
 
 When we code, we value efficiency. We try to reuse the code, keep it concise, and be as clear as possible so our teammates have little trouble understanding it.

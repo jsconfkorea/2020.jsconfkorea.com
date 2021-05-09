@@ -7,6 +7,7 @@ website: 'https://blog.aliencube.org'
 sns: 'https://twitter.com/justinchronicle'
 github: 'https://github.com/justinyoo'
 title: '퇴근 후 집 도착 10분 전, 집 안 거실의 에어콘을 켜고 싶어서 삽질한 썰'
+youtube_video_key: 'xDd2B9uzqkc'
 ---
 
 어느 무더운 여름날, 퇴근 후 집에 돌아갔을 때 화려한 조명 대신 시원한 에어콘 바람이 나를 감싸주길 바라나요? 집에 도착하기 딱 10분 전에 에어콘이 미리 켜져서 돌아가고 있다면 참 좋을텐데, 이걸 어떻게 한다? 집 안의 네트워크에서 라즈베리 파이와 서버리스 애플리케이션을 연동하고, 집 밖의 클라우드 서비스에서 이를 호출하면 모두가 행복한 세상... 이라고 생각했지만, 만만치 않았습니다. 이 과정에서 배웠던 경험들을 공유하고 싶습니다.
