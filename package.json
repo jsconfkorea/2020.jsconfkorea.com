@@ -30,7 +30,7 @@
     "react-dom": "^16.13.1",
     "react-ga": "^3.1.2",
     "react-gtm-module": "^2.0.10",
-    "react-markdown": "^4.3.1",
+    "react-markdown": "^6.0.2",
     "react-use": "^15.3.3",
     "rosetta": "^1.1.0",
     "sass": "^1.26.10",
