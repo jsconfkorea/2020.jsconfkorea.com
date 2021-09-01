@@ -3,6 +3,7 @@
 import { jsx, css } from '@emotion/core'
 import Header from '../components/Header'
 import NotFoundSVG from '../components/svgs/NotFound'
+import React from 'react'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 

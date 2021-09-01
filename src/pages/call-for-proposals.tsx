@@ -6,6 +6,7 @@ import TopButton from '../components/TopButton'
 import { useI18n } from '../hooks/useI18n'
 import Markdown from '../components/Markdown'
 import { NextSeo } from 'next-seo'
+import React from 'react'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
