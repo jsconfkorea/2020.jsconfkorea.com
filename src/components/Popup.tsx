@@ -8,6 +8,7 @@ import fetch from 'node-fetch'
 import CloseButton from './svgs/CloseButton'
 import { useKey } from 'react-use'
 import { useToast } from '@chakra-ui/core'
+import React from 'react'
 
 type Props = {
   isShowing: boolean
