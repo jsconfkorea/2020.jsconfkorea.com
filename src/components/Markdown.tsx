@@ -1,25 +1,27 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import ReactMarkdown from 'react-markdown'
 import React, { Children, ReactNode } from 'react'
 import { motion } from 'framer-motion'
+import remarkGfm from 'remark-gfm'
 
 export { default as getStaticProps } from '../utils/getStaticProps'
 
 type Props = {
-  children: ReactNode
+  children: string
 }
 
-function flatten(text: string, child: any): any {
-  return typeof child === 'string' ? text + child : Children.toArray(child.props.children).reduce(flatten, text)
-}
+// function flatten(text: string, child: any): any {
+//   return typeof child === 'string' ? text + child : Children.toArray(child.props.children).reduce(flatten, text)
+// }
 
-function HeadingRenderer(props: any) {
-  const children = Children.toArray(props.children)
-  const text = children.reduce(flatten, '')
-  const slug = text.toLowerCase().replace(/\W/g, '-')
-  return React.createElement('h' + props.level, { id: slug }, props.children)
-}
+// function HeadingRenderer(props: any) {
+//   const children = Children.toArray(props.children)
+//   const text = children.reduce(flatten, '')
+//   const slug = text.toLowerCase().replace(/\W/g, '-')
+//   return React.createElement('h' + props.level, { id: slug }, props.children)
+// }
 
 const Markdown = ({ children }: Props) => {
   return (
@@ -30,9 +32,7 @@ const Markdown = ({ children }: Props) => {
         transition={{ type: 'tween', duration: 0.35, ease: 'backOut' }}
         css={style}
       >
-        <ReactMarkdown renderers={{ heading: HeadingRenderer }} linkTarget="_blank">
-          {children}
-        </ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
       </motion.div>
     </>
   )

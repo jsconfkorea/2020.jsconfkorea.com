@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css, Global } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
@@ -7,7 +8,7 @@ import { createPortal } from 'react-dom'
 import { useKey } from 'react-use'
 import { NextSeo } from 'next-seo'
 import { NUMBER_OF_SPONSORS } from '../pages/sponsors'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Sponsor from './Sponsor'
 import { useDisclosure, CloseButton, PseudoBox } from '@chakra-ui/core'
 import { Heading, Grid, Divider, Image, Box, Button, A, Flex } from './MotionChakra'

@@ -26,12 +26,13 @@
     "next": "^11.1.0",
     "next-seo": "^4.7.3",
     "nprogress": "^0.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-ga": "^3.1.2",
     "react-gtm-module": "^2.0.10",
-    "react-markdown": "^6.0.2",
+    "react-markdown": "^7.0.1",
     "react-use": "^15.3.3",
+    "remark-gfm": "^2.0.0",
     "rosetta": "^1.1.0",
     "sass": "^1.26.10",
     "shortid": "^2.2.15"
@@ -52,7 +53,7 @@
     "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
     "raw-loader": "^4.0.1",
-    "typescript": "^3.9.7"
+    "typescript": "^4.4.2"
   },
   "husky": {
     "hooks": {

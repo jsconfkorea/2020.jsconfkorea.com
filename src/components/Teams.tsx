@@ -1,8 +1,10 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
 import { motion } from 'framer-motion'
 import { A, Image, Box } from './MotionChakra'
+import React from 'react'
 
 const teams = [
   {

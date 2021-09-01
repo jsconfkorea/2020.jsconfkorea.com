@@ -1,7 +1,8 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import Link from './Link'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import ChangeLanguageLink from './ChangeLangaugeLink'
 import { useI18n } from '../hooks/useI18n'
 import FacebookIcon from './svgs/FacebookIcon'

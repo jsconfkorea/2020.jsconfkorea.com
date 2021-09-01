@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import Header from '../../components/Header'
@@ -8,6 +9,7 @@ import { ko } from '../../i18n/ko'
 import { en } from '../../i18n/en'
 import Sponsors from '../../components/Sponsors'
 import { Box } from '../../components/MotionChakra'
+import React from 'react'
 
 export const NUMBER_OF_SPONSORS = 5
 

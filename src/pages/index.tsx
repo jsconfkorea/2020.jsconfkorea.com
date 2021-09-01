@@ -1,6 +1,7 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
-import { useRef } from 'react'
+import React, { useRef } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import { useOnClickOutside } from '../hooks/useOnClickOutside'
 import Header from '../components/Header'

@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css, Global } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
@@ -11,7 +12,7 @@ import { NextSeo } from 'next-seo'
 import Speaker from './Speaker'
 import { Box, Grid, Flex, A, Button } from './MotionChakra'
 import { listStack } from './Sponsors'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { WEBSITE_URL, WEBSITE_URL_WITH_YEAR } from '../pages/_app'
 

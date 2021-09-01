@@ -1,8 +1,9 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import Letter from './Letter'
 import shortid from 'shortid'
-import { memo } from 'react'
+import React, { memo } from 'react'
 
 const str = `JSCONF KOREA 2020
 HOME EDITION`

@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core'
 import { useI18n } from '../hooks/useI18n'
@@ -5,6 +6,7 @@ import Link from './Link'
 import { Box, Grid, Text, Heading, Image, A, Button } from './MotionChakra'
 import { fadeInUp } from './Sponsors'
 import ReactMarkdown from 'react-markdown'
+import React from 'react'
 
 type Props = {
   i: number

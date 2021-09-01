@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
 import Header from '../../components/Header'
@@ -9,6 +10,7 @@ import { en } from '../../i18n/en'
 import Speakers from '../../components/Speakers'
 import { Box } from '../../components/MotionChakra'
 import TopButton from '../../components/TopButton'
+import React from 'react'
 
 export const NUMBER_OF_SPEAKERS = 10
 
