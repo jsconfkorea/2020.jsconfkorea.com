@@ -1,17 +1,23 @@
+import { ThemeProvider } from '@chakra-ui/core'
+import 'hamburgers/_sass/hamburgers/hamburgers.scss'
+import { DefaultSeo } from 'next-seo'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import GlobalStyle from '../components/GlobalStyle'
-import I18nProvider from '../components/I18nProvider'
-import { ThemeProvider } from '@chakra-ui/core'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
+import GlobalStyle from '../components/GlobalStyle'
+import I18nProvider from '../components/I18nProvider'
 import useGA from '../hooks/useGA'
 import useGTM from '../hooks/useGTM'
-import { DefaultSeo } from 'next-seo'
-import 'hamburgers/_sass/hamburgers/hamburgers.scss'
-import { theme } from '../utils/theme'
 import { languages } from '../hooks/useI18n'
+import { theme } from '../utils/theme'
+
+if (typeof window !== 'undefined') {
+  if (window.location.hostname === 'jsconf.kr') {
+    window.location.href = 'https://2022.jsconf.kr'
+  }
+}
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
