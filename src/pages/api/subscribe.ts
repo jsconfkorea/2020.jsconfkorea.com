@@ -1,4 +1,3 @@
-import fetch from 'node-fetch'
 import { NextApiRequest, NextApiResponse } from 'next'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -34,7 +33,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     return res.status(201).json({ error: '' })
-  } catch (error: any) {
+  } catch (error) {
     return res.status(500).json({ error: error.message || error.toString() })
   }
 }

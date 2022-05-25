@@ -1,14 +1,12 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core'
-import { useState, forwardRef } from 'react'
-import { useI18n } from '../hooks/useI18n'
-import { AnimatePresence, motion } from 'framer-motion'
-import fetch from 'node-fetch'
-import CloseButton from './svgs/CloseButton'
-import { useKey } from 'react-use'
 import { useToast } from '@chakra-ui/core'
-import React from 'react'
+import { css, jsx } from '@emotion/core'
+import { AnimatePresence, motion } from 'framer-motion'
+import React, { forwardRef, useState } from 'react'
+import { useKey } from 'react-use'
+import { useI18n } from '../hooks/useI18n'
+import CloseButton from './svgs/CloseButton'
 
 type Props = {
   isShowing: boolean

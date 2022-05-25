@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@chakra-ui/core'
 import 'hamburgers/_sass/hamburgers/hamburgers.scss'
 import { DefaultSeo } from 'next-seo'
-import { AppProps } from 'next/app'
+import App, { AppContext, AppProps } from 'next/app'
 import Head from 'next/head'
 import Router from 'next/router'
 import NProgress from 'nprogress'
@@ -12,12 +12,6 @@ import useGA from '../hooks/useGA'
 import useGTM from '../hooks/useGTM'
 import { languages } from '../hooks/useI18n'
 import { theme } from '../utils/theme'
-
-if (typeof window !== 'undefined') {
-  if (window.location.hostname === 'jsconf.kr') {
-    window.location.href = 'https://2022.jsconf.kr'
-  }
-}
 
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
@@ -32,7 +26,7 @@ export const description = `${siteName} - Home Edition`
 const url = WEBSITE_URL
 export const thumb = `${url}/og-image.png`
 
-const App = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   const { langDict, lang } = pageProps
 
   useGA()
@@ -92,4 +86,19 @@ const App = ({ Component, pageProps }: AppProps) => {
   )
 }
 
-export default App
+export const getInitialProps = async (ctx: AppContext) => {
+  App.getInitialProps(ctx)
+  const { req, res } = ctx.ctx
+  const headers = req?.headers
+  const host = headers?.host
+  if (res && host === 'jsconf.kr') {
+    res.writeHead(307, { Location: 'https://2022.jsconf.kr' }).end()
+    return
+  }
+
+  return {}
+}
+
+MyApp.getInitialProps = getInitialProps
+
+export default MyApp
