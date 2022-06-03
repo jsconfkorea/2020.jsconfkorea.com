@@ -13,12 +13,6 @@ import useGTM from '../hooks/useGTM'
 import { languages } from '../hooks/useI18n'
 import { theme } from '../utils/theme'
 
-if (typeof window !== 'undefined') {
-  if (window.location.hostname === 'jsconf.kr') {
-    window.location.href = 'https://2022.jsconf.kr'
-  }
-}
-
 NProgress.configure({ showSpinner: false })
 Router.events.on('routeChangeStart', () => NProgress.start())
 Router.events.on('routeChangeComplete', () => NProgress.done())
